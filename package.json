@@ -53,7 +53,7 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
-    "*.js": "eslint --cache --fix"
+    "./src/**/*.js": "eslint --cache --fix"
   },
   "dependencies": {
     "react": "^17.0.2",
