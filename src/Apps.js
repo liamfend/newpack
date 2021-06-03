@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function Apps() {
-    return (
-        <div>
-          react  apps sdafd
-        </div>
-    )
+  return <div>react apps sdafd</div>;
 }
 
-export default Apps
+export default Apps;
