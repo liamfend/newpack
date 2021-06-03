@@ -1,10 +1,10 @@
 import React from 'react'
-import logImg from './svgs/logo.svg'
+import svg from './svgs/logo.svg'
 function App(props) {
     return (
         <div>
           react  app dsafds dsafdsa dsafdsaf dsafdsaf
-          <img src={logImg} />
+         <img src ={ svg} />
           {props.children}
         </div>
     )

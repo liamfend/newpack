@@ -7,6 +7,7 @@ const WebpackBar = require('webpackbar');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 // const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const postcssNormalize = require('postcss-normalize');
 const safePostCssParser = require('postcss-safe-parser');
@@ -21,7 +22,7 @@ const sassModuleRegex = /\.module\.(scss|sass)$/;
 module.exports = function (webpackEnv) {
     const appBase = process.cwd()
     const appOutputBuild = path.resolve(appBase, "build")
-    const appSrcJs = path.resolve(appBase, "src/index.js")
+    const appSrcJs = path.resolve(appBase, "src/index")
     const appSrc = path.resolve(appBase, "src")
     const appPublic = path.resolve(appBase, "public")
     const appHtmlTemp = path.resolve(appBase, "public/index.html")
@@ -87,7 +88,7 @@ module.exports = function (webpackEnv) {
     };
 
     return {
-        stats: 'minimal',
+       // stats: 'minimal',
         mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
         bail: isEnvProduction,
         devtool: isEnvProduction ? "source-map" : isEnvDevelopment && 'cheap-module-source-map',
@@ -97,8 +98,8 @@ module.exports = function (webpackEnv) {
             pathinfo: isEnvDevelopment,
             filename: isEnvProduction
                 ? 'static/js/[name].[contenthash:8].js'
-                : isEnvDevelopment && 'static/js/[name].js',
-            publicPath: "",
+                : isEnvDevelopment && 'static/js/bundle.js',
+            publicPath: "./",
             devtoolModuleFilenameTemplate: isEnvProduction
                 ? info =>
                     path
@@ -173,14 +174,14 @@ module.exports = function (webpackEnv) {
 
             splitChunks: {
                 chunks: 'all',
-                name: isEnvDevelopment ? 'bundle' : false,
+              //  name: isEnvDevelopment ? 'bundle' : false,
             }, 
             runtimeChunk: {
                 name: entrypoint => `runtime-${entrypoint.name}`,
             },
         },
         module: {
-            strictExportPresence: true,
+          
             rules: [
                 {
                     oneOf: [
@@ -264,7 +265,7 @@ module.exports = function (webpackEnv) {
                         },
                         {
                             loader: require.resolve('file-loader'),
-                            exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
+                            exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/,/\.bin$/,/^$/],
                             options: {
                                 name: 'static/media/[name]cccc.[hash:8].[ext]',
                             },
@@ -275,7 +276,7 @@ module.exports = function (webpackEnv) {
 
             ]
         },
-        devServer: {
+        devServer: isEnvDevelopment &&{
             // proxy: { // proxy URLs to backend development server
             //     '/api': 'http://localhost:3000'
             // },
@@ -296,6 +297,7 @@ module.exports = function (webpackEnv) {
                     {
                         inject: true,
                         template: appHtmlTemp,
+                        
                     },
                     isEnvProduction
                         ? {
@@ -315,6 +317,18 @@ module.exports = function (webpackEnv) {
                         : undefined
                 )
             ),
+            isEnvProduction && new CopyPlugin({
+                patterns: [
+                  { from: appPublic, to: appOutputBuild ,globOptions:{
+                    ignore:[
+                        "**/index.html"
+                    ]
+                  } }, 
+                ],
+                options: {
+                  concurrency: 100,
+                },
+              }),
             isEnvProduction &&
             new MiniCssExtractPlugin({ 
                 filename: 'static/css/[name].[contenthash:8].css',
