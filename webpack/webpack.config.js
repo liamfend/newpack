@@ -1,36 +1,36 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const webpack = require('webpack');
-const WebpackBar = require('webpackbar');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const webpack = require('webpack')
+const WebpackBar = require('webpackbar')
 // const CompressionPlugin = require("compression-webpack-plugin");
-const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 // const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const postcssNormalize = require('postcss-normalize');
-const safePostCssParser = require('postcss-safe-parser');
-const getCSSModuleLocalIdent = require('./getCSSModuleLocalIdent');
+const postcssNormalize = require('postcss-normalize')
+const safePostCssParser = require('postcss-safe-parser')
+const getCSSModuleLocalIdent = require('./getCSSModuleLocalIdent')
 // publicPath: "/assets/",
 
-const cssRegex = /\.css$/;
-const cssModuleRegex = /\.module\.css$/;
-const sassRegex = /\.(scss|sass)$/;
-const sassModuleRegex = /\.module\.(scss|sass)$/;
+const cssRegex = /\.css$/
+const cssModuleRegex = /\.module\.css$/
+const sassRegex = /\.(scss|sass)$/
+const sassModuleRegex = /\.module\.(scss|sass)$/
 
 module.exports = function (webpackEnv) {
-  const appBase = process.cwd();
-  const appOutputBuild = path.resolve(appBase, 'build');
-  const appSrcJs = path.resolve(appBase, 'src/index');
-  const appSrc = path.resolve(appBase, 'src');
-  const appPublic = path.resolve(appBase, 'public');
-  const appHtmlTemp = path.resolve(appBase, 'public/index.html');
-  const isEnvProduction = webpackEnv.production;
-  const isEnvDevelopment = webpackEnv.development; // 还有本地 ci 线上ci 等等。。 所以不可以用！isEnvProduction
-  const isEnvProductionProfile = isEnvProduction && process.argv.includes('--profile');
-  const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
-  const imageInlineSizeLimit = parseInt(process.env.IMAGE_INLINE_SIZE_LIMIT || '10000');
+  const appBase = process.cwd()
+  const appOutputBuild = path.resolve(appBase, 'build')
+  const appSrcJs = path.resolve(appBase, 'src/index')
+  const appSrc = path.resolve(appBase, 'src')
+  const appPublic = path.resolve(appBase, 'public')
+  const appHtmlTemp = path.resolve(appBase, 'public/index.html')
+  const isEnvProduction = webpackEnv.production
+  const isEnvDevelopment = webpackEnv.development // 还有本地 ci 线上ci 等等。。 所以不可以用！isEnvProduction
+  const isEnvProductionProfile = isEnvProduction && process.argv.includes('--profile')
+  const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false'
+  const imageInlineSizeLimit = parseInt(process.env.IMAGE_INLINE_SIZE_LIMIT || '10000')
 
   const getStyleLoaders = (cssOptions, preProcessor) => {
     const loaders = [
@@ -63,7 +63,7 @@ module.exports = function (webpackEnv) {
           },
         },
       },
-    ].filter(Boolean);
+    ].filter(Boolean)
     if (preProcessor) {
       loaders.push(
         {
@@ -79,10 +79,10 @@ module.exports = function (webpackEnv) {
             sourceMap: true,
           },
         },
-      );
+      )
     }
-    return loaders;
-  };
+    return loaders
+  }
 
   return {
     // stats: 'minimal',
@@ -318,5 +318,5 @@ module.exports = function (webpackEnv) {
           chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
         }),
     ].filter(Boolean),
-  };
-};
+  }
+}
