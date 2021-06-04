@@ -1,3 +1,11 @@
 body {
+  position: absolute;
+  display: flex;
+  overflow: hidden;
   background-color: red;
+
+  .fix {
+    background-color: green;
+    background-color: red;
+  }
 }

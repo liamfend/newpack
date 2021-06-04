@@ -1,6 +1,6 @@
-import React from 'react';
-import svg from './svgs/logo.svg';
-import PropTypes from 'prop-types';
+import React from 'react'
+import svg from './svgs/logo.svg'
+import PropTypes from 'prop-types'
 
 function App(props) {
   return (
@@ -9,11 +9,11 @@ function App(props) {
       <img src={svg} />
       {props.children}
     </div>
-  );
+  )
 }
 
 App.propTypes = {
   children: PropTypes.any,
-};
+}
 
-export default App;
+export default App

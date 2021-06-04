@@ -3,7 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -24,4 +29,4 @@ module.exports = {
       files: ['*.js', '*.jsx'],
     },
   ],
-};
+}
