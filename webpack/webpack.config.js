@@ -225,6 +225,11 @@ module.exports = function (webpackEnv) {
               ),
             },
             {
+              test: /\.yml$/,
+              use: ['file-loader?name=[name].json', 'yaml-loader'],
+              include: path.resolve(appSrc,'resources/translations'),
+            },
+            {
               loader: require.resolve('file-loader'),
               exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.bin$/, /^$/],
               options: {
@@ -234,6 +239,11 @@ module.exports = function (webpackEnv) {
           ],
         },
       ],
+    },
+    resolve: {
+      fallback: { 
+        "util": require.resolve("util/"),
+      },
     },
     devServer: isEnvDevelopment && {
       port: 3000,

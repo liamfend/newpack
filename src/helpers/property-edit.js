@@ -6,7 +6,7 @@ import endpoints from '~settings/endpoints'
 import * as queries from '~settings/queries'
 import { propertyFormatOption } from '~constants/property-format'
 import store from '~client/store'
-import * as actions from '~actions/properties/property-edit'
+
 import {
   formatReviewFacilities,
   addTagAndLabel,
@@ -20,6 +20,7 @@ import { formatLibraries, formatList, formatUpdateParamOfGallery } from '~helper
 import { cloneObject } from '~helpers'
 import { newRoomFacilities } from '~constants/pending-approval'
 
+debugger
 export const getAuthorization = () => {
   const authorization = `Bearer ${cookies.get(cookieNames.token)}`
   return authorization
@@ -154,11 +155,11 @@ export const htmlMinify = html => {
   let str = html
   // remove newline / carriage return
   // eslint-disable-next-line no-useless-escape
-  str = str
-    .replace(/\n/g, '')
-    .replace(/[\s ]+\</g, '<')
-    .replace(/\>[\s ]+\</g, '><')
-    .replace(/\>[\s ]+/g, '>')
+  // str = str
+  //   .replace(/\n/g, '')
+  //   .replace(/[\s ]+\</g, '<')
+  //   .replace(/\>[\s ]+\</g, '><')
+  //   .replace(/\>[\s ]+/g, '>')
   return str
 }
 

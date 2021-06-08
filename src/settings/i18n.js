@@ -1,9 +1,9 @@
 import axios from 'axios'
 import i18n from 'i18next'
-import HTTPApi from 'i18next-http-backend/cjs'
+const HTTPApi = require('i18next-http-backend')
 
-require.context('../resources/translations', true, /\.(\w){2}-(\w){2}\.yml$/)
-
+var a = require.context('../resources/translations', true, /\.(\w){2}-(\w){2}\.yml$/)
+console.log(a)
 const config = {
   debug: false,
   fallbackLng: 'en-us',
@@ -22,11 +22,12 @@ const config = {
     wait: true,
   },
   backend: {
-    loadPath: './src/%ns%.%lng%.json',
+    loadPath: '/%ns%.%lng%.json',
     ajax: (url, options, callback) => {
       axios
         .get(url)
         .then(response => {
+          console.log(response)
           callback(JSON.stringify(response.data), response)
         })
         .catch(e => {

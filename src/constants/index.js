@@ -4,31 +4,49 @@ export const communicationStatus = {
   ERROR: 'error',
   CLIENT_ERROR: 'clientError',
   TIMEOUT: 'timeout',
-};
+}
 
 export const storage = {
   keys: {
     filters: 'LANDLORD_LAST_FILTERS',
   },
   version: 'v1',
-};
+}
 
 export const cookieNames = {
   token: 'CMSACCESSSESSION',
   landlordToken: 'LANDLORDACCESSSESSION',
-};
+}
 
 export const addStatus = {
   content: 0,
   map: 1,
   admin: 2,
-};
+}
 
-export const locales = ['EN_US', 'EN_GB', 'ZH_CN', 'DE_DE', 'EL_CY', 'EL_GR',
-  'ES_LA', 'ES_ES', 'FR_FR', 'IT_IT', 'JA_JP', 'KO_KR', 'PT_BR', 'RU_RU', 'TH_TH',
-  'TR_TR', 'ZH_HK', 'ZH_TW', 'VI_VN'];
+export const locales = [
+  'EN_US',
+  'EN_GB',
+  'ZH_CN',
+  'DE_DE',
+  'EL_CY',
+  'EL_GR',
+  'ES_LA',
+  'ES_ES',
+  'FR_FR',
+  'IT_IT',
+  'JA_JP',
+  'KO_KR',
+  'PT_BR',
+  'RU_RU',
+  'TH_TH',
+  'TR_TR',
+  'ZH_HK',
+  'ZH_TW',
+  'VI_VN',
+]
 
-export const offerTypes = ['VOUCHER', 'DISCOUNT', 'CASHBACK', 'GROUP_OFFER', 'PROMOTION'];
+export const offerTypes = ['VOUCHER', 'DISCOUNT', 'CASHBACK', 'GROUP_OFFER', 'PROMOTION']
 
 export const offerType = {
   VOUCHER: 'VOUCHER',
@@ -36,57 +54,57 @@ export const offerType = {
   CASHBACK: 'CASHBACK',
   GROUP_OFFER: 'GROUP_OFFER',
   PROMOTION: 'PROMOTION',
-};
+}
 
-export const tenancyUnitTypes = ['MONTH', 'WEEK', 'DAY'];
+export const tenancyUnitTypes = ['MONTH', 'WEEK', 'DAY']
 
 export const mapType = {
   property: 'property',
   city: 'city',
-};
+}
 
 export const endDate = {
   yes: 'haveEndDate',
   no: 'notHaveEndDate',
-};
+}
 
 export const offerCategory = {
   exclusive: true,
   nonExclusize: false,
-};
+}
 
 export const operateType = {
   edit: 'edit',
   add: 'add',
-};
+}
 
 export const displayForm = {
   page: 'page',
   modal: 'modal',
-};
+}
 
 export const offerOwnerType = {
   student: 'INTERNAL',
   landlord: 'LANDLORD',
-};
+}
 
-export const displayType = ['CN', 'GB', 'US', 'AU', 'IN', 'JP', 'KR'];
+export const displayType = ['CN', 'GB', 'US', 'AU', 'IN', 'JP', 'KR']
 
 export const displaySetting = {
   default: 'default',
   accordingIPAddress: 'according_ip_address',
-};
+}
 
-export const userRole = 'content_manager';
+export const userRole = 'content_manager'
 
-export const landlordRole = 'landlord';
+export const landlordRole = 'landlord'
 
 export const sortDirectionMapping = {
   ascend: 'ASCENDING',
   descend: 'DESCENDING',
   ASCENDING: 'ascend',
   DESCENDING: 'descend',
-};
+}
 
 export const sortByMapping = {
   updatedAt: 'UPDATED_AT',
@@ -107,7 +125,7 @@ export const sortByMapping = {
   DISTINCTION_TYPE_NAME: 'distinctionTypeName',
   PRICE_MIN: 'price',
   NAME: 'NAME',
-};
+}
 
 export const countrySortByMapping = {
   countrySlug: 'SLUG',
@@ -115,29 +133,29 @@ export const countrySortByMapping = {
   currencyCode: 'CURRENCY_CODE',
   numOfProperties: 'PUBLISHED_PROPERTIES',
   updatedAt: 'UPDATED_AT',
-};
+}
 
 export const citySortByMapping = {
   updatedAt: 'UPDATED_AT',
   name: 'NAME',
   numOfProperties: 'PROPERTIES',
   rank: 'RANK',
-};
+}
 
 export const areaSortByMapping = {
   name: 'NAME',
   updatedAt: 'UPDATED_AT',
   numOfProperties: 'PUBLISHED_PROPERTIES',
-};
+}
 
 export const universitySortByMapping = {
   commonNamesCount: 'NAME',
   updatedAt: 'UPDATED_AT',
-};
+}
 
 export const accountSortByMapping = {
   updatedAt: 'UPDATED_AT',
-};
+}
 
 export const propertyListingForm = {
   statuses: {
@@ -168,7 +186,7 @@ export const propertyListingForm = {
     exact: 'EXACT',
     range: 'RANGE',
   },
-};
+}
 
 export const unitTypesForm = {
   category: {
@@ -206,16 +224,16 @@ export const unitTypesForm = {
     sharedNonEnsuite: 'SHARED_NON_ENSUITE',
     mixed: 'MIXED',
   },
-};
+}
 
-export const googleMapKey = 'AIzaSyAo3z-iOKf-Mto5TsHcsjXylWdxCt7zZDk';
+export const googleMapKey = 'AIzaSyAo3z-iOKf-Mto5TsHcsjXylWdxCt7zZDk'
 
 export const updateMutation = {
   UPDATE: 'UPDATE',
   DELETE: 'DELETE',
   INSERT: 'INSERT',
   NEW: 'NEW',
-};
+}
 
 export const propertyState = {
   AVAILABLE_WITH_PRICE: 'AVAILABLE_WITH_PRICE',
@@ -223,26 +241,26 @@ export const propertyState = {
   COMING_SOON: 'COMING_SOON',
   SOLD_OUT: 'SOLD_OUT',
   INACTIVE: 'INACTIVE',
-};
+}
 
 export const locationType = {
   COUNTRY_TYPE: 'Country',
   CITY_TYPE: 'City',
   AREA_TYPE: 'Area',
   UNIVERSITY_TYPE: 'University',
-};
+}
 
 export const locationTabType = {
   DETAILS: 'details',
   CONTENT: 'content',
   SEO: 'seo',
-};
+}
 
 export const depositType = {
   FIXED_AMOUNT: 'FIXED_AMOUNT',
   PER_BILLING_CYCLE: 'PER_BILLING_CYCLE',
   DEPOSIT_PERCENTAGE: 'DEPOSIT_PERCENTAGE',
-};
+}
 
 export const draftType = {
   EDITING: 'EDITING',
@@ -250,7 +268,7 @@ export const draftType = {
   APPROVED: 'APPROVED',
   REJECTED: 'REJECTED',
   EXPIRED: 'EXPIRED',
-};
+}
 
 export const platformEntity = {
   PROPERTIES_PROPERTIES: 'properties.properties',
@@ -273,28 +291,33 @@ export const platformEntity = {
   ORDER_RECEIVES: 'payments.order_receivables',
   ORDER_REFUNDS: 'payments.order_refunds',
   BOOKINGS_OPPORTUNITIES: 'bookings.opportunities',
-};
+}
 export const entityAction = {
   CREATE: 'C',
   READ: 'R',
   UPDATE: 'U',
   DELETE: 'D',
-};
+}
 
 export const pmsAllowRoles = [
-  'admin', 'pms_landlord', 'content_manager_level_2',
-  'content_manager', 'regional_supply_head', 'supply', 'financial',
-];
+  'admin',
+  'pms_landlord',
+  'content_manager_level_2',
+  'content_manager',
+  'regional_supply_head',
+  'supply',
+  'financial',
+]
 
 export const createCmsUserType = {
   EMAIL: 'EMAIL',
-};
+}
 
 export const contractStatus = {
   ACTIVE: 'ACTIVE',
   INACTIVE: 'INACTIVE',
   EXPIRED: 'EXPIRED',
-};
+}
 
 export const mappingRoles = {
   ADMIN: 'admin',
@@ -303,4 +326,4 @@ export const mappingRoles = {
   REGIONAL_SUPPLY_HEAD: 'regional_supply_head',
   SUPPLY: 'supply',
   FINANCIAL: 'financial',
-};
+}

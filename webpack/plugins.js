@@ -22,6 +22,7 @@ module.exports = {
       },
     ],
     "jsx-control-statements",
+    "@babel/plugin-syntax-dynamic-import",
     ['@babel/plugin-proposal-decorators', { legacy: true }],
     ['@babel/plugin-proposal-class-properties'],
   ],
