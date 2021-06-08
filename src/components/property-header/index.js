@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import document from 'global/document';
+
 import classNames from 'classnames';
 import generatePath from '~settings/routing';
 import { Tooltip, Popover, Button } from 'antd';

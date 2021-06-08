@@ -1,0 +1,33 @@
+@import '~global-css/atoms/forms';
+@import '~global-css/mixins/fonts';
+
+@mixin checkbox-field {
+  &__label {
+    @include font-weight('normal');
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-left: 2rem;
+    color: $color-silver-chalice;
+    font-size: $type-12px;
+    line-height: $type-20px;
+    cursor: pointer;
+
+    &:before {
+      @extend %checkbox-style;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+
+    &:checked {
+      & ~ label {
+        &:before {
+          @extend %checkbox-checked-style;
+        }
+      }
+    }
+  }
+}

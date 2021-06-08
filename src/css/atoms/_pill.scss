@@ -1,0 +1,64 @@
+@import '~global-css/variables';
+@import '~global-css/helpers/units';
+@import '~global-css/mixins/transition';
+
+@mixin pill {
+  @include transition(default, default, background-color, color, border);
+  display: inline-block;
+  padding: rem(8) rem(16);
+  border: 1px solid $color-silver-sand;
+  border-radius: 2px;
+  font-size: $type-12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@mixin pill-active {
+  border-color: $color-keppel;
+  background-color: $color-keppel;
+  color: $color-white;
+}
+
+@mixin pill-inactive {
+  border-color: $color-mercury;
+  background-color: $color-mercury;
+  color: $color-silver-sand;
+  cursor: default;
+}
+
+.pill {
+  input {
+    &[type=radio],
+    &[type=checkbox] {
+      &:checked ~ label {
+        @include pill-active;
+      }
+
+      &:disabled ~ label {
+        @include pill-inactive;
+      }
+    }
+  }
+
+  label {
+    @include pill;
+  }
+
+  &:hover {
+    label {
+      @include pill-active;
+    }
+  }
+
+  &--big {
+    label {
+      padding: rem(12) rem(16);
+    }
+  }
+
+  &--block {
+    label {
+      display: block;
+    }
+  }
+}

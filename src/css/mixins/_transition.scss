@@ -1,0 +1,50 @@
+$transition-duration-default: 0.3s;
+$transition-timing-function-default: ease-in-out;
+
+/**
+ * Creates a single transition declaration when given only one transition property,
+ * and expands it into three declarations when given more than one transition
+ * property.
+ *
+ * @param  {number} $transition-duration
+ * @param  {string} $transition-timing-function
+ * @param  {list} $transition-property...
+ *
+ * Specifying everything:
+ * @include transition(0.5s, ease-out, transform, opacity);
+ * @include transition(0.5s, ease-out, opacity);
+ *
+ * Don't override defaults:
+ * @include transition(default, default, transform, opacity);
+ * @include transition(default, default, transform);
+ *
+ * Note: there is a bug with the parser used by SASS-lint, when combining
+ * default values and spread arguments. That is why this mixin's call does notuse
+ * default values for transition-duration and transition-timing-function. Related issue:
+ * https://github.com/tonyganch/gonzales-pe/issues/219
+ */
+@mixin transition(
+  $transition-duration,
+  $transition-timing-function,
+  $transition-property...
+) {
+  $transition-duration: if(
+    variable-exists(transition-duration) and $transition-duration != default,
+    $transition-duration,
+    $transition-duration-default
+  );
+
+  $transition-timing-function: if(
+    variable-exists(transition-timing-function) and $transition-timing-function != default,
+    $transition-timing-function,
+    $transition-timing-function-default
+  );
+
+  @if length($transition-property) == 1 {
+    transition: $transition-property $transition-duration $transition-timing-function;
+  } @elseif length($transition-property) > 1 {
+    transition-duration: $transition-duration;
+    transition-property: $transition-property;
+    transition-timing-function: $transition-timing-function;
+  }
+}

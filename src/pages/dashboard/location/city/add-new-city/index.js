@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import document from 'global/document';
+
 import classNames from 'classnames';
 import { Button, Icon, Select, Form, Input, message } from 'antd';
 import modal from '~components/modal';

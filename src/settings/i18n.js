@@ -1,8 +1,8 @@
-import axios from 'axios';
-import i18n from 'i18next';
-import HTTPApi from 'i18next-http-backend';
+import axios from 'axios'
+import i18n from 'i18next'
+import HTTPApi from 'i18next-http-backend/cjs'
 
-require.context('~translations/', true, /\.(\w){2}-(\w){2}\.yml$/);
+require.context('../resources/translations', true, /\.(\w){2}-(\w){2}\.yml$/)
 
 const config = {
   debug: false,
@@ -22,20 +22,23 @@ const config = {
     wait: true,
   },
   backend: {
-    loadPath: '/bundles/microapp-cms/%ns%.%lng%.json',
+    loadPath: './src/%ns%.%lng%.json',
     ajax: (url, options, callback) => {
-      axios.get(url).then((response) => {
-        callback(JSON.stringify(response.data), response);
-      }).catch((e) => {
-        callback(null, {
-          status: 404,
-        });
-        throw (e);
-      });
+      axios
+        .get(url)
+        .then(response => {
+          callback(JSON.stringify(response.data), response)
+        })
+        .catch(e => {
+          callback(null, {
+            status: 404,
+          })
+          throw e
+        })
     },
   },
-};
+}
 
-i18n.use(HTTPApi).init(config);
+i18n.use(HTTPApi).init(config)
 
-export default i18n;
+export default i18n

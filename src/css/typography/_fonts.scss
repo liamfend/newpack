@@ -1,0 +1,52 @@
+@import '~global-css/variables';
+@import '~global-css/typography/font-smoothing';
+@import '~global-css/typography/font-face';
+
+html {
+  @extend %main-font;
+  @include font-smoothing(on);
+  color: $color-tundora;
+  font-size: $type-16px;
+  word-wrap: break-word;
+
+  * {
+    font-family: inherit; // override normalize
+  }
+
+  &:lang(zh-cn),
+  &:lang(zh-tw),
+  &:lang(ko-kr),
+  &:lang(ja-jp) {
+
+    u,
+    strike,
+    em,
+    i,
+    a {
+      text-decoration: none !important;
+    }
+  }
+}
+
+%main-font {
+  font-family: $font-avenir-next;
+
+  // override font on languages that don't support Avenir Next
+  &:lang(el),
+  &:lang(vi-vn),
+  &:lang(ko-kr),
+  &:lang(ja-jp),
+  &:lang(th-th),
+  &:lang(ru-ru) {
+    font-family: $font-system;
+  }
+
+  &:lang(zh-tw),
+  &:lang(zh-hk) {
+    font-family: $font-cn-traditional;
+  }
+
+  &:lang(zh-cn) {
+    font-family: $font-cn;
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "default": "+44 203 817 0080",
+  "regional": {
+    "NA": [
+      {
+        "regional_office_country_code": "US",
+        "number": "+1 718 7099 007",
+        "href": "+1 718 7099 007",
+        "type": "free",
+        "key": "global.footer.text.call_us.toll_free"
+      }
+    ],
+    "SA": [
+      {
+        "regional_office_country_code": "US",
+        "number": "+1 718 7099 007",
+        "href": "+1 718 7099 007",
+        "type": "free",
+        "key": "global.footer.text.call_us.toll_free"
+      }
+    ]
+  },
+  "AU": [
+    {
+      "number": "1 800 161 901",
+      "href": "1 800 161 901",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "CA": [
+    {
+      "number": "1-888-242-0912",
+      "href": "1-888-242-0912",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "CN": [
+    {
+      "number": "+86 400 920 0606",
+      "href": "400 920 0606",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    },
+    {
+      "number": "+86 21 3327 6550",
+      "href": "+86 21 3327 6550",
+      "type": "local",
+      "key": "global.header.phone.cn"
+    }
+  ],
+  "DE": [
+    {
+      "number": "0800 664 8879",
+      "href": "0800 664 8879",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "FR": [
+    {
+      "number": "08 00 94 22 60",
+      "href": "08 00 94 22 60",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "HK": [
+    {
+      "number": "+852 93077740",
+      "href": "+852 93077740",
+      "type": "local",
+      "key": "global.header.phone.hk"
+    }
+  ],
+  "MO": [
+    {
+      "number": "800 960 099",
+      "href": "800 960 099",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "ID": [
+    {
+      "number": "001-803-017-2614",
+      "href": "001-803-017-2614",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "IN": [
+    {
+      "number": "0008 001 009204",
+      "href": "0008 001 009204",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "IT": [
+    {
+      "number": "+44 203 817 0080",
+      "href": "+44 203 817 0080",
+      "type": "local",
+      "key": "global.header.phone.gb"
+    }
+  ],
+  "JP": [
+    {
+      "number": "0120-994-817",
+      "href": "0120-994-817",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    },
+    {
+      "number": "81345107992",
+      "href": "81345107992",
+      "type": "local",
+      "key": "global.header.phone.jp"
+    }
+  ],
+  "MY": [
+    {
+      "number": "1-800-88-6532",
+      "href": "1-800-88-6532",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    },
+    {
+      "number": "03-62074714",
+      "href": "03-62074714",
+      "type": "local",
+      "key": "global.header.phone.my"
+    }
+  ],
+  "NL": [
+    {
+      "number": "0800-0222114",
+      "href": "0800-0222114",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "NG": [
+    {
+      "number": "+234 708 060 1724",
+      "href": "+234 708 060 1724",
+      "type": "local",
+      "key": "global.header.phone.ng"
+    }
+  ],
+  "PK": [
+    {
+      "number": "+92 21 38799808",
+      "href": "+92 21 38799808",
+      "type": "local",
+      "key": "global.header.phone.pk"
+    }
+  ],
+  "SA": [
+    {
+      "number": "800 814 5677",
+      "href": "800 814 5677",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "SE": [
+    {
+      "number": "020-109-263",
+      "href": "020-109-263",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "SG": [
+    {
+      "number": "1800 622 7292",
+      "href": "1800 622 7292",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "KR": [
+    {
+      "number": "+82 704 515 4040",
+      "href": "+82 704 515 4040",
+      "type": "local",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "ES": [
+    {
+      "number": "91 123 32 05",
+      "href": "91 123 32 05",
+      "type": "local",
+      "key": "global.header.phone.es"
+    }
+  ],
+  "TW": [
+    {
+      "number": "0800 666 719",
+      "href": "0800 666 719",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    },
+    {
+      "number": "+886 2 2650 7211",
+      "href": "+886 2 2650 7211",
+      "type": "local",
+      "key": "global.header.phone.tw"
+    }
+  ],
+  "TH": [
+    {
+      "number": "1800-011-012",
+      "href": "1800-011-012",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "TR": [
+    {
+      "number": "0850 390 20 63",
+      "href": "0850 390 20 63",
+      "type": "local",
+      "key": "global.header.phone.tr"
+    }
+  ],
+  "GB": [
+    {
+      "number": "0800 652 4582",
+      "href": "0800 652 4582",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    },
+    {
+      "number": "+44 203 817 0080",
+      "href": "+44 203 817 0080",
+      "type": "local",
+      "key": "global.header.phone.gb"
+    }
+  ],
+  "US": [
+    {
+      "number": "1-855-839-0374",
+      "href": "1-855-839-0374",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ],
+  "VN": [
+    {
+      "number": "1228-0076",
+      "href": "1228-0076",
+      "type": "local",
+      "key": "global.header.phone.vn"
+    }
+  ],
+  "PT": [
+    {
+      "number": "800 180 006",
+      "href": "800 180 006",
+      "type": "free",
+      "key": "global.footer.text.call_us.toll_free"
+    }
+  ]
+}

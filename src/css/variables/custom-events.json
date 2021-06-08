@@ -1,0 +1,106 @@
+{
+  "clientInfo": {
+    "name": "clientInfo",
+    "description": "clientInfo event when fetched user client information, ip/country/region"
+  },
+  "geoIpPhoneNumberInitialised": {
+    "name": "geoIpPhoneNumberInitialised",
+    "description": "initialised geoIp data with formatted data"
+  },
+  "loginUser": {
+    "name": "loginUser",
+    "description": "login user"
+  },
+  "userLogin": {
+    "name": "userLogin",
+    "description": "userLogin event when user logged in"
+  },
+  "userLogged": {
+    "name": "userLogged",
+    "description": "userLogged event when user logged in on page load"
+  },
+  "partnerCookieSet": {
+    "name": "partnerCookieSet",
+    "description": "Fire when partner cookie (partner_info) has successfully set"
+  },
+  "logoutUser": {
+    "name": "logoutUser",
+    "description": "logout user"
+  },
+  "userLogout": {
+    "name": "userLogout",
+    "description": "userLogout event when user logged out"
+  },
+  "setupAutoCompleteTriggers": {
+    "name": "setupAutoCompleteTriggers",
+    "description": "reset autoComplete triggers event, use on dynamic changes on search element"
+  },
+  "autocompletePreFilled": {
+    "name": "autocompletePreFilled",
+    "description": "events when user select dropdown list of autocomplete"
+  },
+  "setupCountryCodeTriggers": {
+    "name": "setupCountryCodeTriggers",
+    "description": "reset country code component"
+  },
+  "countryCodeChanged": {
+    "name": "countryCodeChanged",
+    "description": "country code change event"
+  },
+  "receivedUser": {
+    "name": "receivedUserTriggers",
+    "description": "user request event when received user information"
+  },
+  "enquirySuccess": {
+    "name": "enquirySuccessTriggers",
+    "description": "enquiry success event when a enquiry submitting success"
+  },
+  "modalClose": {
+    "name": "modalCloseTriggers",
+    "description": "modal close event when a modal close"
+  },
+  "trakReady": {
+    "name": "trakReady",
+    "description": "trak is already added"
+  },
+  "liveChatOpeningNotice": {
+    "name": "liveChatOpeningNotice",
+    "description": "notice to open the live chat"
+  },
+  "i18nInitialised": {
+    "name": "i18nInitialised",
+    "description": "fire when i18next initialised"
+  },
+  "staticHashInitialised": {
+    "name": "staticHashInitialised",
+    "description": "fire when static hash ready"
+  },
+  "wishListUpdateSuccess": {
+    "name": "wishListUpdateSuccess",
+    "description": "wish list update success event"
+  },
+  "appReady": {
+    "name": "appReady",
+    "description": "app ready event"
+  },
+  "pageReady": {
+    "name": "pageReady",
+    "description": "page ready event"
+  },
+  "showContactBar": {
+    "name": "showContactBar",
+    "description": "show contact bar"
+  },
+  "wulaiReady": {
+    "name": "wulaiReady",
+    "description": "laiye load success"
+  },
+  "intercomReady": {
+    "name": "intercomReady",
+    "description": "intercom setup success"
+  },
+  "updateCouponViewed": {
+    "name": "updateCouponViewed",
+    "description": "update student info couponViewed to true success"
+  }
+}

@@ -1,0 +1,41 @@
+@import '~global-css/variables';
+
+@mixin font-weight ($weight) {
+  @if $weight == 'normal' {
+    font-weight: $weight-normal;
+  } @else if $weight == 'bold' {
+    font-weight: $weight-demi-bold;
+
+    // Increase font weight for languages that don't support Avenir Next
+    &:lang(el),
+    &:lang(zh-cn),
+    &:lang(vi-vn),
+    &:lang(zh-tw),
+    &:lang(zh-hk),
+    &:lang(ko-kr),
+    &:lang(ja-jp),
+    &:lang(th-th),
+    &:lang(ru-ru) {
+      font-weight: $weight-semi-bold;
+    }
+  }
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else if $value == inherit {
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin font-style($size: inherit, $line-height: inherit, $color: inherit) {
+  color: $color;
+  font-size: $size;
+  line-height: $line-height;
+}

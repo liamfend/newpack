@@ -1,4 +1,4 @@
-import document from 'global/document';
+
 
 export const fireElementCustomEvent = (element, eventName, data = null) => {
   let event = null;

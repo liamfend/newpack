@@ -1,28 +1,14 @@
-button {
-  background: transparent;
-}
 
-.ant-input-number-input {
-  padding: 4px 11px;
-}
-
-// sass-lint:disable variable-for-property
-.ant-form-item-control {
-  line-height: normal;
-}
-// sass-lint:disable variable-for-property
-
-@import '~microapp-frontend-base/dist/global.css';
-@import '~global-css/all';
-@import '~global-css/grid';
-@import '~global-css/molecules/form-field';
-@import '~global-css/molecules/checkbox-field';
+@import 'dist/global.css';
+@import 'css/all';
+@import 'css/grid';
+@import 'css/molecules/form-field';
+@import 'css/molecules/checkbox-field';
 @import '~react-quill/dist/quill.snow.css';
 @import '~slick-carousel/slick/slick.css';
 @import '~slick-carousel/slick/slick-theme.css';
 @import '~video-react/dist/video-react.css';
 @import '~rc-table/assets/animation.css';
-
 @import 'components/global-search/index';
 @import 'components/loading/index';
 @import 'components/header/index';
@@ -134,7 +120,7 @@ button {
 @import 'pages/help-center/commission-and-contract/index';
 @import 'pages/help-center/my-account/index';
 @import 'components/special-offer/map/add-property/index';
-@import 'components/property-status-filter/index';
+// @import 'components/property-status-filter/index';
 @import 'components/table-column-search/index';
 @import 'pages/dashboard/contract/index';
 @import 'pages/dashboard/contract/contract-filter/index';
@@ -169,5 +155,19 @@ button {
 @import 'pages/dashboard/reconciliation/bulk-history/index';
 
 .ant-select-dropdown-menu-item-selected {
-  @include font-weight(bold);
+	// @include font-weight(bold);
 }
+
+button {
+	background: transparent;
+}
+
+.ant-input-number-input {
+	padding: 4px 11px;
+}
+
+// sass-lint:disable variable-for-property
+.ant-form-item-control {
+	line-height: normal;
+}
+// sass-lint:disable variable-for-property

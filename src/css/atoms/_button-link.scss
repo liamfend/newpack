@@ -1,0 +1,11 @@
+@import '~global-css/variables';
+
+.btn-link {
+  border: none;
+  background: transparent;
+  color: $color-keppel;
+  font-size: $type-14px;
+  line-height: $type-16px;
+  text-decoration: underline;
+  cursor: pointer;
+}

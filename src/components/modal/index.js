@@ -5,7 +5,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import document from 'global/document';
+
 import window from 'global/window';
 import classNames from 'classnames';
 

@@ -1,0 +1,16 @@
+{
+  "z-negative": -1,
+  "z-base": 1,
+  "z-low": 10,
+  "z-mid": 50,
+  "z-big": 100,
+  "z-high": 1000,
+  "z-on-top": 5000,
+  "z-top-swap": 10000,
+  "z-dropdown": 50000,
+  "z-header": 100000,
+  "z-overlay": 1000000,
+  "z-modal": 10000000,
+  "z-above-modal": 50000000,
+  "z-king": 100000000
+}

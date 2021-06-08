@@ -1,0 +1,75 @@
+@import '~global-css/variables';
+@import '~susy/sass/susy';
+
+$medium-breakpoint-px: $medium-breakpoint * 1px;
+$large-breakpoint-px: $large-breakpoint * 1px;
+$extra-large-breakpoint-px: $extra-large-breakpoint * 1px;
+
+// grid configurations
+$susy: (
+	columns: $grid-column-count-small, 
+  math: fluid,
+  gutters: 0.5,
+  global-box-sizing: border	ox,
+  gutter-p	ition: after,
+  container: auto	  
+)		;
+
+$medium-size-config: (
+	columns: $grid-column-count-medium,
+	gutters: 24/29.8,
+	gutter-position: split,
+	
+);
+
+$large-size-config: (
+	columns: $grid-column-count-large,
+	gutters: 2/5,
+	gutter-position: split,
+	
+);
+
+@mixin respond-to($media) {
+	@if $media == small-only {
+		@media only screen and (max-width: ($medium-breakpoint-px - 1px)) { @content; }
+	}
+
+	@else if $media == medium-only {
+		@include susy-breakpoint($medium-breakpoint-px ($large-breakpoint-px - 1px), $medium-size-config) { @content; }
+	}
+
+	@else if $media == medium-and-up {
+		@include susy-breakpoint($medium-breakpoint-px, $medium-size-config) { @content; }
+	}
+
+	@else if $media == large-and-up {
+		@include susy-breakpoint($large-breakpoint-px, $large-size-config) { @content; }
+	}
+
+	@else if $media == extra-large-and-up {
+		@include susy-breakpoint($extra-large-breakpoint-px, $large-size-config) { @content; }
+	}
+}
+
+// creates a centered container with a max-width
+%max-width-container {
+	@include respond-to(medium-and-up) {
+		@include container($medium-max-width);
+	}
+
+	@include respond-to(medium-only) {
+		@include container($medium-max-width);
+	}
+
+	@include respond-to(large-and-up) {
+		@include container($large-max-width);
+	}
+
+	@include respond-to(extra-large-and-up) {
+		@include container($large-max-width);
+	}
+}
+
+%max-width-container-desktop {
+	@include container($large-max-width);
+}

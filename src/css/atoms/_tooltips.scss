@@ -1,0 +1,147 @@
+@import '~global-css/mixins/triangle';
+@import '~global-css/mixins/fonts';
+@import '~global-css/svgs';
+
+.tooltip {
+  &--active {
+    .tooltip__modal {
+      transform: translateY(rem(-16));
+      opacity: 1;
+      visibility: visible;
+
+      &--centered {
+        transform: translate(-50%, rem(-16));
+      }
+    }
+  }
+
+  @include respond-to(large-and-up) {
+    &:hover,
+    &:focus {
+      .tooltip__modal {
+        transform: translateY(rem(-16));
+        opacity: 1;
+        visibility: visible;
+
+        &--centered {
+          transform: translate(-50%, rem(-16));
+        }
+      }
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    position: relative;
+    width: rem(16);
+    height: rem(16);
+    margin-left: rem(8);
+    background: url($svg-tooltip) no-repeat;
+    cursor: pointer;
+
+    &--large {
+      width: rem(24);
+      height: rem(24);
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    top: calc(100% + 16px + 12px); // icon height + transform effect height(16px) + triangle height(8px) + spaces(4px)
+    left: calc(50% - 24px); // half icon size - padding(12px) - half triangle width(12px)
+    width: rem(240);
+    padding: rem(16);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+    border-radius: 2px;
+    background-color: $color-shuttle-gray;
+    color: $color-white;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    z-index: $z-low;
+
+    &:after {
+      @include triangle(rem(16), $color-shuttle-gray, 'up');
+      position: absolute;
+      top: rem(-8);
+      content: '';
+    }
+
+    &__section {
+      display: block;
+      padding-bottom: 1rem;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+
+    &--centered {
+      @include font-weight(bold);
+      left: 50%;
+      width: auto;
+      padding-top: rem(8);
+      padding-bottom: rem(8);
+      transform: translateX(-50%);
+      font-size: $type-12px;
+      line-height: $type-12px;
+      white-space: nowrap;
+
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__heading {
+    @include font-weight(bold);
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: $type-14px;
+    line-height: $type-16px;
+  }
+
+  &__description {
+    @include font-weight(normal);
+    display: block;
+    margin: rem(8) 0 0;
+    padding: 0;
+    font-size: $type-12px;
+    line-height: $type-16px;
+    text-transform: none;
+
+    &--single {
+      display: block;
+      margin: 0;
+      font-size: $type-12px;
+      line-height: $type-16px;
+    }
+  }
+
+  &__additional {
+    display: none;
+  }
+
+  &__more {
+    color: $color-white;
+    text-decoration: underline;
+    text-indent: 1px;
+    cursor: pointer;
+  }
+
+  &__expand-control {
+    display: none;
+
+    &:checked {
+      ~ .tooltip__description .tooltip__additional {
+        display: inline;
+      }
+
+      ~ .tooltip__description .tooltip__more {
+        display: none;
+      }
+    }
+  }
+}

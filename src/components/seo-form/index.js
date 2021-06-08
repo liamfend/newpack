@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import document from 'global/document';
+
 import classNames from 'classnames';
 import { Form, Row, Col, Input, Checkbox, Tooltip } from 'antd';
 import updatePayloadDetails, { handleSEOTemplate } from '~helpers/location';

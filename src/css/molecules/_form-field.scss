@@ -1,0 +1,87 @@
+@import '~global-css/atoms/forms';
+@import '~global-css/mixins/fonts';
+
+@mixin form-field() {
+  position: relative;
+  margin-bottom: 24px;
+
+  &__label {
+    @extend %form-label;
+  }
+
+  &__label-ancillary {
+    @include font-weight('normal');
+    float: right;
+
+    a {
+      border: 0;
+      color: $color-keppel;
+      text-decoration: none;
+    }
+  }
+
+  &__input {
+    @extend %form-input;
+  }
+
+  &__textarea {
+    @extend %form-textarea;
+  }
+
+  &--error {
+    textarea {
+      background: url($svg-cross) no-repeat;
+      background-size: 16px;
+    }
+
+    textarea {
+      padding-right: 48px; // allow space for error icon
+      background-position: calc(100% - 16px) 20px;
+    }
+
+    textarea,
+    select {
+      border-color: $color-thunderbird;
+    }
+
+    input {
+      &:not(.selected-phone-number) {
+        border-color: $color-thunderbird;
+        background: url($svg-cross) no-repeat;
+        background-position: calc(100% - 16px) 50%;
+        background-size: 16px;
+      }
+    }
+  }
+
+  &--valid {
+    textarea {
+      background: url($svg-tick) no-repeat;
+      background-size: 16px;
+    }
+
+    textarea {
+      padding-right: 48px; // allow space for valid icon
+      background-position: calc(100% - 16px) 22px;
+    }
+
+    input {
+      &:not(.selected-phone-number) {
+        background: url($svg-tick) no-repeat;
+        background-position: calc(100% - 16px) 50%;
+        background-size: 16px;
+      }
+    }
+  }
+
+  &__error-message {
+    margin: 8px 0 0;
+    color: $color-thunderbird;
+    font-size: $type-14px;
+    line-height: $type-20px;
+  }
+}
+
+.form-field {
+  @include form-field();
+}

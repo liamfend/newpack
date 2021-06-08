@@ -1,0 +1,38 @@
+@import '~global-css/atoms/forms';
+
+@mixin dropdown-with-input-field() {
+  $dropdown-width: 100px;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+
+  &__label {
+    @extend %form-label;
+    flex: 0 0 100%;
+  }
+
+  &__dropdown {
+    @extend %form-dropdown;
+    flex: 0 1 auto;
+    width: $dropdown-width;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &:focus {
+      border-color: $color-tundora;
+      outline: none;
+    }
+  }
+
+  &__input {
+    @extend %form-input;
+    flex: 0 1 auto;
+    width: calc(100% - #{$dropdown-width});
+    padding-left: 8px;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

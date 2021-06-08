@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import document from 'global/document';
+
 import { connect } from 'react-redux';
 import { get } from 'lodash';
 import { useLocation, useHistory } from 'react-router-dom';

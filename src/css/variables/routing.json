@@ -1,0 +1,1185 @@
+{
+  "de-de": {
+    "path": "de-de",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "el-cy": {
+    "path": "el-cy",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "el-gr": {
+    "path": "el-gr",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "en-gb": {
+    "path": "en-gb",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "en-us": {
+    "path": "",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "es-es": {
+    "path": "es-es",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "es-la": {
+    "path": "es-la",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "fr-fr": {
+    "path": "fr-fr",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "it-it": {
+    "path": "it-it",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "ja-jp": {
+    "path": "ja-jp",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "ko-kr": {
+    "path": "ko-kr",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "pt-br": {
+    "path": "pt-br",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "ru-ru": {
+    "path": "ru-ru",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "th-th": {
+    "path": "th-th",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "tr-tr": {
+    "path": "tr-tr",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "vi-vn": {
+    "path": "vi-vn",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "zh-cn": {
+    "path": "",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles_cn": {
+        "path": "//cn.student.com/articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "zh-hk": {
+    "path": "zh-hk",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "zh-tw": {
+    "path": "zh-tw",
+    "childRoutes": {
+      "home": {
+        "path": ""
+      },
+      "help": {
+        "path": "help"
+      },
+      "how_it_works": {
+        "path": "how-it-works"
+      },
+      "about": {
+        "path": "about"
+      },
+      "careers": {
+        "path": "careers"
+      },
+      "list_your_property": {
+        "path": "list-your-property"
+      },
+      "partner": {
+        "path": "p/new-student"
+      },
+      "articles": {
+        "path": "articles"
+      },
+      "blog": {
+        "path": "blog"
+      },
+      "city_property_listing": {
+        "path": "{countrySlug}/{citySlug}"
+      },
+      "area_property_listing": {
+        "path": "{countrySlug}/{citySlug}/{areaSlug}"
+      },
+      "university_property_listing": {
+        "path": "{countrySlug}/{citySlug}/u/{universitySlug}"
+      },
+      "property_detail": {
+        "path": "{countrySlug}/{citySlug}/p/{propertySlug}"
+      },
+      "browse_country": {
+        "path": "{countrySlug}"
+      },
+      "newsletter_signup": {
+        "path": "newsletter/subscribe"
+      },
+      "write_a_review": {
+        "path": "review?pageId={pageId}"
+      },
+      "affiliate": {
+        "path": "mlp/affiliate?Header"
+      }
+    }
+  },
+  "nonLocalised": {
+    "path": "/",
+    "childRoutes": {
+      "blog": {
+        "path": "blog",
+        "localeSpecific": "en-us"
+      },
+      "articles": {
+        "path": "articles",
+        "localeSpecific": "en-us"
+      },
+      "news": {
+        "path": "news",
+        "localeSpecific": "en-us"
+      },
+      "contact": {
+        "path": "contact"
+      },
+      "my-account": {
+        "path": "my-account",
+        "childRoutes": {
+          "login": {
+            "path": "login"
+          },
+          "signup": {
+            "path": "signup"
+          },
+          "forgot-password": {
+            "path": "forgot-password"
+          },
+          "my-applications": {
+            "path": "dashboard"
+          },
+          "application-details": {
+            "path": "my-details"
+          },
+          "my-wish-list": {
+            "path": "wish-list"
+          },
+          "recently-viewed": {
+            "path": "recently-viewed"
+          },
+          "my-coupons": {
+            "path": "my-coupons"
+          },
+          "account-settings": {
+            "path": "account-settings"
+          },
+          "payment-callback": {
+            "path": "payment/callback/{id}/{opportunity_listing_id}/{landlord_name}"
+          },
+          "my-requests": {
+            "path": "my-requests"
+          },
+          "my-bookings": {
+            "path": "my-bookings",
+            "childRoutes": {
+              "review": {
+                "path": "{bookingId}/review"
+              },
+              "bookingDetail": {
+                "path": "{bookingId}"
+              }
+            }
+          },
+          "my-details": {
+            "path": "my-details"
+          },
+          "quick-guides": {
+            "path": "quick-guides"
+          }
+        }
+      },
+      "get-user": {
+        "path": "microapp-home-page/ajax/user/{uuid}"
+      },
+      "get-user-records": {
+        "path": "microapp-student-portal/ajax/user/{uuid}/records"
+      },
+      "get-intercom-user-records": {
+        "path": "microapp-student-portal/ajax/user/intercom/{uuid}/records"
+      },
+      "get-intercom-visitor": {
+        "path": "microapp-search-results-page/ajax/user/intercom/visitor"
+      },
+      "get-journeys-current": {
+        "path": "microapp-student-portal/ajax/user/{uuid}/journeys/current"
+      },
+      "get-owner-id-by-email": {
+        "path": "microapp-student-portal/ajax/user/owner/{email}"
+      },
+      "short-term-default": {
+        "path": "short-term-lets"
+      },
+      "short-term": {
+        "path": "{countrySlug}/{citySlug}/short-term-lets"
+      },
+      "terms": {
+        "path": "terms",
+        "childRoutes": {
+          "cookies": {
+            "path": "cookies"
+          },
+          "privacy": {
+            "path": "privacy"
+          },
+          "acceptable-use": {
+            "path": "acceptableuse"
+          },
+          "terms_of_use": {
+            "path": "terms-of-use"
+          }
+        }
+      },
+      "sitemaps": {
+        "path": "sitemaps/v1"
+      }
+    }
+  }
+}
