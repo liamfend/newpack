@@ -1,18 +1,18 @@
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
-import './scss/index.scss'
+//import App from './App'
+//import './scss/index.scss'
 
-// const App = React.lazy(() => import('./App'))
+const App = React.lazy(() => import('./App'))
 //const Apps = React.lazy(() => import('./Apps'))
 
 ReactDOM.render(
-  <App>
+  <div>
     <Suspense fallback={<div>loading</div>}>
-      {' '}
-      <div>adfsd</div>{' '}
+      <App></App>
+      <div>adfsd</div>
     </Suspense>
-  </App>,
+  </div>,
   document.getElementById('root'),
 )
 

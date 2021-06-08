@@ -85,7 +85,7 @@ module.exports = function (webpackEnv) {
   }
 
   return {
-    // stats: 'minimal',
+    stats: 'minimal',
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     bail: isEnvProduction,
     devtool: isEnvProduction ? 'source-map' : isEnvDevelopment && 'cheap-module-source-map',
@@ -95,8 +95,8 @@ module.exports = function (webpackEnv) {
       pathinfo: isEnvDevelopment,
       filename: isEnvProduction
         ? 'static/js/[name].[contenthash:8].js'
-        : isEnvDevelopment && 'static/js/bundle.js',
-      publicPath: './',
+        : isEnvDevelopment && 'static/js/bundle.[name].js',
+      // publicPath: './',
       devtoolModuleFilenameTemplate: isEnvProduction
         ? info => path.relative(appSrc, info.absoluteResourcePath).replace(/\\/g, '/')
         : isEnvDevelopment && (info => path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')),
@@ -132,36 +132,6 @@ module.exports = function (webpackEnv) {
           // sourceMap: shouldUseSourceMap,
         }),
         new CssMinimizerPlugin(),
-        //     {
-        //     minimizerOptions: {
-        //         parallel: false,
-        //         // preset: [
-        //         //   'default',
-        //         //   {
-        //         //     discardComments: { removeAll: true },
-        //         //   },
-        //         // ],
-        //         processorOptions: {
-        //             parser: safePostCssParser,
-        //           },
-        //       },
-        // }
-        // This is only used in production mode
-        // new OptimizeCSSAssetsPlugin({
-        //     cssProcessorOptions: {
-        //         parser: safePostCssParser,
-        //         map: shouldUseSourceMap
-        //             ? {
-
-        //                 inline: false,
-        //                 annotation: true,
-        //             }
-        //             : false,
-        //     },
-        //     cssProcessorPluginOptions: {
-        //         preset: ['default', { minifyFontValues: { removeQuotes: false } }],
-        //     },
-        // }),
       ],
 
       splitChunks: {
@@ -250,7 +220,7 @@ module.exports = function (webpackEnv) {
               loader: require.resolve('file-loader'),
               exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.bin$/, /^$/],
               options: {
-                name: 'static/media/[name]cccc.[hash:8].[ext]',
+                name: 'static/media/[name].[hash:8].[ext]',
               },
             },
           ],
@@ -258,9 +228,6 @@ module.exports = function (webpackEnv) {
       ],
     },
     devServer: isEnvDevelopment && {
-      // proxy: { // proxy URLs to backend development server
-      //     '/api': 'http://localhost:3000'
-      // },
       port: 3000,
       contentBase: appPublic, // boolean | string | array, static file location
       compress: true, // enable gzip compression
@@ -271,7 +238,7 @@ module.exports = function (webpackEnv) {
     },
     plugins: [
       new WebpackBar(),
-      new CleanWebpackPlugin(),
+      isEnvProduction && new CleanWebpackPlugin(),
       new HtmlWebpackPlugin(
         Object.assign(
           {},
@@ -312,11 +279,11 @@ module.exports = function (webpackEnv) {
             concurrency: 100,
           },
         }),
-      isEnvProduction &&
-        new MiniCssExtractPlugin({
-          filename: 'static/css/[name].[contenthash:8].css',
-          chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
-        }),
+      //  isEnvProduction &&
+      new MiniCssExtractPlugin({
+        filename: 'static/css/[name].[contenthash:8].css',
+        chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
+      }),
     ].filter(Boolean),
   }
 }
