@@ -1,0 +1,67 @@
+.commission-and-contract {
+  height: 100%;
+  padding: rem(40);
+  overflow: auto;
+
+  .center-style__bold-line-container {
+    margin-bottom: rem(16);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__status-container {
+    margin-bottom: rem(32);
+  }
+
+  &__status {
+    white-space: nowrap;
+  }
+
+  &__status-label {
+    @include font-style($type-12px, $type-16px, $color-white);
+    @include font-weight(bold);
+    display: inline-block;
+    width: rem(58);
+    margin-right: rem(24);
+    padding: rem(2) 0 rem(3) rem(11);
+    border-bottom-left-radius: 20px;
+
+    &--inactive {
+      background-color: $color-coral-light;
+    }
+
+    &--active {
+      background-color: $color-wechat;
+    }
+
+    &--expire {
+      background-color: $color-silver-sand;
+    }
+  }
+
+  &__bouns {
+    @include font-style($type-12px, $type-16px, $color-white);
+    @include font-weight(bold);
+    display: inline-block;
+    position: relative;
+    margin: 0 rem(8);
+    padding: rem(1) rem(6) rem(1) rem(2);
+    border-radius: 2px;
+    background-color: $color-supernova;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: rem(-6);
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-right: 7px solid $color-supernova;
+      border-bottom: 9px solid transparent;
+      border-left: 0;
+      content: '';
+    }
+  }
+}

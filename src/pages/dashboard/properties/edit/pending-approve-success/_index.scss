@@ -1,0 +1,25 @@
+.pending-approve-success {
+  height: calc(100vh - 88px);
+  margin: rem(24) rem(32) 0;
+  padding: 15% 0 10%;
+  background: $color-white url('/bundles/microapp-cms/images/public/create-bg.png') 100% 100% no-repeat;
+  text-align: center;
+  overflow-y: scroll;
+
+  &__icon {
+    width: rem(112);
+    height: rem(64);
+    margin-bottom: rem(14);
+  }
+
+  &__title {
+    @include font-style($type-24px, $type-40px, $color-tundora);
+    @include font-weight(bold);
+  }
+
+  &__description {
+    @include font-style($type-18px, $type-40px, $color-tundora);
+    max-width: rem(800);
+    margin: 0 auto rem(40);
+  }
+}

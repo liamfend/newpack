@@ -1,0 +1,134 @@
+.billing {
+  height: 100%;
+
+  &__cards {
+    display: flex;
+    margin: rem(24) rem(32);
+    padding: rem(44) rem(72);
+    border-radius: 2px;
+    background-color: $color-white;
+  }
+
+  &__data-card {
+    display: inline-block;
+    width: 20%;
+    margin: 0;
+    text-align: center;
+
+    .ant-card-body {
+      margin: rem(8) auto rem(14);
+      text-align: center;
+    }
+
+    .ant-card-head-title {
+      color: $color-silver-chalice;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__card-value {
+    @include font-style($type-32px, $type-40px, $color-tundora);
+    @include font-weight(bold);
+  }
+
+  &__content {
+    height: calc(100% - 250px);
+    min-height: rem(300);
+    margin: rem(24) rem(32);
+    padding: rem(62) rem(32);
+    border-radius: 2px;
+    background-color: $color-white;
+  }
+
+  &__divider {
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: calc(100% - 120px);
+    border: 0;
+    background-color: $color-mercury;
+  }
+
+  &__card-btn {
+    @include font-style($type-16px, $type-24px, $color-silver-chalice);
+  }
+
+  &__transfer,
+  &__receivables {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    padding-left: rem(98);
+  }
+
+  &__transfer {
+    margin-right: rem(42);
+  }
+
+  &__receivables {
+    margin-left: rem(42);
+  }
+
+  &__title {
+    @include font-style($type-16px, $type-40px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0;
+  }
+
+  &__desc {
+    @include font-style($type-14px, $type-16px, $color-tundora);
+    display: block;
+  }
+
+  &__btn {
+    @include font-style($type-14px, $type-16px, $color-keppel);
+    margin-top: rem(20);
+    border: 1px solid $color-keppel !important;
+  }
+
+  &__svg-bg {
+    position: absolute;
+    left: 0;
+    width: rem(78);
+    height: rem(78);
+  }
+
+  &__svg {
+    width: rem(78);
+    height: rem(78);
+
+    &--transfer {
+      fill: $color-supernova;
+    }
+
+    &--receivables {
+      fill: $color-keppel;
+    }
+  }
+
+  &__link {
+    width: calc(50% - 12px);
+    margin: 0;
+    margin-bottom: rem(16);
+    padding: 0;
+    float: left;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      border-radius: 2px;
+      box-shadow: 1px 1px rem(6) 0 $color-mercury, -1px -1px rem(6) 0 $color-mercury;
+    }
+
+    &--even {
+      margin-right: rem(24);
+      clear: both;
+    }
+  }
+}

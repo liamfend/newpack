@@ -1,0 +1,89 @@
+.create-offer__card {
+  .create-offer-content {
+    &__input {
+      width: 368px;
+    }
+
+    &__radio {
+      margin-top: 8px;
+
+      &--display {
+        .ant-form-item {
+          margin: 0;
+        }
+      }
+    }
+
+    &__short-input {
+      width: 176px !important;
+    }
+
+    &__text-underline {
+      color: $color-keppel;
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    &__radio-able {
+      .ant-radio-disabled .ant-radio-inner {
+        border-color: $color-keppel !important;
+        background-color: $color-white !important;
+      }
+
+      .ant-radio-disabled .ant-radio-inner:after {
+        background-color:   $color-keppel !important;
+      }
+
+      .ant-radio-disabled + span {
+        color: $color-shuttle-gray;
+      }
+    }
+
+    &__checkbox {
+      width: 100%;
+      margin-top: 8px;
+
+      .ant-checkbox-group-item {
+        width: 100px;
+        margin-bottom: 8px;
+      }
+    }
+
+    &__select-all {
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+
+    &__continue-btn {
+      width: 108px;
+      height: 32px;
+      margin-top: 16px;
+      font-weight: 600;
+    }
+
+    &__continue-save-btn {
+      width: 188px;
+      height: 32px;
+      margin-top: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .ql-editor {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    height: rem(80);
+    padding: rem(8) rem(12);
+    resize: vertical;
+  }
+
+  .ant-input {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    padding: rem(8) rem(12);
+  }
+
+  .ql-editor.ql-blank::before {
+    color: $color-silver-chalice;
+    font-style: normal;
+  }
+}

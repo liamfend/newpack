@@ -1,0 +1,13 @@
+.landlord-details {
+  height: 100%;
+
+  &__loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: rem(50);
+    background-color: $color-white;
+    text-align: center;
+    z-index: $z-big;
+  }
+}

@@ -8,6 +8,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
+    'plugin:jsx-control-statements/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -22,8 +23,10 @@ module.exports = {
     },
   },
   root: true,
-  plugins: ['react'],
-  rules: {},
+  plugins: ['react', 'jsx-control-statements'],
+  rules: {
+    'react/jsx-no-undef': [2, { allowGlobals: true }],
+  },
   overrides: [
     {
       files: ['*.js', '*.jsx'],

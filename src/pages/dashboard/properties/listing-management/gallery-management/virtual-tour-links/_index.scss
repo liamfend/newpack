@@ -1,0 +1,53 @@
+@import 'pages/dashboard/properties/listing-management/gallery-management/virtual-tour-links/virtual-tour-link/index';
+
+.virtual-tour-links {
+  &__label {
+    @include font-weight(bold);
+  }
+
+  &__description {
+    @include font-style($type-12px, $type-20px, $color-silver-chalice);
+    margin: rem(24) 0;
+    padding: 0 rem(24) 0 rem(40);
+  }
+
+  &__collapse {
+    border: none;
+    background-color: transparent;
+
+    .ant-collapse-item {
+      margin-bottom: rem(16);
+      border: none;
+    }
+
+    .ant-collapse-content {
+      border: none;
+    }
+
+    .ant-collapse-item > .ant-collapse-header {
+      @include font-style($type-14px, $type-20px, $color-tundora);
+      @include font-weight(bold);
+      background-color: $color-desert-storm;
+
+      svg {
+        fill: $color-keppel;
+      }
+    }
+
+    .ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header {
+      padding-left: rem(24);
+    }
+
+    .ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+      right: rem(20);
+    }
+
+    .ant-form-vertical .ant-form-item {
+      padding: 0;
+    }
+  }
+
+  .ant-collapse-content {
+    overflow: visible;
+  }
+}

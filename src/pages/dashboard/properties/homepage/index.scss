@@ -1,0 +1,150 @@
+.property-homepage {
+  width: 100%;
+  min-width: rem(660);
+  height: 100%;
+
+  &__content {
+    height: calc(100% - 168px);
+    margin: rem(32);
+    padding: rem(24);
+    border: solid 1px $color-mercury;
+    background: $color-white;
+  }
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+    margin: 0 0 rem(12);
+    clear: both;
+  }
+
+  &__property-settings {
+    padding-top: rem(8);
+  }
+
+  &__link {
+    width: calc(50% - 12px);
+    margin: 0;
+    margin-bottom: rem(16);
+    padding: 0;
+    float: left;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      border-radius: 2px;
+      box-shadow: 1px 1px rem(6) 0 $color-mercury, -1px -1px rem(6) 0 $color-mercury;
+    }
+
+    &--even {
+      margin-right: rem(24);
+      clear: both;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    padding: rem(16) rem(20);
+
+    &:hover {
+      .property-homepage__card-icon--gray {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      .property-homepage__card-icon {
+        display: block;
+        width: rem(40);
+        height: rem(40);
+      }
+    }
+  }
+
+  &__card-icon {
+    display: none;
+    width: 0;
+    height: 0;
+    margin-right: rem(20);
+    float: left;
+
+    &--gray {
+      display: block;
+      width: rem(40);
+      height: rem(40);
+      margin-right: rem(20);
+      float: left;
+    }
+  }
+
+  &__card-title {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    @include font-weight(bold);
+    display: inline-block;
+    margin: 0 rem(16) rem(4) 0;
+  }
+
+  &__card-description {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    display: block;
+  }
+
+  &__clear-both {
+    clear: both;
+  }
+
+  &__change-log {
+    margin-bottom: 0;
+  }
+
+  &__card-text {
+    margin-left: rem(64);
+  }
+
+  &__coming-soon {
+    @include font-style($type-12px, $type-16px, $color-jaffa);
+    @include font-weight(bold);
+    display: inline-block;
+    margin: 0;
+    padding: rem(2) rem(4);
+    border-radius: 2px;
+    background-color: $color-coral-bg;
+    opacity: 0;
+  }
+
+  &__card-coming-soon {
+    .property-homepage__coming-soon {
+      opacity: 1;
+    }
+
+    .property-homepage__card-title,
+    .property-homepage__card-description {
+      color: $color-silver-sand;
+    }
+  }
+
+  &__waiting-approval-modal {
+    top: 40%;
+
+    .ant-modal-body {
+      padding: rem(28) rem(32) rem(24);
+    }
+
+    .ant-modal-confirm-title {
+      @include font-style($type-16px, $type-28px, $color-tundora);
+      @include font-weight(bold);
+    }
+
+    .ant-modal-confirm-btns {
+      margin-top: rem(20);
+    }
+
+    .ant-modal-confirm-content {
+      margin: 0;
+    }
+  }
+
+}

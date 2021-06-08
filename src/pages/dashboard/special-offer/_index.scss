@@ -1,0 +1,127 @@
+
+.special-offer {
+  &__delete-btn {
+    width: 230px;
+
+    .ant-btn-primary {
+      border-color: $color-terracotta;
+      background: $color-terracotta;
+    }
+  }
+
+  &__table-text {
+    span {
+      display: block;
+      max-width: 180;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  &__map {
+    position: relative;
+  }
+
+  &__map-property {
+    padding-top: 68px;
+  }
+
+  &__map-property-header {
+    position: absolute;
+    top: 16px;
+    right: 0;
+  }
+
+  &__map-group {
+    margin: 16px 0;
+  }
+
+  &__map-city {
+    height: 100%;
+
+    .ant-card-head-title {
+      @include font-style($type-14px, $type-20px, $color-shuttle-gray);
+    }
+  }
+
+  &__map-admin-picker {
+    margin-top: 20px;
+  }
+
+  &__map-tag {
+    height: 28px;
+    border-color: $color-silver-sand;
+    background: $color-mercury;
+
+    .ant-tag-text {
+      @include font-style($type-12px, $type-28px, $color-shuttle-gray);
+    }
+  }
+
+  &__map-add-btn {
+    height: 28px;
+    border-style: dashed;
+    background: $color-white;
+
+    .ant-tag-text {
+      @include font-style($type-12px, $type-28px, $color-shuttle-gray);
+      @include font-weight(bold);
+    }
+  }
+
+  &__right-text {
+    color: $color-keppel;
+  }
+
+  &__table-landlord {
+    @include font-style($type-14px, $type-20px, $color-white);
+
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  &__table-landlord-property {
+    @include font-style($type-12px, $type-20px, $color-silver-sand);
+  }
+
+  &__property-container {
+    .ant-tooltip-inner {
+      max-height: 280px;
+      overflow: scroll;
+    }
+
+    .special-offer__property-item {
+      @include font-style($type-12px, $type-20px, $color-silver-sand);
+      margin-bottom: 5px;
+    }
+  }
+
+  &__property {
+    @include font-weight(bold);
+    @include font-style($type-14px, $type-20px, $color-white);
+    padding-bottom: 5px;
+  }
+
+  &__property-box {
+    margin-bottom: 10px;
+  }
+}
+
+.ant-table-filter-icon {
+  right: auto !important;
+}
+
+.ant-pagination {
+  .anticon-left,
+  .anticon-right,
+  .anticon-double-left,
+  .anticon-double-right {
+    margin-top: 9px;
+  }
+}
+
+.ant-table-column-title {
+  @include font-style($type-14px, $type-20px, $color-tundora);
+  @include font-weight(bold);
+}

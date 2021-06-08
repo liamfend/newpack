@@ -1,0 +1,44 @@
+.comment {
+  margin: rem(24) 0;
+
+  &__title {
+    @include font-style($type-16px, $type-28px, $color-tundora);
+    @include font-weight(bold);
+    position: relative;
+    padding-left: rem(11);
+
+    &::before {
+      position: absolute;
+      top: rem(4);
+      left: 0;
+      width: rem(3);
+      height: rem(20);
+      background: $color-keppel;
+      content: '';
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin-top: rem(12);
+    padding: rem(12) rem(16);
+    border-radius: rem(2);
+    background: $color-desert-storm;
+
+    &::before {
+      position: absolute;
+      top: rem(-16);
+      left: rem(24);
+      border-top: rem(8) solid transparent;
+      border-right: rem(8) solid transparent;
+      border-bottom: rem(8) solid $color-desert-storm;
+      border-left: rem(8) solid transparent;
+      content: '';
+    }
+
+    p,
+    ol {
+      margin: 0;
+    }
+  }
+}

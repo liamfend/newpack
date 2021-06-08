@@ -1,0 +1,42 @@
+.property-status-filter {
+  $type-22px: 22px;
+  min-width: rem(660);
+
+  .ant-radio-button-wrapper {
+    min-width: rem(103);
+    margin-bottom: rem(20);
+    padding: 0 rem(20);
+    text-align: center;
+  }
+
+  .table-header__heading {
+    @include font-style($type-22px, $type-28px, $color-tundora);
+    @include font-weight(bold);
+    margin-right: rem(32);
+  }
+
+  .ant-dropdown-link {
+    @include font-style($type-14px, $type-24px, $color-silver-chalice);
+    @include font-weight(bold);
+    display: inline-block;
+    line-height: $type-28px;
+  }
+
+  &__country-filter,
+  &__sort-filter,
+  &__tag-filter {
+    display: inline-block;
+    margin-right: rem(16);
+    vertical-align: middle;
+  }
+
+  .ant-btn {
+    @include font-weight(bold);
+    color: $color-tundora;
+  }
+
+  .anticon-down {
+    margin-left: rem(8);
+    font-size: $type-16px;
+  }
+}

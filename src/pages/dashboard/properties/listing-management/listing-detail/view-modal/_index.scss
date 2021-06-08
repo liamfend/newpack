@@ -1,0 +1,147 @@
+$color-scarlet: #ea2d00;
+
+.listing-view-modal {
+  height: 100%;
+
+  &__label {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-right: rem(8);
+    margin-bottom: rem(8);
+
+    &--flex {
+      display: inline-flex;
+    }
+  }
+
+  &__label-value {
+    @include font-weight(normal);
+    margin-left: rem(6);
+
+    &--red {
+      color: $color-scarlet;
+    }
+  }
+
+  &__content {
+    height: calc(100% - 98px);
+    padding: rem(12) rem(40);
+    overflow: auto;
+  }
+
+  &__listing-id {
+    display: flex;
+    min-height: rem(42);
+    padding: rem(18) 0 rem(8);
+
+    &__text {
+      @include font-style($type-10px, $type-16px, $color-shuttle-gray);
+      display: inline-block;
+      padding: 0 rem(8);
+      border-radius: 2px;
+      background-color: $color-keppel-bg;
+    }
+  }
+
+  &__listing-detail {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    margin-bottom: rem(15);
+  }
+
+  &__title {
+    margin-bottom: rem(12);
+    padding: rem(4) 0;
+  }
+
+  &__title-text {
+    padding-left: rem(8);
+    border-left: rem(4) solid $color-keppel;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: rem(12);
+    right: rem(12);
+    padding: rem(4);
+    border: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    height: rem(56);
+    padding: rem(20) rem(24);
+    box-shadow: 0 0 rem(4) 0 rgba($color-black, 0.09);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-icon {
+    width: rem(16);
+    height: rem(16);
+    margin: 0;
+  }
+
+  &__btns-line {
+    display: inline-block;
+    width: 2px;
+    height: rem(8);
+    background-color: $color-mercury;
+  }
+
+  &__btn {
+    display: flex;
+    margin: 0 rem(14);
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    fill: $color-keppel;
+
+    &:disabled {
+      cursor: not-allowed;
+      fill: $color-silver-sand;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__copy-to-room {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    cursor: pointer;
+
+    &:hover {
+      @include font-style($type-12px, $type-20px, $color-keppel);
+      @include font-weight(bold);
+    }
+
+    &:first-child {
+      padding-bottom: rem(8);
+      border-bottom: 1px solid $color-mercury;
+    }
+
+    &:last-child {
+      padding-top: rem(8);
+    }
+  }
+
+  &__copy-listing-wrap {
+    .ant-popover-title {
+      display: none;
+    }
+
+    .ant-popover-inner-content {
+      padding: rem(8) rem(12);
+    }
+  }
+}

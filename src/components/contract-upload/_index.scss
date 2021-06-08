@@ -1,0 +1,61 @@
+.contract-upload {
+  $type-22px: 22px;
+
+  .ant-upload.ant-upload-drag {
+    width: 100%;
+    height: rem(134);
+    padding-left: rem(30);
+    border: dashed 1px $color-mercury;
+    border-radius: 2px;
+    background-color: $color-desert-storm;
+    text-align: left;
+  }
+
+  &__upload-icon {
+    display: inline-block;
+    margin-right: rem(30);
+  }
+
+  .ant-upload.ant-upload-drag .anticon-plus {
+    width: rem(48);
+    height: rem(48);
+    color: $color-silver-sand;
+  }
+
+  .ant-transfer-list-search {
+    padding: 6px 8px;
+  }
+
+  &__upload-content {
+    display: inline-block;
+  }
+
+  &__upload-text {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    margin: 0 0 rem(8);
+  }
+
+  &__upload-hint {
+    @include font-style($type-14px, $type-22px, rgba($color-black, 0.43));
+  }
+
+  .ant-upload-list-text {
+    display: none;
+  }
+
+  .ant-upload-list-item {
+    width: rem(125);
+    height: rem(125);
+  }
+
+  .ant-upload-select-picture-card {
+    width: rem(125);
+    height: rem(125);
+  }
+
+  .ant-upload-list-picture-card .ant-upload-list-item-name {
+    display: block;
+    margin-top: rem(-21);
+    color: $color-tundora;
+  }
+}

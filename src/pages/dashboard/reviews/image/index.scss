@@ -1,0 +1,67 @@
+.reviews-tab {
+  &__imgs {
+    display: flex;
+    margin: 0 0 rem(8);
+  }
+
+  &__img-content {
+    display: none;
+    position: relative;
+    width: rem(72);
+    height: rem(72);
+    margin: 0 rem(10) 0 0;
+    padding: 0;
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    appearance: none;
+
+    &--show {
+      display: inline-block;
+    }
+  }
+
+  &__img {
+    min-height: rem(72);
+    border-radius: 2px;
+
+    &--block {
+      @include font-style($type-14px, $type-20px, $color-tundora);
+      position: absolute;
+      top: 0;
+      width: rem(72);
+      height: rem(72);
+      padding: rem(26) 0 0 rem(4);
+      background-color: $color-desert-storm;
+      opacity: 0.7;
+    }
+  }
+
+  &__large-img {
+    display: initial;
+
+    .reviews-tab__img {
+      height: auto;
+      margin-bottom: rem(12);
+
+      &--last {
+        margin-bottom: rem(8);
+      }
+    }
+
+    .reviews-tab__img-content {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__img-tips {
+    .ant-tooltip-inner {
+      padding: rem(10) rem(16) !important;
+    }
+  }
+}

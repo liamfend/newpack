@@ -1,0 +1,117 @@
+.property-list {
+  width: calc(100% - 87px);
+  margin: rem(20) rem(32) rem(32) 0;
+  float: left;
+  animation-name: nomal-animation;
+  animation-duration: 0.5s;
+
+  &--small {
+    width: calc(100% - 569px);
+    animation-name: small-animation;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes small-animation {
+    from {
+      width: calc(100% - 87px);
+    }
+
+    to {
+      width: calc(100% - 569px);
+    }
+  }
+
+  @keyframes nomal-animation {
+    from {
+      width: calc(100% - 569px);
+    }
+
+    to {
+      width: calc(100% - 87px);
+    }
+  }
+
+  &__header {
+    margin-bottom: rem(16);
+  }
+
+  .ant-list-item {
+    padding: 0;
+  }
+
+  .ant-list-split .ant-list-item {
+    margin-bottom: rem(16);
+    border: 0;
+  }
+
+  .ant-list-pagination {
+    margin-top: rem(8);
+
+    .anticon-left,
+    .anticon-right  {
+      margin-top: rem(7);
+    }
+  }
+
+  .ant-pagination-prev,
+  .ant-pagination-next,
+  .ant-pagination-jump-prev,
+  .ant-pagination-jump-next,
+  .ant-pagination-item {
+    min-width: rem(28);
+    height: rem(28);
+  }
+
+  .ant-select-selection--single,
+  .ant-pagination-options-size-changer.ant-select {
+    height: rem(28);
+  }
+
+  .ant-select-selection__rendered {
+    line-height: $type-28px;
+  }
+
+  .ant-pagination-item,
+  .ant-select-selection-selected-value {
+    @include font-style($type-12px, $type-28px, $color-tundora);
+  }
+
+  .ant-pagination-item-active {
+    background: $color-keppel;
+
+    a {
+      color: $color-white;
+    }
+
+    &:hover {
+      a {
+        color: $color-white;
+      }
+    }
+  }
+
+  .ant-pagination-item-link-icon {
+    margin-top: rem(9);
+  }
+
+  .ant-select-dropdown-menu-item {
+    text-align: left;
+  }
+
+  .ant-list-something-after-last-item .ant-spin-container > .ant-list-items > .ant-list-item:last-child {
+    border-bottom: 0;
+  }
+
+  &__list-nomal {
+    .ant-list-item {
+      display: inline-block;
+      //propertyListWidth / 2 - propertyCardMarginValue
+      width: calc(50% - 8px);
+      margin-bottom: rem(16) !important;
+
+      &:nth-child(odd) {
+        margin-right: rem(16);
+      }
+    }
+  }
+}

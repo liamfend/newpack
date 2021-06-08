@@ -1,0 +1,250 @@
+.commission-list {
+  $type-30px: 30px;
+  @include clearfix;
+  min-width: rem(660);
+
+  &__card {
+    position: relative;
+    width: calc(33.33% - 14px);
+    min-width: rem(319);
+    height: rem(241);
+    margin: 0 rem(18) rem(53) 0;
+    float: left;
+    border: dashed 1px transparent;
+    background-color: $color-white;
+
+    &:nth-child(3n) {
+      margin: 0 0 rem(53);
+    }
+  }
+
+  &__second {
+    width: calc(50% - 11px);
+    max-width: rem(489);
+
+    &:nth-child(3n) {
+      margin: 0 rem(18) rem(53) 0;
+    }
+
+    &:nth-child(2n) {
+      margin: 0 0 rem(53);
+    }
+  }
+
+  &__add {
+    border: dashed 2px $color-mercury;
+  }
+
+  &__add-content {
+    @include font-style($type-12px, normal, $color-keppel);
+    @include font-weight(bold);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__add-icon {
+    display: block;
+    width: rem(32.8);
+    height: rem(32.8);
+    margin: 0 auto rem(10);
+  }
+
+  &__icon-box {
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: rem(44);
+    height: rem(44);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: $color-keppel-bg;
+    fill: $color-keppel;
+
+    &--grey {
+      background-color: $color-mercury;
+      fill: $color-silver-chalice;
+    }
+  }
+
+  &__list-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: rem(22);
+    transform: translate(-50%, -36%);
+
+    &--rebookers {
+      top: 4%;
+      left: 54%;
+      width: rem(32);
+    }
+  }
+
+  &__status {
+    @include font-style($type-12px, $type-20px, $color-white);
+    @include font-weight(bold);
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: rem(54);
+    height: rem(21);
+    border-radius: 0 0 0 rem(69);
+    background-color: $color-coral-light;
+    text-align: center;
+
+    &--active {
+      background-color: $color-wechat;
+    }
+
+    &--expire {
+      background-color: $color-silver-sand;
+    }
+  }
+
+  &__text {
+    position: relative;
+    height: rem(165);
+    text-align: center;
+  }
+
+  &__category {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    margin-top: rem(-16);
+  }
+
+  &__great-commission {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    @include font-weight(bold);
+    margin-top: rem(12);
+    padding: 0 rem(16);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__booking-number {
+
+    span {
+      @include font-weight(bold);
+    }
+  }
+
+  &__percentage {
+    @include font-style($type-30px, $type-40px, $color-tundora);
+    @include font-weight(bold);
+    display: inline-block;
+    position: relative;
+    margin-top: rem(12);
+  }
+
+  &__bonus {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: rem(10);
+    transform: translate(50%, 50%);
+  }
+
+  &__bonus-text {
+    @include font-style($type-12px, $type-16px, $color-white);
+    position: absolute;
+    top: rem(11);
+    left: rem(-2);
+    margin-left: rem(10);
+    text-align: left;
+    z-index: 5;
+  }
+
+  &__bonus-icon {
+    position: absolute;
+    top: rem(-56);
+    width: rem(48);
+  }
+
+  &__effective-dates {
+    @include font-style($type-14px, $type-18px, $color-silver-chalice);
+    position: absolute;
+    bottom: rem(15);
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 0);
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: rem(48);
+    border-top: 1px solid $color-desert-storm;
+  }
+
+  &__btn-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__update {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: ren(17);
+    height: auto;
+    transform: translate(0, -50%);
+
+    .property-card__icon {
+      margin-right: rem(16);
+    }
+  }
+
+  &__update-time {
+    @include font-weight(bold);
+  }
+
+  &__copy-btn {
+    position: relative;
+    margin: 0 rem(12);
+    padding: 0 rem(12);
+
+    &::after,
+    &::before {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      width: 2px;
+      height: rem(8);
+      transform: translateY(-50%);
+      background-color: $color-mercury;
+      content: '';
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .ant-tooltip {
+    left: rem(-180) !important;
+  }
+
+  .ant-tooltip-content {
+    width: rem(215) !important;
+  }
+
+  .ant-tooltip-inner {
+    padding: rem(10) rem(6);
+  }
+
+  &__delete {
+    border-right: 0 !important;
+  }
+}

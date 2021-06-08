@@ -1,0 +1,39 @@
+.filter-card {
+  $color-dandelion-milk: #e8e8e8;
+  display: inline-block;
+  position: relative;
+  min-width: rem(221);
+  margin-right: rem(16);
+  padding: rem(8) rem(12);
+  border: solid 1px $color-dandelion-milk;
+  border-radius: 2px;
+  background-color: $color-white;
+
+  &__filter-btn {
+    position: absolute;
+    top: rem(10);
+    right: rem(8);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  &__filter-name {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    margin-bottom: rem(8);
+  }
+
+  &__filter-content {
+    @include font-style($type-14px, $type-16px, $color-tundora);
+    margin-bottom: rem(0);
+  }
+
+  &__icon {
+    margin-right: rem(8);
+    font-size: $type-14px;
+  }
+}

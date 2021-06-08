@@ -1,0 +1,43 @@
+.transferred-modal {
+  &__btn {
+    margin-bottom: rem(40);
+  }
+
+  &__invoice-info-title {
+    @include font-style($type-20px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0 0 rem(24);
+    padding: 0;
+  }
+
+  &__invoice-info-desc {
+    @include font-style($type-16px, $type-16px, $color-tundora);
+    display: block;
+    margin: 0 0 rem(32);
+  }
+
+  &__input-lable {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+
+    &--required {
+      color: $color-thunderbird;
+    }
+  }
+
+  &__input-err {
+    @include font-style($type-14px, $type-20px, $color-thunderbird);
+    position: absolute;
+    top: rem(36);
+    left: rem(14);
+  }
+
+  &__row {
+    margin-bottom: rem(64);
+  }
+
+  &__content {
+    .ant-modal-body {
+      padding: rem(32);
+    }
+  }
+}

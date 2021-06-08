@@ -1,0 +1,109 @@
+.reconciliation {
+  $color-alto: #d9d9d9;
+
+  &__header {
+    margin: rem(4) 0 rem(24);
+  }
+
+  &__btn-wrap {
+    display: flex;
+    align-items: center;
+    float: right;
+  }
+
+  &__icon-btn {
+    margin-left: rem(20);
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+
+    &--history {
+      width: rem(20);
+      height: rem(18);
+    }
+
+    &--download {
+      width: rem(18);
+      height: rem(20);
+    }
+
+    &__icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__bulk-update-btn {
+    @include font-style($type-12px, $type-20px, $color-white);
+    @include font-weight(bold);
+    margin-left: rem(24);
+    border: 1px solid $color-keppel;
+  }
+
+  &__container {
+    margin: rem(24) rem(32) rem(32);
+  }
+
+  &__table {
+    min-height: rem(800);
+  }
+
+  &__title {
+    @include font-style($type-22px, $type-32px, $color-tundora);
+    @include font-weight(bold);
+    display: inline-block;
+    margin: 0;
+  }
+
+  &__body {
+    padding: rem(16) rem(24) rem(8) rem(32);
+    border: solid 1px $color-mercury;
+    border-radius: 2px;
+    background-color: $color-white;
+  }
+
+  &__footer {
+    margin-top: rem(16);
+    float: right;
+  }
+
+  &__total-count {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    display: block;
+    margin-bottom: rem(16);
+  }
+
+  &__column {
+    padding: rem(16) rem(24) !important;
+    font-size: $type-12px !important;
+  }
+
+  &__filter-reset-footer {
+    text-align: left;
+  }
+
+  &__filter-reset-btn {
+    @include font-style($type-14px, $type-20px, $color-keppel);
+    margin: 0 0 rem(8) rem(10);
+    border: 0;
+    cursor: pointer;
+  }
+
+  &__date-month-picker {
+    display: inline-block;
+    margin-left: rem(20);
+    border: 1px solid $color-alto;
+    border-radius: 2px;
+    background-color: $color-white;
+  }
+
+  .ant-calendar-picker-input {
+    border: 0;
+    outline: none;
+  }
+
+  &__separator {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+  }
+}

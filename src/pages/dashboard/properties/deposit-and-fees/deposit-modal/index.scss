@@ -1,0 +1,120 @@
+.deposit-from-modal {
+  width: 100%;
+  height: 100%;
+  padding: 8% calc(50% - 226px);
+  overflow: hidden;
+  z-index: $z-high;
+}
+
+.deposit-from {
+  position: relative;
+  width: rem(454);
+  height: 100%;
+  min-height: rem(150);
+  max-height: rem(520);
+  padding: rem(32) rem(12) rem(32) rem(28);
+  border-radius: 2px;
+  background-color: $color-white;
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+    margin-bottom: rem(8);
+  }
+
+  &__country-icon {
+    width: rem(14);
+    height: rem(14);
+    margin-right: rem(8);
+    fill: $color-shuttle-gray;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: rem(16);
+    right: rem(20);
+    min-height: rem(20) !important;
+    padding: 0;
+    float: right;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__property-name {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    display: inline-block;
+    margin-bottom: rem(20);
+  }
+
+  &__content {
+    height: calc(100% - 72px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    display: block;
+    margin: 0 0 rem(4);
+
+    &--radio {
+      margin: 0 0 rem(8);
+    }
+
+    &--currency {
+      @include font-weight(normal);
+    }
+  }
+
+  &__form-title  {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    @include font-weight(normal);
+    display: block;
+    position: relative;
+    margin: 0 rem(12) rem(16);
+  }
+
+  &__title-block {
+    position: absolute;
+    top: 0;
+    left: rem(-12);
+    width: rem(4);
+    height: rem(16);
+    margin: 2px 0;
+    background-color: $color-keppel;
+  }
+
+  &__footer {
+    position: relative;
+    width: rem(454);
+    height: rem(72);
+    margin-left: rem(-28);
+    padding: rem(16) rem(20);
+    border: solid 1px $color-mercury;
+    background-color: $color-white;
+  }
+
+  &__confirm-btn {
+    @include font-style($type-14px, $type-24px, $color-white);
+    @include font-weight(bold);
+    position: absolute;
+    right: rem(20);
+    bottom: rem(16);
+    height: rem(40);
+    padding: rem(8) rem(16);
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    background-color: $color-keppel;
+    cursor: pointer;
+    z-index: $z-base;
+  }
+
+  .deposit-and-fees__delete-btn {
+    margin-top: rem(10);
+    padding: 0;
+  }
+}

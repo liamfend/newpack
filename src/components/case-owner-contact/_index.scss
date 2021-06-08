@@ -1,0 +1,24 @@
+.case-owner-contact {
+  &__container {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+  }
+
+  &__title {
+    @include font-style ($type-12px, $type-20px, $color-silver-chalice);
+    display: block;
+  }
+
+  &__content {
+    @include font-style ($type-12px, $type-20px, $color-tundora);
+    display: block;
+  }
+}

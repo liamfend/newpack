@@ -1,0 +1,144 @@
+.content-form {
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+  }
+
+  &__form {
+    overflow: hidden;
+  }
+
+  &__upload-image-container {
+    margin-right: 100px;
+  }
+
+  &__summary {
+    @include font-style($type-12px, $type-20px, $color-silver-chalice);
+    margin: 0 0 rem(24);
+    padding: rem(12);
+    background: $color-desert-storm;
+  }
+
+  &__upload-container {
+    width: 100%;
+    margin-bottom: rem(16);
+    padding: rem(24) 0;
+    border: dashed 2px rgba($color-black, 0.15);
+    border-radius: 4px;
+    outline: none;
+    background-color: rgba($color-black, 0.02);
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      border: dashed 2px $color-keppel;
+    }
+
+    &--small {
+      width: 50%;
+    }
+
+    &--error {
+      border-color: $color-coral-dark !important;
+
+      .content-form__upload-icon {
+        fill: $color-coral-dark;
+      }
+
+      .content-form__image-size {
+        color: $color-coral-dark;
+      }
+    }
+
+    &--keppel {
+      border: dashed 2px $color-keppel;
+
+      .content-form__upload-icon {
+        color: $color-keppel;
+      }
+    }
+  }
+
+  &__img-container {
+    position: relative;
+    width: 100%;
+    min-height: rem(132);
+    margin-bottom: rem(16);
+    border-radius: 2px;
+    overflow: hidden;
+
+    &:hover .content-form__img-delete {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &--small {
+      width: 50%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__upload-icon {
+    width: rem(36);
+    height: rem(28);
+    margin-bottom: rem(12);
+    fill: $color-keppel;
+  }
+
+  &__upload-summary {
+    @include font-style($type-14px, $type-20px, rgba($color-black, 0.85));
+    margin: 0;
+  }
+
+  &__image-size {
+    @include font-style($type-12px, $type-20px, rgba($color-black, 0.43));
+  }
+
+  .ant-form-item {
+    margin-bottom: rem(16);
+  }
+
+  &__counter {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    margin: rem(4) 0 0;
+    text-align: right;
+
+    &--red {
+      color: $color-coral-dark;
+    }
+  }
+
+  .quill {
+    height: rem(400);
+  }
+
+  .ql-container {
+    height: calc(100% - 42px);
+  }
+
+  &__img-delete {
+    position: absolute;
+    top: rem(12);
+    right: rem(12);
+    padding: rem(5);
+    transition: opacity 0.5s;
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    background: rgba($color-black, 0.43);
+    color: $color-white;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__item {
+    .ant-form-explain {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}

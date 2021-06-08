@@ -1,0 +1,370 @@
+@import 'pages/dashboard/properties/listing-management/listing-detail/view-modal/index';
+@import 'pages/dashboard/properties/listing-management/listing-detail/listing-modal/index';
+@import 'pages/dashboard/properties/listing-management/listing-detail/bulk-modal/index';
+@import 'pages/dashboard/properties/listing-management/listing-detail/other-rooms-modal/index';
+
+.listing-detail {
+  $color-trinidad: #f25202;
+  $color-warning: #ed4545;
+  $color-aqua-squeeze: #e4f2ee;
+
+  position: relative;
+  border: 1px solid $color-mercury;
+  border-radius: rem(2);
+  background-color: $color-white;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(16) rem(24);
+    border-bottom: 1px solid $color-mercury;
+  }
+
+  &__room-type-select {
+    margin-left: rem(8);
+  }
+
+  &__bulk-edit {
+    margin-left: rem(16);
+  }
+
+  &__action-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
+
+  &__action-icon {
+    width: rem(16);
+    height: rem(16);
+  }
+
+  &__icon-wrap {
+    height: rem(16);
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    fill: $color-keppel;
+
+    &:disabled {
+      cursor: not-allowed;
+      fill: $color-silver-sand;
+    }
+  }
+
+  &__line {
+    display: inline-block;
+    width: rem(2);
+    height: rem(8);
+    margin: 0 rem(12);
+    background-color: $color-mercury;
+  }
+
+  &__sub-column {
+    white-space: nowrap;
+
+    &:nth-child(2) {
+      min-width: rem(202);
+    }
+
+    &:nth-child(3) {
+      min-width: rem(138);
+    }
+
+    &:nth-child(4) {
+      min-width: rem(134);
+    }
+
+    &:nth-child(5) {
+      min-width: rem(100);
+    }
+
+    &:nth-child(6) {
+      min-width: rem(130);
+    }
+
+    &:nth-child(7) {
+      min-width: rem(140);
+      text-align: right;
+    }
+  }
+
+  &__sub-column-content {
+    &--move-in,
+    &--move-out,
+    &--availability,
+    &--update-time {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+      margin: 0;
+    }
+
+    &--place-holder {
+      @include font-style($type-12px, $type-12px, $color-trinidad);
+      margin: 0;
+    }
+
+    &--tenancy {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+      display: inline-block;
+      margin: 0;
+      padding: rem(2) rem(10) rem(2) rem(8);
+      border-radius: 2px;
+      background-color: $color-keppel-bg;
+      overflow: hidden;
+    }
+
+    &--price {
+      @include font-style($type-14px, $type-20px, $color-tundora);
+      margin: 0;
+    }
+
+    &--origin-price {
+      @include font-style($type-12px, $type-16px, $color-silver-chalice);
+      margin-left: rem(6);
+      text-decoration: line-through;
+    }
+  }
+
+  &__add-listing-btn {
+    @include font-style($type-12px, $type-24px, $color-keppel);
+    width: rem(100);
+    padding: 0 rem(8);
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__table-header {
+    display: flex;
+    min-width: rem(980);
+    height: rem(51);
+    padding-right: rem(15);
+    background-color: rgba($color-desert-storm, 0.5);
+    overflow: hidden;
+  }
+
+  &__check-all {
+    @include font-style($type-12px, $type-18px, $color-tundora);
+    padding: rem(16) rem(22) rem(16) rem(72);
+    border-bottom: 1px solid $color-mercury;
+  }
+
+  &__header-column {
+    @include font-style($type-12px, $type-18px, $color-tundora);
+    @include font-weight(bold);
+    display: inline-block;
+    padding: rem(16);
+    border-bottom: 1px solid $color-mercury;
+
+    &:nth-child(2) {
+      width: calc((100% - 110px) * 0.22);
+      min-width: rem(202);
+    }
+
+    &:nth-child(3) {
+      width: calc((100% - 110px) * 0.18);
+      min-width: rem(140);
+    }
+
+    &:nth-child(4) {
+      width: calc((100% - 110px) * 0.18);
+      min-width: rem(137);
+    }
+
+    &:nth-child(5) {
+      width: calc((100% - 110px) * 0.12);
+      min-width: rem(101);
+    }
+
+    &:nth-child(6) {
+      width: calc((100% - 110px) * 0.18);
+      min-width: rem(135);
+    }
+
+    &:nth-child(7) {
+      width: calc((100% - 110px) * 0.12);
+      min-width: rem(140);
+      padding-right: rem(48);
+      text-align: right;
+    }
+  }
+
+  .ant-table-selection-column {
+    min-width: rem(60);
+  }
+
+  &__table-wrap {
+    height: calc(100vh - 289px);
+    overflow-x: auto;
+  }
+
+  &__table {
+    min-width: rem(980);
+    height: calc(100% - 51px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .ant-table-tbody > .ant-table-row-selected td {
+      background-color: $color-white;
+    }
+  }
+
+  &__sub-table {
+    .ant-table-tbody > tr > td {
+      padding: rem(12) rem(16);
+    }
+
+    .ant-table-tbody > .ant-table-row-selected td {
+      background-color: $color-white;
+    }
+
+    .ant-table-row:hover > td {
+      background-color: $color-aqua-squeeze !important;
+    }
+  }
+
+  &__status-icon {
+    display: inline-block;
+    width: rem(6);
+    height: rem(6);
+    margin-right: rem(5);
+    border-radius: 50%;
+    overflow: hidden;
+
+    &--good {
+      background: $color-shamrock;
+    }
+
+    &--sold-out {
+      background: $color-silver-sand;
+    }
+
+    &--limited {
+      background: $color-scarlet;
+    }
+  }
+
+  &__rooms-row {
+    &:hover:not(.ant-table-expanded-row) > td {
+      background: $color-white !important;
+    }
+  }
+
+  &__column {
+    &:nth-child(3) {
+      @include font-style($type-12px, $type-24px, $color-tundora);
+      @include font-weight(bold);
+      max-width: rem(600);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &:nth-child(4) {
+      width: rem(140);
+      min-width: rem(140);
+      text-align: center;
+    }
+  }
+
+  &__table-room-name {
+    &--warning-icon {
+      display: inline-block;
+      max-width: calc(100% - 20px);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      vertical-align: middle;
+    }
+  }
+
+  &__warning-icon {
+    margin-left: rem(8);
+    color: $color-warning;
+  }
+
+  &__unconfirmed-listing {
+    background: rgba($color-terracotta-bg, 0.32);
+  }
+
+  &__selected-row {
+    background-color: $color-aqua-squeeze;
+  }
+
+  &__header-right {
+    display: flex;
+    align-items: center;
+
+
+    .ant-checkbox-wrapper {
+      @include font-style($type-12px, $type-18px, $color-tundora);
+    }
+  }
+
+  tr {
+    &.ant-table-expanded-row {
+      background: $color-white;
+    }
+  }
+
+  .ant-table-row:hover .listing-detail__sub-column-content--tenancy {
+    background: $color-white;
+  }
+
+  &__rooms-filter-content {
+    @include font-style($type-12px, $type-18px, $color-tundora);
+    display: inline-block;
+    min-width: rem(68);
+  }
+
+  &__rooms-filter {
+    display: flex;
+    align-items: center;
+    min-height: rem(24);
+    margin-left: rem(8);
+    cursor: pointer;
+  }
+
+  .search-component {
+    right: 0;
+    left: initial;
+  }
+
+  &__total {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    margin-right: rem(12);
+  }
+
+  &__copy-listing-wrap {
+    .ant-popover-title {
+      display: none;
+    }
+
+    .ant-popover-inner-content {
+      padding: rem(8) rem(12);
+    }
+  }
+
+  &__copy-to-room {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    cursor: pointer;
+
+    &:hover {
+      @include font-style($type-12px, $type-20px, $color-keppel);
+      @include font-weight(bold);
+    }
+
+    &:first-child {
+      padding-bottom: rem(8);
+      border-bottom: 1px solid $color-mercury;
+    }
+
+    &:last-child {
+      padding-top: rem(8);
+    }
+  }
+}

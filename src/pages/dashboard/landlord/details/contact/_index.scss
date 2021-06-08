@@ -1,0 +1,98 @@
+.landlord-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 272px);
+  margin: rem(24) rem(32) rem(32);
+  border-radius: 2px;
+
+  &__empty-page-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 332px);
+    padding: rem(24) rem(32);
+  }
+
+  &__empty-page {
+    text-align: center;
+
+    &__icon {
+      width: rem(213);
+      height: rem(173);
+    }
+
+    &__content {
+      @include font-style($type-14px, $type-24px, $color-tundora);
+      display: block;
+      margin-top: rem(33);
+    }
+
+    &__add {
+      margin-top: rem(24);
+    }
+  }
+
+  &__content-page {
+    height: calc(100vh - 332px);
+    padding: 0 0 rem(24);
+    overflow-y: auto;
+
+    &__plus-container {
+      .ant-btn {
+        border-color: $color-keppel;
+        background-color: transparent;
+        color: $color-keppel;
+
+        .anticon-plus {
+          font-size: $type-16px;
+        }
+      }
+    }
+  }
+
+  &__section {
+    margin-top: rem(16);
+    background-color: $color-white;
+  }
+
+  &__header-container {
+    display: flex;
+    align-content: space-between;
+    padding: rem(16);
+    border-bottom: 1px solid $color-mercury;
+    box-sizing: border-box;
+
+    &__icon-wrap {
+      height: rem(16);
+      padding: 0;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &__line {
+      display: inline-block;
+      width: 1px;
+      height: rem(16);
+      margin: 0 rem(21);
+      background-color: $color-mercury;
+    }
+  }
+
+  &__title {
+    @include font-weight(bold);
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    flex: 1;
+    margin: 0;
+  }
+
+  &__section-content {
+    padding: 0 rem(16) rem(16);
+
+    &__label {
+      @include font-style($type-14px, $type-24px, $color-tundora);
+      padding: rem(16) rem(16) 0;
+    }
+  }
+}

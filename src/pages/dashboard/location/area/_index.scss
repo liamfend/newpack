@@ -1,0 +1,78 @@
+$color-silver: #cccccc;
+
+.area-tab {
+  min-width: rem(660);
+
+  &__actions {
+    @include font-style($type-14px, $type-20px, $color-keppel);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__line {
+    @include font-style($type-14px, $type-20px, $color-silver-chalice);
+    margin: 0;
+    padding: 0 rem(14);
+  }
+
+  .ant-table-row {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+  }
+
+  &__icon-plus {
+    opacity: 0.65;
+  }
+
+  .ant-btn {
+    @include font-weight(bold);
+  }
+
+  .ant-table-body {
+    overflow-x: auto !important;
+  }
+
+  &__properties {
+    color: $color-silver-chalice;
+  }
+
+  .table-header__heading {
+    @include font-weight(bold);
+  }
+
+  .ant-table-column-title {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    @include font-weight(bold);
+  }
+
+  &__actions-column {
+    min-width: rem(155);
+  }
+
+  &__properties-column {
+    min-width: rem(145);
+  }
+
+  &__area-column {
+    min-width: rem(180);
+    max-width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__city-column {
+    min-width: rem(180);
+    max-width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.area-edit__loading {
+  text-align: center;
+}

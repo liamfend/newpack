@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
 const WebpackBar = require('webpackbar')
+const babelPlugins = require('./plugins')
 // const CompressionPlugin = require("compression-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -170,6 +171,10 @@ module.exports = function (webpackEnv) {
               loader: require.resolve('babel-loader'),
               options: {
                 presets: ['@babel/preset-env', '@babel/preset-react'],
+                plugins:  [
+                   ...babelPlugins.plugins,
+                   "jsx-control-statements"
+                ]  
               },
             },
             {

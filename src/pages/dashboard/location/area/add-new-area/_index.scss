@@ -1,0 +1,145 @@
+$color-wild-sand: #f5f5f5;
+
+.add-new-area-modal {
+  z-index: $z-high;
+  overflow-y: auto;
+}
+
+.add-new-area {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  width: rem(432);
+  padding: rem(32) rem(32) 0;
+  transform: translate(-50%, -30%);
+  border-radius: 2px;
+  outline: none;
+  background: $color-white;
+  overflow: hidden;
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+    margin-bottom: rem(20);
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: rem(32);
+    right: rem(32);
+    width: rem(12);
+    height: rem(12);
+    min-height: rem(20) !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__form {
+    position: relative;
+    height: rem(356);
+  }
+
+  &__form-left {
+    width: rem(368);
+  }
+
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    display: block;
+    margin: 0 0 rem(4);
+  }
+
+  &__select {
+    width: rem(368);
+  }
+
+  &__footer {
+    width: 100%;
+    height: rem(72);
+  }
+
+  &__label-disabled {
+    color: $color-silver-chalice;
+  }
+
+  &__save-btn {
+    @include font-style($type-14px, $type-24px, $color-white);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: rem(40);
+    margin: rem(16) 0;
+    padding: rem(8) rem(24);
+    float: right;
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    background-color: $color-keppel;
+    cursor: pointer;
+  }
+
+  &__city-slug {
+    display: flex;
+    align-items: center;
+
+    .ant-input-suffix {
+      right: 0;
+    }
+  }
+
+  &__city-slug-btn {
+    color: $color-keppel;
+
+    &--disable {
+      background-color: $color-wild-sand;
+      color: $color-silver-chalice;
+    }
+  }
+
+  &__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(368);
+    margin-left: rem(100);
+  }
+
+  &__map-hidden {
+    display: none;
+  }
+
+  &__line {
+    position: absolute;
+    bottom: rem(72);
+    width: rem(432);
+    height: 1px;
+    margin: rem(100) 0 0 rem(-32);
+    border: 0;
+    background-color: $color-mercury;
+  }
+
+  .table-list__columns-dropdown {
+    width: 100%;
+    height: rem(32);
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .ant-input-disabled {
+    background-color: $color-desert-storm !important;
+  }
+
+  .ant-select-show-search {
+    display: block;
+  }
+
+  .ant-input {
+    display: block;
+    padding-top: rem(6);
+  }
+}

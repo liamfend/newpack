@@ -1,0 +1,78 @@
+.reconciliation-commission {
+  position: relative;
+  min-height: rem(300);
+  padding: rem(8) rem(16);
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: rem(-8);
+    font-size: $type-16px;
+    fill: $color-silver-chalice;
+  }
+
+  .header {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    margin-bottom: rem(20);
+  }
+
+  .commissiontable {
+    width: rem(265);
+  }
+
+  .header-notes {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    margin-bottom: rem(12);
+    padding-left: rem(8);
+    border-left: solid 3px $color-keppel;
+  }
+
+  .box-wapper {
+    display: flex;
+    margin-bottom: rem(24);
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: rem(168);
+      height: rem(113);
+      margin-right: rem(8);
+      background-color: $color-desert-storm;
+
+      .total-label {
+        @include font-style($type-12px, $type-20px, $color-tundora);
+        padding-bottom: rem(14);
+      }
+
+      .total {
+        @include font-style($type-28px, $type-24px, $color-tundora);
+        @include font-weight(bold);
+      }
+
+    }
+  }
+
+  &__dashboard-reminder {
+    @include font-style($type-12px, $type-24px, $color-supernova-dark);
+    margin-bottom: rem(24);
+    padding: rem(4) rem(12);
+    border-radius: 2px;
+    background-color: $color-supernova-bg;
+  }
+
+  &__reminder-icon {
+    @include font-style($type-12px, $type-24px, $color-supernova);
+    margin-right: rem(8);
+  }
+
+  .ant-table-column-title,
+  .ant-table-row {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+  }
+
+  &__loading {
+    margin: 40% 50%;
+  }
+}

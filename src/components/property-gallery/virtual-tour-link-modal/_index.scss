@@ -1,0 +1,191 @@
+$btn-check-gray: #f5f5f5;
+
+.virtual-tour-link-modal {
+  height: rem(704);
+  padding-bottom: rem(20);
+
+  .virtual-tour-link-content {
+    padding-bottom: rem(40);
+
+    .virtual-tour-link-title {
+      @include font-style($type-14px, $type-24px, $color-silver-chalice);
+      @include font-weight(bold);
+      display: block;
+      margin-top: rem(12);
+      margin-bottom: rem(8);
+    }
+
+    .virtual-tour-link-item {
+      &__middle {
+        display: flex;
+        align-items: center;
+        height: rem(32);
+      }
+
+      &:not(:nth-last-of-type(1)) {
+        margin-bottom: rem(16);
+      }
+
+      .icon-delete {
+        color: $color-silver-sand;
+        font-size: $type-18px;
+        cursor: pointer;
+      }
+
+      &__url-prefix {
+        @include font-style($type-14px, $type-20px, $color-silver-chalice);
+        cursor: text;
+      }
+    }
+
+    .btn__add-another-link {
+      @include font-style($type-14px, $type-20px, $color-keppel);
+      margin-top: rem(12);
+      margin-left: rem(34);
+      cursor: pointer;
+    }
+
+    .url {
+      cursor: not-allowed;
+
+      .ant-input-group-addon:last-child {
+        background-color: $btn-check-gray;
+        color: $color-silver-chalice;
+        pointer-events: none;
+      }
+
+      &--valid {
+        cursor: auto;
+
+        .ant-input-group-addon:last-child {
+          background-color: $color-white;
+          color: $color-keppel;
+          pointer-events: auto;
+        }
+      }
+    }
+
+    .ant-input-suffix {
+      right: 0;
+    }
+
+    .ant-row.ant-form-item {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+  }
+
+  .scroll-container {
+    height: 100%;
+    padding-right: rem(32);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .btn-confirm {
+    @include font-style($type-14px, $type-24px, $color-white);
+    @include font-weight(bold);
+    width: rem(101);
+    height: rem(40);
+    padding: rem(8) rem(24);
+  }
+
+  .content-wrapper {
+    &__title {
+      @include font-style($type-16px, $type-24px, $color-tundora);
+      margin-bottom: rem(16);
+    }
+  }
+
+  .section-title {
+    @include font-style($type-14px, $type-32px, $color-silver-chalice);
+    @include font-weight(bold);
+    display: flex;
+    align-items: center;
+    background: $color-desert-storm;
+
+    &::before {
+      display: inline-block;
+      width: rem(4);
+      height: rem(16);
+      margin-right: rem(8);
+      background: $color-keppel;
+      content: '';
+    }
+  }
+
+  .no-virtual-tour-link {
+    padding: rem(24) 0;
+    color: $color-silver-chalice;
+    font-size: $type-12px;
+    text-align: center;
+
+    .add-virtual-tour-link {
+      color: $color-keppel;
+      cursor: pointer;
+
+      .icon-plus {
+        margin: 0 rem(4);
+      }
+    }
+  }
+
+  .ant-modal-close {
+    top: rem(20);
+    right: rem(32);
+
+    .ant-modal-close-x {
+      @include font-style($type-18px, $type-18px, $color-silver-chalice);
+      width: rem(18);
+      height: rem(18);
+    }
+  }
+
+  .ant-modal-content {
+    height: 100%;
+
+    .ant-modal-body {
+      height: 100%;
+      padding: rem(40) 0 rem(60) rem(32);
+      overflow: auto;
+    }
+  }
+
+  .ant-modal-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: rem(10) rem(32);
+    border-top: 0;
+    background-color: $color-white;
+    z-index: $z-high;
+  }
+}
+
+.vr-tooltip {
+  visibility: hidden;
+
+  &--show {
+    visibility: visible;
+    z-index: $z-above-modal;
+  }
+}
+
+.overall-virtual-tour-link__reminder {
+  @include font-style($type-12px, $type-20px, $color-shuttle-gray);
+  display: flex;
+  align-items: center;
+  margin-top: rem(16);
+  padding: rem(8);
+  background-color: $color-supernova-bg;
+  letter-spacing: 0;
+
+  &__icon {
+    margin-right: rem(8);
+    color: $color-coral;
+    font-size: $type-14px;
+  }
+}
+

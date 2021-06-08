@@ -1,0 +1,129 @@
+.landlord-detail {
+  $color-froth: #fafafa;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 272px);
+  margin: rem(24) rem(32) rem(32);
+  border-radius: 2px;
+  background-color: $color-white;
+
+  &__content-wrap {
+    padding: rem(24) rem(32);
+  }
+
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__title {
+    @include font-style($type-16px, $type-24px, rgba($color-black, 0.85));
+    @include font-weight(bold);
+    position: relative;
+    margin-bottom: rem(12);
+    padding-left: rem(11);
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: rem(3);
+      height: rem(16);
+      transform: translateY(-50%);
+      background-color: $color-keppel;
+      content: '';
+    }
+  }
+
+  &__field {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    margin: rem(8) 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__field-value {
+    white-space: initial;
+  }
+
+  &__action {
+    padding: rem(12) rem(24);
+    border-top: 1px solid $color-mercury;
+    text-align: right;
+
+    .ant-btn {
+      @include font-weight(bold);
+    }
+  }
+
+  &__auto-confirm-info {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    margin: 0 0 rem(12);
+    padding: rem(16);
+    background-color: $color-froth;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__row {
+    margin: rem(24) 0;
+  }
+
+  &__show-detail-btn {
+    @include font-style($type-12px, $type-24px, $color-keppel);
+    margin: 0;
+    padding: 0;
+    float: right;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  &__properties-modal {
+    .ant-modal-body {
+      padding: rem(32) 0 rem(32) rem(32);
+    }
+  }
+
+  &__properties-container {
+    max-height: rem(500);
+    padding-right: rem(32);
+    overflow-x: auto;
+  }
+
+  &__properties-container-title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    margin: 0 0 rem(24);
+  }
+
+  &__property-line {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    margin: 0;
+    padding: rem(8) 0;
+    box-shadow: inset 0 1px 0 0 $color-mercury;
+
+    &--first {
+      box-shadow: 0 0 transparent;
+    }
+  }
+
+  &__property-index {
+    @include font-style($type-12px, $type-24px, $color-silver-sand);
+    margin-right: rem(10);
+  }
+
+  &__auto-confirm-info-blod {
+    @include font-weight(bold);
+  }
+
+  &__divider {
+    margin: rem(8) 0 rem(32);
+  }
+}

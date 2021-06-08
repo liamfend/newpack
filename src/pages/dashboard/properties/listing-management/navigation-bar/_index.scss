@@ -1,0 +1,158 @@
+.navigation-bar {
+  $color-gray: #999;
+  $color-scarlet: #ea2d00;
+
+  width: rem(213);
+  min-width: rem(213);
+  margin-right: rem(32);
+
+  &__selection-wrap {
+    margin-bottom: rem(8);
+    border: 1px solid $color-mercury;
+    background-color: $color-white;
+  }
+
+  &__selection {
+    margin: 0;
+    padding: 0;
+    border-radius: rem(2);
+    list-style: none;
+  }
+
+  &__option {
+    @include font-style($type-12px, $type-24px, $color-shuttle-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: rem(24) rem(16);
+    cursor: pointer;
+
+    &--selected {
+      @include font-style($type-12px, $type-24px, $color-keppel);
+      @include font-weight(bold);
+    }
+
+    svg {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+
+  &__unpublished-wrap {
+    @include font-style($type-14px, $type-20px, $color-gray);
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__modal-wrap {
+    .ant-modal-header {
+      display: none;
+    }
+
+    .ant-modal-body {
+      padding: rem(30) rem(32) rem(16);
+    }
+
+    .ant-modal-footer {
+      padding: rem(12) rem(16);
+    }
+
+    .ant-btn-primary {
+      @include font-weight(bold);
+      margin-left: rem(16);
+      border: none;
+      background-color: $color-scarlet;
+      color: $color-white;
+    }
+
+    .ant-modal {
+      max-width: rem(459);
+    }
+  }
+
+  &__modal-title {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(8);
+  }
+
+  &__modal-content {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+
+    span {
+      margin-right: rem(4);
+
+      &:after {
+        content: ':';
+      }
+    }
+  }
+
+  .ant-btn-lg {
+    height: rem(48);
+  }
+
+  &__publish-btn {
+    margin-bottom: rem(14);
+
+    &:disabled {
+      @include font-style($type-16px, $type-24px, $color-white);
+      background-color: $color-silver-sand;
+
+      &:hover {
+        @include font-style($type-16px, $type-24px, $color-white);
+        background-color: $color-silver-sand;
+      }
+    }
+  }
+
+  &__preview-icon {
+    width: rem(18);
+    height: rem(18);
+    margin-right: rem(10);
+    vertical-align: middle;
+  }
+
+  .property-info {
+    margin: 0 rem(16);
+    padding: rem(24) 0;
+    border-bottom: 1px solid $color-mercury;
+
+    &__name-wrap {
+      margin-bottom: rem(10);
+    }
+
+    &__name {
+      @include font-style($type-16px, $type-24px, $color-tundora);
+      @include font-weight(bold);
+      cursor: pointer;
+      vertical-align: middle;
+
+      &--link {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__id {
+      @include font-style($type-12px, $type-16px, $color-tundora);
+      vertical-align: middle;
+    }
+
+    &__line {
+      display: inline-block;
+      width: 1px;
+      height: rem(12);
+      margin: 0 rem(12);
+      background-color: $color-mercury;
+      vertical-align: middle;
+    }
+
+    &__status {
+      @include font-style($type-12px, $type-16px, $color-silver-chalice);
+      @include font-weight(bold);
+    }
+  }
+}

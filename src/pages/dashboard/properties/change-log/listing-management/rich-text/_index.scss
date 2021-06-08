@@ -1,0 +1,32 @@
+.rich-text {
+  div > div > p {
+    margin: 0;
+  }
+
+  &__new-more {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+    cursor: pointer;
+  }
+
+  &__more-tooltip {
+    max-width: rem(368);
+
+    .ant-tooltip-inner {
+      max-height: rem(200);
+      border-radius: rem(2);
+      overflow-y: auto;
+    }
+
+    span,
+    div,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $color-white !important;
+    }
+  }
+}

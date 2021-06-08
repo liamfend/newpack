@@ -1,0 +1,132 @@
+.dashboard-header {
+  display: flex;
+  min-width: rem(780);
+  padding: 0;
+  background-color: $color-white;
+  box-shadow: 0 1px 3px 0 $color-mercury;
+
+  &__search {
+    flex-grow: 1;
+  }
+
+  &__trigger {
+    width: rem(50);
+    padding: rem(22) rem(16) 0;
+    border-right: 1px solid $color-mercury;
+    font-size: $type-16px;
+    cursor: pointer;
+  }
+
+  &__avatar {
+    margin-right: rem(8);
+    vertical-align: rem(-7);
+
+    .anticon-user {
+      margin-top: rem(4);
+    }
+  }
+
+  &__user {
+    display: inline-block;
+    height: rem(64);
+    padding: 0 rem(12) 0 0;
+    color: $color-tundora;
+    font-size: $type-14px;
+
+    .ant-avatar-icon {
+      vertical-align: middle;
+    }
+  }
+
+  &__logout {
+    color: $color-silver-chalice;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-keppel;
+    }
+  }
+
+  &__icon {
+    width: rem(28);
+    height: rem(44);
+    padding-top: rem(14);
+  }
+
+  &__item {
+    display: inherit;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__user-details {
+    display: inline-block;
+    margin: rem(14) rem(20) 0 0;
+  }
+
+  &__name {
+    @include font-style($type-14px, $type-14px, $color-tundora);
+    display: block;
+    max-width: rem(112);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__text {
+    @include font-style($type-12px, $type-12px, $color-silver-chalice);
+    display: block;
+    padding-top: rem(2);
+  }
+
+  &__help-center {
+    margin-right: rem(24);
+  }
+
+  &__help-center-icon {
+    width: rem(16);
+    height: rem(18);
+    margin-top: rem(24);
+    margin-left: rem(14);
+    fill: $color-silver-chalice;
+
+    &:hover {
+      fill: $color-keppel;
+    }
+  }
+
+  &__link {
+    display: initial !important;
+  }
+
+  &__menu-icon {
+    width: rem(16);
+    height: rem(16);
+    margin-right: rem(16);
+    outline: none;
+    vertical-align: middle;
+    fill: $color-mercury;
+  }
+
+  &__menu {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(normal);
+    height: rem(44);
+    padding: rem(10) rem(24);
+
+    &:hover {
+      .dashboard-header__menu-text {
+        @include font-weight(bold);
+        color: $color-keppel !important;
+      }
+
+      .dashboard-header__menu-icon {
+        fill: $color-keppel !important;
+      }
+    }
+  }
+
+  .ant-select-show-search {
+    margin-top: rem(16);
+  }
+}

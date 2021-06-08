@@ -1,0 +1,31 @@
+.commission-empty {
+  position: relative;
+  height: calc(100vh - 224px);
+  padding: 0 rem(32);
+  background-color: $color-white;
+  overflow-y: auto;
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__icon {
+    width: rem(384);
+    height: rem(176);
+    margin-bottom: rem(38);
+  }
+
+  &__title {
+    @include font-style($type-18px, $type-28px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0 0 rem(4);
+  }
+
+  &__summary {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+  }
+}

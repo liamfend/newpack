@@ -1,0 +1,141 @@
+.location-review-modal {
+  padding: 0 rem(60) 0 rem(260);
+  transition: padding-left 0.5s;
+}
+
+@media only screen and (max-width: 924px) {
+  .location-review-modal {
+    padding-left: rem(120);
+  }
+}
+
+.location-review {
+  position: relative;
+  top: 50%;
+  height: 70%;
+  transform: translateY(-50%);
+  background: $color-white;
+
+  &__header-title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+  }
+
+  &__content-container {
+    height: 100%;
+    padding: rem(86) rem(32) rem(75);
+    overflow-y: scroll;
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: rem(20);
+    padding: rem(32) rem(32) 0;
+    background: $color-white;
+    z-index: $z-header;
+  }
+
+  &__block {
+    margin-bottom: rem(24);
+  }
+
+  &__block-title {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(8);
+  }
+
+  &__edit-btn {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+    padding: 0;
+    float: right;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: rem(20);
+    background-color: $color-desert-storm;
+  }
+
+  &__details-table {
+    width: 100%;
+    margin-right: rem(28);
+    border: 1px solid $color-mercury;
+    border-bottom: 0;
+    table-layout: fixed;
+
+    &--details {
+      width: calc(100% - 28px);
+    }
+  }
+
+  &__description-label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    width: rem(150);
+    padding: rem(12);
+    border-right: 1px solid $color-mercury;
+    border-bottom: 1px solid $color-mercury;
+  }
+
+  &__description-item {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    width: calc(100% - 150px);
+    padding: rem(12);
+    border-bottom: 1px solid $color-mercury;
+    background-color: $color-white;
+  }
+
+  &__details-map {
+    padding-left: rem(28);
+    border-left: 1px solid $color-mercury;
+  }
+
+  &__img {
+    height: rem(60);
+    margin-right: rem(20);
+  }
+
+  &__btn-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: rem(16) rem(20);
+    border-top: 1px solid $color-mercury;
+    background: $color-white;
+    text-align: right;
+  }
+
+  &__btn {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+    @include font-weight(bold);
+    margin-right: rem(32);
+    padding: rem(8) rem(24);
+    border: solid 1px $color-keppel;
+    border-radius: 2px;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+
+    &--fill {
+      @include font-weight(normal);
+      background: $color-keppel;
+      color: $color-white;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__unpublish-popup {
+    max-width: rem(260);
+  }
+}

@@ -1,0 +1,105 @@
+.free-cancellation-policy-rule {
+  &__card {
+    margin: 0;
+    padding: rem(24) 0 rem(16);
+  }
+
+  &__card-title {
+    @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+    @include font-weight(bold);
+    position: relative;
+    margin: 0 0 rem(8);
+  }
+
+  &__card-text {
+    @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+    display: block;
+    margin: 0;
+  }
+
+  &__rule {
+    position: relative;
+    margin: 0;
+    padding: rem(10) 0 0 rem(30);
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    width: rem(16);
+    height: rem(16);
+    margin-top: 2px;
+    border-radius: 100%;
+  }
+
+  &__icon {
+    width: rem(10);
+    height: rem(10);
+    color: $color-keppel;
+
+    &--close {
+      color: $color-terracotta;
+    }
+  }
+
+  &__lable {
+    @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+    display: inline-block;
+    position: relative;
+  }
+
+  &__check-in {
+    position: absolute;
+    right: 0;
+    bottom: rem(12);
+    padding: rem(12);
+    border: solid 1px $color-mercury;
+    border-radius: 2px;
+    background-color: $color-white;
+    box-shadow: 0 rem(4) rem(16) 0 rgba($color-tundora, 0.24);
+    z-index: $z-base;
+  }
+
+  &__triangle {
+    position: absolute;
+    right: rem(28);
+    bottom: rem(8);
+    width: rem(12);
+    height: rem(12);
+    transform: translateX(-50%) rotate(45deg);
+    border: 0;
+    border-right: 2px solid $color-tundora-08;
+    border-bottom: 2px solid $color-tundora-08;
+    background-color: $color-white;
+    z-index: $z-low;
+  }
+
+  &__tooltip {
+    display: inline-block;
+    padding: rem(4) 0 0 rem(8);
+
+    .tooltip__children {
+      position: absolute;
+      bottom: 3px;
+    }
+  }
+
+  &__tooltip-container {
+    display: inline-block;
+    position: relative;
+    width: rem(16);
+    height: rem(16);
+    margin-top: 2px;
+    border: 1px solid $color-mercury;
+    border-radius: 50%;
+  }
+
+  &__tooltip-icon {
+    position: absolute;
+    top: rem(3);
+    width: rem(14);
+    height: rem(14);
+    margin-left: rem(4);
+    color: $color-keppel;
+  }
+}

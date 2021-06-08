@@ -1,0 +1,72 @@
+.landlord-contact-modal {
+  z-index: $z-high;
+
+  .landlord-contact-info {
+    width: rem(880);
+    margin: rem(48) auto;
+    background-color: $color-white;
+
+    &__header {
+      @include font-style($type-18px, $type-24px, $color-silver-chalice);
+      position: relative;
+      padding: rem(32) rem(32) rem(24);
+    }
+
+    &__close-button {
+      position: absolute;
+      top: rem(32);
+      right: rem(32);
+      font-size: $type-16px;
+    }
+
+    &__body {
+      height: auto;
+      padding: 0 rem(32);
+      overflow-y: auto;
+
+      .address__map {
+        display: none;
+      }
+
+      .ant-radio-group {
+        @include font-style($type-12px, $type-32px, $color-tundora);
+      }
+
+      .ant-input-group-addon {
+        background-color: $color-white;
+      }
+    }
+
+    .ant-form-item-label label {
+      @include font-style($type-12px, $type-24px, $color-tundora);
+      @include font-weight(bold);
+      display: block;
+    }
+
+    .ant-input {
+      @include font-style($type-12px, $type-24px, $color-tundora);
+    }
+
+    .ant-select-selection-selected-value {
+      font-size: $type-12px;
+    }
+
+    &__section:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+
+    &__footer {
+      padding: rem(12) rem(32);
+      border-top: 1px solid $color-mercury;
+      text-align: right;
+    }
+
+    &__cancel-button {
+      margin-right: rem(24);
+    }
+
+    &__btn {
+      padding: 0 rem(24);
+    }
+  }
+}

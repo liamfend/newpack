@@ -1,0 +1,66 @@
+.record-landlord {
+  min-height: calc(100vh - 230px);
+  border: 1px solid $color-mercury;
+  border-radius: rem(2);
+  background: $color-white;
+  text-align: center;
+
+  &__empty-icon {
+    height: rem(300);
+    padding-top: rem(96);
+  }
+
+  &__empty-header {
+    @include font-style($type-18px, $type-28px, $color-tundora);
+    @include font-weight(bold);
+    margin: rem(40) 0 rem(4);
+  }
+
+  &__empty-description {
+    @include font-style($type-14px, $type-24px, $color-silver-chalice);
+  }
+
+  &__uploaded-icon {
+    width: rem(87);
+    height: rem(93);
+    margin-top: rem(38);
+  }
+
+  &__uploaded-header {
+    @include font-style($type-16px, $type-28px, $color-tundora);
+    @include font-weight(bold);
+    margin: rem(20) 0 rem(8);
+  }
+
+  &__uploaded-description {
+    @include font-style($type-14px, $type-24px, $color-silver-chalice);
+  }
+
+  &__files-wrap {
+    margin: rem(40) rem(24) rem(24);
+    padding: rem(18) rem(20) rem(8);
+    background: $color-desert-storm;
+    text-align: left;
+
+    .contract-file-list {
+      height: auto;
+      padding: 0;
+      white-space: normal;
+
+      &__img-container {
+        margin-bottom: rem(12);
+        vertical-align: top;
+      }
+
+      &__img {
+        width: rem(160);
+      }
+    }
+  }
+
+  &__files-title {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(12);
+  }
+}

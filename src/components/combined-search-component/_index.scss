@@ -1,0 +1,32 @@
+.combined-search-component {
+  position: relative;
+
+  .search-component {
+    top: auto;
+    bottom: rem(27);
+    width: 100%;
+    z-index: $z-overlay;
+
+    .search-component__results-list {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    padding: rem(4) rem(24) rem(4) rem(8);
+    text-overflow: ellipsis;
+  }
+
+  .indicator {
+    @include font-style($type-12px, $type-16px, $color-keppel);
+    position: absolute;
+    top: rem(8);
+    right: rem(8);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .ant-tooltip {
+    width: rem(250);
+  }
+}

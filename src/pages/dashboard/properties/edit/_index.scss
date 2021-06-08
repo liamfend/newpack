@@ -1,0 +1,752 @@
+@import 'pages/dashboard/properties/edit/rooms-tab/index';
+
+.property-edit {
+  min-width: rem(660);
+
+  &__header-info {
+    display: inline-block;
+    // propertyEditWidth - allEditBtns
+    width: calc(100% - 360px);
+  }
+
+  &__page-tips {
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-height: rem(50);
+    margin: 0 0 rem(24);
+    padding: rem(12);
+    border-left: 8px solid $color-thunderbird;
+    border-radius: rem(2);
+    background-color: $color-terracotta-bg;
+  }
+
+  &__draft-details {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    @include font-weight(bold);
+    display: block;
+    margin-bottom: rem(4);
+  }
+
+  &__tips-text {
+    @include font-style($type-14px, $type-20px, $color-thunderbird);
+    display: block;
+  }
+
+  &__page {
+    position: relative;
+    margin: rem(20) rem(32) rem(32);
+
+    &--keepel {
+      margin: rem(20) rem(32) rem(32);
+
+      .property-edit__page-tips {
+        padding: rem(24) rem(24) rem(24) rem(12);
+        border-left: 8px solid $color-keppel;
+        background-color: $color-white;
+      }
+
+      .property-edit__tips-text {
+        @include font-weight(bold);
+        color: $color-tundora;
+      }
+    }
+  }
+
+  &__check-feedback-btn {
+    @include font-style($type-14px, $type-20px, $color-keppel);
+    position: absolute;
+    top: rem(24);
+    right: rem(24);
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__check-feedback-icon {
+    margin-left: rem(16);
+  }
+
+  &__property-name {
+    @include font-style($type-18px, $type-28px, $color-tundora);
+    @include font-weight(normal);
+    width: 100%;
+    margin: 0;
+    font-style: italic;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__property-id {
+    @include font-style($type-12px, $type-20px, $color-silver-chalice);
+  }
+
+  &__property-status {
+    @include font-style($type-12px, $type-16px, $color-white);
+    @include font-weight(bold);
+    display: inline-block;
+    padding: rem(2) rem(4);
+
+    &--gray {
+      background: $color-silver-chalice;
+    }
+
+    &--green {
+      background: $color-emerald;
+    }
+  }
+
+  &__property-link {
+    @include font-style($type-12px, $type-20px, $color-keppel);
+    margin-left: rem(24);
+  }
+
+
+  .ant-input::placeholder,
+  .ant-calendar-input::placeholder,
+  .ant-input-number-input::placeholder {
+    // sass-lint:disable variable-for-property
+    line-height: rem(22);
+    vertical-align: middle;
+  }
+
+  .ant-tabs-nav .ant-tabs-tab {
+    height: auto;
+  }
+
+  .ant-tabs-bar {
+    margin-bottom: 0;
+  }
+
+  .ant-btn {
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  .ant-input {
+    border-radius: 2px;
+  }
+
+  .ant-number-input {
+    border-radius: 2px;
+  }
+
+  .ant-select-selection {
+    border-radius: 2px;
+  }
+
+  .ant-tabs-tab {
+    border-radius: 2px 2px 0 0 !important;
+  }
+
+  .ant-form-item {
+    margin-top: 0;
+    margin-bottom: rem(16);
+    padding-bottom: 0;
+  }
+
+  .ant-form-item-label {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    padding-bottom: rem(4);
+
+    label {
+      color: $color-tundora;
+    }
+  }
+
+  .ant-form-item-no-colon {
+    color: $color-shuttle-gray;
+  }
+
+  .ant-radio-wrapper {
+    margin-right: rem(32);
+  }
+
+  &__header {
+    height: rem(48);
+    margin-bottom: rem(16);
+  }
+
+  .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+    min-width: rem(90);
+    text-align: center;
+  }
+
+  &__label {
+    &--disable {
+      .ant-form-item-label label {
+        color: $color-silver-chalice;
+      }
+    }
+  }
+
+  &__btns {
+    position: relative;
+    top: rem(-4);
+    float: right;
+
+    &__close {
+      @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+      @include font-weight(bold);
+      border: 0;
+      color: $color-shuttle-gray !important;
+    }
+
+    &__prim {
+      @include font-weight(bold);
+      min-width: rem(128);
+      height: rem(40);
+      margin-left: rem(16);
+    }
+
+    &__popover {
+      height: rem(40);
+      float: right;
+    }
+  }
+
+  &__warning {
+    width: rem(218);
+    padding: rem(4) 0;
+
+    &__icon {
+      margin-top: rem(4);
+      float: left;
+      color: $color-supernova-dark;
+    }
+
+    &__text {
+      margin: 0  0 rem(16) rem(20);
+    }
+
+    &__btn-wrapper {
+      height: rem(32);
+    }
+
+    &__btn {
+      float: right;
+    }
+  }
+
+  &__tab-conatiner {
+    height: 100%;
+    border: 1px solid $color-mercury;
+    border-top: 0;
+    background-color: $color-white;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__listings-conatiner,
+  &__rooms-conatiner {
+    overflow-y: hidden;
+  }
+
+  .ant-tabs-content {
+    position: relative;
+    height: calc(100vh - 220px) !important;
+  }
+
+  .ant-tabs-tabpane-active {
+    height: 100%;
+  }
+
+  &__loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: rem(50);
+    background-color: $color-white;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .basic-info__currency {
+    height: rem(40);
+    background-color: $color-desert-storm;
+
+    span {
+      @include font-style($type-14px, $type-40px, $color-shuttle-gray);
+      display: inline-block;
+    }
+
+    .create-confirmation__headline {
+      margin-left: rem(12) !important;
+    }
+
+    .create-confirmation__text {
+      @include font-weight(bold);
+
+      &--bill {
+        @include font-weight(bold);
+      }
+    }
+
+    .create-confirmation__line {
+      height: rem(16);
+    }
+  }
+
+  &__reminder-modal {
+    top: 40%;
+
+    .ant-btn {
+      @include font-style($type-12px, $type-12px, $color-shuttle-gray);
+      @include font-weight(bold);
+    }
+
+    .ant-btn-primary {
+      @include font-style($type-12px, $type-12px, $color-white);
+      background: $color-thunderbird;
+    }
+  }
+
+  &__recommended-universities {
+    position: relative;
+  }
+
+  &__universities-icon {
+    position: absolute;
+    top: rem(4);
+    left: rem(180);
+    color: $color-keppel;
+    z-index: $z-base;
+  }
+
+  &__universities-spin {
+    margin-left: 48%;
+  }
+}
+
+.detail-tab {
+  padding: rem(24);
+
+  &__column {
+    display: inline-block;
+    width: 50%;
+    padding: 0;
+    vertical-align: top;
+
+    &:first-child {
+      padding-right: rem(50);
+    }
+
+    &:nth-child(2) {
+      padding-left: rem(50);
+    }
+
+    .ant-tabs-content {
+      height: auto !important;
+    }
+
+    .ant-tabs {
+      overflow: visible;
+    }
+
+  }
+
+  &__switch-item {
+    margin-bottom: rem(16);
+    padding: rem(8) rem(16);
+    background-color: $color-desert-storm;
+  }
+
+  &__switch-check-icon {
+    width: rem(10);
+    height: rem(10);
+    fill: $color-white;
+  }
+
+  &__item-title {
+    @include font-style($type-12px, $type-24px, $color-shuttle-gray);
+    @include font-weight(bold);
+    display: inline-block;
+  }
+
+  &__cancel-switch {
+    float: right;
+  }
+
+  &__other-cancellation {
+    margin-bottom: rem(16);
+  }
+
+  &__cancel-checkbox {
+    margin-right: rem(16);
+    margin-left: rem(8);
+
+    span {
+      @include font-style($type-12px, $type-24px, $color-tundora);
+    }
+  }
+
+  &__other-text {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+  }
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+    margin-bottom: rem(16);
+
+    &--cancellation {
+      margin-top: rem(32);
+    }
+  }
+
+  &__label {
+    display: inline-block;
+
+    &--hide {
+      display: none;
+    }
+
+    .anticon {
+      margin-left: rem(8);
+    }
+
+    &__link {
+      margin-left: rem(12);
+    }
+
+    &__quill {
+      .ql-toolbar {
+        border-radius: 2px 2px 0 0;
+      }
+
+      .ql-container {
+        border-radius: 0 0 2px 2px;
+      }
+
+      .ant-form-explain {
+        position: absolute;
+        bottom: rem(4);
+      }
+
+      .ql-editor.ql-blank {
+        &::before {
+          color: $color-silver-chalice;
+          font-style: normal;
+        }
+      }
+
+      .ql-picker-item {
+        &:first-child {
+          display: none;
+        }
+
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__beds-icon {
+    color: $color-keppel;
+  }
+
+  &__counter {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    margin-top: rem(4);
+    text-align: right;
+
+    &--red {
+      color: $color-coral-dark;
+    }
+  }
+
+  &__city {
+    position: relative;
+
+    &--status {
+      @include font-style($type-12px, $type-24px, $color-silver-chalice);
+      display: block;
+      position: absolute;
+      right: 0;
+      min-height: 22px;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-silver-chalice;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__desc {
+    overflow: hidden;
+
+    .ant-form-item-control-wrapper {
+      padding: 0 2px;
+    }
+
+    .ant-tabs-nav-wrap {
+      @include font-weight(bold);
+    }
+  }
+
+  .ql-container {
+    height: rem(160);
+  }
+
+  .ant-tabs-tab {
+    width: rem(88);
+    padding: rem(10) 0;
+    text-align: center;
+  }
+
+  .ant-tabs-content {
+    margin-top: rem(16);
+  }
+}
+
+.facility-tab {
+  padding: rem(25) rem(24);
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+    margin-bottom: rem(17);
+  }
+
+  &__radio-group-title {
+    @include font-style($type-14px, $type-20px, $color-silver-chalice);
+    margin-bottom: rem(4);
+  }
+
+  &__other-item-container,
+  &__radio-group-container,
+  &__check-item-container {
+    display: inline-block;
+    width: 33.33%;
+    margin-bottom: rem(9);
+    float: left;
+
+    .ant-radio-wrapper,
+    .ant-checkbox-wrapper {
+      @include font-style($type-14px, $type-20px, $color-tundora);
+    }
+  }
+
+  &__check-item-container-clear {
+    clear: both;
+  }
+
+  &__other-item-container {
+    .ant-form-explain {
+      display: none;
+    }
+  }
+
+  &__radio-group-container {
+    margin-bottom: rem(16);
+  }
+
+  &__radio-item-container {
+    margin-bottom: rem(12);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__check-block,
+  &__radio-block {
+    @include clearfix;
+  }
+
+  &__check-block {
+    margin-bottom: rem(8);
+  }
+
+  &__type-block {
+    padding-bottom: rem(19);
+  }
+
+  &__block {
+    margin-bottom: rem(28);
+    border-bottom: solid 1px $color-mercury;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .ant-form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__radio-group {
+    width: 100%;
+
+    .ant-radio-wrapper {
+      width: 100%;
+      white-space: initial;
+    }
+  }
+
+  &__tips-icon {
+    margin-left: rem(12);
+    color: $color-keppel;
+  }
+}
+
+.address-tab {
+  display: flex;
+  padding: rem(24);
+
+  &--hide {
+    display: none;
+  }
+
+  &__label {
+
+    &--hide {
+      display: none;
+    }
+
+    &--disable {
+      .address-tab__custom-label-text {
+        color: $color-silver-chalice;
+      }
+    }
+  }
+
+  &__hide-fields {
+    display: none;
+  }
+
+  &__left-col {
+    width: 50%;
+  }
+
+  &__right-col {
+    width: 50%;
+    margin-left: rem(100);
+
+    &--hide {
+      display: none;
+    }
+
+    &--no-vpn {
+      padding-top: 0;
+    }
+  }
+
+  &__custom-label {
+    >a {
+      @include font-weight(normal);
+      float: right;
+    }
+
+    .display-permission__switch {
+      float: right;
+    }
+  }
+
+  &__link-delete {
+    @include font-weight(normal);
+    float: right;
+    color: $color-keppel;
+    cursor: pointer;
+  }
+
+  .address__map {
+    $color-torch-red: #f5222d;
+    position: relative;
+
+    &__coordinate {
+      @include font-style($type-12px, $type-16px, $color-silver-chalice);
+      margin-top: rem(5);
+    }
+
+    &__coordinate-error {
+      margin: rem(5) 0 0;
+      color: $color-torch-red;
+    }
+
+    .map-label {
+      @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+      @include font-weight(bold);
+      top: 0;
+      width: 100%;
+      padding-bottom: rem(4);
+
+      .reset-pin-btn {
+        @include font-weight(normal);
+        float: right;
+        outline: 0;
+        color: $color-keppel;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .virtual-tour-link {
+    display: flex;
+    align-items: center;
+    height: 28px;
+
+    .ant-input-suffix {
+      right: 0;
+    }
+
+    .check-btn {
+      color: $color-silver-chalice;
+
+      &--active {
+        color: $color-keppel;
+      }
+    }
+  }
+
+  .add-another-link {
+    display: inline-block;
+    margin-top: rem(-8);
+    color: $color-keppel;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+.auto-complete-wrapper {
+  width: 50%;
+  padding-top: rem(25);
+  padding-left: rem(25);
+
+  &--hide {
+    display: none;
+  }
+
+  .ant-form-item {
+    margin-top: 0;
+  }
+}
+
+.show-all {
+  box-shadow: 0 1px 4px 0 rgba($color-black, 0.2);
+}
+
+.certain-category-search {
+  &--hide {
+    display: none;
+  }
+}
+
+.ant-popover {
+  z-index: $z-modal;
+}
+
+.ant-modal-mask {
+  z-index: $z-modal;
+}
+
+.ant-modal-wrap {
+  z-index: $z-modal;
+}

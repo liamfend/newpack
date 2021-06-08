@@ -1,0 +1,126 @@
+.create-account-modal {
+  height: 100%;
+  padding: 5% calc(50% - 226px);
+  padding-top: 10%;
+  overflow: hidden;
+  z-index: $z-high;
+  overflow-y: scroll;
+}
+
+.create-account {
+  position: relative;
+  width: rem(454);
+  padding: rem(32) rem(20) 0 rem(32);
+  border-radius: 2px;
+  background-color: $color-white;
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+    margin-bottom: rem(20);
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: rem(20);
+    right: rem(20);
+    min-height: rem(14) !important;
+    float: right;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__content {
+    height: calc(100% - 72px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    display: block;
+    margin: 0 0 rem(4);
+
+    &--hidden {
+      display: none;
+    }
+
+    &--disabled {
+      color: $color-silver-chalice;
+    }
+
+    &--switch {
+      @include font-style($type-12px, $type-24px, $color-shuttle-gray);
+    }
+  }
+
+  &__switch-btn {
+    position: absolute;
+    top: rem(8);
+    right: rem(16);
+  }
+
+  &__enable-pms-access {
+    position: relative;
+    width: rem(374);
+    padding: rem(8) rem(16);
+    background-color: $color-desert-storm;
+  }
+
+  &__form-title  {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    @include font-weight(normal);
+    display: block;
+    position: relative;
+    margin: 0 rem(12) rem(16);
+  }
+
+  &__footer {
+    position: relative;
+    width: rem(454);
+    height: rem(72);
+    margin-left: rem(-32);
+    padding: rem(16) rem(20);
+    border: solid 1px $color-mercury;
+    background-color: $color-white;
+  }
+
+  &__confirm-btn {
+    @include font-style($type-14px, $type-24px, $color-white);
+    @include font-weight(bold);
+    position: absolute;
+    right: rem(20);
+    bottom: rem(16);
+    height: rem(40);
+    padding: rem(8) rem(16);
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    background-color: $color-keppel;
+    cursor: pointer;
+    z-index: $z-base;
+  }
+
+  .table-list__columns-dropdown {
+    width: rem(388);
+    height: rem(32);
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .ant-input-disabled {
+    background-color: $color-desert-storm !important;
+  }
+
+  .ant-select-show-search {
+    display: block;
+  }
+
+  .ant-input {
+    display: block;
+  }
+}

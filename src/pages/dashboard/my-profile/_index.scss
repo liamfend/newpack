@@ -1,0 +1,197 @@
+.basic-setting {
+  $type-36px: 36px;
+  border: 1px solid $color-mercury;
+  border-top: 0;
+  background: $color-white url('/bundles/microapp-cms/images/public/account-bg.png') no-repeat;
+  background-size: 100%;
+  background-position-y: calc(100% + 20px);
+
+  &__container {
+    width:  rem(568);
+    margin: 0 auto;
+    padding: rem(57) 0 rem(43);
+  }
+
+  &__profile  {
+    position: relative;
+    margin-bottom: rem(32);
+    padding-bottom: rem(24);
+    border-bottom: 1px solid $color-mercury;
+  }
+
+  &__profile-photo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__profile-photo-icon {
+    width: rem(88);
+    height: rem(88);
+  }
+
+  &__profile-info {
+    position: relative;
+    height: rem(88);
+    padding: 0 0 0 rem(103);
+  }
+
+  &__profile-position {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__profile-role-container {
+    margin: 0;
+  }
+
+  &__profile-name {
+    @include font-style($type-24px, $type-36px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(4);
+  }
+
+  &__profile-role {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+  }
+
+  &__btn {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+
+    &--loading {
+      margin-left: rem(8);
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &__change-version {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    margin-left: rem(8);
+    padding: rem(2) rem(8);
+    border: solid 1px $color-mercury;
+    border-radius: 2px;
+    background-color: $color-desert-storm;
+  }
+
+  &__block-title {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    position: relative;
+    margin-bottom: rem(20);
+    padding-left: rem(12);
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: rem(4);
+      height: rem(16);
+      transform: translateY(-50%);
+      background: $color-keppel;
+      content: '';
+    }
+  }
+
+  .ant-form-item-label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(4);
+  }
+
+  &__label {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    @include font-weight(bold);
+    margin-right: rem(12);
+  }
+
+  &__current-password {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+  }
+
+  &__current-password-container {
+    margin-bottom: rem(4);
+  }
+
+  &__modify {
+    margin-left: rem(44);
+    color: $color-keppel;
+  }
+
+  &__modify-animation-container {
+    position: relative;
+    max-height: 0;
+    transition: max-height 0.5s;
+    overflow: hidden;
+
+    &--show {
+      max-height: rem(186);
+    }
+  }
+
+  &__modify-container {
+    position: relative;
+    width: fit-content;
+    margin: rem(12) auto rem(4) 0;
+    padding: rem(16);
+    border-radius: 2px;
+    background: $color-desert-storm;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: rem(-8);
+      right: rem(54);
+      width: rem(16);
+      height: rem(16);
+      transform: rotateZ(45deg);
+      border-radius: 2px;
+      background: $color-desert-storm;
+      content: '';
+    }
+
+    .ant-form-explain {
+      margin-top: 2px;
+    }
+  }
+
+  &__modify-input {
+    display: block;
+    width: rem(276);
+    margin-bottom: rem(12);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__comfirm {
+    @include font-style($type-14px, $type-24px, $color-white);
+    min-width: rem(150);
+    margin-top: rem(24);
+    padding: rem(8) rem(16);
+    border-radius: 2px;
+    background: $color-keppel;
+    font-weight: 500;
+  }
+
+  &__label--email .ant-form-item-label {
+    color: $color-silver-chalice;
+  }
+
+  .ant-spin-spinning {
+    height: rem(600);
+    margin-top: rem(260);
+  }
+}

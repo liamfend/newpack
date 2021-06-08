@@ -1,0 +1,63 @@
+$color-buttercup: #f5a623;
+
+.unpubilshed-modal {
+  z-index: $z-high;
+
+  &__content {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    width: rem(437);
+    padding: rem(32) rem(34) rem(24);
+    transform: translate(-50%, -30%);
+    border-radius: 2px;
+    outline: none;
+    background: $color-white;
+    overflow: hidden;
+  }
+
+  &__text {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    display: block;
+    min-height: auto !important;
+    margin: 0 0 rem(56) rem(38);
+    padding: 0;
+  }
+
+  &__no-btn {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    position: absolute;
+    right: rem(92);
+    bottom: rem(24);
+    height: rem(32);
+    min-height: rem(32) !important;
+    margin: 0;
+    padding: rem(5) rem(15);
+    border: 1px solid $color-mercury;
+    border-radius: 2px;
+    background-color: $color-white;
+  }
+
+  &__yes-btn {
+    @include font-style($type-14px, $type-24px, $color-white);
+    @include font-weight(bold);
+    position: absolute;
+    right: rem(32);
+    bottom: rem(24);
+    height: rem(32);
+    margin: 0;
+    padding: rem(6) rem(16);
+    border: 0;
+    border-radius: 2px;
+    background-color: $color-terracotta;
+  }
+
+  &__icon {
+    position: absolute;
+    top: rem(32);
+    width: rem(22);
+    height: rem(22);
+    fill: $color-buttercup;
+  }
+}

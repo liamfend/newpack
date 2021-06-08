@@ -1,0 +1,105 @@
+.reconciliation-booking-comment {
+  position: relative;
+
+  &__tag-container {
+    display: flex;
+    position: absolute;
+    top: rem(-23);
+    right: rem(-24);
+    align-items: center;
+    justify-content: flex-end;
+    padding: rem(6) rem(16);
+    border-radius: 2px;
+    background-color: $color-supernova-bg;
+
+    &--blue {
+      background-color: $color-ship-cove-bg;
+
+      .reconciliation-booking-comment__tag-content {
+        @include font-style($type-12px, $type-16px, $color-ship-cove);
+      }
+    }
+  }
+
+  &__tag-content {
+    @include font-style($type-12px, $type-16px, $color-supernova-dark);
+  }
+
+  &__tag-line {
+    display: inline-block;
+    width: 1px;
+    height: rem(12);
+    margin: 0 rem(8);
+    background-color: rgba($color-supernova-dark, 0.32);
+  }
+
+  &__tag-sign {
+    @include font-style($type-12px, $type-16px, $color-supernova-dark);
+  }
+
+  &__reason-container {
+    margin-bottom: rem(8);
+  }
+
+  &__reason-title {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+  }
+
+  &__reason-content {
+    @include font-weight(bold);
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    padding-left: rem(5);
+  }
+
+  &__description-container {
+    display: flex;
+  }
+
+  &__description-title {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    white-space: nowrap;
+  }
+
+  &__description {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 rem(4);
+    word-break: break-all;
+  }
+
+  &__gallery-container {
+    margin: rem(20) 0 0;
+    padding: 0;
+  }
+
+  &__gallery-item {
+    display: inline-block;
+    position: relative;
+    width: rem(80);
+    height: rem(80);
+    border: 1px solid $color-supernova-bg;
+    cursor: zoom-in;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-right: rem(12);
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &--more-width {
+      height: 100%;
+    }
+
+    &--more-height {
+      width: 100%;
+    }
+  }
+
+}

@@ -1,0 +1,130 @@
+.gallery-tab {
+  $container-height: 100%;
+  $container-padding: rem(24);
+
+  height: $container-height !important;
+  padding-top: $container-padding;
+  overflow: hidden;
+
+  &__row,
+  &__col {
+    height: 100%;
+  }
+
+  &__primary {
+    height: 100%;
+    padding: 0 $container-padding;
+    overflow-y: auto;
+  }
+
+  &__partition {
+    height: 100%;
+    border-left: rem(1) solid $color-mercury;
+
+    .icon-vr {
+      width: rem(24);
+      height: rem(14);
+      margin-right: rem(6);
+      transform: translateY(2px);
+      cursor: pointer;
+    }
+  }
+
+  &__sub-tabs {
+    position: relative;
+    padding: 0 $container-padding rem(16);
+
+    .ant-tabs-content.ant-tabs-content-animated.ant-tabs-top-content {
+      display: none;
+    }
+
+    &__icon {
+      color: $color-keppel;
+      font-size: $type-12px;
+      cursor: pointer;
+    }
+
+  }
+
+  &__sub-tab {
+    margin: 0 rem(10);
+  }
+
+  &__tab-sections {
+    position: relative;
+    height: calc(100% - 24px);
+    padding: 0 $container-padding;
+    overflow-y: scroll;
+  }
+
+  &__tab-section-completion {
+    margin-bottom: rem(16 + 48); // add the height of sub tab
+  }
+
+  &__annotation {
+    @include font-style($type-12px, $type-20px, $color-silver-chalice);
+    width: 100%;
+    padding: rem(12);
+    border-radius: 2px;
+    background: $color-desert-storm;
+  }
+
+  &__annotation-label {
+    @include font-weight(bold);
+    display: inline-block;
+    margin-right: rem(4);
+  }
+
+  &__photo-library {
+    margin-top: rem(16);
+    margin-bottom: rem(24);
+
+    .gallery-library {
+      &__description {
+        margin-top: rem(4);
+      }
+
+      &__dropzone {
+        min-height: rem(202);
+        margin-top: rem(16);
+      }
+
+      &__dropzone-description {
+        margin-top: rem(14);
+      }
+    }
+  }
+
+  &__section-title {
+    @include font-style($type-14px, $type-32px, $color-silver-chalice);
+    @include font-weight(bold);
+    background: $color-desert-storm;
+
+    &::before {
+      display: inline-block;
+      width: rem(4);
+      height: rem(16);
+      margin-right: rem(8);
+      background: $color-keppel;
+      content: '';
+      vertical-align: middle;
+    }
+  }
+
+  &__section-undefined-room {
+    @include font-style($type-12px, $type-16px, $color-coral);
+    display: flex;
+    align-items: center;
+    margin-top: rem(20);
+    margin-bottom: rem(12);
+  }
+
+  &__section-undefined-room-icon {
+    display: flex;
+    align-items: center;
+    width: rem(16);
+    height: rem(16);
+    margin-right: rem(5);
+    color: $color-coral;
+  }
+}

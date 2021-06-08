@@ -1,0 +1,87 @@
+@import "~antd/dist/antd.less";
+@blue-6: #38b2a6;
+@btn-danger-color: #fff;
+@btn-danger-bg: #E16B5E;
+@btn-danger-border: #E16B5E;
+@border-radius-base: 2px;
+
+.ant-input::placeholder,
+.ant-calendar-input::placeholder,
+.ant-input-number-input::placeholder {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.ant-input-number {
+	width: 100%;
+}
+
+.ant-calendar-table {
+	font-size: 12px;
+}
+
+.ant-btn {
+	border-radius: 2px;
+}
+
+.ant-form-item-label {
+	margin-bottom: 4px;
+}
+
+form .ant-select:only-child,
+form .ant-cascader-picker:only-child {
+	top: auto;
+}
+
+form .ant-input-group-addon .ant-select:only-child {
+	margin-top: -3px;
+}
+
+tr.ant-table-expanded-row:hover > td {
+	background-color: transparent;
+}
+
+.ant-popover-dark {
+	.ant-popover-content > .ant-popover-arrow,
+	.ant-popover-placement-topLeft > .ant-popover-content > .ant-popover-arrow,
+	.ant-popover-placement-topRight > .ant-popover-content > .ant-popover-arrow,
+	.ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow,
+	.ant-popover-placement-bottomRight > .ant-popover-content > .ant-popover-arrow {
+		border-right-color: #404040;
+		border-bottom-color: #404040;
+	}
+
+	.ant-popover-inner {
+		background-color: #404040;
+
+		.ant-popover-inner-content {
+			color: white;
+		}
+	}
+}
+
+.ant-popover-delete {
+	&.ant-popover {
+		.ant-popover-inner {
+			.ant-btn-primary {
+				background: #e16b5e;
+				border-color: #e16b5e;
+			}
+
+			.ant-popover-inner-content {
+				width: 211px;
+			}
+		}
+	}
+}
+
+.ant-btn-danger:hover {
+	color: #fff;
+	background-color: @btn-danger-bg;
+	border-color: @btn-danger-bg;
+	opacity: 0.5;
+}
+
+.ant-tooltip-inner {
+	font-size: 12px;
+}

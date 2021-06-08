@@ -1,0 +1,108 @@
+.change-log-table {
+  position: relative;
+  margin: rem(16) rem(32) 0;
+  overflow: hidden;
+
+  &__active-log-row td {
+    $color-aqua-squeeze: #e4f2ee;
+
+    background-color: $color-aqua-squeeze;
+  }
+
+  &__table {
+    .ant-table {
+      height: calc(100vh - 274px);
+      border: 1px solid $color-mercury;
+      background: $color-white;
+      overflow-y: auto;
+    }
+
+    &--with-filter {
+      .ant-table {
+        height: calc(100vh - 332px);
+      }
+    }
+
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      width: 25%;
+      padding: rem(14) rem(32);
+    }
+
+    .ant-table-tbody > tr {
+      cursor: pointer;
+    }
+
+    .ant-table-tbody > tr > td:last-child {
+      @include font-style($type-14px, $type-24px, $color-silver-chalice);
+    }
+  }
+
+  .ant-empty {
+    margin-top: rem(100);
+  }
+
+  .ant-table-pagination li {
+    @include font-style($type-12px, $type-28px, $color-tundora);
+    min-width: rem(28);
+    height: rem(28);
+  }
+
+  .ant-select-selection--single {
+    height: rem(28);
+  }
+
+  .ant-select-selection__rendered {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    padding: rem(1) rem(10) rem(1) 0;
+  }
+
+  .ant-pagination-options-quick-jumper {
+    @include font-style($type-12px, $type-28px, $color-tundora);
+    height: rem(28);
+
+    input {
+      @include font-style($type-12px, $type-28px, $color-tundora);
+      height: rem(28);
+      margin: 0 0 0 rem(8);
+    }
+  }
+
+  .ant-select-dropdown-menu li {
+    @include font-style($type-12px, $type-28px, $color-tundora);
+    min-width: rem(28);
+    height: rem(28);
+    padding: 0 rem(12);
+  }
+
+  .ant-pagination {
+    margin: rem(16) 0 rem(32);
+  }
+
+  .ant-pagination .anticon-left,
+  .ant-pagination .anticon-right {
+    margin: 0;
+  }
+
+  .ant-drawer-mask {
+    background: transparent;
+  }
+
+  .ant-drawer-body {
+    padding: rem(40) rem(32) rem(32);
+  }
+
+  .ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
+    height: calc(100% - 76px);
+    border: 1px solid $color-mercury;
+    box-shadow: inset 0 -1px 0 0 $color-mercury, inset 1px 0 0 0 $color-mercury, inset -1px 0 0 0 $color-mercury;
+  }
+
+  .ant-drawer-right .ant-drawer-content-wrapper {
+    height: calc(100% - 76px);
+  }
+
+  .ant-table-body {
+    overflow-y: auto !important;
+  }
+}

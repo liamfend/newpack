@@ -1,0 +1,335 @@
+.gallery-library {
+  margin-bottom: rem(12);
+
+  &:last-child {
+    margin-bottom: 0;
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+
+  &__requirement {
+    &::before {
+      @include font-style($type-14px, $type-14px, $color-coral-dark);
+      display: inline-block;
+      margin-right: 4px;
+      content: '*';
+    }
+  }
+
+  &__title {
+    @include font-style($type-12px, $type-24px, rgba($color-black, 0.85));
+    @include font-weight(bold);
+    margin: 0;
+
+    .ant-tooltip {
+      width: rem(250);
+    }
+  }
+
+  &__reminder {
+    @include font-style($type-12px, $type-20px, $color-shuttle-gray);
+    margin-left: rem(8);
+  }
+
+  &__no-listing-tips {
+    @include font-style($type-12px, $type-20px, $color-white);
+
+    .ant-tooltip-inner {
+      padding: rem(12);
+    }
+  }
+
+  &__no-listing {
+    display: inline;
+    margin: 0 rem(4);
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__no-listing-icon {
+    position: relative;
+    width: rem(14);
+    height: rem(12);
+    margin: 0;
+    padding: 0;
+  }
+
+
+  &__description {
+    @include font-style($type-12px, $type-16px);
+    margin: rem(4) 0 rem(14);
+  }
+
+  &__drapzone {
+    margin: rem(-10);
+  }
+
+  &__dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: rem(235);
+    min-height: rem(155);
+    margin: rem(10);
+    transition: border 0.2s, height 0.2s;
+    // border: 1.5px dashed $color-silver-sand;
+    border-radius: 2px;
+    outline: 0;
+    cursor: pointer;
+    overflow: hidden;
+    user-select: none;
+
+    // hover: 鼠标hover在某个容器上时
+    // enabled: 进入拖拽状态时，hover在可被拖拽的容器的状态
+    // disabled: 进入拖拽状态时，hover在不可被拖拽的容器的状态，比如cover photo已经包含了图片
+    // upload-active: 鼠标拖拽着文件且hover到某个容器时的状态
+
+    &:hover,
+    &--enabled,
+    &--upload-active {
+      // border: 1.5px dashed $color-keppel !important;
+
+      .gallery-library {
+        &__media {
+          border: 1.5px dashed $color-keppel;
+        }
+
+        &__add-item,
+        &__add-item:hover {
+          border-color: $color-silver-sand;
+
+          .gallery-library {
+            &__add-item-icon,
+            &__add-item-icon:hover {
+              color: $color-silver-sand;
+            }
+          }
+        }
+
+        &__plus-icon {
+          color: $color-keppel;
+        }
+      }
+    }
+
+    &:hover {
+      .gallery-library {
+        &__dropzone-description {
+          color: $color-keppel;
+        }
+
+        &__media-icon {
+          fill: $color-keppel;
+        }
+
+        &__plus-icon {
+          @include font-style($type-24px, $type-24px, $color-keppel);
+        }
+      }
+    }
+
+    &--upload-active {
+      cursor: copy !important;
+
+      .gallery-library {
+        &__media {
+          display: flex;
+        }
+
+        &__dropzone-description {
+          color: $color-keppel;
+        }
+
+        &__media-icon {
+          fill: $color-keppel;
+        }
+      }
+    }
+
+    &--disabled,
+    &--disabled:hover {
+      cursor: not-allowed;
+
+      * {
+        cursor: not-allowed;
+      }
+
+      .gallery-library {
+        &__media {
+          border: 1.5px dashed $color-silver-sand;
+        }
+
+        &__dropzone-description {
+          color: $color-shuttle-gray;
+        }
+
+        &__media-icon {
+          fill: $color-silver-sand;
+        }
+      }
+    }
+
+    .gallery-library {
+      &__media {
+        display: flex;
+        background: $color-desert-storm;
+      }
+    }
+  }
+
+  &__media {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: rem(158);
+    border: 1.5px dashed $color-silver-sand;
+    border-radius: 2px;
+    background: rgba($color-white, 0.9);
+  }
+
+  &__dropzone-description {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    margin-top: rem(9);
+  }
+
+  &__media-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__plus-icon {
+    @include font-style($type-24px, $type-24px, $color-silver-sand);
+  }
+
+  &__media-icon {
+    width: rem(30);
+    height: rem(24);
+    fill: $color-silver-sand;
+  }
+
+  &__media-icon-split {
+    width: rem(2);
+    height: rem(30);
+    margin: 0 rem(22);
+    border-radius: 1px;
+    background: $color-mercury;
+  }
+
+
+  &__img-multiple {
+    width: rem(70);
+    height: rem(70);
+    border-radius: 2px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: border 0.2s, height 0.2s;
+    border-radius: 2px;
+    outline: none;
+    user-select: none;
+
+    &--single {
+      position: relative;
+      margin: rem(10);
+
+      .gallery-library {
+        &__add-item {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: rem(235);
+          height: auto;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__add-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(70);
+    height: rem(70);
+    margin: rem(6);
+    border: 1.5px dashed $color-silver-sand;
+    border-radius: 2px;
+    outline: none;
+    background: $color-desert-storm;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $color-keppel;
+
+      .gallery-library {
+        &__add-item-icon {
+          color: $color-keppel;
+        }
+      }
+    }
+  }
+
+  &__add-item-icon {
+    @include font-style(rem(26), rem(26), $color-silver-sand);
+    color: $color-silver-sand;
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: rem(16);
+
+    &::before {
+      display: inline-block;
+      width: rem(3);
+      height: rem(16);
+      margin-right: rem(8);
+      background-color: $color-keppel;
+      content: '';
+    }
+  }
+
+  &__delete {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    outline: none;
+    cursor: not-allowed;
+
+    &--active {
+      color: $color-keppel;
+      cursor: pointer;
+    }
+  }
+
+  &__title-start {
+    flex: 1;
+  }
+
+  &__select {
+    @include font-style($type-12px, $type-16px, $color-keppel);
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__item-single {
+    width: auto;
+  }
+}

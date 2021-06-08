@@ -1,0 +1,231 @@
+$color-wild-sand: #f5f5f5;
+$color-alto: #d9d9d9;
+
+.add-new-city-modal {
+  z-index: $z-high;
+  overflow-y: auto;
+}
+
+.add-new-city {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  width: rem(880);
+  padding: rem(32) rem(32) 0;
+  transform: translate(-50%, -30%);
+  border-radius: 2px;
+  outline: none;
+  background: $color-white;
+  overflow: hidden;
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+    margin-bottom: rem(20);
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: rem(32);
+    right: rem(32);
+    width: rem(12);
+    height: rem(12);
+    min-height: rem(20) !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__form {
+    position: relative;
+    height: rem(400);
+  }
+
+  &__form-left {
+    width: rem(368);
+  }
+
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    display: block;
+    margin: 0 0 rem(4);
+  }
+
+  &__label-disabled {
+    color: $color-silver-chalice;
+  }
+
+  &__select {
+    display: block;
+    width: rem(368);
+  }
+
+  &__footer {
+    width: 100%;
+    height: rem(72);
+  }
+
+  &__save-btn {
+    @include font-style($type-14px, $type-24px, $color-white);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: rem(40);
+    margin: rem(16) 0;
+    padding: rem(8) rem(24);
+    float: right;
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    background-color: $color-keppel;
+    cursor: pointer;
+
+    &--disabled {
+      border-color: $color-alto;
+      background-color: $color-wild-sand;
+      color: rgba($color-black, 0.25);
+      text-shadow: none;
+      cursor: not-allowed;
+    }
+  }
+
+  &__city-slug {
+    display: flex;
+    align-items: center;
+
+    .ant-input-suffix {
+      right: 0;
+    }
+
+    .ant-input {
+      @include font-style($type-14px, $type-20px, $color-silver-sand);
+    }
+  }
+
+  &__city-slug-btn {
+    color: $color-keppel;
+  }
+
+  &__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(368);
+    margin-left: rem(100);
+  }
+
+  &__map-hidden {
+    display: none;
+  }
+
+  .address__map__coordinate--lng,
+  .address__map__coordinate--lat,
+  .address__map__coordinate--country {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    display: block;
+    margin: 0 !important;
+    float: left;
+  }
+
+  .address__map__coordinate--country {
+    margin: rem(4) 0 0 !important;
+  }
+
+  .address__map__coordinate {
+    width: 100%;
+  }
+
+  .address__map {
+    $color-torch-red: #f5222d;
+    position: relative;
+
+    &__coordinate {
+      @include font-style($type-12px, $type-16px, $color-silver-chalice);
+      margin-top: rem(5);
+    }
+
+    &__coordinate-error {
+      margin: rem(5) 0 0;
+      color: $color-torch-red;
+    }
+
+    &__coordinate-error-weak {
+      @include font-style($type-12px, $type-20px, $color-shuttle-gray);
+      @include font-weight(normal);
+      margin: rem(4) 0 rem(8);
+      padding: rem(2) rem(8);
+      border-radius:  2px;
+      background: $color-supernova-bg;
+      animation: showError 0.5s;
+
+      @keyframes showError {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__coordinate-error-weak-icon {
+      margin-right: rem(8);
+    }
+
+    .map-label {
+      @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+      @include font-weight(bold);
+      top: 0;
+      width: 100%;
+      padding-bottom: rem(4);
+
+      .reset-pin-btn {
+        @include font-weight(normal);
+        float: right;
+        outline: 0;
+        color: $color-keppel;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__line {
+    position: absolute;
+    bottom: rem(72);
+    width: rem(880);
+    height: 1px;
+    margin: rem(100) 0 0 rem(-32);
+    border: 0;
+    background-color: $color-mercury;
+  }
+
+  &__name-input {
+    display: block;
+    height: rem(32);
+
+    .ant-input {
+      @include font-style($type-14px, $type-20px, $color-silver-sand);
+    }
+  }
+
+  .ant-form-explain {
+    color: $color-coral-dark;
+  }
+
+  .ant-input-disabled {
+    background-color: $color-desert-storm !important;
+  }
+
+  .ant-select-show-search {
+    display: block;
+  }
+
+  .ant-input {
+    display: block;
+    padding-top: rem(6);
+  }
+}

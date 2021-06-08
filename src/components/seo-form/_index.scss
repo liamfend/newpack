@@ -1,0 +1,94 @@
+$color-torch-red: #f5222d;
+
+.seo-form {
+  overflow: hidden;
+
+  &__summary {
+    @include font-style($type-14px, $type-20px, $color-silver-chalice);
+    margin: 0 0 rem(24);
+    padding: rem(12);
+    border-radius: 2px;
+    background-color: $color-desert-storm;
+  }
+
+  &__block-title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+    margin-bottom: rem(16);
+  }
+
+  &__checkbox-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .ant-form-item-control {
+      line-height: inherit;
+    }
+  }
+
+  &__headline-container,
+  &__paragraph-container,
+  &__meta-title-container,
+  &__meta-desc-container,
+  &__meta-keywords-container {
+    position: relative;
+  }
+
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+
+    &--required {
+      @include font-style($type-14px, $type-24px, $color-torch-red);
+    }
+  }
+
+  &__counter {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    margin: rem(4) 0 0;
+    text-align: right;
+
+    &--red {
+      color: $color-coral-dark;
+    }
+  }
+
+  &__item-container {
+    .ant-form-explain {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__tips-container {
+    position: relative;
+  }
+
+  &__input-tips--disable {
+    display: none;
+  }
+
+  &__template-enabled {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    float: right;
+  }
+
+  .ant-checkbox-inner {
+    margin-right: rem(-8);
+  }
+
+  .ant-form-explain {
+    @include font-style($type-12px, $type-16px, $color-torch-red);
+    padding: rem(4) 0 0;
+  }
+
+  .ant-input {
+    margin-bottom: 0;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+    padding-bottom: rem(16);
+  }
+}

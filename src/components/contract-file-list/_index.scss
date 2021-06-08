@@ -1,0 +1,47 @@
+.contract-file-list {
+  width: 100%;
+  height: rem(134);
+  padding: rem(12);
+  background: $color-desert-storm;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &__img {
+    height: 100%;
+  }
+
+  .ant-tooltip-inner {
+    white-space: normal;
+  }
+
+  &__tooltips-container {
+    display: inline-block;
+    height: 100%;
+  }
+
+  &__img-container,
+  &__file-container {
+    display: inline-block;
+    position: relative;
+    width: rem(150);
+    height: 100%;
+    margin-right: rem(12);
+    background: $color-white;
+    overflow: hidden;
+  }
+
+  &__file-pdf {
+    height: rem(64);
+    margin-top: rem(22);
+    margin-left: rem(-94);
+  }
+
+  &__img-container {
+    width: auto;
+  }
+
+  &__file-container {
+    width: rem(110);
+  }
+}

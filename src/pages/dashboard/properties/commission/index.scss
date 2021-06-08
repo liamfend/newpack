@@ -1,0 +1,175 @@
+.property-commission {
+  min-width: rem(660);
+  height: 100%;
+  overflow-y: hidden;
+
+  &__page {
+    height: calc(100% - 162px);
+    margin: rem(32);
+  }
+
+  &__property-name {
+    @include font-style($type-18px, $type-28px, $color-tundora);
+    @include font-weight(normal);
+    width: 100%;
+    margin: 0;
+    padding-right: rem(4);
+    font-style: italic;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__property-status {
+    @include font-style($type-12px, $type-16px, $color-white);
+    @include font-weight(bold);
+    display: inline-block;
+    padding: rem(2) rem(4);
+
+    &--gray {
+      background: $color-silver-chalice;
+    }
+
+    &--green {
+      background: $color-emerald;
+    }
+  }
+
+  &__property-link {
+    @include font-style($type-12px, $type-20px, $color-keppel);
+    margin-left: rem(24);
+  }
+
+  &__close-btn {
+    @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+    @include font-weight(bold);
+    margin-top: rem(16);
+    float: right;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__content-create {
+    height: calc(100vh - 224px);
+    padding: 0 rem(32);
+    background-color: $color-white;
+    overflow-y: auto;
+  }
+
+  &__content {
+    min-width: rem(652);
+    min-height: rem(370);
+    padding: 0 calc(50% - 326px) rem(100);
+    background-color: $color-white;
+  }
+
+  &__content-title {
+    @include font-style($type-24px, $type-32px, $color-tundora);
+    @include font-weight(normal);
+    max-width: rem(800);
+    margin: rem(72) auto;
+    text-align: center;
+  }
+
+  &__type-label {
+    @include font-style($type-14px, $type-32px, $color-tundora);
+    @include font-weight(bold);
+    display: block;
+    margin: 0 0 rem(8);
+  }
+
+  &__type-card {
+    display: inline-block;
+    width: rem(126);
+    margin-right: rem(24);
+
+    &:nth-child(4) {
+      margin-right: rem(0);
+    }
+  }
+
+  &__type-item {
+    position: relative;
+    width: 100%;
+    height: rem(96);
+    border: solid 1px $color-mercury;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--check {
+      border: solid 1px $color-keppel;
+
+      .property-commission__type-icon {
+        fill: $color-keppel;
+      }
+    }
+
+    &:hover {
+      border: solid 1px $color-keppel;
+
+      .property-commission__type-icon {
+        fill: $color-keppel;
+      }
+    }
+  }
+
+  &__type-icon {
+    width: 100%;
+    height: rem(44);
+    margin-top: rem(24);
+    fill: $color-silver-chalice;
+  }
+
+  &__type-text {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    display: block;
+    margin-top: rem(14);
+    text-align: center;
+  }
+
+  &__commission-type {
+    margin-bottom: rem(72);
+    padding-left: rem(40);
+  }
+
+  &__create-btn {
+    text-align: center;
+  }
+
+  &__btn {
+    @include font-style($type-16px, $type-24px, $color-white);
+    @include font-weight(bold);
+    width: rem(206);
+    height: rem(48);
+    margin: 0 0 rem(16);
+  }
+
+  &__create-tips {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    display: block;
+  }
+
+  &__type-tick {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-width: 0 0 rem(22) rem(22);
+    border-style: solid;
+    border-color: $color-keppel transparent;
+  }
+
+  &__check-icon {
+    position: absolute;
+    top: 2px;
+    width: rem(10);
+    height: rem(7);
+    transform: translate(-110%, 150%);
+    fill: $color-white;
+  }
+}

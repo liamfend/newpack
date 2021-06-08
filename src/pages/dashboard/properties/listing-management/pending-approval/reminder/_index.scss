@@ -1,0 +1,17 @@
+.pending-approval-reminder {
+  border-radius: rem(2);
+
+  &--rejected {
+    padding: rem(12) rem(16);
+    background-color: $color-terracotta-bg;
+  }
+
+  &__rejected-text {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    margin-bottom: rem(4);
+  }
+
+  &__request-by {
+    @include font-style($type-12px, $type-20px, $color-silver-chalice);
+  }
+}

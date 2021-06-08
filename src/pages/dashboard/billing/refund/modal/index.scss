@@ -1,0 +1,47 @@
+.refund-modal {
+  &__btn {
+    margin-bottom: rem(40);
+  }
+
+  &__basic-info-title {
+    @include font-style($type-16px, $type-16px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0 0 rem(16);
+    padding: 0 rem(8);
+    border-left: 4px solid $color-keppel;
+  }
+
+  &__basic-info-desc {
+    margin: 0 0 rem(24);
+  }
+
+  &__basic-info-text {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    display: block;
+  }
+
+  &__lable {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    display: block;
+  }
+
+  &__row {
+    margin-bottom: rem(64);
+  }
+
+  &__content {
+    .ant-modal-header {
+      padding: rem(32);
+      border: 0;
+    }
+
+    .ant-modal-title {
+      @include font-style($type-18px, $type-24px, $color-silver-chalice);
+      @include font-weight(bold);
+    }
+
+    .ant-modal-body {
+      padding: 0 rem(32) rem(32);
+    }
+  }
+}

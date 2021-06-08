@@ -1,0 +1,55 @@
+.country-tab {
+  min-width: rem(660);
+
+  .ant-table-row {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+  }
+
+  .ant-table-filter-icon {
+    right: auto !important;
+  }
+
+  .ant-table-body {
+    overflow-x: auto !important;
+  }
+
+  .ant-btn {
+    @include font-weight(bold);
+  }
+
+  &__filter-icon {
+    width: rem(10) !important;
+    height: rem(10) !important;
+    margin: rem(20) 0 0 rem(4);
+    fill: $color-silver-sand;
+  }
+
+  &__filter-icon-keepel {
+    fill: $color-keppel;
+  }
+
+  &__properties {
+    color: $color-silver-chalice;
+  }
+
+  .table-header__heading {
+    @include font-weight(bold);
+  }
+
+  .ant-table-column-title {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    @include font-weight(bold);
+  }
+
+  &__tips {
+    @include font-style($type-12px, $type-24px, $color-white);
+  }
+
+  &__name-column {
+    min-width: rem(190);
+    max-width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

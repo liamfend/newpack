@@ -1,0 +1,119 @@
+.bulk-history-modal {
+  $color-lightblue: #1da1f3;
+
+  height: rem(807);
+
+  .ant-modal-body {
+    padding: rem(32);
+  }
+
+  .ant-modal-content {
+    height: 100%;
+  }
+
+  .ant-table-placeholder .ant-empty-normal {
+    margin: rem(230) 0;
+  }
+
+  .ant-table-placeholder {
+    border-bottom: none;
+  }
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+  }
+
+  &__total {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    margin: rem(20) 0 rem(16);
+  }
+
+  &__search-input {
+    display: inline-block;
+    padding: rem(8);
+    border-radius: rem(2);
+    background-color: $color-white;
+  }
+
+  &__file-name,
+  &__status,
+  &__total-records,
+  &__success-num,
+  &__failed-num,
+  &__created-at,
+  &__completed-at,
+  &__update-by {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    vertical-align: middle;
+  }
+
+  &__file-name {
+    display: inline-block;
+    width: rem(218);
+  }
+
+  &__name-text {
+    display: inline-block;
+    max-width: calc(100% - 22px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  &__status {
+    &--done {
+      color: $color-tundora;
+    }
+
+    &--in-process {
+      color: $color-lightblue;
+    }
+
+    &--new {
+      color: $color-wechat;
+    }
+  }
+
+  &__update-by {
+    display: inline-block;
+    width: rem(118);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__download-btn {
+    display: inline-flex;
+    height: rem(14);
+    margin-left: rem(8);
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
+  &__download-icon {
+    color: $color-keppel;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  &__checkbox-group {
+    display: flex;
+    flex-direction: column;
+    padding: rem(8);
+
+    .ant-checkbox-group-item {
+      margin: rem(4) 0;
+    }
+  }
+}

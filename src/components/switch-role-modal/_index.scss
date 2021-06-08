@@ -1,0 +1,79 @@
+.switch-role-modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: rem(454);
+    transform: translate(-50%, -50%);
+    background: $color-white;
+  }
+
+  &__position-container {
+    position: relative;
+  }
+
+  &__header-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: rem(32) rem(32) rem(20);
+  }
+
+  &__footer-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: rem(16) rem(24);
+    text-align: right;
+    box-shadow: 0 -1px 0 0 $color-mercury;
+  }
+
+  &__btn {
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+
+    &--close {
+      position: absolute;
+      top: rem(16);
+      right: rem(20);
+    }
+
+    &--confirm {
+      @include font-style($type-14px, $type-24px, $color-white);
+      padding: rem(8) rem(16);
+      border-radius: rem(2);
+      background: $color-keppel;
+    }
+  }
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+    margin: 0;
+  }
+
+  &__role-list {
+    padding: rem(76) rem(32) rem(96);
+  }
+
+  .ant-radio-group {
+    display: block;
+  }
+
+  .ant-radio-wrapper {
+    margin-bottom: rem(4);
+    padding-left: rem(12);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

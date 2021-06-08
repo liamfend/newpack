@@ -1,0 +1,158 @@
+.user-guide {
+  $type-36px: 36px;
+  overflow: hidden;
+
+  &__banner {
+    min-width: rem(1280);
+    height: rem(498);
+    margin-bottom: rem(96);
+    background-image: url('/bundles/microapp-cms/images/public/help-center-banner.jpg');
+    // background-image: -webkit-image-set (url('/bundles/microapp-cms/images/public/help-center-banner.jpg') 1x, 
+    //   url('/bundles/microapp-cms/images/public/help-center-banner@2x.jpg') 2x);
+    background-position: bottom;
+  }
+
+  &__title {
+    @include font-style($type-40px, $type-56px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0 0 rem(14);
+  }
+
+  &__summary {
+    @include font-style($type-24px, $type-28px, $color-tundora);
+    margin: 0;
+  }
+
+  &__banner-container {
+    position: relative;
+    max-width: rem(1280);
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__title-container {
+    padding: rem(128) 0 0 rem(77);
+  }
+
+  &__banner-icon {
+    position: absolute;
+    right: rem(64);
+    bottom: rem(60);
+    width: rem(574);
+    height: rem(438);
+  }
+
+  &__content {
+    max-width: rem(1280);
+    margin: 0 auto;
+    padding: 0 rem(64) rem(178) rem(77);
+  }
+
+  &__content-title {
+    @include font-style($type-32px, $type-48px, $color-tundora);
+    @include font-weight(normal);
+    margin: 0 0 rem(58);
+  }
+
+  &__row {
+    margin-bottom: rem(99);
+  }
+
+  &__block {
+    position: relative;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc(100% - 67px);
+  }
+
+  &__block-container {
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      .user-guide__block-label,
+      .user-guide__block-item--read-more {
+        text-decoration: underline;
+      }
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+
+      .user-guide__block-label {
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  &__block-label {
+    @include font-weight(bold);
+    @include font-style($type-18px, $type-36px, $color-tundora);
+    display: block;
+    margin: 0 0 rem(12);
+  }
+
+  &__block-icon {
+    margin-bottom: rem(24);
+
+    &--things-to-know {
+      width: rem(65);
+      height: rem(65);
+      margin-top: rem(7);
+    }
+
+    &--listing-your-properties {
+      width: rem(65);
+      height: rem(65);
+      margin-top: rem(7);
+    }
+
+    &--price-and-availability {
+      width: rem(64);
+      height: rem(66);
+      margin-top: rem(6);
+    }
+
+    &--commission-and-contract {
+      width: rem(64);
+      height: rem(65);
+      margin-top: rem(7);
+    }
+
+    &--my-account {
+      width: rem(64);
+      height: rem(64);
+      margin-top: rem(8);
+    }
+
+    &--review-management {
+      width: rem(64);
+      height: rem(64);
+      margin-top: rem(8);
+    }
+  }
+
+  &__block-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__block-item {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    margin-bottom: rem(20);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--read-more {
+      margin-top: rem(4);
+      color: $color-keppel;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+$color-lightred: #f5232d;
+
+.reference-and-contact {
+  &__content {
+    min-height: calc(100vh - 230px);
+    margin: rem(32);
+    padding: rem(24);
+    border: 1px solid $color-mercury;
+    background: $color-white;
+  }
+
+  &__disabled-label {
+    .ant-form-item-label label {
+      color: $color-silver-chalice;
+    }
+  }
+
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+
+    .ant-tabs {
+      @include font-style($type-14px, $type-20px, $color-tundora);
+    }
+
+    .ant-tabs-bar {
+      margin: rem(16) 0 rem(24);
+      border: none;
+    }
+
+    .ant-tabs-tab {
+      @include font-weight(bold);
+      margin: 0 rem(40) 0 0;
+      padding: rem(9) 0;
+    }
+  }
+
+  .ant-form-item {
+    margin: 0;
+    padding: rem(16) 0 0;
+  }
+
+  .ant-form-item-label {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(4);
+    padding: 0;
+  }
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+  }
+
+  &__add-icon {
+    margin-right: rem(8);
+    color: $color-keppel;
+  }
+
+  &__delete-contact {
+    @include font-style($type-12px, $type-20px, $color-keppel);
+    display: inline-block;
+    margin: rem(8) 0 rem(16);
+    outline: 0;
+    cursor: pointer;
+  }
+
+  &__add-contact {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+    margin-bottom: rem(16);
+    padding: rem(3) 0;
+    border-radius: rem(4);
+    outline: none;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2338b2a6' stroke-width='2' stroke-dasharray='1%2c6' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__contact-wrap {
+    padding: 0 rem(24) rem(24);
+    border: 1px solid $color-desert-storm;
+    background-color: $color-desert-storm;
+
+    &--name-empty-error {
+      border: 1px solid $color-lightred;
+    }
+  }
+
+  &__empty-name-error {
+    @include font-style($type-14px, $type-24px, $color-lightred);
+    margin: rem(4) 0;
+    animation: slideDown 0.3s ease-in-out alternate;
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  &__sub-label {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    @include font-weight(bold);
+    margin-left: rem(4);
+  }
+
+  &__url-input {
+    display: flex;
+    align-items: center;
+
+    .ant-input-suffix {
+      right: 0;
+    }
+  }
+
+  &__check-btn {
+    color: $color-silver-chalice;
+
+    &--active {
+      color: $color-keppel;
+    }
+  }
+}

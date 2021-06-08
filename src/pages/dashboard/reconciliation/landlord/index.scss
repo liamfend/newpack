@@ -1,0 +1,138 @@
+@import './drawer/index';
+@import './calendar/index';
+@import './comission/index';
+@import  "../reconciliation-filter/index";
+
+$color-charcoal-grey: #2b2d37;
+
+.reconciliation {
+  height: 100%;
+
+  .ant-input {
+    padding:  4px 11px;
+
+    &::placeholder {
+      line-height: $type-24px;
+    }
+  }
+
+  &__card {
+    padding: rem(24) rem(32);
+    border-radius: 2px;
+    background-color: $color-white;
+    box-shadow: 0 4px 4px 0 rgba($color-charcoal-grey, 0.01);
+
+    .nav {
+      @include font-style($type-14px, $type-16px, $color-tundora);
+      margin-bottom: rem(11);
+    }
+
+    .discribe--wapper {
+      position: relative;
+
+      .ant-descriptions-item-content {
+        font-size: $type-12px;
+      }
+
+      .btns--box {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .btns {
+      @include font-style($type-14px, $type-32px, $color-white);
+      @include font-weight(bold);
+      height: rem(32);
+      padding: 0 rem(15);
+      float: right;
+      border: 0 none;
+      border-radius: 2px;
+      outline: none;
+      background-color: $color-keppel;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    position: relative;
+    min-height: rem(700);
+    margin: rem(16) rem(32);
+    padding: rem(16) rem(32);
+    border-radius: 2px;
+    background-color: $color-white;
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: rem(24);
+
+      &__board-wrap {
+        height: rem(18);
+        margin-left: rem(20);
+        cursor: pointer;
+      }
+
+      .cdicon {
+        width: rem(18);
+        height: rem(18);
+        fill: $color-tundora;
+      }
+
+      .icons {
+        margin-left: rem(20);
+        cursor: pointer;
+      }
+
+    }
+
+    .filter-box {
+      display: flex;
+      flex-wrap: wrap;
+      margin: rem(12) 0 0;
+    }
+
+  }
+
+  &__loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: rem(50);
+    background-color: $color-white;
+    text-align: center;
+    z-index: 100;
+  }
+
+  &__modal-container {
+
+    .ant-drawer-body {
+      height: 100%;
+      padding: 0;
+    }
+
+  }
+
+  &__filters-container {
+    margin: 0 rem(32);
+    padding-top: rem(16);
+  }
+
+  .ant-table-column-title,
+  .ant-table-row {
+    font-size: $type-12px;
+  }
+
+  .ant-table-tbody {
+    cursor: pointer;
+  }
+
+  &__alert {
+    margin-bottom: rem(12);
+    border: 0;
+    border-radius: 2px;
+    font-size: $type-12px;
+  }
+}

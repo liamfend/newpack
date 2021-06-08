@@ -1,0 +1,31 @@
+@import 'pages/dashboard/properties/listing-management/gallery-management/photos-and-videos/index';
+@import 'pages/dashboard/properties/listing-management/gallery-management/virtual-tour-links/index';
+
+.gallery-management {
+  height: 100%;
+
+  .ant-tabs-nav .ant-tabs-tab-active {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+  }
+
+  .ant-tabs {
+    height: 100%;
+  }
+
+  .ant-tabs-bar {
+    margin: 0;
+    padding: 0 rem(24);
+  }
+
+  .ant-tabs-content {
+    height: calc(100% - 44px);
+  }
+
+  .ant-tabs-ink-bar {
+    height: rem(4);
+  }
+
+  .ant-tabs-tabpane-active {
+    overflow-y: auto;
+  }
+}
