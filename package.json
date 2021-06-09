@@ -38,6 +38,7 @@
     "loader-utils": "^2.0.0",
     "mini-css-extract-plugin": "^1.6.0",
     "optimize-css-assets-webpack-plugin": "^6.0.0",
+    "postcss": "^8.3.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^5.3.0",
     "postcss-normalize": "^10.0.0",
@@ -57,8 +58,7 @@
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
-    "webpackbar": "^5.0.0-3",
-    "postcss": "^8.3.0"
+    "webpackbar": "^5.0.0-3"
   },
   "lint-staged": {
     "./src/**/*.js": "eslint --cache --fix",
@@ -66,6 +66,7 @@
     "*.scss": "stylelint ./src/**/*.scss --fix"
   },
   "dependencies": {
+    "antd": "^4.16.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
