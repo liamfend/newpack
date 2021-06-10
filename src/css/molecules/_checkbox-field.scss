@@ -1,5 +1,5 @@
-@import '~global-css/atoms/forms';
-@import '~global-css/mixins/fonts';
+@import '../atoms/forms';
+@import '../mixins/fonts';
 
 @mixin checkbox-field {
   &__label {

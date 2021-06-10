@@ -1,8 +1,8 @@
-@import '~global-css/variables';
-@import '~global-css/mixins/fonts';
-@import '~global-css/helpers/units';
-@import '~global-css/grid';
-@import '~global-css/svgs';
+@import '../variables';
+@import '../mixins/fonts';
+@import '../helpers/units';
+@import '../grid';
+@import '../svgs';
 
 .button {
   @include font-weight(bold);

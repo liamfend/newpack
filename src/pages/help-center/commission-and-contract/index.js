@@ -52,8 +52,8 @@ export default class CommissionAndContract extends React.Component {
                   you will see all the commission cards that being set by Student.com.
                   <img
                     className="center-style__image"
-                    src="/bundles/microapp-cms/images/public/help-center/image-11.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-11.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-11@2x.jpg 2x"
+                    src="/public/help-center/image-11.jpg"
+                    srcSet="/public/help-center/image-11.jpg 1x, /public/help-center/image-11@2x.jpg 2x"
                     alt="11"
                   />
                   <p className="center-style__bold-line-container">
@@ -110,8 +110,8 @@ export default class CommissionAndContract extends React.Component {
                 <div className="center-style__content">
                   <img
                     className="center-style__image"
-                    src="/bundles/microapp-cms/images/public/help-center/image-12.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-12.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-12@2x.jpg 2x"
+                    src="/public/help-center/image-12.jpg"
+                    srcSet="/public/help-center/image-12.jpg 1x, /public/help-center/image-12@2x.jpg 2x"
                     alt="12"
                   />
                   The contract record section is used to store the official contract between the hose and Student.com.

@@ -88,7 +88,7 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.19.0",
-    "susy": "^3.0.7",
+    "susy": "2.2.12",
     "url-loader": "^4.1.1",
     "video-react": "^0.14.1",
     "webpack": "^5.38.1",

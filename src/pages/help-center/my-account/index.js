@@ -46,16 +46,16 @@ export default class MyAccount extends React.Component {
                   </p>
                   <img
                     className="center-style__image"
-                    src="/bundles/microapp-cms/images/public/help-center/image-13.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-13.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-13@2x.jpg 2x"
+                    src="/public/help-center/image-13.jpg"
+                    srcSet="/public/help-center/image-13.jpg 1x, /public/help-center/image-13@2x.jpg 2x"
                     alt="13"
                   />
                   <div className="center-style__row-28" />
                   If you want to change your password, just click [Modify],  and you can start to input your new password.
                   <img
                     className="center-style__image"
-                    src="/bundles/microapp-cms/images/public/help-center/image-14.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-14.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-14@2x.jpg 2x"
+                    src="/public/help-center/image-14.jpg"
+                    srcSet="/public/help-center/image-14.jpg 1x, /public/help-center/image-14@2x.jpg 2x"
                     alt="14"
                   />
                   <div className="center-style__note">

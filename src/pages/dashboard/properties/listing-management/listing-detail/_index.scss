@@ -1,7 +1,7 @@
-@import 'pages/dashboard/properties/listing-management/listing-detail/view-modal/index';
-@import 'pages/dashboard/properties/listing-management/listing-detail/listing-modal/index';
-@import 'pages/dashboard/properties/listing-management/listing-detail/bulk-modal/index';
-@import 'pages/dashboard/properties/listing-management/listing-detail/other-rooms-modal/index';
+@import '~@pages/dashboard/properties/listing-management/listing-detail/view-modal/index';
+@import '~@pages/dashboard/properties/listing-management/listing-detail/listing-modal/index';
+@import '~@pages/dashboard/properties/listing-management/listing-detail/bulk-modal/index';
+@import '~@pages/dashboard/properties/listing-management/listing-detail/other-rooms-modal/index';
 
 .listing-detail {
   $color-trinidad: #f25202;

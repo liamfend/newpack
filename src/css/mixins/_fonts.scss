@@ -1,4 +1,4 @@
-@import '~global-css/variables';
+@import '../variables';
 
 @mixin font-weight ($weight) {
   @if $weight == 'normal' {

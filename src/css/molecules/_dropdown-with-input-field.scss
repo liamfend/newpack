@@ -1,4 +1,4 @@
-@import '~global-css/atoms/forms';
+@import '../atoms/forms';
 
 @mixin dropdown-with-input-field() {
   $dropdown-width: 100px;

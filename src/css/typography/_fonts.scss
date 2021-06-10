@@ -1,6 +1,6 @@
-@import '~global-css/variables';
-@import '~global-css/typography/font-smoothing';
-@import '~global-css/typography/font-face';
+@import '../variables';
+@import '../typography/font-smoothing';
+@import '../typography/font-face';
 
 html {
   @extend %main-font;

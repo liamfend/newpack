@@ -1,12 +1,12 @@
 
-@import 'pages/dashboard/properties/listing-management/address-detail/index';
-@import 'pages/dashboard/properties/listing-management/facility-detail/index';
-@import 'pages/dashboard/properties/listing-management/room-detail/index';
-@import 'pages/dashboard/properties/listing-management/listing-detail/index';
-@import 'pages/dashboard/properties/listing-management/gallery-management/index';
-@import 'pages/dashboard/properties/listing-management/upload-progress/index';
-@import 'pages/dashboard/properties/listing-management/pending-approval/reminder/index';
-@import 'pages/dashboard/properties/listing-management/header/index';
+@import '~@pages/dashboard/properties/listing-management/address-detail/index';
+@import '~@pages/dashboard/properties/listing-management/facility-detail/index';
+@import '~@pages/dashboard/properties/listing-management/room-detail/index';
+@import '~@pages/dashboard/properties/listing-management/listing-detail/index';
+@import '~@pages/dashboard/properties/listing-management/gallery-management/index';
+@import '~@pages/dashboard/properties/listing-management/upload-progress/index';
+@import '~@pages/dashboard/properties/listing-management/pending-approval/reminder/index';
+@import '~@pages/dashboard/properties/listing-management/header/index';
 
 .property-listing-management {
   &__loading {

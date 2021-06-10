@@ -1,6 +1,6 @@
-@import '~global-css/variables';
-@import '~global-css/helpers/units';
-@import '~global-css/mixins/transition';
+@import '../variables';
+@import '../helpers/units';
+@import '../mixins/transition';
 
 @mixin pill {
   @include transition(default, default, background-color, color, border);

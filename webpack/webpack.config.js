@@ -26,6 +26,7 @@ module.exports = function (webpackEnv) {
   const appOutputBuild = path.resolve(appBase, 'build')
   const appSrcJs = path.resolve(appBase, 'src/index')
   const appSrc = path.resolve(appBase, 'src')
+  const appCssImg = path.resolve(appBase, 'src/css/imgs')
   const appPublic = path.resolve(appBase, 'public')
   const appHtmlTemp = path.resolve(appBase, 'public/index.html')
   const isEnvProduction = webpackEnv.production
@@ -72,19 +73,13 @@ module.exports = function (webpackEnv) {
           loader: require.resolve('resolve-url-loader'),
           options: {
             sourceMap: isEnvProduction ? true : isEnvDevelopment,
-            root: appSrc,
+            root: appCssImg,
+            debug:isEnvDevelopment
           },
         },
         {
           loader: require.resolve(preProcessor),
-          options: Object.assign(
-            { sourceMap: true },
-            preProcessor ==='sass-loader'&&{
-              sassOptions: {
-                importer:jsonImporter
-              },
-            },
-          ),
+          options: { sourceMap: true }
         },
       )
     }
@@ -241,6 +236,9 @@ module.exports = function (webpackEnv) {
       ],
     },
     resolve: {
+      alias:{ 
+        "@pages":path.resolve(appBase,'src/pages')
+      },
       fallback: { 
         "util": require.resolve("util/"),
       },

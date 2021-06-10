@@ -8886,10 +8886,10 @@ supports-color@^8.0.0:
   dependencies:
     has-flag "^4.0.0"
 
-susy@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.nlark.com/susy/download/susy-3.0.7.tgz#134f6fd1491476812942b608b991262e763f9166"
-  integrity sha1-E09v0UkUdoEpQrYIuZEmLnY/kWY=
+susy@2.2.12:
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/susy/-/susy-2.2.12.tgz#644c2441ed00d293287e8d49a016dbf919215953"
+  integrity sha1-ZEwkQe0A0pMofo1JoBbb+RkhWVM=
 
 svg-tags@^1.0.0:
   version "1.0.0"

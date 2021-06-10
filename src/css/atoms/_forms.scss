@@ -1,7 +1,7 @@
-@import '~global-css/variables';
-@import '~global-css/svgs';
-@import '~global-css/mixins/forms';
-@import '~global-css/mixins/fonts';
+@import '../variables';
+@import '../svgs';
+@import '../mixins/forms';
+@import '../mixins/fonts';
 
 %form-label {
   @include font-weight('bold');

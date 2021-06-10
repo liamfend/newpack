@@ -26,7 +26,7 @@ export default class Auth extends React.Component {
       <section className="auth">
         <img
           className="auth__login-image"
-          src="/bundles/microapp-cms/images/public/login-image.png"
+          src="/public/login-image.png"
           alt="login"
         />
         <div className="auth__container">

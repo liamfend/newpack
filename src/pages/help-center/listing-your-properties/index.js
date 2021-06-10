@@ -52,8 +52,8 @@ export default class ListingYourProperties extends React.Component {
                   <div className="center-style__row-16" />
                   <img
                     className="center-style__image"
-                    src="/bundles/microapp-cms/images/public/help-center/image-1.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-1.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-1@2x.jpg 2x"
+                    src="/public/help-center/image-1.jpg"
+                    srcSet="/public/help-center/image-1.jpg 1x, /public/help-center/image-1@2x.jpg 2x"
                     alt="1"
                   />
                   <ul className="center-style__list">
@@ -91,22 +91,22 @@ export default class ListingYourProperties extends React.Component {
                   <p className="center-style__line-with-dot">You can change your property location by completing your property address in [Address line 1] and [Address line 2].</p>
                   <img
                     className="center-style__image"
-                    src="/bundles/microapp-cms/images/public/help-center/image-2.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-2.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-2@2x.jpg 2x"
+                    src="/public/help-center/image-2.jpg"
+                    srcSet="/public/help-center/image-2.jpg 1x, /public/help-center/image-2@2x.jpg 2x"
                     alt="2"
                   />
                   <p className="center-style__line-with-dot">Moving the map location to get accurate longitude and latitude.</p>
                   <img
                     className="center-style__image"
-                    src="/bundles/microapp-cms/images/public/help-center/image-3.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-3.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-3@2x.jpg 2x"
+                    src="/public/help-center/image-3.jpg"
+                    srcSet="/public/help-center/image-3.jpg 1x, /public/help-center/image-3@2x.jpg 2x"
                     alt="3"
                   />
                   <p className="center-style__line-with-dot">You can also click [Search again] to reselect your property address.</p>
                   <img
                     className="center-style__image center-style__image--no-margin"
-                    src="/bundles/microapp-cms/images/public/help-center/image-4.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-4.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-4@2x.jpg 2x"
+                    src="/public/help-center/image-4.jpg"
+                    srcSet="/public/help-center/image-4.jpg 1x, /public/help-center/image-4@2x.jpg 2x"
                     alt="4"
                   />
                 </div>
@@ -311,8 +311,8 @@ export default class ListingYourProperties extends React.Component {
                   <span className="center-style__bold">Photo library</span> part on the left and <span className="center-style__bold">Gallery management</span> part on the right.
                   <img
                     className="center-style__image"
-                    src="/bundles/microapp-cms/images/public/help-center/image-5.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-5.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-5@2x.jpg 2x"
+                    src="/public/help-center/image-5.jpg"
+                    srcSet="/public/help-center/image-5.jpg 1x, /public/help-center/image-5@2x.jpg 2x"
                     alt="5"
                   />
                   <ul className="center-style__list">
@@ -384,22 +384,22 @@ export default class ListingYourProperties extends React.Component {
                   You can move the files from Photo library to your target areas or you can move files from one subsection to another subsection.
                   <img
                     className="center-style__image"
-                    src="/bundles/microapp-cms/images/public/help-center/image-6.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-6.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-6@2x.jpg 2x"
+                    src="/public/help-center/image-6.jpg"
+                    srcSet="/public/help-center/image-6.jpg 1x, /public/help-center/image-6@2x.jpg 2x"
                     alt="6"
                   />
                   You can delete photos or videos if you don&apos;t want them any more.
                   <img
                     className="center-style__image"
-                    src="/bundles/microapp-cms/images/public/help-center/image-7.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-7.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-7@2x.jpg 2x"
+                    src="/public/help-center/image-7.jpg"
+                    srcSet="/public/help-center/image-7.jpg 1x, /public/help-center/image-7@2x.jpg 2x"
                     alt="7"
                   />
                   You can preview the files you uploaded.
                   <img
                     className="center-style__image center-style__image--no-margin"
-                    src="/bundles/microapp-cms/images/public/help-center/image-8.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-8.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-8@2x.jpg 2x"
+                    src="/public/help-center/image-8.jpg"
+                    srcSet="/public/help-center/image-8.jpg 1x, /public/help-center/image-8@2x.jpg 2x"
                     alt="8"
                   />
                 </div>
@@ -422,8 +422,8 @@ export default class ListingYourProperties extends React.Component {
                   You can start to add virtual tour link by clicking the button as below.
                   <img
                     className="center-style__image center-style__image--no-margin"
-                    src="/bundles/microapp-cms/images/public/help-center/image-9.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-9.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-9@2x.jpg 2x"
+                    src="/public/help-center/image-9.jpg"
+                    srcSet="/public/help-center/image-9.jpg 1x, /public/help-center/image-9@2x.jpg 2x"
                     alt="9"
                   />
                 </div>
@@ -447,8 +447,8 @@ export default class ListingYourProperties extends React.Component {
                   <div className="center-style__row-24" />
                   <img
                     className="center-style__image center-style__image--no-margin"
-                    src="/bundles/microapp-cms/images/public/help-center/image-10.jpg"
-                    srcSet="/bundles/microapp-cms/images/public/help-center/image-10.jpg 1x, /bundles/microapp-cms/images/public/help-center/image-10@2x.jpg 2x"
+                    src="/public/help-center/image-10.jpg"
+                    srcSet="/public/help-center/image-10.jpg 1x, /public/help-center/image-10@2x.jpg 2x"
                     alt="10"
                   />
                   <div className="center-style__row-24" />

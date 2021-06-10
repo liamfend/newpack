@@ -13,7 +13,7 @@ export default function UploadSuccess() {
       <div className="upload-success__tip-wrap">
         <img
           className="upload-success__tip-image"
-          src="/bundles/microapp-cms/images/public/bulk_update_tip.png"
+          src="/public/bulk_update_tip.png"
           alt="bulk_update_tip"
         />
       </div>

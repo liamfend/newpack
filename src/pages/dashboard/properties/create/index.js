@@ -334,10 +334,10 @@ export default class PropertyCreate extends React.Component {
           </If>
         </div >
         <If condition={ current === 0 }>
-          <img className="property-create__basic-bg" src="/bundles/microapp-cms/images/public/basic-bg.png" alt="" />
+          <img className="property-create__basic-bg" src="/public/basic-bg.png" alt="" />
         </If>
         <If condition={ current === 1 }>
-          <img className="property-create__basic-bg" src="/bundles/microapp-cms/images/public/address-bg.png" alt="" />
+          <img className="property-create__basic-bg" src="/public/address-bg.png" alt="" />
         </If>
       </div>
     );

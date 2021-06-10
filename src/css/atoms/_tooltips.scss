@@ -1,6 +1,6 @@
-@import '~global-css/mixins/triangle';
-@import '~global-css/mixins/fonts';
-@import '~global-css/svgs';
+@import '../mixins/triangle';
+@import '../mixins/fonts';
+@import '../svgs';
 
 .tooltip {
   &--active {
