@@ -9,6 +9,7 @@ import ForgotPassword from '~pages/auth/forgot-password';
 import ForgotPasswordSuccessful from '~pages/auth/forgot-password-successful';
 import ResetPassword from '~pages/auth/reset-password';
 import generatePath from '~settings/routing';
+import loginImg from '~global-css/imgs/login-image.png'
 
 const mapStateToProps = state => ({
   token: state.auth.getIn(['base', 'token']),
@@ -26,7 +27,7 @@ export default class Auth extends React.Component {
       <section className="auth">
         <img
           className="auth__login-image"
-          src="/public/login-image.png"
+          src={loginImg}
           alt="login"
         />
         <div className="auth__container">

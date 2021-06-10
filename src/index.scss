@@ -1,14 +1,14 @@
-
+@import '~antd/dist/antd.css';
  @import 'css/all';
  @import 'css/global.scss';
  @import 'css/grid';
-// @import 'css/molecules/form-field';
-// @import 'css/molecules/checkbox-field';
-// @import '~react-quill/dist/quill.snow.css';
-// @import '~slick-carousel/slick/slick.css';
-// @import '~slick-carousel/slick/slick-theme.css';
-// @import '~video-react/dist/video-react.css';
-// @import '~rc-table/assets/animation.css';
+@import 'css/molecules/form-field';
+@import 'css/molecules/checkbox-field';
+@import '~react-quill/dist/quill.snow.css';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+@import '~video-react/dist/video-react.css';
+@import '~rc-table/assets/animation.css';
 @import 'components/global-search/index';
 @import 'components/loading/index';
 @import 'components/header/index';
