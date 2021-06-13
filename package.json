@@ -11,7 +11,7 @@
     "lint": "yarn lint:js && yarn lint:css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare__": "husky install",
-    "generate:svg":"svgr src/svgs -d src/svgcomponents "
+    "generate:svg":"svgr src/svgs -d src/components/svgs "
   },
   "keywords": [],
   "author": "",

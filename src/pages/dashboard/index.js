@@ -7,6 +7,7 @@ import { withTranslation } from 'react-i18next';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import Svg from '~components/svg';
+import {Property,Landlord} from '~components/svgs'
 import Header from '~components/header';
 import PropertyList from '~pages/dashboard/properties';
 import LandlordManagement from '~pages/dashboard/landlord';
@@ -357,7 +358,7 @@ export default class Dashboard extends React.Component {
                 title={ this.props.t('cms.sidebar.menu.properties') }
               >
                 <Link to="/properties" className="sidebar__menu__link">
-                  <Svg
+                  <Property
                     className="sidebar__icon sidebar__icon--property"
                     hash="property"
                   />
@@ -382,7 +383,7 @@ export default class Dashboard extends React.Component {
                 title={ this.props.t('cms.sidebar.menu.landlord') }
               >
                 <Link to="/landlords" className="sidebar__menu__link">
-                  <Svg
+                  <Landlord
                     className="sidebar__icon sidebar__icon--property"
                     hash="landlord"
                   />
