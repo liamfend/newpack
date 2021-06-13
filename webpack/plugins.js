@@ -5,7 +5,7 @@ module.exports = {
       {
         alias: {
           "~global-css":"./src/css",
-           "~base": "./src/dist",
+          "~base": "./src/dist",
           '~webpack': './src/webpack',
           '~client': './src/',
           '~pages': './src/pages',

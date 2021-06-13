@@ -98,7 +98,7 @@ module.exports = function (webpackEnv) {
       filename: isEnvProduction
         ? 'static/js/[name].[contenthash:8].js'
         : isEnvDevelopment && 'static/js/bundle.[name].js',
-      // publicPath: './',
+      publicPath: '/',
       devtoolModuleFilenameTemplate: isEnvProduction
         ? info => path.relative(appSrc, info.absoluteResourcePath).replace(/\\/g, '/')
         : isEnvDevelopment && (info => path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')),
@@ -135,7 +135,6 @@ module.exports = function (webpackEnv) {
         }),
         new CssMinimizerPlugin(),
       ],
-
       splitChunks: {
         chunks: 'all',
         //  name: isEnvDevelopment ? 'bundle' : false,
@@ -246,6 +245,7 @@ module.exports = function (webpackEnv) {
     devServer: isEnvDevelopment && {
       port: 3000,
       contentBase: appPublic, // boolean | string | array, static file location
+      publicPath:'/',
       compress: true, // enable gzip compression
       historyApiFallback: true, // true for index.html upon 404, object for multiple paths
       hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
