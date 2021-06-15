@@ -102,9 +102,9 @@
     "yaml-loader": "^0.6.0"
   },
   "lint-staged": {
-    "./src/**/*.js": "eslint --cache --fix",
-    "**/*": "prettier --write --ignore-unknown",
-    "*.scss": "stylelint ./src/**/*.scss --fix"
+    "./src/**/*.js": "eslint --cache --fix", 
+    "*.scss": "stylelint ./src/**/*.scss --fix",
+    "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "@babel/node": "^7.14.5",
