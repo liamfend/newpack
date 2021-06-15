@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 import { Row, Col } from 'antd';
 import { withTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import Svg from '~components/svg';
+import {
+  Illustrator as IllustratorIcon,
+  HelpCenterThingsToKnow as HelpCenterThingsToKnowIcon,
+  HelpCenterListingYourProperties as HelpCenterListingYourPropertiesIcon,
+  HelpCenterPriceAndAvailability as HelpCenterPriceAndAvailabilityIcon,
+  HelpCenterCommission as HelpCenterCommissionIcon,
+  HelpCenterMyAccount as HelpCenterMyAccountIcon,
+  HelpCenterReview as HelpCenterReviewIcon,
+} from "~components/svgs";
 
 @withTranslation()
 export default class UserGuide extends React.Component {
@@ -16,7 +24,7 @@ export default class UserGuide extends React.Component {
               <h1 className="user-guide__title">{ this.props.t('cms.help_center.homepage.title.welcome') }</h1>
               <p className="user-guide__summary">{ this.props.t('cms.help_center.homepage.summary.started') }</p>
             </div>
-            <Svg className="user-guide__banner-icon" hash="illustrator" />
+            <IllustratorIcon className="user-guide__banner-icon" />
           </div>
         </div>
 
@@ -26,10 +34,7 @@ export default class UserGuide extends React.Component {
             <Col span={ 8 } className="user-guide__block">
               <div className="user-guide__block-container">
                 <Link to="/help-center/things-to-know" className="user-guide__link" />
-                <Svg
-                  className="user-guide__block-icon user-guide__block-icon--things-to-know"
-                  hash="help-center-things-to-know"
-                />
+                <HelpCenterThingsToKnowIcon className="user-guide__block-icon user-guide__block-icon--things-to-know" />
                 <p className="user-guide__block-label">{ this.props.t('cms.help_center.homepage.block.title.things_to_know') }</p>
                 <ul className="user-guide__block-list">
                   <li className="user-guide__block-item">
@@ -50,10 +55,8 @@ export default class UserGuide extends React.Component {
             <Col span={ 8 } className="user-guide__block">
               <div className="user-guide__block-container">
                 <Link to="/help-center/listing-your-properties" className="user-guide__link" />
-                <Svg
-                  className="user-guide__block-icon user-guide__block-icon--listing-your-properties"
-                  hash="help-center-listing-your-properties"
-                />
+                <HelpCenterListingYourPropertiesIcon
+                  className="user-guide__block-icon user-guide__block-icon--listing-your-properties" />
                 <p className="user-guide__block-label">
                   { this.props.t('cms.help_center.homepage.block.title.listing_your_properties') }
                 </p>
@@ -73,10 +76,8 @@ export default class UserGuide extends React.Component {
             <Col span={ 8 } className="user-guide__block">
               <div className="user-guide__block-container">
                 <Link to="/help-center/price-and-availability" className="user-guide__link" />
-                <Svg
-                  className="user-guide__block-icon user-guide__block-icon--price-and-availability"
-                  hash="help-center-price-and-availability"
-                />
+                <HelpCenterPriceAndAvailabilityIcon
+                  className="user-guide__block-icon user-guide__block-icon--price-and-availability" />
                 <p className="user-guide__block-label">
                   { this.props.t('cms.help_center.homepage.block.title.price_and_availability') }
                 </p>
@@ -98,10 +99,8 @@ export default class UserGuide extends React.Component {
             <Col span={ 8 } className="user-guide__block">
               <div className="user-guide__block-container">
                 <Link to="/help-center/commission-and-contract" className="user-guide__link" />
-                <Svg
-                  className="user-guide__block-icon user-guide__block-icon--commission-and-contract"
-                  hash="help-center-commission"
-                />
+                <HelpCenterCommissionIcon
+                  className="user-guide__block-icon user-guide__block-icon--commission-and-contract" />
                 <p className="user-guide__block-label">
                   { this.props.t('cms.help_center.homepage.block.title.commission_and_contract') }
                 </p>
@@ -121,10 +120,7 @@ export default class UserGuide extends React.Component {
             <Col span={ 8 } className="user-guide__block">
               <div className="user-guide__block-container">
                 <Link to="/help-center/my-account" className="user-guide__link" />
-                <Svg
-                  className="user-guide__block-icon user-guide__block-icon--my-account"
-                  hash="help-center-my-account"
-                />
+                <HelpCenterMyAccountIcon className="user-guide__block-icon user-guide__block-icon--my-account" />
                 <p className="user-guide__block-label">
                   { this.props.t('cms.help_center.homepage.block.title.my_account') }
                 </p>
@@ -138,10 +134,8 @@ export default class UserGuide extends React.Component {
             <Col span={ 8 } className="user-guide__block">
               <div className="user-guide__block-container user-guide__block-container--disabled">
                 <Link to="/help-center/review-management" className="user-guide__link" disabled />
-                <Svg
-                  className="user-guide__block-icon user-guide__block-icon--review-management"
-                  hash="help-center-review"
-                />
+                <HelpCenterReviewIcon
+                  className="user-guide__block-icon user-guide__block-icon--review-management" />
                 <p className="user-guide__block-label">
                   { this.props.t('cms.help_center.homepage.block.title.review_management') }
                 </p>

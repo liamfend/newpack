@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from 'antd';
-import Svg from '~components/svg';
+import { DepositBg as DepositBgIcon } from "~components/svgs";
 import { depositType } from '~constants';
 
 export default class DepositTTL extends React.Component {
@@ -127,7 +127,7 @@ export default class DepositTTL extends React.Component {
             { t('cms.deposit_and_fees.ttl_formula_textl.billing_cycle') }
           </span>
         </div>
-        <Svg className="deposit-and-fees__ttl-bg" hash="deposit-bg" />
+        <DepositBgIcon className="deposit-and-fees__ttl-bg" />
       </div>
     );
   }

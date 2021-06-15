@@ -6,7 +6,19 @@ import { Layout, Menu, message } from 'antd';
 import { withTranslation } from 'react-i18next';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
-import Svg from '~components/svg';
+import {
+  LogoSmall as LogoSmallIcon,
+  LogoMain as LogoMainIcon,
+  Contract as ContractIcon,
+  Tag as TagIcon,
+  NewReviews as NewReviewsIcon,
+  Billing as BillingIcon,
+  Location as LocationIcon,
+  NewBooking as NewBookingIcon,
+  CoomingSoonIcon as CoomingSoonIconIcon,
+  IconReconciliation as IconReconciliationIcon,
+  AccountIcon as AccountIconIcon,
+} from "~components/svgs";
 import {Property,Landlord} from '~components/svgs'
 import Header from '~components/header';
 import PropertyList from '~pages/dashboard/properties';
@@ -333,10 +345,10 @@ export default class Dashboard extends React.Component {
         >
           <div className="sidebar__logo-container">
             <If condition={ this.state.collapsed }>
-              <Svg hash="logo-small" className="sidebar__logo-small" />
+              <LogoSmallIcon className="sidebar__logo-small" />
             </If>
             <If condition={ !this.state.collapsed }>
-              <Svg hash="logo-main" className="sidebar__logo" />
+              <LogoMainIcon className="sidebar__logo" />
             </If>
           </div>
           <Menu
@@ -408,7 +420,7 @@ export default class Dashboard extends React.Component {
                 className="sidebar__menu__item"
               >
                 <Link to="/contract" className="sidebar__menu__link">
-                  <Svg className="sidebar__icon" hash="contract" />
+                  <ContractIcon className="sidebar__icon" />
                   <If condition={ !this.state.collapsed }>
                     <span className="sidebar__text">
                       {this.props.t('cms.sidebar.menu.contract')}
@@ -430,10 +442,7 @@ export default class Dashboard extends React.Component {
                 title={ this.props.t('cms.sidebar.menu.special_offers') }
               >
                 <Link to="/special-offers" className="sidebar__menu__link">
-                  <Svg
-                    className="sidebar__icon sidebar__icon--tag"
-                    hash="tag"
-                  />
+                  <TagIcon className="sidebar__icon sidebar__icon--tag" />
                   <If condition={ !this.state.collapsed }>
                     <span className="sidebar__text">
                       {this.props.t('cms.sidebar.menu.special_offers')}
@@ -458,7 +467,7 @@ export default class Dashboard extends React.Component {
                 title={ this.props.t('cms.sidebar.menu.reviews') }
               >
                 <Link to="/reviews" className="sidebar__menu__link">
-                  <Svg className="sidebar__icon" hash="new-reviews" />
+                  <NewReviewsIcon className="sidebar__icon" />
                   <If condition={ !this.state.collapsed }>
                     <span className="sidebar__text">
                       {this.props.t('cms.sidebar.menu.reviews')}
@@ -490,7 +499,7 @@ export default class Dashboard extends React.Component {
                 title={ this.props.t('cms.sidebar.menu.billing') }
               >
                 <Link to="/billing" className="sidebar__menu__link">
-                  <Svg className="sidebar__icon" hash="billing" />
+                  <BillingIcon className="sidebar__icon" />
                   <If condition={ !this.state.collapsed }>
                     <span className="sidebar__text">
                       {this.props.t('cms.sidebar.menu.billing')}
@@ -506,7 +515,7 @@ export default class Dashboard extends React.Component {
                 className="sidebar__submenu"
                 title={
                   <span className={ 'sidebar__label-container' }>
-                    <Svg className="sidebar__icon" hash="location" />
+                    <LocationIcon className="sidebar__icon" />
                     <span className="sidebar__text">
                       {this.props.t('cms.sidebar.menu.location')}
                     </span>
@@ -541,15 +550,12 @@ export default class Dashboard extends React.Component {
               style={ { display: 'none' } }
             >
               <Link to="/bookings" className="sidebar__menu__link">
-                <Svg className="sidebar__icon" hash="new-booking" />
+                <NewBookingIcon className="sidebar__icon" />
                 <If condition={ !this.state.collapsed }>
                   <span className="sidebar__text">
                     {this.props.t('cms.sidebar.menu.bookings')}
                   </span>
-                  <Svg
-                    className="sidebar__icon sidebar__icon--coming-soon"
-                    hash="cooming-soon-icon"
-                  />
+                  <CoomingSoonIconIcon className="sidebar__icon sidebar__icon--coming-soon" />
                 </If>
               </Link>
             </Menu.Item>
@@ -568,7 +574,7 @@ export default class Dashboard extends React.Component {
                 title={ this.props.t('cms.sidebar.menu.reconciliation') }
               >
                 <Link to="/reconciliation" className="sidebar__menu__link">
-                  <Svg className="sidebar__icon sidebar__icon--reconciliation" hash="icon-reconciliation" />
+                  <IconReconciliationIcon className="sidebar__icon sidebar__icon--reconciliation" />
                   <If condition={ !this.state.collapsed }>
                     <span className="sidebar__text">
                       {this.props.t('cms.sidebar.menu.reconciliation')}
@@ -589,7 +595,7 @@ export default class Dashboard extends React.Component {
                 className="sidebar__submenu"
                 title={
                   <span className={ 'sidebar__label-container' }>
-                    <Svg className="sidebar__icon" hash="account-icon" />
+                    <AccountIconIcon className="sidebar__icon" />
                     <span className="sidebar__text">
                       {this.props.t('cms.sidebar.menu.account')}
                     </span>

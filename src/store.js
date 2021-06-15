@@ -41,7 +41,6 @@ if (process.env.NODE_ENV !== 'production') {
     : newEnhancers
   /* eslint-enable */
 }
-debugger
 const store = createStore(reducer, enhancers)
 
 export default store

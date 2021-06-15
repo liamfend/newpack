@@ -6,7 +6,7 @@ import moment from 'moment';
 import { Icon, Popconfirm, Popover } from 'antd';
 import { platformEntity, entityAction } from '~client/constants';
 import showElementByAuth from '~helpers/auth';
-import Svg from '~components/svg';
+import { Edit as EditIcon, Copy as CopyIcon, Delete as DeleteIcon } from "~components/svgs";
 import handleTenancy from '~helpers/tenancy-preview';
 import formatPrice from '~helpers/currency';
 
@@ -240,7 +240,7 @@ export default class ViewModal extends React.PureComponent {
                 className="listing-view-modal__btn"
                 onClick={ () => { this.props.openModal('edit'); } }
               >
-                <Svg hash="edit" className="listing-view-modal__btn-icon" />
+                <EditIcon className="listing-view-modal__btn-icon" />
               </button>
               <span className="listing-view-modal__btns-line" />
             </If>
@@ -255,7 +255,7 @@ export default class ViewModal extends React.PureComponent {
                     className="listing-view-modal__btn"
                     disabled={ listingData && listingData.unconfirmed }
                   >
-                    <Svg hash="copy" className="listing-view-modal__btn-icon" />
+                    <CopyIcon className="listing-view-modal__btn-icon" />
                   </button>
                 </When>
                 <Otherwise>
@@ -297,7 +297,7 @@ export default class ViewModal extends React.PureComponent {
                       className="listing-view-modal__btn"
                       disabled={ listingData && listingData.unconfirmed }
                     >
-                      <Svg hash="copy" className="listing-view-modal__btn-icon" />
+                      <CopyIcon className="listing-view-modal__btn-icon" />
                     </button>
                   </Popover>
                 </Otherwise>
@@ -321,7 +321,7 @@ export default class ViewModal extends React.PureComponent {
                 cancelText={ t('cms.properties.edit.btn.no') }
               >
                 <button className="listing-view-modal__btn">
-                  <Svg hash="delete" className="listing-view-modal__btn-icon" />
+                  <DeleteIcon className="listing-view-modal__btn-icon" />
                 </button>
               </Popconfirm>
             </If>

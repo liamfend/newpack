@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Svg from '~components/svg';
+import {
+  ContractEmptyLandlord as ContractEmptyLandlordIcon,
+  ContractRecordLandlord as ContractRecordLandlordIcon,
+} from "~components/svgs";
 import ContractFileList from '~components/contract-file-list';
 
 export default class RecordLandlord extends React.PureComponent {
@@ -10,10 +13,7 @@ export default class RecordLandlord extends React.PureComponent {
       <div className="record-landlord">
         <Choose>
           <When condition={ fileArray.length === 0 }>
-            <Svg
-              className="record-landlord__empty-icon"
-              hash="contract-empty-landlord"
-            />
+            <ContractEmptyLandlordIcon className="record-landlord__empty-icon" />
             <div className="record-landlord__empty-header">
               { t('cms.property.record_landlord.empty.header') }
             </div>
@@ -22,10 +22,7 @@ export default class RecordLandlord extends React.PureComponent {
             </div>
           </When>
           <Otherwise>
-            <Svg
-              className="record-landlord__uploaded-icon"
-              hash="contract-record-landlord"
-            />
+            <ContractRecordLandlordIcon className="record-landlord__uploaded-icon" />
             <div className="record-landlord__uploaded-header">
               { t('cms.property.record_landlord.uploaded.header') }
             </div>

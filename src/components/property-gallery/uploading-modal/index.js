@@ -8,7 +8,7 @@ import SparkMD5 from 'spark-md5';
 import moment from 'moment';
 
 import gallery, { uploadStatus, localeMapping } from '~constants/gallery';
-import Svg from '~components/svg';
+import { Shrink as ShrinkIcon } from "~components/svgs";
 import { formatBytes, getFileInfo, getFileType } from '~helpers/gallery';
 import { fireCustomEvent } from '~helpers/custom-events';
 import * as propertyEditAction from '~actions/properties/property-edit';
@@ -782,7 +782,7 @@ export default class UploadingModal extends React.Component {
                 className="gallery-uploading__shrink"
                 onClick={ this.handleShrink }
               >
-                <Svg className="gallery-uploading__shrink-icon" hash="shrink" />
+                <ShrinkIcon className="gallery-uploading__shrink-icon" />
                 <span className="gallery-uploading__shrink-text">
                   {t('cms.properties.edit.gallery.minimize_the_model')}
                 </span>

@@ -5,7 +5,7 @@ import NavigationOption from '~pages/dashboard/properties/listing-management/nav
 import UploadProgress from '~pages/dashboard/properties/listing-management/upload-progress';
 import { propertySections, sectionPropertyState, propertyStatus } from '~constants/listing-management';
 import { communicationStatus } from '~client/constants';
-import Svg from '~components/svg';
+import { Preview as PreviewIcon } from "~components/svgs";
 import { authUrl } from '~settings/endpoints';
 
 export default class NavigationBar extends React.Component {
@@ -276,7 +276,7 @@ export default class NavigationBar extends React.Component {
                 size="large"
                 onClick={ this.handleClickPreivew }
               >
-                <Svg className="navigation-bar__preview-icon" hash="preview" />
+                <PreviewIcon className="navigation-bar__preview-icon" />
                 { t('cms.property.listing_management.preview.button') }
               </Button>
             </form>

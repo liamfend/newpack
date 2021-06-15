@@ -20,7 +20,6 @@ import { formatLibraries, formatList, formatUpdateParamOfGallery } from '~helper
 import { cloneObject } from '~helpers'
 import { newRoomFacilities } from '~constants/pending-approval'
 
-debugger
 export const getAuthorization = () => {
   const authorization = `Bearer ${cookies.get(cookieNames.token)}`
   return authorization

@@ -9,7 +9,7 @@ import DepositList from '~pages/dashboard/properties/deposit-and-fees/deposit-li
 import DepositModal from '~pages/dashboard/properties/deposit-and-fees/deposit-modal';
 import { communicationStatus, platformEntity, entityAction } from '~constants';
 import { Spin, Switch, Icon, Tooltip, Popconfirm } from 'antd';
-import Svg from '~components/svg';
+import { Deposit as DepositIcon } from "~components/svgs";
 import showElementByAuth from '~helpers/auth';
 import authControl from '~components/auth-control';
 import generatePath from '~settings/routing';
@@ -176,7 +176,7 @@ export default class DepositAndFees extends React.Component {
             <div className="deposit-and-fees__content">
               <div className="deposit-and-fees__content-header">
                 <div className="deposit-and-fees__header">
-                  <Svg className="deposit-and-fees__header-svg" hash="deposit" />
+                  <DepositIcon className="deposit-and-fees__header-svg" />
                   <h3 className="deposit-and-fees__header-title" ref={ (node) => { this.titleContainer = node; } }>
                     { t('cms.deposit_and_fees.content_header.title') }
                     <Tooltip

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Svg from '~components/svg';
+import { IconComments as IconCommentsIcon } from "~components/svgs";
 import { Tooltip } from 'antd';
 import classNames from 'classnames';
 import DropDownBox from './drop-down-box';
@@ -35,7 +35,7 @@ export default class VrReview extends React.PureComponent {
 
         <If condition={ isAlreadyReject }>
           <span className="review-draft__vr__comments-tag">
-            <Svg className="review-draft__vr__icon-comments" hash="icon-comments" />
+            <IconCommentsIcon className="review-draft__vr__icon-comments" />
           </span>
         </If>
 

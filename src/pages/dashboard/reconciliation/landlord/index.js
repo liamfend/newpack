@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { get } from 'lodash';
-import Svg from '~components/svg';
+import { Board as BoardIcon } from "~components/svgs";
 import { listLandlordReconciliationOpportunities, getLandlordReconciliation, getCommission, getLandlordProperties } from '~actions/reconciliation/bookinglist';
 import { Icon, Descriptions, Alert, Breadcrumb, Form, Drawer } from 'antd';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
@@ -288,7 +288,7 @@ const Index = ({ form, communication, getLandlordReconciliation, getLandlordProp
               setShowComission(true);
             } }
           >
-            <Svg hash="board" className="cdicon" />
+            <BoardIcon className="cdicon" />
           </span>
         </div>
 

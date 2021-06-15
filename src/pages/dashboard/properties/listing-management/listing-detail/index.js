@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Checkbox, Button, Icon, Table, Popconfirm, Drawer, message, Tooltip, Popover } from 'antd';
 import moment from 'moment';
-import Svg from '~components/svg';
+import { Edit as EditIcon, Copy as CopyIcon, Delete as DeleteIcon } from "~components/svgs";
 import showElementByAuth from '~helpers/auth';
 import handleTenancy from '~helpers/tenancy-preview';
 import formatPrice from '~helpers/currency';
@@ -512,7 +512,7 @@ export default class ListingDetail extends React.Component {
                 className="listing-detail__icon-wrap"
                 onClick={ () => { this.openListingFormModal('edit', record, unit); } }
               >
-                <Svg className="listing-detail__action-icon" hash="edit" />
+                <EditIcon className="listing-detail__action-icon" />
               </button>
               <If condition={
                 showElementByAuth(platformEntity.LISTINGS_LISTINGS, entityAction.CREATE) ||
@@ -533,7 +533,7 @@ export default class ListingDetail extends React.Component {
                     className="listing-detail__icon-wrap"
                     disabled={ record && record.unconfirmed }
                   >
-                    <Svg className="listing-detail__action-icon" hash="copy" />
+                    <CopyIcon className="listing-detail__action-icon" />
                   </button>
                 </When>
                 <Otherwise>
@@ -575,7 +575,7 @@ export default class ListingDetail extends React.Component {
                       className="listing-detail__icon-wrap"
                       disabled={ record && record.unconfirmed }
                     >
-                      <Svg className="listing-detail__action-icon" hash="copy" />
+                      <CopyIcon className="listing-detail__action-icon" />
                     </button>
                   </Popover>
                 </Otherwise>
@@ -614,7 +614,7 @@ export default class ListingDetail extends React.Component {
                   className="listing-detail__icon-wrap"
                   onClick={ () => { this.handleClickDelete(unit, record.id); } }
                 >
-                  <Svg className="listing-detail__action-icon" hash="delete" />
+                  <DeleteIcon className="listing-detail__action-icon" />
                 </button>
               </Popconfirm>
             </If>

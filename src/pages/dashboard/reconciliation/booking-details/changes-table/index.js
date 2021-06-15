@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import { Card, Table, Popover } from 'antd';
-import Svg from '~components/svg';
+import { Massage as MassageIcon } from "~components/svgs";
 import { withTranslation } from 'react-i18next';
 import GalleryModal from '~components/gallery-modal';
 import { bookingPedingNoteType } from '~constants/reconciliation-booking';
@@ -79,7 +79,7 @@ export default class ChangesTable extends React.Component {
                 overlayClassName="reconciliation-changes__table-popover"
               >
                 <button className="reconciliation-changes__massage-btn">
-                  <Svg hash="massage" className="reconciliation-changes__massage-icon" />
+                  <MassageIcon className="reconciliation-changes__massage-icon" />
                 </button>
               </Popover>
             </If>

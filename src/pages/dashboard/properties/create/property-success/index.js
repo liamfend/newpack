@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from 'antd';
 import { withTranslation } from 'react-i18next';
 import { withRouter } from 'react-router-dom';
-import Svg from '~components/svg';
+import { PropertySuccess as PropertySuccessIcon } from "~components/svgs";
 import generatePath from '~settings/routing';
 
 @withTranslation()
@@ -36,7 +36,7 @@ export default class PropertySuccess extends React.Component {
 
     return (
       <div className="property-success">
-        <Svg className="property-success__icon" hash="property-success" />
+        <PropertySuccessIcon className="property-success__icon" />
         <div className="property-success__create-success">
           {t('cms.properties.create.property_success.create_success')}
         </div>

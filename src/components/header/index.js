@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import { Menu, Dropdown, Icon, Layout, Modal } from 'antd';
 import { Link } from 'react-router-dom';
 import GlobalSearch from '~components/global-search';
-import Svg from '~components/svg';
+import {
+  MyProfile as MyProfileIcon,
+  Switch as SwitchIcon,
+  Logout as LogoutIcon,
+  HelpCenter as HelpCenterIcon,
+  AccountPhoto as AccountPhotoIcon,
+} from "~components/svgs";
 import { fireCustomEvent } from '~helpers/custom-events';
 
 export default class Header extends React.Component {
@@ -11,7 +17,7 @@ export default class Header extends React.Component {
     <Menu style={ { width: 160, padding: 0 } }>
       <Menu.Item className="dashboard-header__menu">
         <Link to="/account/my-profile" className="dashboard-header__link">
-          <Svg className="dashboard-header__menu-icon" hash="my-profile" />
+          <MyProfileIcon className="dashboard-header__menu-icon" />
           <span className="dashboard-header__menu-text">
             { this.props.t('cms.header.dropdown.menu.my_profile') }
           </span>
@@ -22,7 +28,7 @@ export default class Header extends React.Component {
       >
         <Menu.Item className="dashboard-header__menu">
           <span onClick={ this.handleSwitchRole } role="button" tabIndex="0" style={ { outline: 0 } }>
-            <Svg className="dashboard-header__menu-icon" hash="switch" />
+            <SwitchIcon className="dashboard-header__menu-icon" />
             <span className="dashboard-header__menu-text">
               { this.props.t('cms.header.dropdown.menu.switch_role') }
             </span>
@@ -31,7 +37,7 @@ export default class Header extends React.Component {
       </If>
       <Menu.Item className="dashboard-header__menu">
         <span onClick={ this.logoutModal } role="button" tabIndex="0" style={ { outline: 0 } }>
-          <Svg className="dashboard-header__menu-icon" hash="logout" />
+          <LogoutIcon className="dashboard-header__menu-icon" />
           <span className="dashboard-header__menu-text">
             { this.props.t('cms.header.dropdown.menu.log_out') }
           </span>
@@ -85,12 +91,12 @@ export default class Header extends React.Component {
         </div>
         <div className="dashboard-header__item">
           <Link to="/help-center" className="dashboard-header__help-center" target="_blank">
-            <Svg className="dashboard-header__help-center-icon" hash="help-center" />
+            <HelpCenterIcon className="dashboard-header__help-center-icon" />
           </Link>
           <Dropdown overlay={ this.getMenu }>
             <div>
               <span className="dashboard-header__user">
-                <Svg className="dashboard-header__icon" hash="account-photo" />
+                <AccountPhotoIcon className="dashboard-header__icon" />
               </span>
               <div className="dashboard-header__user-details">
                 <If condition={ this.props.cmsUser }>

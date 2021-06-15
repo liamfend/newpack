@@ -1,7 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { Icon, Collapse, Steps } from 'antd';
-import Svg from '~components/svg';
+import {
+  CreateProperty as CreatePropertyIcon,
+  UpdateListing as UpdateListingIcon,
+  WaitingApproval as WaitingApprovalIcon,
+  PublishProperty as PublishPropertyIcon,
+} from "~components/svgs";
 
 /**
  *
@@ -88,7 +93,7 @@ export default class ThingsToKnow extends React.Component {
             <div className="center-style__block center-style__block--things-to-know-special">
               <div className="center-style__content-container">
                 <div className="center-style__content">
-                  <Svg className="center-style__content-icon" hash="create-property" />
+                  <CreatePropertyIcon className="center-style__content-icon" />
                   <div className="center-style__text-container">
                     <label className="center-style__content-title center-style__content-title--no-margin" style={ { fontSize: '16px' } }>
                       Student.com create property
@@ -98,7 +103,7 @@ export default class ThingsToKnow extends React.Component {
                   </div>
                 </div>
                 <div className="center-style__content">
-                  <Svg className="center-style__content-icon" hash="update-listing" />
+                  <UpdateListingIcon className="center-style__content-icon" />
                   <div className="center-style__text-container">
                     <label className="center-style__content-title center-style__content-title--no-margin" style={ { fontSize: '16px' } }>
                       Update listings
@@ -108,7 +113,7 @@ export default class ThingsToKnow extends React.Component {
                   </div>
                 </div>
                 <div className="center-style__content">
-                  <Svg className="center-style__content-icon" hash="waiting-approval" />
+                  <WaitingApprovalIcon className="center-style__content-icon" />
                   <div className="center-style__text-container">
                     <label className="center-style__content-title center-style__content-title--no-margin" style={ { fontSize: '16px' } }>
                       Wait for Student.com approval
@@ -118,7 +123,7 @@ export default class ThingsToKnow extends React.Component {
                   </div>
                 </div>
                 <div className="center-style__content">
-                  <Svg className="center-style__content-icon" hash="publish-property" />
+                  <PublishPropertyIcon className="center-style__content-icon" />
                   <div className="center-style__text-container">
                     <label className="center-style__content-title center-style__content-title--no-margin" style={ { fontSize: '16px' } }>
                       Publish your property

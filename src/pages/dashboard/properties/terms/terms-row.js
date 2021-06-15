@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { toLower } from 'lodash';
 import moment from 'moment';
-import Svg from '~components/svg';
+import { IconEdit as IconEditIcon, Delete as DeleteIcon, Files as FilesIcon } from "~components/svgs";
 import { platformEntity, entityAction } from '~constants';
 import showElementByAuth from '~helpers/auth';
 import { Popconfirm } from 'antd';
@@ -49,7 +49,7 @@ const TermsRow = ({
             className="property-terms__row__edit-button"
             onClick={ onEdit }
           >
-            <Svg className="property-terms__row__edit-icon" hash="icon-edit" />
+            <IconEditIcon className="property-terms__row__edit-icon" />
           </button>
         </If>
         <If
@@ -77,7 +77,7 @@ const TermsRow = ({
               type="button"
               className="property-terms__row__edit-button"
             >
-              <Svg className="property-terms__row__delete-icon" hash="delete" />
+              <DeleteIcon className="property-terms__row__delete-icon" />
             </button>
           </Popconfirm>
         </If>
@@ -114,7 +114,7 @@ const TermsRow = ({
           <span className="property-terms__row__content-file-text">
             { `${t('cms.terms.list.row.file')}: `}
           </span>
-          <Svg className="property-terms__row__file-icon" hash="files" />
+          <FilesIcon className="property-terms__row__file-icon" />
           <a
             className="property-terms__row__content-file-text"
             href={ term.url }

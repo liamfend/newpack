@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import modal from '~components/modal';
-import Svg from '~components/svg';
+import { Warning as WarningIcon } from "~components/svgs";
 
 @modal({ className: 'unpubilshed-modal' }, true)
 export default class UnpubilshedModal extends React.Component {
@@ -12,7 +12,7 @@ export default class UnpubilshedModal extends React.Component {
   render() {
     return (
       <div className="unpubilshed-modal__content">
-        <Svg className="unpubilshed-modal__icon" hash="warning" />
+        <WarningIcon className="unpubilshed-modal__icon" />
         <span className="unpubilshed-modal__text">
           {this.props.text}
         </span>

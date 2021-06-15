@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Checkbox, Button, Icon, Table, Popconfirm, message, Drawer } from 'antd';
 import moment from 'moment';
-import Svg from '~components/svg';
+import {
+  Edit as EditIcon,
+  Copy as CopyIcon,
+  Delete as DeleteIcon,
+  ContractEmpty as ContractEmptyIcon,
+} from "~components/svgs";
 import SearchComponent from '~components/search-component';
 import ViewModal from '~pages/dashboard/properties/listing-management/room-detail/view-modal';
 import { roomCategory, propertyStatus } from '~constants/listing-management';
@@ -287,7 +292,7 @@ export default class RoomDetail extends React.Component {
                 className="room-detail__icon-wrap"
                 onClick={ () => this.openRoomFormModal('edit', record) }
               >
-                <Svg className="room-detail__action-icon" hash="edit" />
+                <EditIcon className="room-detail__action-icon" />
               </button>
             </If>
             <If condition={
@@ -306,7 +311,7 @@ export default class RoomDetail extends React.Component {
                 className="room-detail__icon-wrap"
                 onClick={ () => this.openRoomFormModal('copy', record) }
               >
-                <Svg className="room-detail__action-icon" hash="copy" />
+                <CopyIcon className="room-detail__action-icon" />
               </button>
             </If>
             <If condition={
@@ -336,7 +341,7 @@ export default class RoomDetail extends React.Component {
                   className="room-detail__icon-wrap"
                   onClick={ () => this.handleClickDelete(record.id) }
                 >
-                  <Svg className="room-detail__action-icon" hash="delete" />
+                  <DeleteIcon className="room-detail__action-icon" />
                 </button>
               </Popconfirm>
             </If>
@@ -442,7 +447,7 @@ export default class RoomDetail extends React.Component {
         <Choose>
           <When condition={ this.formatedRooms.length === 0 }>
             <div className="room-detail__empty">
-              <Svg className="room-detail__empty-icon" hash="contract-empty" />
+              <ContractEmptyIcon className="room-detail__empty-icon" />
               <span className="room-detail__no-room">{ t('cms.property.listing_management.no_room.description') }</span>
               <Button
                 type="primary"

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'antd';
-import Svg from '~components/svg';
+import { PropertySuccess as PropertySuccessIcon } from "~components/svgs";
 import generatePath from '~settings/routing';
 
 export default class PendingApproveSuccess extends React.PureComponent {
@@ -15,7 +15,7 @@ export default class PendingApproveSuccess extends React.PureComponent {
 
     return (
       <div className="pending-approve-success">
-        <Svg className="pending-approve-success__icon" hash="property-success" />
+        <PropertySuccessIcon className="pending-approve-success__icon" />
         <div className="pending-approve-success__title">
           { t('cms.properties.edit.pending_approve_success.title') }
         </div>

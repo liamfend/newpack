@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Select, Icon, Spin, Popconfirm } from 'antd';
-import Svg from '~components/svg';
+import { Video as VideoIcon } from "~components/svgs";
 import ProgressBar from '~components/property-gallery/uploading-modal/progress-bar';
 import { uploadStatus, localeMapping } from '~constants/gallery';
 
@@ -79,7 +79,7 @@ export default class ItemVideo extends React.Component {
           <Otherwise>
             <div className="gallery-uploading__video-title">
               <span className="gallery-uploading__video-icon-wrapper">
-                <Svg className="gallery-uploading__video-icon" hash="video" />
+                <VideoIcon className="gallery-uploading__video-icon" />
                 <If condition={ this.props.item.status === uploadStatus.FAILED }>
                   <Icon className="gallery-uploading__video-failed-icon" type="exclamation-circle" theme="filled" />
                 </If>

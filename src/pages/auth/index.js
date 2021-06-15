@@ -4,7 +4,7 @@ import queryString from 'query-string';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Login from '~pages/auth/login';
-import Svg from '~components/svg';
+import { LogoMain as LogoMainIcon } from "~components/svgs";
 import ForgotPassword from '~pages/auth/forgot-password';
 import ForgotPasswordSuccessful from '~pages/auth/forgot-password-successful';
 import ResetPassword from '~pages/auth/reset-password';
@@ -36,7 +36,7 @@ export default class Auth extends React.Component {
           <Route path="/forgot-password/:email/success" component={ ForgotPasswordSuccessful } />
           <Route path="/set-password" component={ ResetPassword } />
         </div>
-        <Svg className="auth__logo-main" hash="logo-main" />
+        <LogoMainIcon className="auth__logo-main" />
       </section>
     );
   }

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import ReactQuill from '~components/react-quill';
 import CurrencyBar from '~components/currency-bar';
-import Svg from '~components/svg';
+import { CreateTick as CreateTickIcon } from "~components/svgs";
 import { rankTypeOptions, freeCancellationPeriodOptions, typeOptions } from '~constants/property-field-options';
 import { getRankTypeValue } from '~helpers/property-field-option';
 import { generateSlug } from '~helpers';
@@ -330,7 +330,7 @@ class DetailTab extends React.Component {
             })(
               <Switch
                 className="detail-tab__cancel-switch"
-                checkedChildren={ <Svg className="detail-tab__switch-check-icon" hash="create-tick" /> }
+                checkedChildren={ <CreateTickIcon className="detail-tab__switch-check-icon" /> }
               />,
             ) }
           </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Prompt } from 'react-router-dom';
 import { Icon, Modal } from 'antd';
-import Svg from '~components/svg';
+import { CloudUpload as CloudUploadIcon } from "~components/svgs";
 import { uploadStatus } from '~constants/gallery';
 import { getFileType } from '~helpers/gallery';
 
@@ -231,7 +231,7 @@ export default class UploadProgress extends React.Component {
           <When condition={ this.state.status === 'upload' }>
             <div className="upload-progress__upload-wrap">
               <span className="upload-progress__icon-wrap">
-                <Svg className="upload-progress__upload-icon" hash="cloud-upload" />
+                <CloudUploadIcon className="upload-progress__upload-icon" />
                 <span className="upload-progress__upload-text">
                   { this.props.t('cms.properties.edit.gallery.mini_modal.upload_text', {
                     filesNum: this.state.filesNum,

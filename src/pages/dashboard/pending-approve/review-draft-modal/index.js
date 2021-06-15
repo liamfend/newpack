@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon, Button } from 'antd';
 import modal from '~components/modal';
-import Svg from '~components/svg';
+import {
+  IconCommentsMark as IconCommentsMarkIcon,
+  IconDraftWarming as IconDraftWarmingIcon,
+} from "~components/svgs";
 import DetailsReview from '~pages/dashboard/pending-approve/review-draft-modal/details-review';
 import PhotosReview from '~pages/dashboard/pending-approve/review-draft-modal/photos-review';
 import VideosReview from '~pages/dashboard/pending-approve/review-draft-modal/videos-review';
@@ -271,7 +274,7 @@ export default class ReviewDraftModal extends React.Component {
                       .findIndex(item => item.id === details.draftId)) !== -1 }
                     >
                       <span className="review-draft__details-container__comment-tag">
-                        <Svg className="review-draft__details-container__icon-comment-tag" hash="icon-comments-mark" />
+                        <IconCommentsMarkIcon className="review-draft__details-container__icon-comment-tag" />
                       </span>
                     </If>
                     <div className="review-draft__details-container__content">
@@ -371,10 +374,7 @@ export default class ReviewDraftModal extends React.Component {
             <span className="review-draft__bottom">
               <span className="review-draft__bottom__warming-tips">
                 <If condition={ bottomWarningTips }>
-                  <Svg
-                    className="review-draft__bottom__icon-warming"
-                    hash="icon-draft-warming"
-                  />
+                  <IconDraftWarmingIcon className="review-draft__bottom__icon-warming" />
                   <span className="review-draft__bottom__warming-tips-content">
                     { t('cms.properties.pending_approval.review_modal.warming_tips.content') }
                   </span>

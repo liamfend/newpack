@@ -12,7 +12,7 @@ import {
 import CombinedSearchComponent from '~components/combined-search-component';
 import { isLandlordRole } from '~helpers/auth';
 import { vrUrlPrefix, vrLinkLabel } from '~constants/gallery';
-import Svg from '~components/svg';
+import { RejectedNoShadow as RejectedNoShadowIcon } from "~components/svgs";
 
 const urlRegex = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/;
 
@@ -308,7 +308,7 @@ export default class SingleLink extends React.PureComponent {
             }) }
             >
               <If condition={ virtualTourLinkItem.status === 'REJECTED' }>
-                <Svg className="virtual-tour-link-item__reject-vr__icon" hash="rejected-no-shadow" />
+                <RejectedNoShadowIcon className="virtual-tour-link-item__reject-vr__icon" />
               </If>
             </span>
           </Form.Item>

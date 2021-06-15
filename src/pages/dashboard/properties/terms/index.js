@@ -7,7 +7,7 @@ import * as termsActions from '~actions/properties/terms';
 import Header from '~components/property-header';
 import TermsRow from '~pages/dashboard/properties/terms/terms-row';
 import TermsModal from '~pages/dashboard/properties/terms/terms-modal';
-import Svg from '~components/svg';
+import { NoTerms as NoTermsIcon } from "~components/svgs";
 
 import authControl from '~components/auth-control';
 import { platformEntity, entityAction, communicationStatus } from '~constants';
@@ -141,7 +141,7 @@ class Terms extends React.Component {
           <Otherwise>
             <div className="property-terms__empty-contain">
               <div className="property-terms__empty">
-                <Svg className="property-terms__empty-icon" hash="no-terms" />
+                <NoTermsIcon className="property-terms__empty-icon" />
                 <p className="property-terms__empty-text">
                   { this.props.t('cms.terms.list.empty.text') }
                 </p>

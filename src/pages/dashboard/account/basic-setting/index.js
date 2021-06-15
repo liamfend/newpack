@@ -5,7 +5,7 @@ import { withTranslation } from 'react-i18next';
 import authControl from '~components/auth-control';
 import { Form, Row, Col, Input, message, Icon, Spin } from 'antd';
 import classNames from 'classnames';
-import Svg from '~components/svg';
+import { AccountPhoto as AccountPhotoIcon } from "~components/svgs";
 import { validateEmojiRegex } from '~helpers/validate';
 import Loading from '~components/loading';
 import { communicationStatus, platformEntity, entityAction, pmsAllowRoles } from '~constants';
@@ -187,7 +187,7 @@ class BasicSettingForm extends React.Component {
           <div className="basic-setting__container">
             <div className="basic-setting__profile">
               <div className="basic-setting__profile-photo">
-                <Svg className="basic-setting__profile-photo-icon" hash="account-photo" />
+                <AccountPhotoIcon className="basic-setting__profile-photo-icon" />
               </div>
               <div className="basic-setting__profile-info">
                 <div className="basic-setting__profile-position">

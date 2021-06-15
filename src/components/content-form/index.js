@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import Dropzone from 'react-dropzone';
 import { Form, Row, Col, Input, Icon } from 'antd';
-import Svg from '~components/svg';
+import { Image as ImageIcon } from "~components/svgs";
 import ReactQuill from '~components/react-quill';
 import { htmlMinify, getHtmlLength } from '~helpers/property-edit';
 import updatePayloadDetails from '~helpers/location';
@@ -317,7 +317,7 @@ class ContentForm extends React.Component {
                           { ...getRootProps() }
                         >
                           <input { ...getInputProps() } />
-                          <Svg className="content-form__upload-icon" hash="image" />
+                          <ImageIcon className="content-form__upload-icon" />
                           <p className="content-form__upload-summary">{ this.props.t('cms.edit.content.upload_image.tips') }</p>
                           <span className="content-form__image-size">{ this.props.t('cms.edit.content.upload_image.size.big') }</span>
                         </div>
@@ -346,7 +346,7 @@ class ContentForm extends React.Component {
                           { ...getRootProps() }
                         >
                           <input { ...getInputProps() } />
-                          <Svg className="content-form__upload-icon" hash="image" />
+                          <ImageIcon className="content-form__upload-icon" />
                           <p className="content-form__upload-summary">{ this.props.t('cms.edit.content.upload_image.tips') }</p>
                           <span className="content-form__image-size">{ this.props.t('cms.edit.content.upload_image.size.small') }</span>
                         </div>

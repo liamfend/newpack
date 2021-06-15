@@ -1,6 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Svg from '~components/svg'
+import {
+  PropertyIcon as PropertyIconIcon,
+  TagIcon as TagIconIcon,
+  ImageIcon as ImageIconIcon,
+} from "~components/svgs";
 
 const NoProperties = props => (
   <div className="no-properties">
@@ -11,19 +15,19 @@ const NoProperties = props => (
       <h3 className="no-properties__sub-title">{props.t('cms.no_properties.title.create_one')}</h3>
       <div className="no-properties__summary-container">
         <p className="no-properties__summary no-properties__summary--property">
-          <Svg className="no-properties__icon no-properties__icon--property" hash="property-icon" />
+          <PropertyIconIcon className="no-properties__icon no-properties__icon--property" />
           <span className="no-properties__summary-content">
             {props.t('cms.no_properties.summary.content.about_your_property')}
           </span>
         </p>
         <p className="no-properties__summary no-properties__summary--listing-and-price">
-          <Svg className="no-properties__icon no-properties__icon--tag" hash="tag-icon" />
+          <TagIconIcon className="no-properties__icon no-properties__icon--tag" />
           <span className="no-properties__summary-content">
             {props.t('cms.no_properties.summary.content.listings_and_prices')}
           </span>
         </p>
         <p className="no-properties__summary no-properties__summary--upload">
-          <Svg className="no-properties__icon no-properties__icon--image" hash="image-icon" />
+          <ImageIconIcon className="no-properties__icon no-properties__icon--image" />
           <span className="no-properties__summary-content">
             {props.t('cms.no_properties.summary.content.upload_photo_and_videos')}
           </span>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon, Tooltip } from 'antd';
 import handleTenancy from '~helpers/tenancy-preview';
-import Svg from '~components/svg';
+import { Arrow as ArrowIcon } from "~components/svgs";
 
 export default class TenancyDetailsPreview extends React.PureComponent {
   constructor() {
@@ -90,7 +90,7 @@ export default class TenancyDetailsPreview extends React.PureComponent {
                       </span>
                     </If>
                     <If condition={ this.state.moveInDesc && this.state.moveOutDesc }>
-                      <Svg className="listing-model__desc listing-model__common" hash="arrow" />
+                      <ArrowIcon className="listing-model__desc listing-model__common" />
                     </If>
                     <If condition={ this.state.moveOutDesc }>
                       <span className="listing-model__desc listing-model__move-out-desc">

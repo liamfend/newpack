@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Icon, Form, Popconfirm, Tooltip } from 'antd';
 import { trim } from 'lodash';
-import Svg from '~components/svg';
+import { PropertyCountry as PropertyCountryIcon } from "~components/svgs";
 import modal from '~components/modal';
 import moment from 'moment';
 import DetailsForm from '~pages/dashboard/properties/commission/commission-form-modal/details-form';
@@ -320,7 +320,7 @@ class CommissionFormModal extends React.Component {
         </Popconfirm>
         <div className="commission-from__content">
           <If condition={ modalType === 'edit' }>
-            <Svg className="commission-from__country-icon" hash="property-country" />
+            <PropertyCountryIcon className="commission-from__country-icon" />
             <span className="commission-from__property-name">
               { property.name }
             </span>

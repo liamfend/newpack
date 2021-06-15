@@ -11,7 +11,7 @@ import {
   getFileType,
   getLocale,
 } from '~helpers/gallery';
-import Svg from '~components/svg';
+import { Hourglass as HourglassIcon, Cover as CoverIcon } from "~components/svgs";
 
 export default class GalleryReview extends React.Component {
   constructor(props) {
@@ -353,7 +353,7 @@ export default class GalleryReview extends React.Component {
                                             title={ this.props.t('cms.properties.edit.gallery.compressing_text') }
                                           >
                                             <div className="photo-item__img-video-compress--hover">
-                                              <Svg className="photo-item__img-video-icon" hash="hourglass" />
+                                              <HourglassIcon className="photo-item__img-video-icon" />
                                               <span>{ this.props.t('cms.properties.edit.gallery.file_type.mp4') }</span>
                                             </div>
                                           </Tooltip>
@@ -400,7 +400,7 @@ export default class GalleryReview extends React.Component {
                                     && this.getCoverPhoto(photoLibrary.list) === imgItem.id
                                   }
                                 >
-                                  <Svg className="gallery-review__cover" hash="cover" />
+                                  <CoverIcon className="gallery-review__cover" />
                                 </If>
                               </div>
                             </When>

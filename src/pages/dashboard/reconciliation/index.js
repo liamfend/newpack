@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 import queryString from 'query-string';
 import { Table, Pagination, Spin, DatePicker, Icon, Radio, Button, Tooltip } from 'antd';
-import Svg from '~components/svg';
+import { BulkHistory as BulkHistoryIcon, TemplateDownload as TemplateDownloadIcon } from "~components/svgs";
 import authControl from '~components/auth-control';
 import { communicationStatus, platformEntity, entityAction } from '~constants';
 import generatePath from '~settings/routing';
@@ -439,7 +439,7 @@ export default class Reconciliation extends React.Component {
                     className="reconciliation__icon-btn reconciliation__icon-btn--history"
                     onClick={ this.handleBulkHistory }
                   >
-                    <Svg hash="bulk-history" className="reconciliation__icon-btn__icon" />
+                    <BulkHistoryIcon className="reconciliation__icon-btn__icon" />
                   </Button>
                 </Tooltip>
                 <Tooltip
@@ -451,7 +451,7 @@ export default class Reconciliation extends React.Component {
                     className="reconciliation__icon-btn reconciliation__icon-btn--download"
                     onClick={ this.handleDownloadTemplate }
                   >
-                    <Svg hash="template-download" className="reconciliation__icon-btn__icon" />
+                    <TemplateDownloadIcon className="reconciliation__icon-btn__icon" />
                   </Button>
                 </Tooltip>
                 <Button

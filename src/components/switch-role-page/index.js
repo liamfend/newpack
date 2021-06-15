@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button, message, Spin } from 'antd';
 import { connect } from 'react-redux';
 import modal from '~components/modal';
-import Svg from '~components/svg';
+import { Roles as RolesIcon } from "~components/svgs";
 import generatePath from '~settings/routing';
 import RoleItem from '~client/components/switch-role-page/role-item';
 import * as authActions from '~actions/auth';
@@ -107,7 +107,7 @@ export default class SwitchRolePage extends React.Component {
             </When>
             <Otherwise>
               <div className="switch-role-page__position-container">
-                <Svg className="switch-role-page__icon-roles" hash="roles" />
+                <RolesIcon className="switch-role-page__icon-roles" />
                 <h3 className="switch-role-page__title">
                   { this.props.t('cms.switch_role_modal.description.switch_role') }
                 </h3>

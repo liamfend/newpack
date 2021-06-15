@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Row, Icon, Modal, Tabs } from 'antd';
 import gallery from '~constants/gallery';
-import Svg from '~components/svg';
+import { IconVr as IconVrIcon } from "~components/svgs";
 import {
   DragLayer,
 } from '~components/sortable-gallery';
@@ -567,7 +567,7 @@ export default class GalleryTab extends React.Component {
                   onChange={ (key) => { this.onClickSubTab(key); } }
                   tabBarExtraContent={
                     <div role="presentation" className="gallery-tab__sub-tabs__icon" onClick={ () => { this.openVirtualTourLinkModal('OVERALL'); } }>
-                      <Svg className="icon-vr" hash="icon-vr" />
+                      <IconVrIcon className="icon-vr" />
                       <span>{t('cms.properties.edit.gallery.virtual_tour')}</span>
                     </div>
                   }

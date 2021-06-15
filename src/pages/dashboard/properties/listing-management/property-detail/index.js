@@ -13,7 +13,7 @@ import {
 } from '~constants/property-field-options';
 import { longtailCancellationPeriod } from '~helpers/longtail-cancellation-period';
 import { getBillingCycleText, getRankTypeValue } from '~helpers/property-field-option';
-import Svg from '~components/svg';
+import { CreateTick as CreateTickIcon } from "~components/svgs";
 import ReactQuill from '~components/react-quill';
 import PropertyDetailWrapper from '~components/property-detail-wrapper';
 import enhanceForm from '~hocs/enhance-form';
@@ -504,7 +504,7 @@ export default class PropertyDetail extends React.Component {
                     })(
                       <Switch
                         className="property-detail__cancel-switch"
-                        checkedChildren={ <Svg className="property-detail__switch-check-icon" hash="create-tick" /> }
+                        checkedChildren={ <CreateTickIcon className="property-detail__switch-check-icon" /> }
                       />,
                     ) }
                   </div>

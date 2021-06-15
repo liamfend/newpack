@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Modal, Form, Input, DatePicker, Checkbox, Row, Col, Upload, Icon, message } from 'antd';
-import Svg from '~components/svg';
+import { Files as FilesIcon } from "~components/svgs";
 import { getFileSizeString } from '~helpers/jstool';
 import moment from 'moment';
 import { connect } from 'react-redux';
@@ -274,7 +274,7 @@ const TermsModal = ({
             <When condition={ selectedFile }>
               <div className="terms-modal__file-wrap">
                 <div className="terms-modal__file-wrap__left">
-                  <Svg className="terms-modal__file-wrap__file-icon" hash="files" />
+                  <FilesIcon className="terms-modal__file-wrap__file-icon" />
                   <span className="terms-modal__file-wrap__file-name">
                     { selectedFile.name }
                   </span>

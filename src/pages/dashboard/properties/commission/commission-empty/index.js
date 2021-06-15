@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Svg from '~components/svg';
+import { NoCommission as NoCommissionIcon } from "~components/svgs";
 
 const CommissionEmpty = props => (
   <div className="commission-empty">
     <div className="commission-empty__container">
-      <Svg className="commission-empty__icon" hash="no-commission" />
+      <NoCommissionIcon className="commission-empty__icon" />
       <h3 className="commission-empty__title">
         { props.t('cms.commission.commission_empty.title') }
       </h3>

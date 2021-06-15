@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Svg from '~components/svg';
+import { IconComments as IconCommentsIcon, IconCover as IconCoverIcon } from "~components/svgs";
 import { imageUrl } from '~helpers/gallery';
 import classNames from 'classnames';
 import DropDownBox from '../review-draft-modal/drop-down-box';
@@ -31,12 +31,12 @@ export default class PhotosReview extends React.PureComponent {
           {/* ------ reject image mask ------ */}
           <If condition={ isAlreadyReject }>
             <span className="review-draft__photos__img-reject" />
-            <Svg className="review-draft__photos__icon-comments" hash="icon-comments" />
+            <IconCommentsIcon className="review-draft__photos__icon-comments" />
           </If>
 
           {/* ------ hero image tag ------ */}
           <If condition={ image.category === 'GENERAL' && image.hero }>
-            <Svg className="review-draft__photos__hero-tag" hash="icon-cover" />
+            <IconCoverIcon className="review-draft__photos__hero-tag" />
           </If>
 
           <DropDownBox

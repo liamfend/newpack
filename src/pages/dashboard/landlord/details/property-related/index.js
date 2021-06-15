@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Table, Icon } from 'antd';
-import Svg from '~components/svg';
+import { LandlordNoProperty as LandlordNoPropertyIcon } from "~components/svgs";
 import { propertyStatus } from '~constants/landlord';
 import SearchComponent from '~components/search-component';
 import TableColumnSearch from '~components/table-column-search';
@@ -306,7 +306,7 @@ export default class LandlordPropertyRelated extends React.Component {
         <Choose>
           <When condition={ properties.length === 0 && this.state.isWithoutFilter }>
             <div className="landlord-property-related__no-property-wrap">
-              <Svg className="landlord-property-related__landlord-no-property" hash="landlord-no-property" />
+              <LandlordNoPropertyIcon className="landlord-property-related__landlord-no-property" />
               <div className="landlord-property-related__description">
                 { t('cms.landlord.property_related.no_property.description') }
               </div>

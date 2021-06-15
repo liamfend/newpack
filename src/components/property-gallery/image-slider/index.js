@@ -6,7 +6,12 @@ import Slider from 'react-slick';
 import classNames from 'classnames';
 import { getFileType, imageUrl, formatBytes } from '~helpers/gallery';
 import gallery, { imageSizes, localeMapping, galleryStatus } from '~constants/gallery';
-import Svg from '~components/svg';
+import {
+  VideoBg as VideoBgIcon,
+  Hourglass as HourglassIcon,
+  VideoFailed as VideoFailedIcon,
+  Cover as CoverIcon,
+} from "~components/svgs";
 
 
 const SLICK_ANIMATION_DURATION = 500;
@@ -244,7 +249,7 @@ export default class ImageSlider extends React.Component {
                         }) }
                         key={ item.id }
                       >
-                        <Svg className="gallery-slider-modal__video-bg" hash="video-bg" />
+                        <VideoBgIcon className="gallery-slider-modal__video-bg" />
                         <div className="gallery-slider-modal__img-video-compress gallery-slider-modal__img">
                           <Choose>
                             <When
@@ -252,14 +257,14 @@ export default class ImageSlider extends React.Component {
                                 item.transcodedStatus === gallery.videoStatus.compressing
                               }
                             >
-                              <Svg className="gallery-slider-modal__img-video-icon" hash="hourglass" />
+                              <HourglassIcon className="gallery-slider-modal__img-video-icon" />
                             </When>
                             <When
                               condition={
                                 item.transcodedStatus === gallery.videoStatus.error
                               }
                             >
-                              <Svg className="gallery-slider-modal__img-video-icon" hash="video-failed" />
+                              <VideoFailedIcon className="gallery-slider-modal__img-video-icon" />
                             </When>
                             <Otherwise>
                               <Icon className="gallery-slider-modal__img-video-icon" type="video-camera" />
@@ -388,14 +393,14 @@ export default class ImageSlider extends React.Component {
                                   item.transcodedStatus === gallery.videoStatus.compressing
                                 }
                               >
-                                <Svg className="gallery-slider-modal__img-video-icon" hash="hourglass" />
+                                <HourglassIcon className="gallery-slider-modal__img-video-icon" />
                               </When>
                               <When
                                 condition={
                                   item.transcodedStatus === gallery.videoStatus.error
                                 }
                               >
-                                <Svg className="gallery-slider-modal__img-video-icon" hash="video-failed" />
+                                <VideoFailedIcon className="gallery-slider-modal__img-video-icon" />
                               </When>
                               <Otherwise>
                                 <Icon className="gallery-slider-modal__img-video-icon" type="video-camera" />
@@ -415,7 +420,7 @@ export default class ImageSlider extends React.Component {
                     </Otherwise>
                   </Choose>
                   <If condition={ cover && this.getCoverPhoto(list) === item.id }>
-                    <Svg className="gallery-slider-modal__cover" hash="cover" />
+                    <CoverIcon className="gallery-slider-modal__cover" />
                   </If>
                 </div>
               </For>

@@ -8,7 +8,13 @@ import { Skeleton, Tooltip } from 'antd';
 import { useTranslation } from 'react-i18next';
 import getEnvironment, { environments } from '~base/global/helpers/environment';
 import generatePath from '~settings/routing';
-import Svg from '~components/svg';
+import {
+  SoldOut as SoldOutIcon,
+  DefaultImage as DefaultImageIcon,
+  PropertyCountry as PropertyCountryIcon,
+  Address as AddressIcon,
+  Time as TimeIcon,
+} from "~components/svgs";
 import { propertyStatus } from '~constants/landlord';
 import { propertyState } from '~constants';
 
@@ -37,7 +43,7 @@ const PropertyCard = ({ property, loading }) => {
         }
       >
         <If condition={ get(property, 'state') === propertyState.SOLD_OUT }>
-          <Svg className="property-card__sold-out" hash="sold-out" />
+          <SoldOutIcon className="property-card__sold-out" />
         </If>
         <Skeleton
           active
@@ -49,7 +55,7 @@ const PropertyCard = ({ property, loading }) => {
         >
           <div className="property-card__container">
             <div className="property-card__image-container">
-              <Svg hash="default-image" className="property-card__image-default" />
+              <DefaultImageIcon className="property-card__image-default" />
               <If condition={ get(property, 'heroImage.source') }>
                 <img
                   className="property-card__image"
@@ -67,7 +73,7 @@ const PropertyCard = ({ property, loading }) => {
                   overlayClassName="property-card__country-tips"
                 >
                   <span className="property-card__country">
-                    <Svg className="property-card__country-icon" hash="property-country" />
+                    <PropertyCountryIcon className="property-card__country-icon" />
                   </span>
                 </Tooltip>
                 <span className="property-card__name">{ get(property, 'name') }</span>
@@ -79,13 +85,13 @@ const PropertyCard = ({ property, loading }) => {
               </p>
 
               <p className="property-card__address-info-container">
-                <Svg className="property-card__icon property-card__address-icon" hash="address" />
+                <AddressIcon className="property-card__icon property-card__address-icon" />
                 <span className="property-card__address-info">
                   {`${get(property, 'cityName')}, ${get(property, 'countryName')}`}
                 </span>
               </p>
               <p className="property-card__update-info-container">
-                <Svg className="property-card__icon property-card__update-icon" hash="time" />
+                <TimeIcon className="property-card__icon property-card__update-icon" />
                 <span className="property-card__update-info">
                   { t('cms.property_card.label.last_update_by', {
                     name: get(property, 'updatedBy') || 'system',

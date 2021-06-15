@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withTranslation } from 'react-i18next';
-import Svg from '~components/svg';
+import { PendingApprove as PendingApproveIcon } from "~components/svgs";
 import { fireCustomEvent } from '~helpers/custom-events';
 import { Icon, Tooltip } from 'antd';
 import { connect } from 'react-redux';
@@ -147,7 +147,7 @@ export default class PendingApproveList extends React.Component {
                 title={ t('cms.properties.pending_approval.list.title') }
               >
                 <button onClick={ this.showList } className="pending-approve__list-btn">
-                  <Svg className="pending-approve__list-icon" hash="pending-approve" />
+                  <PendingApproveIcon className="pending-approve__list-icon" />
                   <If condition={ this.props.drafts.length > 0 }>
                     <span className="pending-approve__red-dot" />
                   </If>
@@ -159,7 +159,7 @@ export default class PendingApproveList extends React.Component {
                 onClick={ this.showList }
                 className="pending-approve__list-btn pending-approve__list-btn--click"
               >
-                <Svg className="pending-approve__list-icon" hash="pending-approve" />
+                <PendingApproveIcon className="pending-approve__list-icon" />
               </button>
             </Otherwise>
           </Choose>

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Svg from '~components/svg';
+import { IconDraftVideo as IconDraftVideoIcon, IconComments as IconCommentsIcon } from "~components/svgs";
 import classNames from 'classnames';
 import { Tooltip } from 'antd';
 import { getLocale } from '~helpers/gallery';
@@ -19,7 +19,7 @@ export default class VideosReview extends React.PureComponent {
 
         <span className="review-draft__videos__symbol-container">
           <span className="review-draft__videos__icon-container">
-            <Svg className="review-draft__videos__icon-video" hash="icon-draft-video" />
+            <IconDraftVideoIcon className="review-draft__videos__icon-video" />
             <span className="review-draft__videos__icon-content">
               { t('cms.properties.pending_approval.review_modal.video_content') }
             </span>
@@ -57,7 +57,7 @@ export default class VideosReview extends React.PureComponent {
 
         <If condition={ isAlreadyReject }>
           <span className="review-draft__videos__comments-tag">
-            <Svg className="review-draft__videos__icon-comments" hash="icon-comments" />
+            <IconCommentsIcon className="review-draft__videos__icon-comments" />
           </span>
         </If>
 

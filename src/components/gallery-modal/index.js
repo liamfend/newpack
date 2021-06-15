@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Icon } from 'antd';
 import modal from '~components/modal';
 import Slider from 'react-slick';
-import Svg from '~components/svg';
+import { ArrowBigLeft as ArrowBigLeftIcon, ArrowBigRight as ArrowBigRightIcon } from "~components/svgs";
 import endpoints from '~settings/endpoints';
 
 @modal()
@@ -81,14 +81,14 @@ export default class GalleryModal extends React.Component {
             onClick={ () => { this.handleClickArrow('prev'); } }
             className="gallery-modal__arrow-container gallery-modal__arrow-container--prev"
           >
-            <Svg className="gallery-modal__arrow-icon" hash="arrow_big_left" />
+            <ArrowBigLeftIcon className="gallery-modal__arrow-icon" />
           </button>
 
           <button
             onClick={ () => { this.handleClickArrow('next'); } }
             className="gallery-modal__arrow-container gallery-modal__arrow-container--next"
           >
-            <Svg className="gallery-modal__arrow-icon" hash="arrow_big_right" />
+            <ArrowBigRightIcon className="gallery-modal__arrow-icon" />
           </button>
         </If>
 

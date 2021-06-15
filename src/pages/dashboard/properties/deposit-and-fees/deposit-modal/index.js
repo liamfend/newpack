@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon, Form, Popconfirm } from 'antd';
-import Svg from '~components/svg';
+import { PropertyCountry as PropertyCountryIcon } from "~components/svgs";
 import modal from '~components/modal';
 import DetailsForm from '~pages/dashboard/properties/deposit-and-fees/deposit-modal/form';
 import DeleteBtn from '~pages/dashboard/properties/deposit-and-fees/delete-btn';
@@ -146,7 +146,7 @@ class DepositFormModal extends React.Component {
           </button>
         </Popconfirm>
         <div className="deposit-from__content">
-          <Svg className="deposit-from__country-icon" hash="property-country" />
+          <PropertyCountryIcon className="deposit-from__country-icon" />
           <span className="deposit-from__property-name">
             { property.name }
           </span>

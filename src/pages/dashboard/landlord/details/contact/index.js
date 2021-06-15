@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Row, Col, Icon, Popconfirm, message } from 'antd';
-import Svg from '~components/svg';
+import { IconContactEmpty as IconContactEmptyIcon } from "~components/svgs";
 import LandlordContactModal from '~pages/dashboard/landlord/contact-modal';
 import * as queries from '~settings/queries';
 import { fetch } from '~helpers/graphql';
@@ -73,7 +73,7 @@ export default class LandlordContact extends React.Component {
           <If condition={ landlordLinkMen.length === 0 }>
             <div className="landlord-contact__empty-page-wrap">
               <div className="landlord-contact__empty-page">
-                <Svg className="landlord-contact__empty-page__icon" hash="icon-contact-empty" />
+                <IconContactEmptyIcon className="landlord-contact__empty-page__icon" />
                 <span className="landlord-contact__empty-page__content">
                   { t('cms.landlord.contact.add_new_contact.description') }
                 </span>

@@ -6,7 +6,7 @@ import { Form, Select, Icon, Tooltip, message } from 'antd';
 import endpoints from '~settings/endpoints';
 import * as queries from '~settings/queries';
 import { cookieNames } from '~constants';
-import Svg from '~components/svg';
+import { RecommendedUniversity as RecommendedUniversityIcon } from "~components/svgs";
 import { getItem } from '~base/global/helpers/storage';
 
 export default class RecommendedUniversities extends React.Component {
@@ -113,7 +113,7 @@ export default class RecommendedUniversities extends React.Component {
           className="address-detail__label"
           label={ t('cms.properties.edit.address.recommended_universities') }
         >
-          <Svg hash="recommended-university" className="address-detail__university-icon" />
+          <RecommendedUniversityIcon className="address-detail__university-icon" />
           {
             getFieldDecorator('universities', {
               trigger: 'onChange',

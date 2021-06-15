@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { Icon, Popconfirm } from 'antd';
 import { platformEntity, entityAction } from '~client/constants';
 import showElementByAuth from '~helpers/auth';
-import Svg from '~components/svg';
+import { Edit as EditIcon, Copy as CopyIcon, Delete as DeleteIcon } from "~components/svgs";
 
 export default class ViewModal extends React.PureComponent {
 formatRoomDetailsData = () => {
@@ -238,7 +238,7 @@ render() {
               className="room-view-modal__btn"
               onClick={ () => { this.props.openModal('edit'); } }
             >
-              <Svg hash="edit" className="room-view-modal__btn-icon" />
+              <EditIcon className="room-view-modal__btn-icon" />
             </button>
             <span className="room-view-modal__btns-line" />
           </If>
@@ -251,7 +251,7 @@ render() {
               className="room-view-modal__btn"
               onClick={ () => { this.props.openModal('copy'); } }
             >
-              <Svg hash="copy" className="room-view-modal__btn-icon" />
+              <CopyIcon className="room-view-modal__btn-icon" />
             </button>
             <span className="room-view-modal__btns-line" />
           </If>
@@ -269,7 +269,7 @@ render() {
               okType="danger"
             >
               <button className="room-view-modal__btn">
-                <Svg hash="delete" className="room-view-modal__btn-icon" />
+                <DeleteIcon className="room-view-modal__btn-icon" />
               </button>
             </Popconfirm>
           </If>

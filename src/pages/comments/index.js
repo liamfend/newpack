@@ -7,7 +7,10 @@ import { withTranslation } from 'react-i18next';
 import { Spin } from 'antd';
 import decodeHtml from '~base/global/helpers/decode-html';
 import { communicationStatus, draftType } from '~constants';
-import Svg from '~components/svg';
+import {
+  LogoCommentHeader as LogoCommentHeaderIcon,
+  LogoCommentFooter as LogoCommentFooterIcon,
+} from "~components/svgs";
 import Comment from '~components/comment';
 import generatePath from '~settings/routing';
 import * as actions from '~actions/pending-approval';
@@ -102,7 +105,7 @@ export default class Comments extends React.Component {
           <Otherwise>
             <div className="comments__container">
               <div className="comments__header">
-                <Svg hash="logo-comment-header" className="comments__logo" />
+                <LogoCommentHeaderIcon className="comments__logo" />
               </div>
               <div className="comments__main">
                 <div>{ t('cms.draft.comments.greetings1') }</div>
@@ -140,7 +143,7 @@ export default class Comments extends React.Component {
                 <div className="comments__greeting-signature">{ t('cms.draft.comments.greetings5') }</div>
               </div>
               <div className="comments__footer">
-                <Svg hash="logo-comment-footer" className="comments__footer-logo" />
+                <LogoCommentFooterIcon className="comments__footer-logo" />
                 <div className="comments__footer-copyright">
                   { t('cms.draft.comments.footer.copyright', { year: moment().year() }) }
                 </div>

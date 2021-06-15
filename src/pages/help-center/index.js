@@ -15,7 +15,7 @@ import MyAccount from '~pages/help-center/my-account';
 import * as accountActions from '~actions/account';
 import generatePath from '~settings/routing';
 import { logout } from '~actions/auth';
-import Svg from '~components/svg';
+import { HelpCenterLogo as HelpCenterLogoIcon } from "~components/svgs";
 
 const { Sider, Content, Header } = Layout;
 
@@ -107,7 +107,7 @@ export default class HelpCenter extends React.Component {
           <Header className="help-center__header-container">
             <div className="help-center__header-logo">
               <Link to="/help-center">
-                <Svg className="help-center__header-logo-icon" hash="help-center-logo" />
+                <HelpCenterLogoIcon className="help-center__header-logo-icon" />
               </Link>
             </div>
             <div className="help-center__user-info">

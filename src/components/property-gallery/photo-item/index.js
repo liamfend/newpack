@@ -3,7 +3,12 @@ import { Icon, Tooltip, Select, Popconfirm } from 'antd';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import gallery, { localeMapping, uploadStatus, galleryStatus } from '~constants/gallery';
-import Svg from '~components/svg';
+import {
+  RejectedNoShadow as RejectedNoShadowIcon,
+  Cover as CoverIcon,
+  Hourglass as HourglassIcon,
+  VideoFailed as VideoFailedIcon,
+} from "~components/svgs";
 import ProgressBar from '~components/property-gallery/uploading-modal/progress-bar';
 
 const { Option } = Select;
@@ -86,7 +91,7 @@ export default class PhotoItem extends React.PureComponent {
         <If condition={ this.props.type === 'image' }>
           <If condition={ status === 'REJECTED' }>
             <span className="photo-item__reject-photo">
-              <Svg className="photo-item__reject-photo__icon" hash="rejected-no-shadow" />
+              <RejectedNoShadowIcon className="photo-item__reject-photo__icon" />
             </span>
           </If>
           <img
@@ -129,13 +134,13 @@ export default class PhotoItem extends React.PureComponent {
             </If>
           </div>
           <If condition={ this.props.isCover }>
-            <Svg className="photo-item__cover" hash="cover" />
+            <CoverIcon className="photo-item__cover" />
           </If>
         </If>
         <If condition={ this.props.type === 'video' }>
           <If condition={ status === 'REJECTED' }>
             <span className="photo-item__reject-photo">
-              <Svg className="photo-item__reject-photo__icon" hash="rejected-no-shadow" />
+              <RejectedNoShadowIcon className="photo-item__reject-photo__icon" />
             </span>
           </If>
           <span className="photo-item__video-tag-wrap">
@@ -195,7 +200,7 @@ export default class PhotoItem extends React.PureComponent {
                   <div className="photo-item__img-video-compress">
                     <Tooltip placement={ 'top' } title={ this.props.t('cms.properties.edit.gallery.compressing_text') }>
                       <div className="photo-item__img-video-compress--hover">
-                        <Svg className="photo-item__img-video-icon" hash="hourglass" />
+                        <HourglassIcon className="photo-item__img-video-icon" />
                         <span>{ this.props.t('cms.properties.edit.gallery.video_is_compressing.text') }</span>
                       </div>
                     </Tooltip>
@@ -205,7 +210,7 @@ export default class PhotoItem extends React.PureComponent {
                   <div className="photo-item__img-video-compress photo-item__img-video-compress-err">
                     <Tooltip placement={ 'top' } title={ this.props.t('cms.properties.edit.gallery.failed_text') }>
                       <div className="photo-item__img-video-compress--hover">
-                        <Svg className="photo-item__img-video-icon" hash="video-failed" />
+                        <VideoFailedIcon className="photo-item__img-video-icon" />
                         <span>{ this.props.t('cms.properties.edit.gallery.file_type.mp4') }</span>
                       </div>
                     </Tooltip>

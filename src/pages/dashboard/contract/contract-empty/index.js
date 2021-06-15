@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Svg from '~components/svg';
+import { ContractEmpty as ContractEmptyIcon } from "~components/svgs";
 import showElementByAuth from '~helpers/auth';
 import { platformEntity, entityAction } from '~constants';
 
@@ -47,7 +47,7 @@ export default class ContractEmpty extends React.Component {
   render() {
     return (
       <div className={ classNames('contract-empty', { 'contract-empty__full-filter': this.props.filterState }) }>
-        <Svg className="contract-empty__icon" hash="contract-empty" />
+        <ContractEmptyIcon className="contract-empty__icon" />
         <If condition={ showElementByAuth(
           platformEntity.PROPERTIES_CONTRACTS,
           entityAction.CREATE,
@@ -58,7 +58,8 @@ export default class ContractEmpty extends React.Component {
             { ...this.renderContent() }
           />
         </If>
-      </div>);
+      </div>
+    );
   }
 }
 

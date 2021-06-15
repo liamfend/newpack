@@ -2,7 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Divider } from 'antd';
 import { withTranslation } from 'react-i18next';
-import Svg from '~components/svg';
+import {
+  CreateAddress as CreateAddressIcon,
+  CreateZipcode as CreateZipcodeIcon,
+  CreateStyle as CreateStyleIcon,
+  CreateCity as CreateCityIcon,
+  CreateCurrency as CreateCurrencyIcon,
+  CreateLandlord as CreateLandlordIcon,
+} from "~components/svgs";
 import CurrencyBar from '~components/currency-bar';
 
 @withTranslation()
@@ -22,7 +29,7 @@ export default class CreateConfirmation extends React.Component {
           <p className={ 'create-confirmation__info-title' }>{basicInfo.name}</p>
           <div className="create-confirmation__detail">
             <div className="create-confirmation__detail__item">
-              <Svg className="create-confirmation__icon create-confirmation__icon--address" hash="create-address" />
+              <CreateAddressIcon className="create-confirmation__icon create-confirmation__icon--address" />
               <span className="create-confirmation__headline">
                 {this.props.t('cms.properties.edit.tab_label.address')}:
               </span>
@@ -32,7 +39,7 @@ export default class CreateConfirmation extends React.Component {
               </span>
             </div>
             <div className="create-confirmation__detail__item">
-              <Svg className="create-confirmation__icon create-confirmation__icon--zipcode" hash="create-zipcode" />
+              <CreateZipcodeIcon className="create-confirmation__icon create-confirmation__icon--zipcode" />
               <span className="create-confirmation__headline">
                 {this.props.t('cms.location.table.add_new.zip_code')}:
               </span>
@@ -47,7 +54,7 @@ export default class CreateConfirmation extends React.Component {
           </div>
           <div className="create-confirmation__detail">
             <div className="create-confirmation__detail__item">
-              <Svg className="create-confirmation__icon create-confirmation__icon--style" hash="create-style" />
+              <CreateStyleIcon className="create-confirmation__icon create-confirmation__icon--style" />
               <span className="create-confirmation__headline">
                 {this.props.t('cms.properties.create.create_confirmation.icon_style')}:
               </span>
@@ -56,7 +63,7 @@ export default class CreateConfirmation extends React.Component {
               </span>
             </div>
             <div className="create-confirmation__detail__item">
-              <Svg className="create-confirmation__icon create-confirmation__icon--city" hash="create-city" />
+              <CreateCityIcon className="create-confirmation__icon create-confirmation__icon--city" />
               <span className="create-confirmation__headline">
                 {this.props.t('cms.properties.create.create_confirmation.icon_city')}:
               </span>
@@ -65,14 +72,14 @@ export default class CreateConfirmation extends React.Component {
               </span>
             </div>
             <div className="create-confirmation__detail__item">
-              <Svg className="create-confirmation__icon create-confirmation__icon--currency" hash="create-currency" />
+              <CreateCurrencyIcon className="create-confirmation__icon create-confirmation__icon--currency" />
               <CurrencyBar
                 t={ t }
                 countryData={ basicInfo.countryData }
               />
             </div>
             <div className="create-confirmation__detail__item">
-              <Svg className="create-confirmation__icon create-confirmation__icon--landlord" hash="create-landlord" />
+              <CreateLandlordIcon className="create-confirmation__icon create-confirmation__icon--landlord" />
               <span className="create-confirmation__headline">
                 {this.props.t('cms.table.column.landlord')}:
               </span>

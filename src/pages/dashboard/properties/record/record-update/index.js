@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'antd';
-import Svg from '~components/svg';
+import { PropertyContract as PropertyContractIcon } from "~components/svgs";
 import ContractFileList from '~components/contract-file-list';
 import showElementByAuth from '~helpers/auth';
 import { platformEntity, entityAction } from '~constants';
@@ -18,10 +18,7 @@ export default class RecordUpdate extends React.Component {
     return (
       <div className="record-update">
         <div className="record-change">
-          <Svg
-            className="record-update__header-icon"
-            hash="property-contract"
-          />
+          <PropertyContractIcon className="record-update__header-icon" />
           <div className="record-update__text-box">
             <div className="record-update__stage-action">
               <div className="record-update__stage-text">
@@ -55,7 +52,8 @@ export default class RecordUpdate extends React.Component {
             </div>
           </If>
         </div>
-      </div>);
+      </div>
+    );
   }
 }
 

@@ -4,7 +4,7 @@ import { Icon, Col, Row, Tooltip, Popconfirm } from 'antd';
 import moment from 'moment';
 import { handlePropertyGroup, getPropertyOrder } from '~helpers/property-edit';
 import { showEffectiveToDate, calContractStatus } from '~helpers/contract';
-import Svg from '~components/svg';
+import { ContractPdf as ContractPdfIcon } from "~components/svgs";
 
 export default class Confirm extends React.Component {
   constructor() {
@@ -77,7 +77,7 @@ export default class Confirm extends React.Component {
                                 className="contract-confirm-container__file"
                                 ref={ (node) => { this.pdfFiles[index] = node; } }
                               >
-                                <Svg className="contract-confirm-container__file-pdf" hash="contract-pdf" />
+                                <ContractPdfIcon className="contract-confirm-container__file-pdf" />
                               </div>
                             </Tooltip>
                           </When>
