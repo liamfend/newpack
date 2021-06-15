@@ -1,4 +1,3 @@
-
 .special-offer {
   &__delete-btn {
     width: 230px;
@@ -12,7 +11,7 @@
   &__table-text {
     span {
       display: block;
-      max-width: 180;
+      max-width: 180px;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
