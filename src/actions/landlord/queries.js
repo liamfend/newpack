@@ -8,7 +8,7 @@ const listSystemProviders = {
         }
       }
     `,
-};
+}
 
 export const listReconciliationPreference = {
   query: `
@@ -20,6 +20,6 @@ export const listReconciliationPreference = {
         }
       }
     `,
-};
+}
 
-export default listSystemProviders;
+export default listSystemProviders

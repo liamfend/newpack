@@ -4,7 +4,7 @@ import {
   PropertyIcon as PropertyIconIcon,
   TagIcon as TagIconIcon,
   ImageIcon as ImageIconIcon,
-} from "~components/svgs";
+} from '~components/svgs'
 
 const NoProperties = props => (
   <div className="no-properties">

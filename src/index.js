@@ -33,7 +33,6 @@ const isAuthorised = state => (
     </Otherwise>
   </Choose>
 )
-console.log('test lint a')
 ReactDOM.render(
   <Provider store={store}>
     <ConfigProvider locale={enUS}>

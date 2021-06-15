@@ -1,5 +1,3 @@
-
-
 // f放在这里是因为  那个queries 都 7k行代码了
 
 export const listLandlordReconciliationOpportunities = variables => ({
@@ -82,8 +80,7 @@ export const listLandlordReconciliationOpportunities = variables => ({
           totalCount
         }
       }`,
-});
-
+})
 
 export const getLandlordReconciliation = variables => ({
   operationName: 'CMS_GetLandlordReconciliation',
@@ -108,8 +105,7 @@ export const getLandlordReconciliation = variables => ({
             } 
         }
       }`,
-});
-
+})
 
 export const listReconciliationComission = variables => ({
   operationName: 'CMS_ListReconciliationComission',
@@ -157,7 +153,7 @@ export const listReconciliationComission = variables => ({
         }
       }
        `,
-});
+})
 
 export const landlordProperties = variables => ({
   operationName: 'CMS_PropertiesView_RE',
@@ -180,8 +176,7 @@ export const landlordProperties = variables => ({
           }
       }
     }`,
-});
-
+})
 
 // booking details
 
@@ -267,7 +262,7 @@ export const getReconciliationOpportunityDetails = variables => ({
         }
       }
     }`,
-});
+})
 
 export const setLandlordBookingStatus = variables => ({
   operationName: 'CMS_setLandlordBookingStatus',
@@ -285,7 +280,7 @@ export const setLandlordBookingStatus = variables => ({
     }
   }
 `,
-});
+})
 
 export const createOpportunityCase = variables => ({
   operationName: 'CMS_CreateOpportunityCase',
@@ -305,7 +300,7 @@ export const createOpportunityCase = variables => ({
     }
   }
   `,
-});
+})
 
 export const checkActiveOpportunityCasesExist = variables => ({
   operationName: 'CMS_CheckActiveOpportunityCasesExist',
@@ -323,8 +318,7 @@ export const checkActiveOpportunityCasesExist = variables => ({
       }
     }
   `,
-});
-
+})
 
 export const closeActiveOpportunityCases = variables => ({
   operationName: 'CMS_closeActiveOpportunityCases',
@@ -344,7 +338,7 @@ export const closeActiveOpportunityCases = variables => ({
       }
     }
   `,
-});
+})
 
 export const reconciliationUpdateOpportunity = variables => ({
   operationName: 'CMS_ReconciliationUpdateOpportunity',
@@ -367,7 +361,7 @@ export const reconciliationUpdateOpportunity = variables => ({
     }
   }
   `,
-});
+})
 
 export const listOpportunityPendingNotes = variables => ({
   operationName: 'CMS_listOpportunityPendingNotes',
@@ -409,7 +403,7 @@ export const listOpportunityPendingNotes = variables => ({
         }
     }
   `,
-});
+})
 
 export const bulkUpdateOppLandlordBookingStatusByExcel = `
   mutation CMS_bulkUpdateOppLandlordBookingStatusByExcel($input: bulkUpdateOppLandlordBookingStatusByExcelInput) {
@@ -417,7 +411,7 @@ export const bulkUpdateOppLandlordBookingStatusByExcel = `
       filename
     }
   }
-`;
+`
 
 export const listReconciliationBulkUpdateRecords = variables => ({
   operationName: 'CMS_ListReconciliationBulkUpdateRecords',
@@ -452,7 +446,7 @@ export const listReconciliationBulkUpdateRecords = variables => ({
         totalCount
       }
     }`,
-});
+})
 
 export const searchCmsUser = variables => ({
   operationName: 'CMS_SearchCmsUser',
@@ -478,4 +472,4 @@ export const searchCmsUser = variables => ({
         }
       }
     }`,
-});
+})

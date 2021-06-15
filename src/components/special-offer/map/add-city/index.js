@@ -1,63 +1,66 @@
-import React from 'react';
-import { withTranslation } from 'react-i18next';
-import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { operateType } from '~constants';
-import { Card, Icon, message, Tag, Tooltip, Button } from 'antd';
-import SearchCity from './search';
+import React from 'react'
+import { withTranslation } from 'react-i18next'
+import { withRouter } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import { operateType } from '~constants'
+import { Card, Icon, message, Tag, Tooltip, Button } from 'antd'
+import SearchCity from './search'
 
 @withRouter
 @withTranslation()
 export default class AddCity extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       searchValue: '',
       newCityIds: [],
       inputVisible: false,
-    };
+    }
   }
 
   handleClose = (e, value) => {
-    e.preventDefault();
+    e.preventDefault()
     this.props.unLinkSpecialOffer({
       id: this.props.offerInfo.id,
       cityIds: [value],
-    });
+    })
   }
 
   showInput = () => {
     this.setState({ inputVisible: true }, () => {
       if (this.inputRef && this.inputRef.rcSelect && this.inputRef.rcSelect.inputRef) {
-        this.inputRef.rcSelect.focus();
-        this.inputRef.rcSelect.inputRef.focus();
+        this.inputRef.rcSelect.focus()
+        this.inputRef.rcSelect.inputRef.focus()
       }
-    });
+    })
   }
 
   onSubmit = () => {
-    this.props.redirectToList();
+    this.props.redirectToList()
   }
 
-  handleCitySelect = (value) => {
+  handleCitySelect = value => {
     if (!value) {
-      setTimeout(this.setState({
-        inputVisible: false,
-      }), 100);
-      return;
+      setTimeout(
+        this.setState({
+          inputVisible: false,
+        }),
+        100,
+      )
+      return
     }
-    const cities = this.props.offerInfo.cities;
-    const cityIds = cities.map(city => (city.id));
+    const cities = this.props.offerInfo.cities
+    const cityIds = cities.map(city => city.id)
     if (value && cityIds.indexOf(value) === -1) {
       this.setState({
         inputVisible: false,
-      });
+      })
       this.props.linkSpecialOffer({
         id: this.props.offerInfo.id,
         cityIds: [value],
-      });
+      })
     } else {
-      message.error(this.props.t('cms.message.error'));
+      message.error(this.props.t('cms.message.error'))
       // to do more error message...
     }
   }
@@ -65,51 +68,65 @@ export default class AddCity extends React.Component {
   render() {
     return (
       <div>
-        <Card className="special-offer__map-city" type="inner" title={ this.props.t('cms.table.header.city_name') }>
+        <Card
+          className="special-offer__map-city"
+          type="inner"
+          title={this.props.t('cms.table.header.city_name')}
+        >
           <div>
-            {this.props.offerInfo.cities.map((city) => {
+            {this.props.offerInfo.cities.map(city => {
               const tagElem = (
                 <Tag
-                  key={ city.id }
+                  key={city.id}
                   closable
                   className="special-offer__map-tag"
-                  onClose={ (e) => { this.handleClose(e, city.id); } }
+                  onClose={e => {
+                    this.handleClose(e, city.id)
+                  }}
                 >
                   {city.name}
                 </Tag>
-              );
-              return <Tooltip key={ city.id }>{tagElem}</Tooltip>;
+              )
+              return <Tooltip key={city.id}>{tagElem}</Tooltip>
             })}
-            <If condition={ this.state.inputVisible }>
+            <If condition={this.state.inputVisible}>
               <SearchCity
-                saveRef={ (e) => { this.inputRef = e; } }
+                saveRef={e => {
+                  this.inputRef = e
+                }}
                 searchType="city"
-                onSelect={ this.handleCitySelect }
+                onSelect={this.handleCitySelect}
               />
             </If>
-            <If condition={ !this.state.inputVisible }>
-              <Tag
-                onClick={ this.showInput }
-                className="special-offer__map-add-btn"
-              >
+            <If condition={!this.state.inputVisible}>
+              <Tag onClick={this.showInput} className="special-offer__map-add-btn">
                 <Icon type="plus" />
                 {this.props.t('cms.sepcial_offer.add_city.btn')}
               </Tag>
             </If>
           </div>
         </Card>
-        <If condition={ this.props.operateType === operateType.add }>
-          <Button disabled={ this.props.offerInfo.cities.length === 0 } type="primary" className="create-offer-content__continue-save-btn" onClick={ this.props.goToNextStep } >
+        <If condition={this.props.operateType === operateType.add}>
+          <Button
+            disabled={this.props.offerInfo.cities.length === 0}
+            type="primary"
+            className="create-offer-content__continue-save-btn"
+            onClick={this.props.goToNextStep}
+          >
             {this.props.t('cms.sepcial_offer.save_continue.btn')}
           </Button>
         </If>
-        <If condition={ this.props.operateType === operateType.edit }>
-          <Button type="primary" className="create-offer-content__continue-btn" onClick={ this.onSubmit } >
+        <If condition={this.props.operateType === operateType.edit}>
+          <Button
+            type="primary"
+            className="create-offer-content__continue-btn"
+            onClick={this.onSubmit}
+          >
             {this.props.t('cms.sepcial_offer.submit.btn')}
           </Button>
         </If>
       </div>
-    );
+    )
   }
 }
 
@@ -121,7 +138,7 @@ AddCity.propTypes = {
   goToNextStep: PropTypes.func.isRequired,
   redirectToList: PropTypes.func,
   operateType: PropTypes.string.isRequired,
-};
+}
 
 AddCity.defaultProps = {
   offerInfo: {},
@@ -130,4 +147,4 @@ AddCity.defaultProps = {
   unLinkSpecialOffer: () => {},
   goToNextStep: () => {},
   redirectToList: () => {},
-};
+}

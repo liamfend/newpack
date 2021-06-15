@@ -171,8 +171,8 @@ module.exports = function (webpackEnv) {
               exclude: /(node_modules)/,
               loader: require.resolve('babel-loader'),
               options: {
-                presets: ['@babel/preset-env', '@babel/preset-react'],
-                plugins: [...babelPlugins.plugins],
+                presets:babelPlugins.presets,
+                plugins: babelPlugins.plugins,
               },
             },
             {

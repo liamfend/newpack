@@ -10,12 +10,16 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:jsx-control-statements/recommended',
   ],
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
     sourceType: 'module',
+    babelOptions: {
+      configFile: './webpack/plugins.js',
+    },
   },
   settings: {
     react: {
@@ -26,6 +30,7 @@ module.exports = {
   plugins: ['react', 'jsx-control-statements'],
   rules: {
     'react/jsx-no-undef': [2, { allowGlobals: true }],
+    'react/no-deprecated': 0,
   },
   overrides: [
     {

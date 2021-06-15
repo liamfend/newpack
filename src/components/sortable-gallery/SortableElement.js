@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-import { provideDisplayName, omit } from './utils';
+import { provideDisplayName, omit } from './utils'
 
-export default function sortableElement(
-  WrappedComponent,
-) {
+export default function sortableElement(WrappedComponent) {
   return class extends Component {
     state = {
       selected: false,
@@ -35,99 +33,101 @@ export default function sortableElement(
     }
 
     componentDidMount() {
-      this.setDraggable();
+      this.setDraggable()
     }
 
     componentWillUnmount() {
-      this.removeDraggable();
+      this.removeDraggable()
     }
 
     setDraggable = () => {
       if (!this.props.disabled) {
-        this.context.manager.add(this);
+        this.context.manager.add(this)
       }
     }
 
     removeDraggable = () => {
-      this.context.manager.remove(this);
+      this.context.manager.remove(this)
     }
 
     setGhost = (hide = false) => {
       if (hide) {
-        this.node.style.display = 'none';
+        this.node.style.display = 'none'
       } else {
-        this.node.style.visibility = 'hidden';
+        this.node.style.visibility = 'hidden'
       }
     }
 
     removeGhost = () => {
-      this.node.style.visibility = '';
+      this.node.style.visibility = ''
     }
 
     onSelect = () => {
       if (!this.state.selected) {
-        this.setState({
-          selected: true,
-        }, () => {
-          this.context.manager.addSelected(this);
-          const { onSelect, item } = this.props;
-          onSelect(item, true);
-        });
+        this.setState(
+          {
+            selected: true,
+          },
+          () => {
+            this.context.manager.addSelected(this)
+            const { onSelect, item } = this.props
+            onSelect(item, true)
+          },
+        )
       }
     }
 
     removeSelect = () => {
       if (this.state.selected) {
-        this.setState({
-          selected: false,
-        }, () => {
-          this.context.manager.removeSelected(this);
-          const { onSelect, item } = this.props;
-          onSelect(item, false);
-        });
+        this.setState(
+          {
+            selected: false,
+          },
+          () => {
+            this.context.manager.removeSelected(this)
+            const { onSelect, item } = this.props
+            onSelect(item, false)
+          },
+        )
       }
     }
 
-    isSelected = () => (
-      this.state.selected
-    );
+    isSelected = () => this.state.selected
 
     triggerSelect = () => {
       if (this.state.selected) {
-        this.removeSelect();
+        this.removeSelect()
       } else {
-        this.onSelect();
+        this.onSelect()
       }
     }
 
-    getItem = () => (
-      this.props.item
-    );
+    getItem = () => this.props.item
 
     render() {
       const component = (
         <div
           role="button"
           tabIndex="0"
-          ref={ (e) => {
+          ref={e => {
             // it's better to use e.firstElementChild :)
             // optimize it when have time
-            this.node = e;
-          } }
-          onClick={ this.triggerSelect }
-          style={ {
+            this.node = e
+          }}
+          onClick={this.triggerSelect}
+          style={{
             outline: 'none',
-          } }
-          className={ this.props.className }
+          }}
+          className={this.props.className}
         >
           <WrappedComponent
-            { ...omit(this.props, 'collection', 'disabled', 'index') }
-            className={ this.state.selected ? this.props.selectedClassName : '' }
+            {...omit(this.props, 'collection', 'disabled', 'index')}
+            className={this.state.selected ? this.props.selectedClassName : ''}
           />
         </div>
-      );
+      )
 
-      return component;
+      return component
     }
-  };
+  }
 }

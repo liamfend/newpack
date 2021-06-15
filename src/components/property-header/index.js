@@ -1,224 +1,254 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import classNames from 'classnames';
-import generatePath from '~settings/routing';
-import { Tooltip, Popover, Button } from 'antd';
-import { Link } from 'react-router-dom';
-import { getItem } from '~base/global/helpers/storage';
-import getEnvironment, { environments } from '~base/global/helpers/environment';
-import BreadCrumbs from '~components/bread-crumbs';
-import showElementByAuth from '~helpers/auth';
-import { platformEntity, entityAction } from '~constants';
-import { authUrl } from '~settings/endpoints';
+import classNames from 'classnames'
+import generatePath from '~settings/routing'
+import { Tooltip, Popover, Button } from 'antd'
+import { Link } from 'react-router-dom'
+import { getItem } from '~base/global/helpers/storage'
+import getEnvironment, { environments } from '~base/global/helpers/environment'
+import BreadCrumbs from '~components/bread-crumbs'
+import showElementByAuth from '~helpers/auth'
+import { platformEntity, entityAction } from '~constants'
+import { authUrl } from '~settings/endpoints'
 
 export default class PropertyHeader extends React.Component {
-  generatePropertyUrl = (property) => {
-    const path = `${property.city && property.city.country && property.city.country.slug ?
-      property.city.country.slug : ''}/${property.city && property.city.slug ?
-      property.city.slug : ''}/p/${property.slug}`;
+  generatePropertyUrl = property => {
+    const path = `${
+      property.city && property.city.country && property.city.country.slug
+        ? property.city.country.slug
+        : ''
+    }/${property.city && property.city.slug ? property.city.slug : ''}/p/${property.slug}`
 
     if (getEnvironment() === environments.PROD) {
-      return `//www.student.com/${path}`;
+      return `//www.student.com/${path}`
     }
-    return `//hurricane-www.dandythrust.com/${path}`;
-  };
+    return `//hurricane-www.dandythrust.com/${path}`
+  }
 
   getFilters = () => {
-    const filters = getItem('cms_properties_list_filters');
-    const result = {};
+    const filters = getItem('cms_properties_list_filters')
+    const result = {}
     if (filters) {
-      Object.keys(filters).map((key) => {
+      Object.keys(filters).map(key => {
         if (filters[key]) {
-          result[key] = filters[key];
+          result[key] = filters[key]
         }
-        return true;
-      });
+        return true
+      })
     }
     if (filters && filters.pageNumber && filters.pageNumber === 1) {
-      delete result.pageNumber;
+      delete result.pageNumber
     }
     if (filters && filters.pageSize && filters.pageSize === 10) {
-      delete result.pageSize;
+      delete result.pageSize
     }
 
-    return result;
+    return result
   }
 
   redirectToEditPage = () => {
-    let path = '';
+    let path = ''
     if (this.props.type === 'homepage') {
-      path = generatePath('properties', {}, this.getFilters());
+      path = generatePath('properties', {}, this.getFilters())
     }
 
-    if (['edit', 'commission', 'record', 'deposit-and-fees', 'reference-and-contact', 'terms'].indexOf(this.props.type) !== -1) {
-      path = generatePath('property.homepage', { propertySlug: this.props.property.slug });
+    if (
+      [
+        'edit',
+        'commission',
+        'record',
+        'deposit-and-fees',
+        'reference-and-contact',
+        'terms',
+      ].indexOf(this.props.type) !== -1
+    ) {
+      path = generatePath('property.homepage', { propertySlug: this.props.property.slug })
     }
 
-    return path;
+    return path
   }
 
   handlePreview = () => {
-    this.props.handlePreview((res) => {
+    this.props.handlePreview(res => {
       if (res && res.slug && res.city.slug && res.city.country && res.city.country.slug) {
-        this.previewForm.action = authUrl(`/${res.city.country.slug}/${res.city.slug}/p/${res.slug}?preview=yes&update_cache=yes`);
+        this.previewForm.action = authUrl(
+          `/${res.city.country.slug}/${res.city.slug}/p/${res.slug}?preview=yes&update_cache=yes`,
+        )
         document.getElementById('item__data').value = JSON.stringify({
           property: res,
-        });
-        this.previewForm.submit();
+        })
+        this.previewForm.submit()
       }
 
-      return false;
-    });
-  };
+      return false
+    })
+  }
 
   render() {
     const {
-      t, property, showedWarningType,
-      showWarning, renderWarning, type, warningType,
+      t,
+      property,
+      showedWarningType,
+      showWarning,
+      renderWarning,
+      type,
+      warningType,
       isShowSaveButton,
-    } = this.props;
+    } = this.props
     return (
       <div className="property-header">
-        <If condition={ property }>
+        <If condition={property}>
           <BreadCrumbs
-            t={ t }
-            type={ type }
-            propertySlug={ property.slug }
-            getFilters={ this.getFilters }
+            t={t}
+            type={type}
+            propertySlug={property.slug}
+            getFilters={this.getFilters}
           />
           <div className="property-header__header-info">
             <h2 className="property-header__property-name">
               <Tooltip
                 title={
-                  this.props.property.status === 'PUBLISHED' ?
-                    t('cms.edit.header.label.view_on_student')
+                  this.props.property.status === 'PUBLISHED'
+                    ? t('cms.edit.header.label.view_on_student')
                     : t('cms.header.property_name.unpublished.tips')
                 }
               >
                 <Choose>
-                  <When condition={ property.status === 'PUBLISHED' }>
+                  <When condition={property.status === 'PUBLISHED'}>
                     <a
                       className="property-header__text"
                       target="_blank"
-                      href={ this.generatePropertyUrl(property) }
+                      href={this.generatePropertyUrl(property)}
                       rel="noopener noreferrer"
                     >
-                      { property.name }
+                      {property.name}
                       <span className="property-header__underline" />
                     </a>
                   </When>
                   <Otherwise>
-                    <span className="property-header__text">
-                      { property.name }
-                    </span>
+                    <span className="property-header__text">{property.name}</span>
                   </Otherwise>
                 </Choose>
               </Tooltip>
-              <If condition={ property.id }>
+              <If condition={property.id}>
                 <span className="property-header__property-id">
-                  { t('cms.header.property_id.text') }{ JSON.parse(window.atob(property.id)).id }
+                  {t('cms.header.property_id.text')}
+                  {JSON.parse(window.atob(property.id)).id}
                 </span>
               </If>
-              <div className={ classNames('property-header__property-status', {
-                'property-header__property-status--gray': property.status === 'UNPUBLISHED',
-                'property-header__property-status--green': property.status !== 'UNPUBLISHED',
-              }) }
+              <div
+                className={classNames('property-header__property-status', {
+                  'property-header__property-status--gray': property.status === 'UNPUBLISHED',
+                  'property-header__property-status--green': property.status !== 'UNPUBLISHED',
+                })}
               >
-                { t(`cms.property_card.status.tag.${property.status ? property.status.toLowerCase() : ''}`) }
+                {t(
+                  `cms.property_card.status.tag.${
+                    property.status ? property.status.toLowerCase() : ''
+                  }`,
+                )}
               </div>
             </h2>
           </div>
           <div className="property-edit__btns">
-            <If condition={ !type.includes('change-log') }>
-              <Link to={ this.redirectToEditPage() }>
+            <If condition={!type.includes('change-log')}>
+              <Link to={this.redirectToEditPage()}>
                 <Button className="property-edit__btns__close" type="link" ghost>
-                  { t('cms.properties.edit.btn.close') }
+                  {t('cms.properties.edit.btn.close')}
                 </Button>
               </Link>
             </If>
-            <If condition={ type === 'change-log-listing-management' }>
+            <If condition={type === 'change-log-listing-management'}>
               <Button
                 size="large"
                 type="primary"
-                onClick={ this.props.handleOpenFilterModal }
+                onClick={this.props.handleOpenFilterModal}
                 className="property-edit__btns__prim property-header__btn"
               >
-                { t('cms.properties.edit.btn.filter') }
+                {t('cms.properties.edit.btn.filter')}
               </Button>
             </If>
-            <If condition={ type === 'reference-and-contact' && showElementByAuth(platformEntity.PROPERTIES_PROPERTIES, entityAction.UPDATE) }>
+            <If
+              condition={
+                type === 'reference-and-contact' &&
+                showElementByAuth(platformEntity.PROPERTIES_PROPERTIES, entityAction.UPDATE)
+              }
+            >
               <Button
                 size="large"
                 type="primary"
-                onClick={ this.props.handleSave }
+                onClick={this.props.handleSave}
                 className="property-edit__btns__prim property-header__btn"
-                loading={ this.props.isFetchingSave }
+                loading={this.props.isFetchingSave}
               >
-                { t('cms.properties.edit.btn.save') }
+                {t('cms.properties.edit.btn.save')}
               </Button>
             </If>
-            <If condition={ type === 'edit' && showElementByAuth(platformEntity.PROPERTIES_PROPERTIES, entityAction.UPDATE) }>
-              <If condition={ property.status !== 'PUBLISHED' && isShowSaveButton }>
+            <If
+              condition={
+                type === 'edit' &&
+                showElementByAuth(platformEntity.PROPERTIES_PROPERTIES, entityAction.UPDATE)
+              }
+            >
+              <If condition={property.status !== 'PUBLISHED' && isShowSaveButton}>
                 <Popover
-                  content={ renderWarning(showedWarningType) }
+                  content={renderWarning(showedWarningType)}
                   placement="topRight"
                   trigger="click"
-                  visible={
-                    showWarning
-                      && (showedWarningType === warningType.CLOSE_POPUP_SAVE)
-                  }
+                  visible={showWarning && showedWarningType === warningType.CLOSE_POPUP_SAVE}
                 >
                   <Button
                     ghost
                     size="large"
                     type="primary"
-                    onClick={ this.props.handleSave }
+                    onClick={this.props.handleSave}
                     className="property-edit__btns__prim property-header__btn"
-                    loading={ this.props.isFetchingSave }
+                    loading={this.props.isFetchingSave}
                   >
-                    { t('cms.properties.edit.btn.save') }
+                    {t('cms.properties.edit.btn.save')}
                   </Button>
                 </Popover>
               </If>
-              <If condition={ type === 'edit' }>
+              <If condition={type === 'edit'}>
                 <form
-                  style={ { display: 'inline-block' } }
+                  style={{ display: 'inline-block' }}
                   method="post"
                   target="_blank"
                   encType="application/json"
-                  ref={ (node) => { this.previewForm = node; } }
+                  ref={node => {
+                    this.previewForm = node
+                  }}
                 >
                   <input type="hidden" id="item__data" name="data" value="" />
                   <Button
                     ghost
                     size="large"
                     type="primary"
-                    onClick={ this.handlePreview }
+                    onClick={this.handlePreview}
                     className="property-edit__btns__prim property-header__btn"
                   >
-                    { t('cms.properties.edit.btn.preview') }
+                    {t('cms.properties.edit.btn.preview')}
                   </Button>
                 </form>
-
               </If>
 
               <Button
                 size="large"
                 type="primary"
-                onClick={ this.props.handleReview }
+                onClick={this.props.handleReview}
                 className="property-edit__btns__prim property-header__btn"
               >
-                { t('cms.properties.edit.btn.publish') }
+                {t('cms.properties.edit.btn.publish')}
               </Button>
               <Popover
-                content={ renderWarning(showedWarningType) }
+                content={renderWarning(showedWarningType)}
                 placement="topRight"
                 trigger="click"
                 visible={
-                  showWarning
-                    && (showedWarningType === warningType.FIELD_REQUIRED
-                      || showedWarningType === warningType.CLOSE_POPUP_REVIEW)
+                  showWarning &&
+                  (showedWarningType === warningType.FIELD_REQUIRED ||
+                    showedWarningType === warningType.CLOSE_POPUP_REVIEW)
                 }
               >
                 <div className="property-edit__btns__popover" />
@@ -227,7 +257,7 @@ export default class PropertyHeader extends React.Component {
           </div>
         </If>
       </div>
-    );
+    )
   }
 }
 
@@ -245,7 +275,7 @@ PropertyHeader.propTypes = {
   handlePreview: PropTypes.func,
   isShowSaveButton: PropTypes.bool,
   handleOpenFilterModal: PropTypes.func,
-};
+}
 
 PropertyHeader.defaultProps = {
   t: () => {},
@@ -261,4 +291,4 @@ PropertyHeader.defaultProps = {
   handlePreview: () => {},
   isShowSaveButton: false,
   handleOpenFilterModal: () => {},
-};
+}

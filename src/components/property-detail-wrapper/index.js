@@ -1,103 +1,105 @@
-import React from 'react';
-import { Button, Icon, message, Popconfirm } from 'antd';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from 'react'
+import { Button, Icon, message, Popconfirm } from 'antd'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 export default class PropertyDetailWrapper extends React.Component {
   constructor() {
-    super();
+    super()
 
     this.state = {
       loading: false,
-    };
+    }
   }
 
   handleSave = () => {
-    this.setState({ loading: true });
-    const { onClickSave, t, isPublished } = this.props;
+    this.setState({ loading: true })
+    const { onClickSave, t, isPublished } = this.props
 
-    onClickSave((res) => {
+    onClickSave(res => {
       if (res.status === 'success') {
         if (res.isUpdated) {
-          message.success(t(`cms.properties.edit.message.${isPublished ? 'publish_success' : 'save_success'}`));
+          message.success(
+            t(`cms.properties.edit.message.${isPublished ? 'publish_success' : 'save_success'}`),
+          )
         }
       }
       if (res.status === 'err') {
         if (res.e && res.e.message) {
           if (res.e.message.includes('PROPERTY_PENDING_DRAFT_EXISTS')) {
-            message.error(t('cms.error.property_pending_draft_exists'));
+            message.error(t('cms.error.property_pending_draft_exists'))
           } else {
-            message.error(`${t('cms.message.error')}: ${res.e.message}`);
+            message.error(`${t('cms.message.error')}: ${res.e.message}`)
           }
         } else {
-          message.error(`${t('cms.message.error')}: ${res.err.message}`);
+          message.error(`${t('cms.message.error')}: ${res.err.message}`)
         }
       }
-      this.setState({ loading: false });
-    });
+      this.setState({ loading: false })
+    })
   }
 
   handleInsistSave = () => {
-    const { rejectedDraftIds } = this.props;
+    const { rejectedDraftIds } = this.props
     this.props.expirePropertyDraft(rejectedDraftIds, () => {
-      this.handleSave();
-    });
+      this.handleSave()
+    })
   }
 
   render() {
-    const { t, children, isPublished, isHidden, rejectedDraftIds, isValidated } = this.props;
+    const { t, children, isPublished, isHidden, rejectedDraftIds, isValidated } = this.props
     return (
-      <div className={ classNames('property-detail-wrapper', {
-        'property-detail-wrapper--hidden': isHidden,
-        'property-detail-wrapper--reminder': rejectedDraftIds.length > 0,
-      }) }
+      <div
+        className={classNames('property-detail-wrapper', {
+          'property-detail-wrapper--hidden': isHidden,
+          'property-detail-wrapper--reminder': rejectedDraftIds.length > 0,
+        })}
       >
-        <div className="property-detail-wrapper__content">
-          { children }
-        </div>
+        <div className="property-detail-wrapper__content">{children}</div>
         <div className="property-detail-wrapper__footer">
           <div className="property-detail-wrapper__warning">
-            <If condition={ isPublished }>
-              <Icon type="info-circle" theme="filled" className="property-detail-wrapper__warning-icon" />
-              <span className="property-detail-wrapper__warning-text" >
+            <If condition={isPublished}>
+              <Icon
+                type="info-circle"
+                theme="filled"
+                className="property-detail-wrapper__warning-icon"
+              />
+              <span className="property-detail-wrapper__warning-text">
                 {t('cms.form.warning.check_before_publish')}
               </span>
             </If>
           </div>
           <Choose>
-            <When condition={ isValidated && rejectedDraftIds.length > 0 }>
+            <When condition={isValidated && rejectedDraftIds.length > 0}>
               <Popconfirm
                 overlayClassName="property-detail-wrapper__popconfirm"
-                overlayStyle={ { maxWidth: 210 } }
+                overlayStyle={{ maxWidth: 210 }}
                 placement="topRight"
-                title={ t('cms.pending_approval.double_confirm.change_detail.title') }
-                onConfirm={ this.handleInsistSave }
-                okText={ t('cms.properties.edit.btn.yes') }
+                title={t('cms.pending_approval.double_confirm.change_detail.title')}
+                onConfirm={this.handleInsistSave}
+                okText={t('cms.properties.edit.btn.yes')}
                 okType="danger"
-                cancelText={ t('cms.properties.edit.btn.no') }
+                cancelText={t('cms.properties.edit.btn.no')}
               >
-                <Button
-                  className="property-detail-wrapper__btn"
-                  type="primary"
-                >
-                  { isPublished ? t('cms.properties.edit.btn.publish') : t('cms.form.button.save') }
+                <Button className="property-detail-wrapper__btn" type="primary">
+                  {isPublished ? t('cms.properties.edit.btn.publish') : t('cms.form.button.save')}
                 </Button>
               </Popconfirm>
             </When>
             <Otherwise>
               <Button
-                onClick={ this.handleSave }
+                onClick={this.handleSave}
                 className="property-detail-wrapper__btn"
                 type="primary"
-                loading={ this.state.loading }
+                loading={this.state.loading}
               >
-                { isPublished ? t('cms.properties.edit.btn.publish') : t('cms.form.button.save') }
+                {isPublished ? t('cms.properties.edit.btn.publish') : t('cms.form.button.save')}
               </Button>
             </Otherwise>
           </Choose>
         </div>
       </div>
-    );
+    )
   }
 }
 
@@ -110,7 +112,7 @@ PropertyDetailWrapper.propTypes = {
   rejectedDraftIds: PropTypes.array,
   expirePropertyDraft: PropTypes.func,
   isValidated: PropTypes.bool,
-};
+}
 
 PropertyDetailWrapper.defaultProps = {
   t: () => {},
@@ -121,4 +123,4 @@ PropertyDetailWrapper.defaultProps = {
   rejectedDraftIds: [],
   expirePropertyDraft: () => {},
   isValidated: false,
-};
+}

@@ -1,12 +1,11 @@
-
-import endpoints from '~settings/endpoints';
-import { get } from 'lodash';
-import i18n from '~settings/i18n';
-import { fetch } from '~actions/shared';
-import * as comQueries from '~settings/queries';
-import { message } from 'antd';
-import * as actions from './actionTypes';
-import * as queries from './queries';
+import endpoints from '~settings/endpoints'
+import { get } from 'lodash'
+import i18n from '~settings/i18n'
+import { fetch } from '~actions/shared'
+import * as comQueries from '~settings/queries'
+import { message } from 'antd'
+import * as actions from './actionTypes'
+import * as queries from './queries'
 /* eslint-disable   */
 
 const CommonFetech = (successCallback,doneCall)=> ({
