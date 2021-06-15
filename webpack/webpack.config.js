@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
 const WebpackBar = require('webpackbar')
 const babelPlugins = require('./plugins')
-const jsonImporter =require( 'node-sass-json-importer');
+const jsonImporter = require('node-sass-json-importer')
 // const CompressionPlugin = require("compression-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -19,6 +19,7 @@ const getCSSModuleLocalIdent = require('./getCSSModuleLocalIdent')
 const cssRegex = /\.css$/
 const cssModuleRegex = /\.module\.css$/
 const sassRegex = /\.(scss|sass)$/
+const lessRegex = /\.less$/
 const sassModuleRegex = /\.module\.(scss|sass)$/
 
 module.exports = function (webpackEnv) {
@@ -35,7 +36,7 @@ module.exports = function (webpackEnv) {
   const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false'
   const imageInlineSizeLimit = parseInt(process.env.IMAGE_INLINE_SIZE_LIMIT || '10000')
 
-  const getStyleLoaders = (cssOptions, preProcessor) => {
+  const getStyleLoaders = (cssOptions, preProcessor, preProcessorOption) => {
     const loaders = [
       isEnvDevelopment && require.resolve('style-loader'),
       isEnvProduction && {
@@ -74,12 +75,12 @@ module.exports = function (webpackEnv) {
           options: {
             sourceMap: isEnvProduction ? true : isEnvDevelopment,
             root: appCssImg,
-            debug:isEnvDevelopment
+            //debug:isEnvDevelopment
           },
         },
         {
           loader: require.resolve(preProcessor),
-          options: { sourceMap: true }
+          options: Object.assign({ sourceMap: true }, preProcessorOption),
         },
       )
     }
@@ -194,6 +195,23 @@ module.exports = function (webpackEnv) {
               }),
             },
             {
+              test: lessRegex,
+              use: getStyleLoaders(
+                {
+                  importLoaders: 3,
+                  sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+                },
+                'less-loader',
+                {
+                  lessOptions: {
+                    javascriptEnabled: true,
+                    math: 'always',
+                  },
+                },
+              ),
+              sideEffects: true,
+            },
+            {
               test: sassRegex,
               exclude: sassModuleRegex,
               use: getStyleLoaders(
@@ -206,22 +224,21 @@ module.exports = function (webpackEnv) {
               sideEffects: true,
             },
             {
-              test: sassModuleRegex,
+              test: sassRegex,
+              exclude: sassModuleRegex,
               use: getStyleLoaders(
                 {
                   importLoaders: 3,
                   sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
-                  modules: {
-                    getLocalIdent: getCSSModuleLocalIdent,
-                  },
                 },
                 'sass-loader',
               ),
+              sideEffects: true,
             },
             {
               test: /\.yml$/,
               use: ['file-loader?name=[name].json', 'yaml-loader'],
-              include: path.resolve(appSrc,'resources/translations'),
+              include: path.resolve(appSrc, 'resources/translations'),
             },
             {
               loader: require.resolve('file-loader'),
@@ -235,17 +252,17 @@ module.exports = function (webpackEnv) {
       ],
     },
     resolve: {
-      alias:{ 
-        "@pages":path.resolve(appBase,'src/pages')
+      alias: {
+        '@pages': path.resolve(appBase, 'src/pages'),
       },
-      fallback: { 
-        "util": require.resolve("util/"),
+      fallback: {
+        util: require.resolve('util/'),
       },
     },
     devServer: isEnvDevelopment && {
       port: 3000,
       contentBase: appPublic, // boolean | string | array, static file location
-      publicPath:'/',
+      publicPath: '/',
       compress: true, // enable gzip compression
       historyApiFallback: true, // true for index.html upon 404, object for multiple paths
       hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin

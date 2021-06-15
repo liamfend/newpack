@@ -1,7 +1,7 @@
-@import '~antd/dist/antd.css';
- @import 'css/all';
- @import 'css/global.scss';
- @import 'css/grid';
+// @import '~antd/dist/antd.css';
+@import 'css/all';
+@import 'css/global.scss';
+@import 'css/grid';
 @import 'css/molecules/form-field';
 @import 'css/molecules/checkbox-field';
 @import '~react-quill/dist/quill.snow.css';
@@ -120,7 +120,6 @@
 @import 'pages/help-center/commission-and-contract/index';
 @import 'pages/help-center/my-account/index';
 @import 'components/special-offer/map/add-property/index';
-// @import 'components/property-status-filter/index';
 @import 'components/table-column-search/index';
 @import '~@pages/dashboard/contract/index';
 @import '~@pages/dashboard/contract/contract-filter/index';
@@ -155,19 +154,19 @@
 @import '~@pages/dashboard/reconciliation/bulk-history/index';
 
 .ant-select-dropdown-menu-item-selected {
-	// @include font-weight(bold);
+  @include font-weight(bold);
 }
 
 button {
-	background: transparent;
+  background: transparent;
 }
 
 .ant-input-number-input {
-	padding: 4px 11px;
+  padding: 4px 11px;
 }
 
 // sass-lint:disable variable-for-property
 .ant-form-item-control {
-	line-height: normal;
+  line-height: normal;
 }
 // sass-lint:disable variable-for-property

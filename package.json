@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./webpack/webpack.config.js --env production",
+    "build": "yarn generate && webpack --config ./webpack/webpack.config.js --env production",
     "start": "webpack serve --config ./webpack/webpack.config.js --env development",
     "lint:js": "eslint ./src --fix",
-    "lint:css": "stylelint ./src/**/*.scss --fix",
+    "lint:css": "stylelint   **/*.scss --fix",
     "lint": "yarn lint:js && yarn lint:css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
@@ -57,6 +57,7 @@
     "js-md5": "^0.7.3",
     "json-loader": "^0.5.7",
     "jwt-decode": "^3.1.2",
+    "less": "^4.1.1",
     "less-loader": "^9.1.0",
     "lint-staged": "^11.0.0",
     "loader-utils": "^2.0.0",
@@ -103,7 +104,7 @@
   },
   "lint-staged": {
     "./src/**/*.js": "eslint --cache --fix",
-    "*.scss": "stylelint ./src/**/*.scss --fix",
+    "style": "yarn lint:css",
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {

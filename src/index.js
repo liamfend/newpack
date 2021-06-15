@@ -18,6 +18,7 @@ import Comments from '~pages/comments'
 import HelpCenter from '~pages/help-center'
 import Udesk from '~pages/udesk'
 import httpsRedirect from '~helpers'
+import './antd.less'
 import './index.scss'
 
 httpsRedirect()
