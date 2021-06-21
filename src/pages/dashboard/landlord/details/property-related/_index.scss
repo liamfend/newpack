@@ -1,0 +1,33 @@
+.landlord-property-related {
+  margin: rem(24) rem(32) rem(32);
+
+  &__no-property-wrap {
+    min-height: calc(100vh - 332px);
+    background-color: $color-white;
+    text-align: center;
+  }
+
+  &__landlord-no-property {
+    display: block;
+    width: rem(208);
+    margin: 0 auto;
+    padding-top: rem(98);
+  }
+
+  &__description {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    margin: rem(32) 0 rem(24);
+  }
+
+  &__create-property {
+    @include font-weight(bold);
+  }
+
+  .ant-table-tbody tr td:nth-child(5) {
+    padding-left: rem(64);
+  }
+
+  .table-list .ant-table {
+    min-height: rem(573);
+  }
+}

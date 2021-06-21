@@ -1,0 +1,83 @@
+.contract-content {
+  min-height: rem(374);
+  box-sizing: border-box;
+
+  &__header {
+    @include clearfix;
+    min-width: rem(432);
+    margin-bottom: rem(20);
+  }
+
+  &__number {
+    @include font-style($type-18px, $type-32px, $color-tundora);
+    float: left;
+  }
+
+  &__add {
+    @include font-style($type-14px, $type-32px, $color-white);
+    @include font-weight(bold);
+    height: rem(32);
+    padding: 0 rem(15);
+    float: right;
+    border: 0 none;
+    border-radius: 2px;
+    outline: none;
+    background-color: $color-keppel;
+    cursor: pointer;
+  }
+
+  .ant-pagination {
+    margin-top: rem(24);
+    float: right;
+  }
+
+  &__loading {
+    height: 0;
+    transition: height 0.5s;
+    text-align: center;
+    overflow: hidden;
+
+    &--show {
+      height: rem(50);
+    }
+  }
+}
+
+.contract-empty {
+  position: relative;
+  min-width: rem(432);
+  height: rem(641);
+  border: 1px solid $color-mercury;
+  background-color: $color-white;
+
+  &__full-filter {
+    height: rem(589);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__add-new {
+    display: inline-block;
+    position: absolute;
+    top: calc(40% + 120px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &--btn {
+      color: $color-keppel;
+    }
+  }
+
+  &__click-action {
+    color: $color-keppel;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

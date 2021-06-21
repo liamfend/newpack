@@ -1,0 +1,54 @@
+.create-offer {
+  &__dot {
+    width: 60%;
+    margin: 5px auto;
+
+    .ant-steps-item-process {
+      .ant-steps-item-icon {
+        width: 12px;
+        height: 12px;
+      }
+
+      .ant-steps-item-title {
+        color: $color-keppel;
+      }
+    }
+  }
+
+
+  &__header {
+    position: relative;
+  }
+
+  &__tab-header {
+    height: 48px;
+  }
+
+  &__back-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+    .anticon-left {
+      margin-right: 5px;
+    }
+  }
+
+  &__card {
+    margin-top: 20px;
+
+    .ant-form-item-label {
+      .ant-form-item-required {
+        @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+        @include font-weight(bold);
+      }
+    }
+  }
+
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    display: block;
+    margin-bottom: rem(8);
+  }
+}

@@ -1,0 +1,99 @@
+.refund-details {
+  height: 100%;
+
+  &__loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: rem(50);
+    background-color: $color-white;
+    text-align: center;
+    z-index: $z-big;
+  }
+
+  &__bread-crumb {
+    margin-bottom: rem(12);
+  }
+
+  &__title {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0 0 rem(20);
+    padding: 0;
+  }
+
+  &__info {
+    display: block;
+    margin-bottom: rem(8);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__table-btn {
+    margin-bottom: rem(40);
+  }
+
+  &__info-right {
+    @include font-style($type-14px, $type-20px, $color-silver-chalice);
+    display: block;
+    margin-bottom: rem(10);
+
+    &--value {
+      @include font-style($type-20px, $type-28px, $color-tundora);
+      @include font-weight(bold);
+      display: block;
+    }
+  }
+
+  &__header-content {
+    width: 60%;
+
+    &--left {
+      position: absolute;
+      top: rem(24);
+      right: 0;
+      margin-right: rem(32);
+      text-align: right;
+    }
+  }
+
+  &__header-content-btns {
+    min-height: rem(72);
+  }
+
+  &__content {
+    margin: 0 rem(32);
+  }
+
+  &__card {
+    margin-bottom: rem(24);
+
+    &--table {
+      .ant-card-head {
+        border: 0 !important;
+      }
+
+      .ant-card-body {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__right-info {
+    display: flex;
+  }
+
+  &__right-row {
+    display: inline-block;
+
+    &:last-child {
+      margin-left: rem(48);
+    }
+  }
+
+  .ant-table-content {
+    border: 1px solid $color-mercury;
+  }
+}

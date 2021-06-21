@@ -1,0 +1,42 @@
+.check-in-tip {
+  position: absolute;
+  top: rem(-10);
+  right: 0;
+
+  &--center {
+    right: calc(50% - 32px);
+  }
+
+  &__check-in {
+    @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+    padding: rem(8);
+    border: solid 1px $color-mercury;
+    border-radius: 2px;
+    background-color: $color-white;
+    z-index: $z-base;
+  }
+
+  &__check-in-point {
+    position: absolute;
+    right: calc(50% - 8px);
+    bottom: rem(-24);
+    width: rem(8);
+    height: rem(8);
+    border-radius: rem(10);
+    background-color: $color-white;
+  }
+
+  &__triangle {
+    position: absolute;
+    right: calc(50% - 16px);
+    bottom: rem(-6);
+    width: rem(12);
+    height: rem(12);
+    transform: translateX(-50%) rotate(45deg);
+    border: 0;
+    border-right: 1px solid  $color-mercury;
+    border-bottom: 1px solid  $color-mercury;
+    background-color: $color-white;
+    z-index: $z-low;
+  }
+}

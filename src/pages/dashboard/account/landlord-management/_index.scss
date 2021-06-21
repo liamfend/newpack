@@ -1,0 +1,107 @@
+.landlord-account-management {
+  height: calc(100vh - 162px);
+  border: 1px solid $color-mercury;
+  border-top: 0;
+  background: $color-white;
+  overflow: hidden;
+  overflow-y: auto;
+
+  &__header {
+    @include clearfix();
+    padding: rem(16) rem(24);
+    border-bottom: 1px solid $color-mercury;
+  }
+
+  &__landlord-name-label {
+    @include font-style($type-14px, $type-32px, $color-silver-chalice);
+    margin-right: rem(8);
+    white-space: nowrap;
+    cursor: pointer;
+
+    .anticon {
+      margin-left: rem(4);
+      font-size: $type-12px;
+    }
+  }
+
+  &__btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: $color-keppel;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  .ant-divider-vertical {
+    margin: 0 rem(12);
+  }
+
+  &__create-new-account {
+    @include font-style($type-14px, $type-24px, $color-white);
+    @include font-weight(bold);
+    padding: rem(4) rem(12);
+    float: right;
+    border-radius: 2px;
+    background: $color-keppel;
+  }
+
+  .anticon-plus {
+    margin-right: rem(8);
+  }
+
+  &__landlord-selector-container {
+    display: inline-block;
+    width: rem(112);
+  }
+
+  .search-component__input::placeholder {
+    font-size: $type-14px;
+  }
+
+  &__edit-modal {
+    position: absolute;
+    top: rem(40);
+    right: 0;
+    height: calc(100% - 40px);
+    border: solid 1px $color-mercury;
+    border-top: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    animation-name: openModalAnimation;
+    animation-duration: 0.5s;
+
+    &--close {
+      animation-name: closeModalAnimation;
+      animation-duration: 0.5s;
+    }
+  }
+
+  @keyframes openModalAnimation {
+    0% {
+      right: rem(-448);
+    }
+
+    100% {
+      right: 0;
+    }
+  }
+
+  @keyframes closeModalAnimation {
+    0% {
+      right: 0;
+    }
+
+    100% {
+      right: rem(-448);
+    }
+  }
+
+  &__search-tips-hidden {
+    .ant-tooltip-content {
+      display: none;
+    }
+  }
+}

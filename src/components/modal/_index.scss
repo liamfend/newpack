@@ -1,0 +1,39 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba($color-black, 0.4);
+  z-index: $z-overlay;
+  overflow-y: hidden;
+
+  &--sticky {
+    overflow-y: initial;
+
+    .account-modal {
+      @include respond-to(medium-and-up) {
+        margin: rem(40) 0 !important;
+      }
+    }
+  }
+
+  &--active {
+    display: block;
+  }
+
+  // notes: ie 11 not support overlay property, so add auto property.
+  // sass-lint:disable no-duplicate-properties
+  .body-dom-ovs {
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-y: overlay;
+  }
+  // sass-lint:enable no-duplicate-properties
+}
+
+.body-ovh {
+  width: 100%;
+  overflow: hidden;
+}

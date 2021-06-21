@@ -1,0 +1,214 @@
+.property-detail {
+  $color-orange: #f5a623;
+
+  padding: rem(24) rem(32);
+
+  &__subtitle {
+    @include font-style($type-16px, $type-24px, rgba($color-black, 0.85));
+    @include font-weight(bold);
+    position: relative;
+    margin: 0 0 rem(12);
+    padding-left: rem(12);
+
+    &:before {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: rem(3);
+      height: rem(16);
+      transform: translateY(-50%);
+      background: $color-keppel;
+      content: '';
+    }
+  }
+
+  &__switch-item {
+    @include font-style($type-12px, $type-24px, $color-shuttle-gray);
+    @include font-weight(bold);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: rem(40);
+    margin-bottom: rem(16);
+    padding-right: rem(16);
+    padding-left: rem(12);
+    border-radius: 2px;
+    background: $color-desert-storm;
+  }
+
+  &__switch-check-icon {
+    width: rem(10);
+    height: rem(10);
+    fill: $color-white;
+  }
+
+  .ant-form-item-label {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+  }
+
+  &__label {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(4);
+  }
+
+  &__checkbox-wrap {
+    display: flex;
+    align-items: center;
+    height: rem(32);
+  }
+
+  .ql-editor {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    height: rem(80);
+    padding: rem(8) rem(12);
+    resize: vertical;
+  }
+
+  .ant-input {
+    @include font-style($type-12px, $type-16px, $color-tundora);
+    padding: rem(8) rem(12);
+  }
+
+  .ql-editor.ql-blank::before {
+    color: $color-silver-chalice;
+    font-style: normal;
+  }
+
+  &__counter {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    margin-top: rem(4);
+    text-align: right;
+
+    &--red {
+      color: $color-coral-dark;
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: rem(16);
+  }
+
+  &__basic-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: rem(16);
+    padding: rem(8) rem(12);
+    background: $color-desert-storm;
+  }
+
+  &__basic-label {
+    @include font-style($type-12px, $type-24px, $color-shuttle-gray);
+    margin-right: rem(8);
+    white-space: nowrap;
+
+    &:after {
+      content: ':';
+    }
+  }
+
+  &__basic-text {
+    @include font-style($type-12px, $type-24px, $color-shuttle-gray);
+    @include font-weight(bold);
+    white-space: nowrap;
+
+    &--ellipsis {
+      max-width: rem(150);
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  &__line {
+    width: 1px;
+    height: rem(16);
+    margin: 0 rem(16);
+    background: $color-silver-sand;
+  }
+
+  .ant-form label {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+  }
+
+  &__description-wrap {
+    margin-bottom: rem(24);
+    padding: rem(8) rem(12);
+    border-radius: rem(2);
+    background: $color-desert-storm;
+
+    .ant-form-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .ql-container {
+      background: $color-white;
+    }
+
+    .ant-form-explain {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  input::placeholder {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+  }
+
+  .ant-select-selection__placeholder,
+  textarea::placeholder {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+  }
+
+  .ant-radio-wrapper:not(:last-child) {
+    margin-right: rem(50);
+  }
+
+  &__ranking-type-wrap {
+    display: flex;
+    align-items: center;
+    min-height: rem(32);
+  }
+
+  &__headline-textarea {
+    resize: none;
+  }
+
+  &__tips-icon {
+    margin-left: rem(4);
+    color: $color-keppel;
+    cursor: pointer;
+  }
+
+  &__tenancy-agreement-container {
+    position: relative;
+  }
+
+  &__tenancy-agreement-time-type {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__tenancy-agreement-time-type-label {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+  }
+
+  &__tenancy-agreement-time-type-container {
+    position: relative;
+    margin-bottom: rem(4);
+  }
+
+  &__tenancy-agreement-calculate-option {
+    font-size: $type-12px;
+  }
+
+  &__tenancy-agreement-time-label {
+    @include font-weight(bold);
+    color: $color-silver-chalice !important;
+  }
+}

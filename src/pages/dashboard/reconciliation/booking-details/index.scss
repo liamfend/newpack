@@ -1,0 +1,286 @@
+@import '~@pages/dashboard/reconciliation/booking-details/changes-table/index';
+@import '~@pages/dashboard/reconciliation/booking-details/navigation-bar/index';
+$color-fafa: #fafafa;
+$color-wl56: #565656;
+@import './statusModal/index';
+
+.reconciliation-booking {
+  height: 100%;
+
+  &__card {
+    margin-top: 1px;
+    padding: rem(24) rem(32) 0;
+    border-radius: 2px;
+    background-color: $color-white;
+    box-shadow: 0 4px 4px 0 rgba($color-charcoal-grey, 0.01);
+
+    .nav {
+      @include font-style($type-14px, $type-16px, $color-tundora);
+      margin-bottom: rem(11);
+    }
+
+    .discribe--wapper {
+      position: relative;
+
+      .ant-descriptions-item-content {
+        font-size: $type-12px;
+      }
+
+      .btns-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+
+        .changebooking {
+          height: rem(24);
+          margin-bottom: rem(24);
+        }
+
+        .status-box {
+          margin-left: rem(36);
+
+          &>:nth-child(1) {
+            @include font-style($type-12px, $type-20px, $color-silver-chalice);
+           }
+
+          &>:nth-child(2) {
+            @include font-style($type-20px, $type-28px, $color-black);
+            @include font-weight(bold);
+           }
+        }
+      }
+    }
+
+    .btns {
+      @include font-style($type-14px, $type-32px, $color-white);
+      @include font-weight(bold);
+      height: rem(32);
+      padding: 0 rem(15);
+      float: right;
+      border: 0 none;
+      border-radius: 2px;
+      outline: none;
+      background-color: $color-keppel;
+      cursor: pointer;
+    }
+  }
+
+  &__tabs {
+    background-color: $color-white;
+
+    .ant-tabs-bar {
+      margin: 0;
+      padding: rem(0) rem(32);
+    }
+
+    .ant-tabs-tab {
+      padding-left: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    padding: rem(24) rem(32);
+    background-color: $color-desert-storm;
+
+    .patch-blod {
+      @include font-weight(bold);
+      @include font-style($type-12px, $type-24px, $color-tundora);
+    }
+
+    .booking-userinfo {
+      max-width: rem(272);
+      background-color: $color-white;
+
+      .ant-descriptions-item-label {
+        color: $color-silver-chalice;
+      }
+
+      .ant-descriptions-item-content {
+        color: $color-tundora;
+      }
+
+      .account-photo-icon {
+        width: rem(44);
+        height: rem(44);
+      }
+    }
+
+    .box-cards {
+      width: 100%;
+      margin-right: rem(24);
+      background-color: $color-white;
+
+      .editor-icon {
+        width: rem(18);
+        height: rem(16);
+        cursor: pointer;
+        fill: $color-keppel;
+      }
+
+      .comment-card {
+        margin-bottom: rem(24);
+      }
+
+      .product-card-container {
+        padding-top: rem(24);
+        background-color: $color-desert-storm;
+      }
+
+      .details-wapper {
+        display: flex;
+        justify-content: space-between;
+
+        .details-info {
+          width: rem(300);
+          margin-right: rem(24);
+
+          .ant-descriptions-item-label {
+            color: $color-silver-chalice;
+          }
+
+          .ant-descriptions-item {
+            display: flex;
+            justify-content: space-between;
+            color: $color-silver-chalice;
+          }
+
+        }
+
+        .comission {
+          width: rem(368);
+          height: rem(108);
+          margin-left: rem(10);
+          padding: rem(10) rem(24);
+          background-color: $color-fafa;
+
+          .ant-divider-horizontal {
+            margin: rem(10) 0;
+          }
+
+          .rowline {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          &__title {
+            @include font-style($type-12px, $type-24px, $color-silver-chalice);
+          }
+
+          &__price {
+            @include font-style($type-12px, $type-24px, $color-tundora);
+          }
+        }
+      }
+    }
+  }
+
+  .mainbtn {
+    padding: rem(4) rem(16);
+    border: solid 1px $color-keppel;
+    border-radius: 2px;
+    color: $color-keppel;
+  }
+
+  .changeproduct {
+    width: rem(123);
+    height: rem(24);
+  }
+
+  .product-card {
+    .ant-card-extra {
+      display: none !important;
+    }
+  }
+
+  .booking-card {
+    .ant-card-extra {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    .ant-card-head-title {
+      flex: initial;
+    }
+
+    &__extra-container {
+      display: flex;
+      flex: 1;
+    }
+
+    &__extra-remider {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      padding-left: rem(24);
+    }
+
+    &__extra-icon {
+      width: rem(16);
+      height: rem(16);
+    }
+
+    &__extra-content {
+      @include font-style($type-12px, $type-24px, $color-supernova-dark);
+      margin-left: rem(6);
+    }
+  }
+
+  &__booking-content {
+    &__edit-btn {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__booking-detail {
+    &__edit-btn {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__assign-icon {
+    width: rem(23);
+    height: rem(19);
+    fill: $color-keppel;
+  }
+
+  &__comment-case {
+    display: flex;
+    background-color: $color-desert-storm;
+  }
+
+  &__booking-comment {
+    flex: 1;
+    margin: rem(24) rem(32) 0;
+    border-radius: 2px;
+    background-color: $color-white;
+    box-shadow: 0 4px 4px 0 rgba($color-charcoal-grey, 0.01);
+  }
+
+  &__case-owner {
+    width: rem(272);
+    margin: rem(24) rem(32) 0 0;
+    border-radius: 2px;
+    background-color: $color-white;
+    box-shadow: 0 4px 4px 0 rgba($color-charcoal-grey, 0.01);
+  }
+
+}
+
+.ant-modal-mask {
+  z-index: $z-base !important;
+}
+
+.ant-modal-wrap {
+  z-index: $z-base !important;
+}

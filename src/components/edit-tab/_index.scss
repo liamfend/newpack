@@ -1,0 +1,28 @@
+.edit-tab {
+  $color-mercury: #e8e8e8;
+
+  .ant-tabs-bar {
+    margin: 0;
+  }
+
+  .ant-tabs-content {
+    border: 1px solid $color-mercury;
+    border-top: 0;
+    background: $color-white;
+  }
+
+  .ant-tabs-tabpane {
+    height: calc(100% - 40px);
+    overflow-y: auto;
+  }
+
+  .ant-tabs-tab {
+    position: relative;
+    min-width: rem(90);
+    text-align: center;
+  }
+
+  &__pane {
+    padding: rem(24);
+  }
+}

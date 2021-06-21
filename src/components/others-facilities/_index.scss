@@ -1,0 +1,51 @@
+.others-facilities {
+  $color-alto: #d9d9d9;
+  $color-trinidad: #f25202;
+
+  min-height: rem(80);
+  border: solid 1px  $color-alto;
+  border-radius: 2px;
+  background-color: $color-white;
+
+  &--error {
+    border-color: $color-trinidad;
+  }
+
+  &__container {
+    min-height: rem(80);
+    max-height: rem(168);
+    padding: rem(8) rem(12);
+    overflow: auto;
+  }
+
+  .ant-tag {
+    margin: 0 rem(4) rem(4) 0;
+    border-radius: 2px;
+  }
+
+  &__error-msg {
+    @include font-style($type-12px, $type-16px, $color-trinidad);
+    display: inline-block;
+    margin-top: rem(4);
+  }
+
+  &__input {
+    width: rem(206);
+    border: 0;
+    outline: none;
+
+    &::placeholder {
+      @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    }
+  }
+
+  &__counter {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    margin-top: rem(4);
+    float: right;
+
+    &--red {
+      color: $color-coral-dark;
+    }
+  }
+}

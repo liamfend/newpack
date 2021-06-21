@@ -1,0 +1,80 @@
+.other-rooms-modal {
+  $color-buttercup: #f5a623;
+  $color-gray: #999;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: rem(880);
+  transform: translate(-50%, -50%);
+  background-color: $color-white;
+
+  &__main {
+    padding: rem(32) rem(32) rem(20);
+  }
+
+  &__close-btn {
+    display: flex;
+    position: absolute;
+    top: rem(16);
+    right: rem(16);
+    padding: rem(4);
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__close-icon {
+    color: $color-gray;
+    font-size: $type-12px;
+  }
+
+  &__title {
+    @include font-style($type-16px, $type-24px, $color-silver-chalice);
+    margin: 0 0 rem(20);
+  }
+
+  &__tip {
+    @include font-style($type-12px, $type-24px, $color-supernova-dark);
+    margin-bottom: rem(20);
+    padding: rem(4) rem(12);
+    border-radius: rem(2);
+    background-color: $color-supernova-bg;
+  }
+
+  &__btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    padding: rem(16) rem(32);
+    border-top: 1px solid $color-mercury;
+  }
+
+  &__subtitle {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(4);
+  }
+
+  &__transfer {
+    .ant-transfer-list-header-selected {
+      @include font-style($type-12px, $type-20px, $color-silver-chalice);
+    }
+
+    .ant-transfer-list-body {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+    }
+  }
+
+  &__warning-icon {
+    width: rem(16);
+    height: rem(16);
+    margin-right: rem(8);
+    color: $color-buttercup;
+    vertical-align: middle;
+
+    svg {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+}

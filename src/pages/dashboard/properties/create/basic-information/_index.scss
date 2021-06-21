@@ -1,0 +1,191 @@
+.basic-info {
+  $color-torch: #f5222d;
+  position: relative;
+  width: rem(568);
+  margin: 0 auto;
+
+  .ant-input {
+    display: block;
+    padding: rem(6) rem(11);
+    line-height: $type-16px;
+  }
+
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+    @include font-weight(bold);
+    display: block;
+    position: relative;
+  }
+
+  &__circle {
+    position: absolute;
+    top: 50%;
+    width: rem(15);
+    height: rem(15);
+    margin-left: rem(8);
+    transform: translate(0, -50%);
+    color: $color-keppel;
+  }
+
+  &__apartment-box {
+    margin-bottom: rem(24);
+  }
+
+  &__apartment {
+    @include clearfix;
+    position: relative;
+    width: 110%;
+  }
+
+  &__apartment-item {
+    float: left;
+  }
+
+  &__apartment-border {
+    display: inline-block;
+    position: relative;
+    width: rem(101);
+    height: rem(79);
+    margin-right: rem(16);
+    border: 1px solid $color-mercury;
+
+    &--green {
+      border-color: $color-keppel;
+    }
+
+    &:hover {
+      border-color: $color-keppel;
+      cursor: pointer;
+    }
+
+    &:hover .basic-info__apartment-type {
+      fill: $color-keppel;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__apartment-type {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: rem(56);
+    height: rem(38.6);
+    transform: translate(-50%, -50%);
+    fill: $color-silver-chalice;
+
+    &--green {
+      fill: $color-keppel;
+    }
+  }
+
+  &__apartment-tick {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-width: 0 0 rem(22) rem(22);
+    border-style: solid;
+    border-color: $color-keppel transparent;
+  }
+
+  &__check {
+    width: rem(10);
+    height: rem(7);
+    transform: translate(-110%, 70%);
+    fill: $color-white;
+  }
+
+  &__apartment-text {
+    width: rem(101);
+    margin-top: rem(8);
+    color: $color-tundora;
+    font-size: $type-12px;
+    text-align: center;
+  }
+
+  &__apartment-error {
+    @include font-style($type-14px, $type-18px, $color-torch);
+    min-height: rem(18);
+    margin: rem(2) 0;
+  }
+
+  &__currency {
+    position: relative;
+    background-color: $color-desert-storm;
+  }
+
+  &__headline {
+    margin-left: rem(8) !important;
+  }
+
+  &__tips {
+    position: absolute;
+    top: rem(32);
+    left: rem(621);
+    width: rem(194);
+    height: rem(165);
+    padding: 15px;
+    background-color: $color-supernova-bg;
+  }
+
+  &__tips-title {
+    position: absolute;
+  }
+
+  &__tips-icon {
+    position: absolute;
+    top: 50%;
+    width: rem(13);
+    height: rem(17);
+    transform: translate(0, -50%);
+  }
+
+  &__tips-text {
+    @include font-weight(bold);
+    margin-left: 23px;
+    color: $color-tundora;
+    font-size: $type-16px;
+  }
+
+  &__tips-content {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    margin-top: rem(34);
+  }
+
+  .table-list__columns-dropdown {
+    width: 100%;
+    height: rem(32);
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .ant-input-disabled {
+    background-color: $color-desert-storm !important;
+  }
+
+  .ant-form-explain {
+    @include font-style($type-14px, $type-18px, $color-torch);
+    min-height: rem(18);
+    margin: rem(2) 0 rem(16);
+  }
+
+  .create-confirmation__text {
+    @include font-weight(bold);
+
+    &--bill {
+      @include font-weight(bold);
+    }
+  }
+
+  .basic-info__currency {
+    display: inline-block;
+    width: 100%;
+    padding: rem(8) 0;
+  }
+}
+

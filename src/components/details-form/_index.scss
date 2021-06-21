@@ -1,0 +1,39 @@
+$color-torch-red: #f5222d;
+
+.details-form {
+  overflow: hidden;
+
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+
+    &--disabled {
+      color: $color-silver-chalice;
+    }
+
+    &--required {
+      @include font-style($type-14px, $type-24px, $color-torch-red);
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: rem(16);
+  }
+
+  &__map-country {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    margin: 0;
+  }
+
+  .others-facilities__container {
+    height: rem(96);
+  }
+
+  .map-label {
+    color: $color-tundora;
+  }
+
+  .address__map {
+    margin-bottom: rem(16);
+  }
+}

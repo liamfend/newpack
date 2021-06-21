@@ -1,0 +1,28 @@
+.reconciliation-details__navigation-bar {
+  width: 100%;
+  padding: 0 rem(32);
+  background-color: $color-white;
+
+  &__btn {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    margin-right: rem(48);
+    padding: 0 0 rem(10);
+    border: 0;
+    border-bottom: 2px solid $color-white;
+    outline: none;
+    cursor: pointer;
+
+    &--active {
+      border-bottom: 2px solid $color-keppel;
+      color: $color-keppel;
+    }
+
+    &:hover {
+      color: $color-keppel;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+}

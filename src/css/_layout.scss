@@ -1,0 +1,26 @@
+@import 'grid';
+
+html {
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba($color-white, 0);
+    -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-misspelled-properties
+
+    &::before,
+    &::after {
+      box-sizing: border-box;
+    }
+  }
+}
+
+.no-scroll {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+
+  @include respond-to(large-and-up) {
+    position: static;
+    height: auto;
+  }
+}

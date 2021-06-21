@@ -1,0 +1,110 @@
+.create-confirmation {
+  width: rem(568);
+  margin: 0 auto;
+
+  &__title {
+    @include font-weight(bold);
+    width: 120%;
+    transform: translate(-8%, 0);
+    color: $color-tundora;
+    font-size: $type-16px;
+    text-align: center;
+  }
+
+  &__info {
+    margin-top: rem(48);
+    padding: rem(24);
+    border: solid 1px $color-mercury;
+    background-color: $color-desert-storm;
+  }
+
+  &__info-title {
+    @include font-weight(bold);
+    color: $color-tundora;
+    font-size: $type-16px;
+    text-align: left;
+  }
+
+  &__confirm-tip {
+    margin: rem(16) 0 rem(8);
+    color: $color-supernova-dark;
+    font-size: $type-12px;
+  }
+
+  &__detail__item {
+    position: relative;
+    margin-bottom: rem(8);
+
+    .basic-info__currency {
+      display: inline-block;
+    }
+  }
+
+  &__icon {
+    transform: translate(0, 20%);
+    fill: $color-keppel;
+
+    &--address {
+      width: rem(14);
+      height: rem(17);
+    }
+
+    &--zipcode {
+      width: rem(15);
+      height: rem(12);
+    }
+
+    &--style {
+      width: rem(15);
+      height: rem(14);
+    }
+
+    &--city {
+      width: rem(14);
+      height: rem(14);
+    }
+
+    &--currency {
+      width: rem(15);
+      height: rem(15);
+    }
+
+    &--landlord {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+
+  &__headline {
+    margin-left: rem(8);
+
+    &--second {
+      @include font-weight(normal);
+      margin-left: rem(25);
+    }
+  }
+
+  &__text {
+    margin-left: rem(10);
+
+    &--bill {
+      margin-left: rem(10);
+    }
+  }
+
+  &__line {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    width: 1px;
+    height: rem(12);
+    margin: 0 rem(12);
+    transform: translate(0, -50%);
+    background-color: $color-silver-sand;
+  }
+
+  .ant-divider-horizontal {
+    top: 0;
+    margin: 0;
+  }
+}

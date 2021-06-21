@@ -1,0 +1,21 @@
+.price-and-availability {
+  height: 100%;
+  padding: rem(40);
+  overflow: auto;
+
+  .center-style__title {
+    margin-bottom: rem(16);
+  }
+
+  .center-style__content-title {
+    margin-top: rem(24);
+  }
+
+  .center-style__note {
+    margin: rem(16) 0 rem(24);
+  }
+
+  .center-style__list {
+    list-style: lower-alpha;
+  }
+}

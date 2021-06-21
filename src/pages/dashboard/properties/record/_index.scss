@@ -1,0 +1,76 @@
+.property-record {
+
+  &__content {
+    margin: rem(32);
+    background-color: $color-white;
+    overflow-x: auto;
+  }
+
+  .contract-empty {
+    min-width: rem(814);
+    height: rem(580);
+    border-top: 0;
+  }
+}
+
+.record-update {
+  @include clearfix;
+  min-width: rem(852);
+  padding: rem(28) 0 0;
+  border: 1px solid $color-mercury;
+
+  &__header-icon {
+    display: inline-block;
+    width: rem(57);
+    height: rem(58);
+    margin: 0 rem(36);
+  }
+
+  &__text-box {
+    display: inline-block;
+    width: calc(100% - 129px);
+    margin-bottom: rem(32);
+  }
+
+  &__stage-text {
+    @include font-style($type-16px, $type-28px, $color-tundora);
+    display: inline-block;
+    margin-bottom: rem(14);
+
+    span {
+      @include font-weight(bold);
+    }
+  }
+
+  &__update-btn {
+    @include font-style($type-14px, $type-24px, $color-white);
+    @include font-weight(bold);
+    margin-left: rem(28);
+    padding: 0 rem(12);
+  }
+
+  &__tips {
+    @include font-style($type-14px, $type-24px, $color-silver-chalice);
+  }
+
+  &__file {
+    width: calc(100% - 129px);
+    height: rem(218);
+    padding-right: rem(32);
+    float: right;
+    border-top: 1px solid $color-mercury;
+
+    &--title {
+      @include font-style($type-14px, $type-24px, $color-tundora);
+      width: 100%;
+      margin: rem(20) 0 rem(8);
+      float: right;
+    }
+
+    .contract-file-list {
+      width: 100%;
+      float: right;
+    }
+  }
+
+}

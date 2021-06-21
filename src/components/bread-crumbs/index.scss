@@ -1,0 +1,7 @@
+.bread-crumbs {
+  margin-bottom: rem(12);
+
+  &__text {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+  }
+}

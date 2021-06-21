@@ -1,0 +1,398 @@
+$color-border: #d9d9d9;
+
+.ant-calendar-year-panel-body {
+  height: calc(100% - 40px);
+}
+
+.rooms-tab {
+  width: 100%;
+  min-height: rem(600);
+
+  .ant-drawer-content-wrapper {
+    position: absolute;
+    min-width: rem(480);
+    transition: transform 0.1s;
+    border: $color-mercury solid 1px;
+    border-top: 0;
+    box-shadow: none !important;
+
+    .ant-drawer-body {
+      padding: 0;
+    }
+  }
+
+  .table-header {
+    height: rem(65);
+    background-color: $color-white;
+  }
+
+  .ant-table-tbody > tr > td {
+    padding: rem(20) rem(16);
+  }
+
+  .add-more {
+    @include font-style($type-14px, $type-20px, $color-keppel);
+    display: inline-block;
+    margin-top: rem(-4);
+  }
+
+  &__list-row {
+    @include font-style($type-14px, $type-14px, $color-silver-chalice);
+
+    &:hover {
+      background-color: $color-desert-storm;
+    }
+
+    &--active {
+      background-color: $color-keppel-bg !important;
+      color: $color-tundora;
+    }
+
+  }
+
+  &__drawer {
+    .ant-drawer-close {
+      top: rem(16);
+      right: rem(16);
+      width: rem(12);
+      height: rem(12);
+      z-index: $z-top-swap;
+
+      svg {
+        width: rem(12);
+        height: rem(12);
+      }
+    }
+
+    &__room-id {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      padding-top: rem(16);
+      padding-bottom: rem(10);
+      background-color: $color-white;
+      z-index: $z-high;
+
+      &__text {
+        @include font-style($type-10px, $type-14px, $color-shuttle-gray);
+        display: inline-block;
+        padding: rem(4) rem(8);
+        border-radius: 2px;
+        background-color: $color-keppel-bg;
+      }
+
+      .room-modal__btn--close {
+        padding: 0 rem(16) 0 0;
+        float: right;
+        border: 0;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+      }
+    }
+
+    .ant-drawer-wrapper-body {
+      height: calc(100% - 3.5rem) !important;
+    }
+
+    &__content {
+      padding: rem(47) rem(40) 0;
+
+      .content-title {
+        @include font-style($type-16px, $type-24px, $color-tundora);
+        margin-bottom: rem(15);
+
+        &__text {
+          padding-left: rem(8);
+          border-left: rem(4) solid $color-keppel;
+        }
+      }
+
+      .room-details,
+      .facilities,
+      .unit-details {
+        margin-bottom: rem(8);
+      }
+
+      .room-details {
+        &__floor {
+          .label {
+            &__hint {
+              @include font-weight(normal);
+            }
+
+          }
+
+          .select-box {
+            background-color: rgba($color-keppel, 0.3);
+          }
+
+          .floor-item {
+            @include font-style($type-12px, $type-24px, $color-shuttle-gray);
+            flex: 1;
+            height: rem(26);
+            margin-bottom: rem(12);
+            padding: 1px 0;
+            border: 1px solid $color-mercury;
+            border-radius: 2px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+
+            &:not(:nth-last-of-type(1)) {
+              margin-right: rem(12);
+            }
+
+            &:hover {
+              border-color: $color-keppel;
+            }
+
+            &--selected {
+              border-color: $color-keppel;
+              background-color: $color-keppel;
+              color: $color-white;
+            }
+          }
+        }
+
+        &__bed-size {
+          .label {
+            &__hint {
+              @include font-weight(normal);
+            }
+          }
+
+          .unified-size-block,
+          .different-sizes-block {
+            margin-top: rem(8);
+
+            .no-error {
+              border: 1px solid $color-border;
+            }
+
+            .ant-form-item:nth-last-of-type(1) {
+              margin-bottom: 0;
+            }
+
+            .ant-form-explain {
+              white-space: nowrap;
+            }
+          }
+
+          .bed-size__select {
+            .ant-select-arrow {
+              right: 11px !important;
+            }
+          }
+
+          .x {
+            @include font-style($type-12px, $type-32px, $color-silver-chalice);
+            text-align: center;
+          }
+
+          .row-wrapper {
+            position: relative;
+
+            &:not(:nth-last-of-type(1)) {
+              margin-bottom: 1rem;
+            }
+
+            .icon-delete {
+              position: absolute;
+              top: 50%;
+              right: rem(-20);
+              transform: translate(50%, -50%);
+              color: $color-silver-sand;
+              cursor: pointer;
+            }
+          }
+
+          .add-new-size {
+            @include font-style($type-14px, $type-20px, $color-keppel);
+            display: inline-block;
+            margin-top: rem(8);
+          }
+
+        }
+      }
+
+      .unit-details {
+        .ant-calendar-month-panel-body,
+        .ant-calendar-year-panel-body {
+          height: calc(100% - 40px);
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      align-items: center;
+      justify-content: space-between;
+      height: rem(56);
+      padding: rem(12) rem(40);
+      background-color: $color-white;
+      z-index: $z-high;
+
+      .icons {
+        .icon-copy {
+          margin-right: rem(16);
+          color: $color-silver-sand;
+          cursor: not-allowed;
+          // pointer-events: none;
+
+          &--active {
+            color: $color-keppel;
+            cursor: pointer;
+            pointer-events: all;
+          }
+        }
+
+        .icon-delete {
+          color: $color-keppel;
+          cursor: pointer;
+        }
+      }
+
+      .confirm-button {
+        margin-left: rem(5);
+      }
+    }
+  }
+
+  &__list-wrapper {
+    .filter {
+      display: flex;
+      position: absolute;
+      top: 0;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: rem(17) rem(24) rem(14);
+      z-index: $z-high;
+
+      .ant-dropdown-trigger {
+        cursor: pointer;
+      }
+
+      &__label {
+        @include font-style($type-14px, $type-20px, $color-silver-chalice);
+        @include font-weight(bold);
+        display: inline-block;
+        min-width: rem(103);
+        margin-right: rem(4);
+      }
+
+      &__select {
+        height: rem(24);
+      }
+
+      &__show-rooms-with-listings {
+        flex: 1;
+        padding-left: rem(33);
+
+        .ant-checkbox-wrapper {
+          @include font-style($type-14px, $type-24px, $color-silver-chalice);
+          @include font-weight(bold);
+        }
+      }
+
+      .ant-select-selection--single {
+        height: rem(24);
+      }
+
+      .ant-select-selection__rendered {
+        line-height: $type-24px;
+      }
+    }
+
+    .list {
+      .room-name-col {
+        @include font-style($type-14px, $type-24px, $color-tundora);
+        @include font-weight(bold);
+        max-width: rem(300);
+        padding-left: rem(24);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .edit-icon-col {
+        min-width: rem(160);
+        padding-right: rem(24);
+      }
+
+      .icon {
+        color: $color-keppel;
+        cursor: pointer;
+
+        &.icon-copy {
+          position: relative;
+          margin: 0 rem(20);
+          padding: 0 rem(15);
+
+          &::after,
+          &::before {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            width: 2px;
+            height: rem(8);
+            transform: translateY(-50%);
+            background-color: $color-mercury;
+            content: '';
+          }
+
+          &::before {
+            left: 0;
+          }
+
+          &::after {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .room-modal {
+    &__tilde {
+      padding: 0;
+      border-left: 0;
+      background-color: $color-white;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    &__label {
+      @include font-style($type-14px, $type-24px, $color-tundora);
+      @include font-weight(bold);
+
+      margin-bottom: rem(4);
+    }
+
+    &__room-size-max {
+      .ant-form-explain {
+        display: none;
+      }
+    }
+
+    &__room-size-input {
+      z-index: $z-base;
+
+      &:hover,
+      &:focus {
+        z-index: $z-big;
+      }
+    }
+  }
+
+  &__tips-icon {
+    margin-left: rem(12);
+    color: $color-keppel;
+  }
+}

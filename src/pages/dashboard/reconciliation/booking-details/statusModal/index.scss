@@ -1,0 +1,54 @@
+$color-border: #d9d9d9;
+$color-black-alph043: #000000;
+$color-fontgray: rgba($color-black-alph043, 0.43);
+
+.reconciliation-bkdetails {
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    padding-bottom: rem(20);
+  }
+
+  .form-maxheight {
+    max-height: rem(800);
+    overflow-y: scroll;
+  }
+
+  .limit-number {
+    color: $color-silver-chalice;
+    font-size: $type-10px;
+    text-align: right;
+  }
+
+  .textarea-box {
+    height: rem(96) !important;
+  }
+
+  &__files {
+
+    .files-uploadbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: rem(72);
+      background-color: $color-desert-storm;
+
+      .files-icons-add {
+        padding: 0   rem(24);
+        font-size: $type-24px;
+        cursor: pointer;
+      }
+
+      .files-box-desc {
+        > div {
+          font-size: $type-12px;
+
+          &:nth-child(2) {
+            color: $color-fontgray;
+          }
+        }
+      }
+    }
+  }
+}
+
+

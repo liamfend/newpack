@@ -1,0 +1,131 @@
+.property-address {
+  $type-38px: 38px;
+  $color-lochinvar: #2b948a;
+  $color-torch-red: #f5222d;
+
+  width: rem(568);
+  margin: 0 auto;
+
+  &__search-container {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    vertical-align: bottom;
+
+    &--expand {
+      width: rem(568);
+    }
+  }
+
+  &__google-search-container {
+    margin-bottom: rem(16);
+  }
+
+  &__search-icon-container {
+    position: relative;
+    width: rem(40);
+    height: rem(40);
+    margin-right: rem(8);
+    transition: width 0.4s, height 0.4s, border-radius 0.4s, background-color 0.4s, box-shadow 0.4s;
+    border: 0;
+    border-radius: rem(38);
+    background-color: $color-keppel;
+    box-shadow: 0 2px 8px 0 rgba($color-lochinvar, 0.31);
+
+    &--expand {
+      width: rem(568);
+      height: rem(40);
+      border-radius: 2px;
+      background-color: $color-white;
+      box-shadow: none;
+    }
+  }
+
+  &__search-label {
+    @include font-style($type-14px, $type-38px, $color-keppel);
+    position: absolute;
+    top: 50%;
+    left: rem(50);
+    transform: translateY(-50%);
+    transition: opacity 0.4s;
+    white-space: nowrap;
+    opacity: 1;
+
+    &--expand {
+      opacity: 0;
+    }
+  }
+
+  &__search-autocomplete {
+    display: none;
+
+    .ant-input {
+      padding-left: rem(44) !important;
+    }
+
+    &--expand {
+      display: block;
+      z-index: $z-mid;
+    }
+  }
+
+  &__search-icon {
+    position: absolute;
+    top: 50%;
+    left: rem(11);
+    transform: translateY(-50%);
+    transition: color 0.4s;
+    color: $color-white;
+    font-size: $type-20px;
+    z-index: $z-big;
+
+    &--expand {
+      left: rem(11);
+      color: $color-keppel;
+    }
+  }
+
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(4);
+  }
+
+  .ant-form-item {
+    margin-bottom: rem(16);
+  }
+
+  .ant-form-item-with-help {
+    margin-bottom: rem(0);
+  }
+
+  .ant-form-explain {
+    @include font-style($type-14px, $type-18px, $color-torch-red);
+    min-height: rem(18);
+    margin: rem(2) 0 rem(16);
+  }
+
+  .map-label {
+    @include font-weight(bold);
+    color: $color-tundora;
+  }
+
+  .ant-input {
+    height: rem(40);
+    padding: rem(10) rem(11);
+    line-height: $type-16px;
+  }
+
+  .reset-pin-btn {
+    margin-left: rem(8);
+    float: none !important;
+  }
+
+  &__hidden {
+    display: none;
+  }
+}

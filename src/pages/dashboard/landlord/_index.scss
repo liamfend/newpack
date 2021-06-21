@@ -1,0 +1,13 @@
+.landlord-management {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    min-height: rem(40);
+    margin-bottom: rem(16);
+  }
+
+  &__count {
+    @include font-style($type-24px, $type-28px, $color-tundora);
+    @include font-weight(bold);
+  }
+}

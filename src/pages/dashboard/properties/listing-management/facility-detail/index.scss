@@ -1,0 +1,94 @@
+
+.facility-tab {
+  padding: rem(25) rem(24);
+
+  &__title {
+    @include font-style($type-16px, $type-16px, rgba($color-black, 0.85));
+    @include font-weight(bold);
+    margin-bottom: rem(16);
+    padding-left: rem(8);
+    border-left: $color-keppel solid 3px;
+  }
+
+  &__radio-group-title {
+    @include font-style($type-12px, $type-20px, $color-silver-sand);
+    margin-bottom: rem(4);
+  }
+
+  &__other-item-container,
+  &__radio-group-container,
+  &__check-item-container {
+    display: inline-block;
+    width: 33.33%;
+    margin-bottom: rem(9);
+    float: left;
+
+    .ant-radio-wrapper,
+    .ant-checkbox-wrapper {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+    }
+  }
+
+  &__check-item-container-clear {
+    clear: both;
+  }
+
+  &__other-item-container {
+    .ant-form-explain {
+      display: none;
+    }
+  }
+
+  &__radio-group-container {
+    margin-bottom: rem(16);
+  }
+
+  &__radio-item-container {
+    margin-bottom: rem(12);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__check-block,
+  &__radio-block {
+    @include clearfix;
+  }
+
+  &__check-block {
+    margin-bottom: rem(8);
+  }
+
+  &__type-block {
+    padding-bottom: rem(19);
+  }
+
+  &__block {
+    margin-bottom: rem(28);
+    border-bottom: solid 1px $color-mercury;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .ant-form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__radio-group {
+    width: 100%;
+
+    .ant-radio-wrapper {
+      width: 100%;
+      white-space: initial;
+    }
+  }
+
+  &__tips-icon {
+    margin-left: rem(12);
+    color: $color-keppel;
+  }
+}

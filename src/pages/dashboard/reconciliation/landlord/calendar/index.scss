@@ -1,0 +1,109 @@
+ $color-gray-border: #e8e8e8;
+
+.reconciliation-cards {
+  width: rem(380);
+  margin-bottom: rem(16);
+  padding: rem(8) rem(12);
+  border: solid 1px $color-gray-border;
+  background-color:  $color-white;
+
+  .ant-input {
+    padding:  4px 11px;
+  }
+
+  .title {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: rem(8);
+
+    .cdicon {
+      width: 16px;
+      height: 16px;
+      margin-right: rem(9);
+
+    }
+
+    .cdicon ,
+    span {
+      color: $color-silver-chalice;
+      fill: $color-silver-chalice;
+    }
+
+    .closebtn {
+      margin-left: auto;
+    }
+  }
+
+  .value {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+
+    &__name-count {
+      display: none;
+    }
+  }
+
+  .cards-select-box {
+    display: inline-block;
+    margin-right: rem(10);
+    padding: 0 rem(5);
+    border: solid 1px $color-gray-border;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: flex-end;
+    margin: rem(16) 0;
+
+    .ant-btn {
+      margin-left: rem(12);
+    }
+  }
+
+  .ant-calendar-range-picker-input {
+    text-align: left;
+  }
+
+  // sass-lint:disable no-vendor-prefixes
+  input::-webkit-input-placeholder {
+    font-size: $type-12px;
+  }
+
+  .ant-calendar-range-picker-separator {
+    margin-right: rem(20);
+  }
+}
+
+.recon-cards-done {
+  min-height: rem(56);
+}
+
+.recon-cards-small {
+  width: rem(214);
+  min-height: rem(56);
+  margin-right: rem(10);
+  margin-bottom: rem(12);
+  font-size: $type-12px;
+
+  .value {
+    position: relative;
+
+    &--property-name {
+      position: relative;
+      width: 100%;
+      padding-right: rem(24);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &__name-count {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $color-keppel;
+    }
+  }
+}

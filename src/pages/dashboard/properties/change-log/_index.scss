@@ -1,0 +1,86 @@
+.property-change-log {
+  height: 100%;
+
+  &__loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: rem(50);
+    background-color: $color-white;
+    text-align: center;
+    z-index: 100;
+  }
+
+  &__tabs-wrap {
+    position: relative;
+    min-width: rem(1048);
+    height: calc(100vh - 260px);
+    min-height: rem(500);
+    margin: rem(32) rem(32) rem(62);
+    padding: rem(32) rem(48);
+    border: 1px solid $color-mercury;
+    background: $color-white;
+
+    .ant-tabs {
+      height: 100%;
+    }
+
+    .ant-tabs-bar {
+      border-bottom: 1px solid $color-mercury;
+    }
+
+    .ant-tabs-tab {
+      @include font-style($type-14px, $type-20px, $color-silver-chalice);
+      padding: rem(14) rem(20);
+
+      &.ant-tabs-tab-active {
+        @include font-style($type-14px, $type-20px, $color-tundora);
+      }
+    }
+
+    .ant-tabs-content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__container {
+    width: rem(660);
+    margin: 0 auto;
+  }
+
+  &__coming-soon-tag {
+    position: absolute;
+    top: rem(32);
+    left: rem(950);
+    width: rem(48);
+    height: rem(48);
+    z-index: $z-low;
+  }
+
+  &__content-wrap {
+    margin-left: rem(190);
+  }
+
+  &__icon {
+    width: rem(129);
+    height: rem(129);
+    float: left;
+  }
+
+  &__title {
+    @include font-style($type-24px, $type-32px, $color-tundora);
+    margin-bottom: rem(16);
+  }
+
+  &__description {
+    @include font-style($type-16px, $type-28px, $color-tundora);
+    margin-bottom: rem(20);
+  }
+
+  &__go-to-check {
+    @include font-weight(bold);
+    padding: 0 rem(20);
+  }
+}

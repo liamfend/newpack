@@ -1,0 +1,60 @@
+.address__map {
+  position: relative;
+
+  &__coordinate {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    margin-top: rem(5);
+
+    &--university {
+      float: none;
+    }
+
+    &--city {
+      @include font-style($type-12px, $type-16px, $color-silver-chalice);
+      display: block;
+      margin-top: rem(4);
+      float: left;
+    }
+  }
+
+
+  &__coordinate-error-weak {
+    @include font-style($type-12px, $type-20px, $color-shuttle-gray);
+    @include font-weight(normal);
+    margin: rem(4) 0 rem(8);
+    padding: rem(2) rem(8);
+    border-radius:  2px;
+    background: $color-supernova-bg;
+    animation: showError 0.5s;
+
+    @keyframes showError {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__coordinate-error-weak-icon {
+    margin-right: rem(8);
+  }
+
+  .map-label {
+    @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+    @include font-weight(bold);
+    top: 0;
+    width: 100%;
+    padding-bottom: rem(4);
+
+    .reset-pin-btn {
+      @include font-weight(normal);
+      float: right;
+      outline: 0;
+      color: $color-keppel;
+      cursor: pointer;
+    }
+  }
+}

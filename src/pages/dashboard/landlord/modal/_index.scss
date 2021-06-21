@@ -1,0 +1,179 @@
+$color-torch-red: #f5222d;
+
+.landlord-action-modal {
+  z-index: $z-high;
+
+  .landlord-info {
+    width: rem(880);
+    margin: rem(48) auto;
+    background-color: $color-white;
+
+    &__header {
+      @include font-style($type-18px, $type-24px, $color-silver-chalice);
+      position: relative;
+      padding: rem(32);
+    }
+
+    &__close-button {
+      position: absolute;
+      top: rem(32);
+      right: rem(32);
+    }
+
+    &__body {
+      padding: 0 rem(32);
+      overflow-y: auto;
+
+      .address__map {
+        display: none;
+      }
+
+      .ant-radio-group {
+        @include font-style($type-12px, $type-32px, $color-tundora);
+      }
+    }
+
+    .ant-form-item-label label {
+      @include font-style($type-12px, $type-24px, $color-tundora);
+      @include font-weight(bold);
+      display: block;
+    }
+
+    &__section {
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-bottom: rem(24);
+      }
+    }
+
+    &__section-title {
+      @include font-style($type-16px, $type-24px, rgba($color-black, 0.85));
+      @include font-weight(bold);
+      position: relative;
+      margin-bottom: rem(16);
+      padding-left: rem(11);
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: rem(3);
+        height: rem(16);
+        transform: translateY(-50%);
+        background-color: $color-keppel;
+        content: '';
+      }
+    }
+
+    &__footer {
+      padding: rem(12) rem(32);
+      border-top: 1px solid $color-mercury;
+      text-align: right;
+    }
+
+    &__cancel-button {
+      margin-right: rem(24);
+    }
+
+    &__properties {
+      @include font-style($type-12px, $type-24px, $color-tundora);
+      margin-bottom: rem(12);
+      padding: rem(16) rem(12);
+      background-color: $color-desert-storm;
+
+      .ant-form-explain {
+        margin-top: rem(8);
+      }
+    }
+
+    &__btns {
+      float: right;
+    }
+
+    &__btn {
+      @include font-style($type-12px, $type-24px, $color-keppel);
+      display: inline-block;
+      padding: 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      &--disabled {
+        color: $color-silver-sand;
+      }
+
+      &--deteted {
+        margin-right: rem(32);
+      }
+
+      &--add {
+        margin-bottom: rem(16);
+      }
+    }
+
+    &__label {
+      @include font-style($type-12px, $type-24px, $color-shuttle-gray);
+      @include font-weight(bold);
+      display: block;
+      margin: 0 0 rem(4);
+    }
+
+    &__access-to {
+      padding-left: rem(322);
+    }
+
+    &__countdown {
+      margin: rem(16) 0 rem(20);
+
+    }
+
+    &__countdown-input {
+      width: rem(80);
+      margin-right: rem(12);
+    }
+
+    &__label-text {
+      @include font-style($type-12px, $type-32px, $color-tundora);
+    }
+
+    &__err-tips {
+      @include font-style($type-12px, $type-16px, $color-torch-red);
+      margin: rem(8) 0 0;
+      padding: 0;
+    }
+
+    &__divider {
+      margin: rem(20) 0 rem(12);
+    }
+
+    &__property-btns {
+      text-align: right;
+    }
+
+    &__radio-text {
+      @include font-style($type-12px, $type-32px, $color-tundora);
+      margin-right: rem(32);
+    }
+
+    &__radio-tooltip {
+      left: rem(314) !important;
+
+      &--no {
+        left: rem(404) !important;
+      }
+    }
+
+    &__disable-tips {
+      color: $color-supernova-dark;
+    }
+
+    &__disable-btn {
+      max-width: rem(300);
+      border: 0;
+      background-color: transparent;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}

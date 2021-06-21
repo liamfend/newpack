@@ -1,0 +1,142 @@
+$color-torch-red: #f5222d;
+
+.auth {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: rem(968);
+  background: $color-white url('/login-footer.png') no-repeat;
+  background-position: 43% rem(540);
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    width: rem(1008);
+    margin: rem(104) auto 0;
+    padding: 0 rem(40);
+  }
+
+  &__login-image {
+    display: none;
+    position: absolute;
+    top: rem(84);
+    right: calc(50% - 600px);
+    width: rem(760);
+
+    @include respond-to(medium-and-up) {
+      display: inline-block;
+    }
+  }
+
+  &__headline {
+    @include font-style($type-32px, $type-48px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0 0 rem(48);
+    padding-bottom: rem(32);
+    border-bottom: 1px solid $color-mercury;
+
+    &--set-password {
+      @include font-style($type-28px, $type-48px, $color-tundora);
+    }
+  }
+
+  &__label {
+    @include font-style($type-18px, $type-28px, $color-tundora);
+    @include font-weight(bold);
+    padding-bottom: rem(12);
+  }
+
+  &__forget-password {
+    float: right;
+    font-size: $type-14px;
+    line-height: $type-28px;
+  }
+
+  &__login-button {
+    @include font-style($type-14px, $type-24px, $color-white);
+    @include font-weight(bold);
+    min-width: rem(138);
+    height: rem(40);
+    padding: 0 rem(40);
+  }
+
+  &__main {
+    width: rem(440);
+
+    &__title {
+      @include font-style($type-32px, $type-48px, $color-tundora);
+      @include font-weight(bold);
+      margin: rem(48) 0 rem(28);
+    }
+
+    &__heading {
+      @include font-style($type-18px, $type-24px, $color-tundora);
+      @include font-weight(normal);
+      margin-bottom: rem(48);
+
+      &--set-password {
+        padding: rem(8);
+        background-color: $color-desert-storm;
+        text-align: center;
+      }
+    }
+
+    &__back {
+      display: flex;
+      align-items: center;
+    }
+
+    .ant-input {
+      height: rem(40);
+
+      &::placeholder {
+        @include font-style($type-16px, $type-28px, $color-silver-chalice);
+      }
+    }
+
+    .ant-form-explain {
+      position: absolute;
+      bottom: rem(-28);
+    }
+
+    .ant-form-item {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__remember {
+    margin: rem(8) 0;
+
+    .ant-checkbox {
+      border-radius: rem(4);
+      overflow: hidden;
+    }
+  }
+
+  &__warning {
+    @include font-style($type-14px, $type-24px, $color-torch-red);
+    margin-bottom: rem(24);
+  }
+
+  &__logo-main {
+    position: absolute;
+    top: rem(888);
+    left: 50%;
+    width: rem(180);
+    height: rem(32);
+    transform: translateX(-50%);
+    color: $color-supernova;
+    fill: $color-white;
+
+
+    @media only screen and (min-height: 1034px) {
+      top: rem(952);
+    }
+  }
+
+  .ant-form-item:last-child {
+    margin-bottom: 0;
+  }
+}

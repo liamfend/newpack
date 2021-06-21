@@ -1,0 +1,222 @@
+@import '../variables';
+@import '../mixins/fonts';
+@import '../helpers/units';
+@import '../grid';
+@import '../svgs';
+
+.button {
+  @include font-weight(bold);
+  display: block;
+  width: 100%;
+  padding: rem(11) rem(23);
+  border: 1px solid $color-supernova;
+  border-radius: 2px;
+  background-color: $color-supernova;
+  color: $color-tundora;
+  font-size: $type-16px;
+  line-height: $type-24px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include respond-to(medium-and-up) {
+    display: inline-block;
+    width: auto;
+  }
+
+  @include respond-to(large-and-up) {
+    padding: rem(11) rem(39);
+  }
+
+  &--arrow {
+    &:after {
+      display: inline-block;
+      width: rem(14);
+      height: rem(11);
+      margin-left: rem(8);
+      background-image: url($svg-arrow-right-tundora);
+      background-repeat: no-repeat;
+      content: '';
+    }
+  }
+
+  &--arrow-right {
+    &:after {
+      background-position: top right;
+      background-size: rem(14) auto;
+      vertical-align: -1px;
+    }
+
+    @include respond-to(large-and-up) {
+      &:after {
+        display: none;
+      }
+
+      &:hover {
+        padding-right: rem(28); // 39px padding - 14/2px arrow width - 8/2px margin between arrow and text
+        padding-left: rem(28);
+
+        &:after {
+          display: inline-block;
+        }
+
+      }
+
+      &.button--full {
+        &:after {
+          display: inline-block;
+          width: 0;
+          margin-left: 0;
+          transition: width 0.2s ease-in-out;
+        }
+
+        &:hover {
+          &:after {
+            width: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  &--arrow-up,
+  &--arrow-down {
+    &:after {
+      vertical-align: baseline;
+    }
+
+    @include respond-to(large-and-up) {
+      overflow: hidden; //arrow animation use
+    }
+  }
+
+  &--arrow-up {
+    &:after {
+      transform: rotate(-90deg);
+    }
+
+    @include respond-to(large-and-up) {
+      &:hover {
+        &:not([disabled]) {
+          &:after {
+            animation: up-arrow 0.4s ease-in;
+          }
+        }
+      }
+    }
+  }
+
+  &--arrow-down {
+    &:after {
+      transform: rotate(90deg);
+    }
+
+    @include respond-to(large-and-up) {
+      &:hover {
+        &:not([disabled]) {
+          &:after {
+            animation: down-arrow 0.4s ease-in;
+          }
+        }
+      }
+    }
+  }
+
+  &--small {
+    padding: rem(7) rem(23);
+    font-size: $type-14px;
+
+    @include respond-to(large-and-up) {
+      padding: rem(7) rem(39);
+    }
+  }
+
+  &--keppel {
+    border-color: $color-keppel;
+    background-color: $color-keppel;
+    color: $color-white;
+
+    &.button--arrow {
+      &:after {
+        background-image: url($svg-arrow-right-white);
+      }
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $color-tundora;
+
+    &.button--arrow {
+      &:after {
+        background-image: url($svg-arrow-right-tundora);
+      }
+    }
+  }
+
+  &--full {
+    display: block;
+    width: 100%;
+    padding-right: rem(24);
+    padding-left: rem(24);
+  }
+
+  &:disabled {
+    border-color: $color-mercury;
+    background-color: $color-mercury;
+    color: $color-silver-chalice;
+    cursor: inherit;
+
+    &:after {
+      background-image: url($svg-arrow-right-silver-sand);
+    }
+
+    &.button--secondary {
+      border-color: $color-silver-sand;
+      background-color: transparent;
+      color: $color-silver-sand;
+
+      &.button--arrow {
+        &:after {
+          background-image: url($svg-arrow-right-silver-sand);
+        }
+      }
+    }
+  }
+
+  @keyframes down-arrow {
+    0% {
+      transform: rotate(90deg) translateX(0);
+    }
+
+    50% {
+      transform: rotate(90deg) translateX(40px);
+    }
+
+    51% {
+      transform: rotate(90deg) translateX(-40px);
+    }
+
+    100% {
+      transform: rotate(90deg) translateX(0);
+    }
+  }
+
+  @keyframes up-arrow {
+    0% {
+      transform: rotate(-90deg) translateX(0);
+    }
+
+    50% {
+      transform: rotate(-90deg) translateX(40px);
+    }
+
+    51% {
+      transform: rotate(-90deg) translateX(-40px);
+    }
+
+    100% {
+      transform: rotate(-90deg) translateX(0);
+    }
+  }
+}

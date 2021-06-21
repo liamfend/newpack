@@ -1,0 +1,35 @@
+.loading {
+  &__bounce {
+    display: inline-block;
+    width: rem(8);
+    height: rem(8);
+    margin-right: rem(8);
+    border-radius: 100%;
+    background-color: $color-white;
+    animation: sk-bouncedelay 1s infinite ease-in-out both;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__bounce1 {
+    animation-delay: -0.32s;
+  }
+
+  &__bounce2 {
+    animation-delay: -0.16s;
+  }
+
+  @keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+      transform: scale(0);
+    }
+
+    40% {
+      transform: scale(1);
+    }
+  }
+}

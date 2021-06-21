@@ -1,0 +1,78 @@
+.add-property {
+  &__title {
+    @include font-style($type-14px, $type-24px, $color-shuttle-gray);
+    @include font-weight(bold);
+
+    padding-bottom: 8px;
+  }
+
+  &__unit-type-container {
+    display: inline-block;
+  }
+
+  &__icon {
+    margin-right: 12px;
+    margin-left: 12px;
+    font-size: $type-18px;
+    cursor: pointer;
+  }
+
+  &__icon-red {
+    color: $color-terracotta;
+    font-size: $type-18px;
+    cursor: pointer;
+  }
+
+  &__plus-icon {
+    color: $color-keppel;
+    font-size: $type-24px;
+    cursor: pointer;
+  }
+
+  &__city {
+    margin-left: 15px;
+    color: $color-silver-chalice;
+  }
+
+  &__option {
+    width: auto;
+
+    &.ant-select-dropdown-menu-item {
+      padding-right: 30px;
+    }
+  }
+
+  &__select-small {
+    width: 236px;
+  }
+
+  &__select-large {
+    width: 100%;
+    max-width: rem(535);
+  }
+
+  &__select {
+    width: 256px;
+  }
+
+  &__search {
+    width: 256px;
+
+    .ant-select-search--inline {
+      display: block !important;
+    }
+
+    .ant-select-selection-selected-value {
+      display: block !important;
+    }
+  }
+
+  &__unit-type {
+    margin-bottom: 20px;
+  }
+
+  &__modal {
+    width: 1000px !important;
+    min-height: 346px;
+  }
+}

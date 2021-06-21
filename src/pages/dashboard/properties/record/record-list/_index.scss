@@ -1,0 +1,128 @@
+$color-alabaster: #fafafa;
+
+.record-list {
+  min-width: rem(852);
+  border-right: 1px solid $color-mercury;
+  border-left: 1px solid $color-mercury;
+
+  &__outer-box {
+    min-width: rem(850);
+    background-color: $color-white;
+  }
+
+  &__each-box {
+    height: rem(49);
+    padding-left: rem(20);
+    border-bottom: 1px solid $color-mercury;
+    outline: none;
+
+    &:hover {
+      background-color: $color-keppel-bg;
+      cursor: default;
+    }
+
+    &--bg {
+      background-color: $color-keppel-bg;
+    }
+  }
+
+  &__icon-down {
+    display: inline-block;
+  }
+
+  .anticon-down {
+    position: absolute;
+    top: 50%;
+    margin-right: rem(32);
+    transform: translate(0, -40%);
+    color: $color-silver-chalice;
+  }
+
+  .anticon-up {
+    position: absolute;
+    top: 50%;
+    margin-right: rem(32);
+    transform: translate(0, -40%);
+    color: $color-silver-chalice;
+  }
+
+  &__note-title {
+    @include font-style($type-14px, $type-28px, $color-tundora);
+    display: inline-block;
+    width: 80%;
+    margin-top: rem(10);
+    margin-left: rem(48);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__update-time {
+    @include font-style($type-12px, $type-28px, $color-silver-chalice);
+    display: inline-block;
+    margin-top: rem(10);
+  }
+
+  &__btn-box {
+    display: inline-block;
+    margin-top: rem(14);
+
+    .listings-tab__edit-listing-btn {
+      border-right: 1px solid $color-mercury;
+    }
+  }
+
+  &__desc {
+    padding: rem(20);
+    border-bottom: 1px solid $color-mercury;
+    background-color: $color-alabaster;
+  }
+
+  &__full-note {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(12);
+  }
+
+  &__desc-text {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    margin-bottom: rem(12);
+  }
+
+  &__stage {
+
+    &--before {
+      @include font-style($type-12px, $type-16px, $color-ship-cove);
+      @include font-weight(bold);
+      display: inline-block;
+      padding: rem(2) rem(12);
+      background-color: $color-ship-cove-bg;
+    }
+
+    &--current {
+      @include font-style($type-12px, $type-16px, $color-keppel);
+      @include font-weight(bold);
+      display: inline-block;
+      padding: rem(2) rem(12);
+      background-color: $color-keppel-bg;
+    }
+
+    .anticon-arrow-right {
+      margin: 0 rem(8);
+      color: $color-tundora;
+    }
+  }
+
+  &__desc-bottom {
+    margin-top: rem(12);
+
+    span {
+      @include font-style($type-12px, $type-16px, $color-silver-chalice);
+      display: inline-block;
+    }
+  }
+
+  &__interval {
+    margin: 0 rem(5);
+  }
+}

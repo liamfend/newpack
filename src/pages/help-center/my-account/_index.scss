@@ -1,0 +1,13 @@
+.my-account {
+  height: 100%;
+  padding: rem(40);
+  overflow: auto;
+
+  .center-style__note {
+    margin-top: 0;
+  }
+
+  .center-style__title {
+    margin-bottom: rem(16);
+  }
+}

@@ -1,0 +1,59 @@
+.photos-videos {
+  height: 100%;
+  overflow: auto;
+
+  &__description {
+    @include font-style($type-12px, $type-20px, $color-silver-chalice);
+    margin: 0;
+    padding: rem(24) rem(24) rem(24) rem(40);
+  }
+
+  &__label {
+    @include font-weight(bold);
+  }
+
+  &__collapse {
+    border: none;
+    background-color: transparent;
+
+    .ant-collapse-item {
+      margin-bottom: rem(16);
+      border: none;
+    }
+
+    .ant-collapse-content {
+      border: none;
+    }
+
+    .ant-collapse-item > .ant-collapse-header {
+      @include font-style($type-14px, $type-20px, $color-tundora);
+      @include font-weight(bold);
+      background-color: $color-desert-storm;
+
+      svg {
+        fill: $color-keppel;
+      }
+    }
+
+    .ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header {
+      padding-left: rem(24);
+    }
+
+    .ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+      right: rem(20);
+    }
+
+    .ant-form-vertical .ant-form-item {
+      padding: 0;
+    }
+  }
+
+  &__with-listings {
+    text-align: center;
+
+    span {
+      @include font-style($type-12px, $type-16px, $color-keppel);
+      cursor: pointer;
+    }
+  }
+}

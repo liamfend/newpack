@@ -1,0 +1,98 @@
+{
+  "1001": {
+    "description": "E-mail invalid message: Please enter a valid email address",
+    "key": "global.form_input.email.invalid_message"
+  },
+  "1002": {
+    "description": "E-mail blank message: Please enter a valid email address",
+    "key": "global.form_input.email.blank_message"
+  },
+  "1011": {
+    "description": "First name blank message: Please enter a valid first name",
+    "key": "global.form_input.first_name.blank_message"
+  },
+  "1012": {
+    "description": "Last name blank message: Please enter a valid last name",
+    "key": "global.form_input.last_name.blank_message"
+  },
+  "1021": {
+    "description": "Phone number invalid message: Please enter a valid phone number",
+    "key": "global.form_input.phone_number.invalid_message"
+  },
+  "1031": {
+    "description": "Gender invalid message: Please enter a valid gender",
+    "key": "global.form_input.gender.blank_message"
+  },
+  "1041": {
+    "description": "Date of birth invalid message: Please enter a valid date of birth",
+    "key": "global.form_input.date_of_birth.invalid_message"
+  },
+  "1051": {
+    "description": "Nationality invalid message: Please enter a valid nationality",
+    "key": "account.application_details.form_input.nationality.blank_message"
+  },
+  "1061": {
+    "description": "Current school message: Please enter a valid current school",
+    "key": "account.application_details.form_input.current_school.blank_message"
+  },
+  "1071": {
+    "description": "Move in month invalid message: Please enter a valid move in month",
+    "key": "global.form_input.move_in_month.invalid_message"
+  },
+  "1081": {
+    "description": "Destination university invalid message: Please enter a valid destination university",
+    "key": "global.form_input.destination_uni_other.blank_message"
+  },
+  "1091": {
+    "description": "Academic year invalid message: Please enter a valid academic year",
+    "key": "account.application_details.form_input.academic_year.blank_message"
+  },
+  "1101": {
+    "description": "Study major invalid message: Please enter a valid study major",
+    "key": "account.application_details.form_input.study_major.blank_message"
+  },
+  "1111": {
+    "description": "Address invalid message: Please enter a valid Address",
+    "key": "global.form_input.address_line_1.blank_message"
+  },
+  "1121": {
+    "description": "City invalid message: Please enter a valid city",
+    "key": "global.form_input.city.blank_message"
+  },
+  "1131": {
+    "description": "State invalid message: Please enter a valid state",
+    "key": "global.form_input.state.blank_message"
+  },
+  "1141": {
+    "description": "Post code invalid message: Please enter a valid post code",
+    "key": "global.form_input.post_code.blank_message"
+  },
+  "1151": {
+    "description": "Country invalid message: Please enter a valid country",
+    "key": "account.application_details.form_input.country.blank_message"
+  },
+  "1161": {
+    "description": "Guarantor first name invalid message: Please enter a valid guarantor first name",
+    "key": "account.application_details.form_input.guarantor_first_name.blank_message"
+  },
+  "1162": {
+    "description": "Guarantor last name invalid message: Please enter a valid guarantor last name",
+    "key": "account.application_details.form_input.guarantor_last_name.blank_message"
+  },
+  "1171": {
+    "description": "Relationship with student invalid message: Please enter a valid relationship whit student",
+    "key": "account.application_details.form_input.relationship_with_student.blank_message"
+  },
+  "1181": {
+    "description": "Preference invalid message: Please enter a valid preference",
+    "key": "account.application_details.form_input.preference.blank_message"
+  },
+  "1191": {
+    "description": "City invalid message: Please enter a valid city",
+    "key": "partner.application_page.form.city_of_study.invalid_message"
+  },
+  "1201": {
+    "description": "Move out month invalid message: Please enter a valid move out month",
+    "key": "global.form_input.move_out_month.invalid_message"
+  }
+}

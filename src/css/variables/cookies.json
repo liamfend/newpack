@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "name": "STUDENTPORSESSION",
+    "path": "/"
+  },
+  "partnerInfo": {
+    "name": "partner_info",
+    "path": "/"
+  }
+}

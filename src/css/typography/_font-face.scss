@@ -1,0 +1,35 @@
+$file-path: '//cdn.student.com/dist/fonts/avenir-next';
+
+@font-face {
+  font-family: 'Avenir Next W04_n4';
+  src: url('#{$file-path}/483d8937-5e17-4378-9c51-aa91a3d9e1eb.eot?#iefix') format('eot');
+}
+
+@font-face {
+  font-family: 'Avenir Next W04';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$file-path}/483d8937-5e17-4378-9c51-aa91a3d9e1eb.eot?#iefix');
+  src: url('#{$file-path}/483d8937-5e17-4378-9c51-aa91a3d9e1eb.eot?#iefix') format('eot'),
+  url('#{$file-path}/ed4b9060-b5ab-4379-8840-0b50a15258b7.woff2') format('woff2'),
+  url('#{$file-path}/9b47db0b-77fb-4bb0-b5c2-3c131a36fc4d.woff') format('woff'),
+  url('#{$file-path}/9c8b7e5f-b3ca-435d-a197-b3dfeae277a1.ttf') format('truetype'),
+  url('#{$file-path}/0f72ee75-31c8-42ba-b262-3e13b83a8fdf.svg#0f72ee75-31c8-42ba-b262-3e13b83a8fdf') format('svg');
+}
+
+@font-face {
+  font-family: 'Avenir Next W04_n5';
+  src: url('#{$file-path}/47d79f32-82c5-4a74-9646-5150297aabc1.eot?#iefix') format('eot');
+}
+
+@font-face {
+  font-family: 'Avenir Next W04';
+  font-style: normal;
+  font-weight: 500;
+  src: url('#{$file-path}/47d79f32-82c5-4a74-9646-5150297aabc1.eot?#iefix');
+  src: url('#{$file-path}/47d79f32-82c5-4a74-9646-5150297aabc1.eot?#iefix') format('eot'),
+  url('#{$file-path}/249228f0-61ac-40cc-a5a5-5609c9816e3f.woff2') format('woff2'),
+  url('#{$file-path}/efba18ed-80cc-49c4-997a-fbb140739d19.woff') format('woff'),
+  url('#{$file-path}/750a20ec-9242-42a8-b3bd-c4dcec552196.ttf') format('truetype'),
+  url('#{$file-path}/9505c912-495c-462c-899a-e61574ee9559.svg#9505c912-495c-462c-899a-e61574ee9559') format('svg');
+}

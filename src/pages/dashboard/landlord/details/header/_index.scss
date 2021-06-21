@@ -1,0 +1,62 @@
+.landlord-header {
+  padding: rem(16) rem(32) 0;
+  border-top: 1px solid $color-mercury;
+  border-bottom: 1px solid $color-mercury;
+  background: $color-white;
+
+  &__name {
+    margin: rem(16) 0 rem(10);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__info-wrap {
+    @include clearfix;
+  }
+
+  &__info {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    margin: rem(4) 0;
+  }
+
+  &__tab-wrap {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    margin-top: rem(8);
+
+    .ant-tabs-bar {
+      margin: 0;
+      border-bottom: 0;
+    }
+
+    .ant-tabs-tab-active {
+      @include font-weight(bold);
+    }
+
+    .ant-tabs-tab {
+      padding: rem(12) rem(8);
+    }
+
+    .ant-tabs-content {
+      display: none;
+    }
+
+    .ant-tabs-nav-container {
+      margin-bottom: 0;
+    }
+  }
+
+  &__upload-contract {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+    margin-left: rem(8);
+    padding: 0 rem(8);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+
+    &--disable {
+      @include font-style($type-14px, $type-24px, $color-silver-chalice);
+      cursor: not-allowed;
+    }
+  }
+}

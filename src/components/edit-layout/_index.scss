@@ -1,0 +1,97 @@
+.edit-layout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &__header-container {
+    @include clearfix();
+    margin-bottom: rem(16);
+  }
+
+  &__summary-container {
+    float: left;
+  }
+
+  &__summary-name {
+    @include font-style($type-18px, $type-28px, $color-tundora);
+    min-height: rem(28);
+    margin: 0;
+    font-style: italic;
+  }
+
+  &__summary-status {
+    @include font-style($type-12px, $type-16px, $color-white);
+    @include font-weight(bold);
+    margin: 0;
+    padding: rem(2) rem(4);
+    border-radius: 2px;
+    background: $color-silver-chalice;
+
+    &--green {
+      background: $color-emerald;
+    }
+  }
+
+  &__action-container {
+    float: right;
+  }
+
+  &__action-btn {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+
+    &--save {
+      margin-right: rem(16);
+      padding: rem(7) rem(47);
+      border: solid 1px $color-keppel;
+      border-radius: 2px;
+      color: $color-keppel;
+    }
+
+    &--review {
+      padding: rem(8) rem(48);
+      border-radius: 2px;
+      background: $color-keppel;
+      color: $color-white;
+    }
+
+    &--close {
+      @include font-weight(bold);
+      margin-right: rem(32);
+    }
+  }
+
+  &__content-container {
+    height: calc(100% - 60px);
+  }
+
+  &__warning {
+    width: rem(218);
+    padding: rem(4) 0;
+
+    &__icon {
+      margin-top: rem(4);
+      float: left;
+      color: $color-supernova-dark;
+    }
+
+    &__text {
+      margin: 0  0 rem(16) rem(20);
+    }
+
+    &__btn-wrapper {
+      height: rem(32);
+    }
+
+    &__btn {
+      float: right;
+    }
+  }
+}

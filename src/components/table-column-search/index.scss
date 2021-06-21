@@ -1,0 +1,26 @@
+.table-list {
+
+  &__country-name {
+    margin-left: rem(16);
+    color: $color-silver-chalice;
+  }
+
+  &__unpublished {
+    margin-left: rem(16);
+  }
+}
+
+.ant-select-dropdown {
+  border-radius: 0 !important;
+}
+
+.ant-select-dropdown-menu-item {
+
+  &:first-child {
+    border-radius: 0 !important;
+  }
+
+  &:last-child {
+    border-radius: 0 !important;
+  }
+}

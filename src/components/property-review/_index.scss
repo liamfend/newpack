@@ -1,0 +1,565 @@
+$color-shamrock: #33d16b;
+$color-scarlet: #ea2d00;
+$color-table-body: #fbfbfb;
+
+.property-review {
+  position: absolute;
+  left: calc(50% + 100px);
+  width: rem(880);
+  margin: rem(48) 0;
+  transform: translateX(-50%);
+  background-color: $color-white;
+
+  &--collasped {
+    left: calc(50% + 32px);
+  }
+
+  &__empty-topic {
+    @include font-style($type-14px, $type-24px, $color-silver-chalice);
+    text-align: center;
+  }
+
+  &__header {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    height: rem(76);
+    padding: rem(32) rem(18) rem(32) rem(32);
+
+    &__link {
+      @include font-style($type-12px, $type-24px, $color-keppel);
+      margin-left: rem(20);
+    }
+
+    &__close {
+      position: absolute;
+      top: rem(20);
+      right: rem(32);
+      cursor: pointer;
+    }
+  }
+
+  &__body {
+    padding: 0 rem(32);
+  }
+
+  &__footer {
+    height: rem(64);
+    padding: rem(12) rem(32);
+    text-align: right;
+  }
+
+  &__btn {
+    margin-left: rem(32);
+
+    &--not-primary {
+      border-color: $color-keppel;
+      color: $color-keppel;
+    }
+  }
+
+  &__topic {
+    margin-bottom: rem(24);
+
+    &__title {
+      @include font-style($type-14px, $type-24px, $color-tundora);
+      @include font-weight(bold);
+    }
+
+    &__edit {
+      @include font-style($type-14px, $type-24px, $color-keppel);
+      @include font-weight(normal);
+      float: right;
+      cursor: pointer;
+    }
+
+    &__content {
+      padding: rem(14) rem(20);
+      background-color: $color-desert-storm;
+    }
+  }
+
+  &__item {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    margin: rem(6) 0;
+
+    &__name {
+      @include font-weight(bold);
+      display: inline-block;
+      width: 33.3%;
+      text-align: right;
+      vertical-align: top;
+    }
+
+    &__content {
+      display: inline-block;
+      width: 66.6%;
+      padding-left: rem(12);
+    }
+
+  }
+
+}
+
+.rich-text-viewer {
+
+  &__content {
+    max-height: rem(472);
+    margin-bottom: rem(8);
+    padding: rem(20);
+    background-color: $color-white;
+    overflow-y: auto;
+  }
+
+  &__link {
+    @include font-style($type-12px, $type-24px, $color-keppel);
+    cursor: pointer;
+  }
+}
+
+.room-review {
+  $color-trinidad: #f25202;
+  padding: rem(12);
+  background-color: $color-desert-storm;
+
+  &__container {
+    padding: rem(12);
+  }
+
+  .ant-table-thead > tr {
+    background-color: $color-desert-storm;
+  }
+
+  .ant-table-tbody {
+    background-color: $color-table-body;
+  }
+
+  &__item {
+    position: relative;
+    border: $color-mercury solid 1px;
+    border-bottom: 0;
+
+    &:last-child {
+      border-bottom: $color-mercury solid 1px;
+    }
+
+    &__room {
+      padding: rem(20) rem(24);
+      background-color: $color-white;
+    }
+
+    &__icon-wrapper {
+      display: inline-block;
+      width: rem(16);
+      margin-right: rem(24);
+      cursor: pointer;
+      vertical-align: middle;
+    }
+
+    &__icon {
+      display: inline-block;
+      width: rem(16);
+      height: rem(16);
+    }
+
+    &__text {
+      display: inline-block;
+      max-width: rem(550);
+    }
+
+    &__name {
+      @include font-style($type-14px, $type-24px, $color-tundora);
+      @include font-weight(bold);
+      margin-right: rem(12);
+    }
+
+    &__category {
+      @include font-style($type-14px, $type-24px, $color-silver-chalice);
+      padding-left: rem(12);
+      border-left: $color-silver-chalice solid 1px;
+    }
+
+    &__detail {
+      @include font-style($type-14px, $type-24px, $color-keppel);
+      float: right;
+      cursor: pointer;
+    }
+
+    &__label {
+      margin-right: rem(8);
+    }
+  }
+
+  &__new-label {
+    @include font-style($type-10px, $type-14px, $color-white);
+    @include font-weight(bold);
+    display: inline-block;
+    position: absolute;
+    top: rem(12);
+    left: 0;
+    padding: 0 rem(6);
+    border-radius: 2px;
+    background-color: $color-shamrock;
+  }
+
+  &__new-room-label {
+    @include font-style($type-10px, $type-14px, $color-white);
+    @include font-weight(bold);
+    display: inline-block;
+    margin-right: rem(8);
+    padding: 0 rem(6);
+    border-radius: 2px;
+    background-color: $color-shamrock;
+  }
+
+  &__deleted {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+
+  &__delete-row {
+    opacity: 0.5;
+  }
+
+  &__tenancy {
+    position: relative;
+    padding-left: rem(48);
+
+    &--move-in {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+      margin: 0;
+    }
+
+    &--move-out {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+      margin: 0;
+    }
+  }
+
+  &__listing {
+
+    &__stay {
+      @include font-style($type-12px, $type-18px, $color-tundora);
+      padding: 2px rem(10);
+      background-color: $color-keppel-bg;
+    }
+
+    &__price-min {
+      @include font-style($type-14px, $type-20px, $color-tundora);
+      @include font-weight(bold);
+    }
+
+    &__price-max {
+      @include font-style($type-12px, $type-16px, $color-silver-chalice);
+      margin-left: rem(6);
+      text-decoration: line-through;
+    }
+
+    &__availability {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+
+      &:before {
+        display: inline-block;
+        width: rem(6);
+        height: rem(6);
+        margin: 0 rem(4) 1px 0;
+        border-radius: 50%;
+        background-color: $color-silver-sand;
+        content: '';
+      }
+
+      &--good {
+        &:before {
+          background-color: $color-shamrock;
+        }
+      }
+
+      &--limited {
+        &:before {
+          background-color: $color-scarlet;
+        }
+      }
+    }
+
+    &__place-holder {
+      @include font-style($type-12px, $type-20px, $color-trinidad);
+      margin: 0;
+    }
+
+    &__more {
+      color: $color-keppel;
+    }
+
+    .ant-table-column-title {
+      @include font-style($type-12px, $type-18px, $color-tundora);
+      @include font-weight(bold);
+    }
+
+    .ant-table-row {
+
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    &__label-container {
+      width: rem(34);
+      padding-right: 0 !important;
+    }
+
+    &__other-container {
+      width: rem(14);
+      padding-right: 24px !important;
+    }
+
+    &__tenancy {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+    }
+  }
+
+  &__listing-detail {
+    padding: rem(8) rem(12);
+
+    &__name {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+      @include font-weight(bold);
+      margin-top: rem(4);
+    }
+
+    &__content {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+    }
+  }
+
+  &__detail {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-bottom: rem(20);
+    padding: rem(16) rem(24) rem(24) rem(64);
+    border-top: $color-desert-storm solid 1px;
+    background-color: $color-white;
+    box-shadow: 0 4px 4px 0 rgba($color-black, 0.13);
+    z-index: $z-low;
+
+    &__topic {
+      padding-top: rem(9);
+    }
+
+    &__topic-name {
+      @include font-style($type-12px, $type-14px, $color-tundora);
+      @include font-weight(bold);
+      margin-bottom: rem(9);
+      padding-left: rem(8);
+      border-left: $color-keppel solid 2px;
+    }
+
+    &__field {
+      display: inline-block;
+      width: rem(214);
+      margin-right: rem(12);
+      margin-bottom: rem(12);
+      vertical-align: top;
+
+      &--line {
+        display: block;
+        width: auto;
+      }
+    }
+
+    &__field-name {
+      @include font-style($type-12px, $type-20px, $color-silver-chalice);
+
+    }
+
+    &__field-text {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+      min-height: rem(20);
+    }
+
+    &__field-facility {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+      margin: rem(12) 0;
+    }
+
+    &__no-change {
+      @include font-style($type-12px, $type-20px, $color-silver-chalice);
+      margin: rem(12) 0 rem(8);
+    }
+  }
+
+  .ant-table-thead {
+    th {
+      &:first-child {
+        padding-left: rem(64);
+      }
+    }
+  }
+}
+
+.gallery-review {
+
+  &__modal {
+    width: rem(500);
+    height: rem(275);
+    transform: translate(50%, 0);
+    z-index: $z-overlay;
+  }
+
+  &__in-modal-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__container {
+    margin-bottom: rem(16);
+
+    &__virtual-link {
+      padding: rem(12) rem(16);
+      background-color: $color-white;
+
+      .row {
+        display: flex;
+        align-items: center;
+      }
+
+      &__title {
+        @include font-style($type-12px, $type-24px, $color-silver-chalice);
+        @include font-weight(bold);
+      }
+
+      &__value {
+        @include font-style($type-12px, $type-24px, $color-tundora);
+
+        &.room-section {
+          display: flex;
+
+          .room-value {
+            max-width: 100%;
+          }
+        }
+
+        .vertical-line {
+          padding: 0 rem(4);
+          color: $color-silver-sand;
+        }
+
+        .indicator {
+          margin-left: rem(4);
+          color: $color-keppel;
+          cursor: pointer;
+        }
+      }
+
+      &--disabled {
+        .gallery-review__container__virtual-link__value {
+          color: $color-silver-sand;
+        }
+      }
+
+      &--hidden {
+        height: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &__title {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    margin-bottom: rem(12);
+    vertical-align: middle;
+
+    &:before {
+      display: inline-block;
+      width: rem(4);
+      height: rem(16);
+      margin-right: rem(6);
+      background: $color-keppel;
+      content: '';
+      vertical-align: middle;
+    }
+  }
+
+  &__no-media {
+    display: none;
+  }
+
+  &__sub-title {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-top: rem(4);
+    margin-bottom: rem(8);
+
+    &--delete .gallery-review__no-media {
+      @include font-style($type-12px, $type-32px, $color-silver-chalice);
+      display: block;
+      height: rem(32);
+      margin: 0;
+    }
+  }
+
+  &__img-container {
+    display: inline-block;
+  }
+
+  &__img-container--multiple {
+    position: relative;
+    width: rem(72);
+    height: rem(72);
+    margin-right: rem(12);
+    margin-bottom: rem(12);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__img-item {
+    width: 100%;
+    height: rem(72);
+    border-radius: 2px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__img-modal {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: rem(500);
+    height: rem(275);
+    transform: translate(-50%, -100%);
+  }
+
+  &__img-container--single {
+    width: rem(332);
+    height: rem(96);
+    margin-bottom: rem(12);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__img-item--single {
+    width: 100%; // don't set height here, will cause the issue that image can't expend 100% on firefox
+    border-radius: 2px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__modal-img {
+    width: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__cover {
+    @include font-style(rem(8), $type-14px, $color-white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(30);
+    height: rem(30);
+  }
+}

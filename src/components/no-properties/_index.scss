@@ -1,0 +1,98 @@
+.no-properties {
+  width: 100%;
+  padding: rem(100) 0 rem(156);
+  border: solid 1px $color-mercury;
+  background-color: $color-white;
+  text-align: center;
+
+  &__container {
+    max-width: rem(640);
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include font-style($type-24px, $type-32px, $color-tundora);
+    @include font-weight(normal);
+    max-width: rem(640);
+  }
+
+  &__sub-title {
+    @include font-style($type-24px, $type-32px, $color-tundora);
+    @include font-weight(normal);
+    max-width: rem(640);
+    margin-bottom: rem(32);
+  }
+
+  &__summary-container {
+    display: inline-block;
+    padding-left: rem(72);
+    text-align: left;
+  }
+
+  &__summary {
+    @include font-style($type-18px, $type-28px, $color-tundora);
+    position: relative;
+    max-width: rem(380);
+    margin-bottom: rem(32);
+    padding: rem(10) 0;
+
+    &--listing-and-price {
+      margin-bottom: rem(22);
+    }
+
+    &:last-child {
+      margin-bottom: rem(14);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: rem(-74);
+    width: rem(48);
+    height: rem(48);
+    margin-right: rem(28);
+    transform: translateY(-50%);
+
+    &--tag {
+      left: rem(-69);
+      width: rem(41);
+      height: rem(41);
+    }
+
+    &--image {
+      left: rem(-69);
+      width: rem(40);
+      height: rem(37);
+    }
+  }
+
+  &__add-property-btn-container {
+    text-align: center;
+  }
+
+  &__tip {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    margin: rem(16) 0 0;
+    text-align: center;
+  }
+
+  &__summary-content {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__add-property-btn {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    display: inline-block;
+    padding: rem(12) rem(46);
+    border-radius: 2px;
+    background-color: $color-supernova;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-tundora;
+    }
+  }
+}

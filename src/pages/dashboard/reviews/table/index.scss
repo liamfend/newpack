@@ -1,0 +1,150 @@
+$type-22px: 22px;
+
+.reviews-tab {
+  margin-top: rem(24);
+
+  &__rating {
+    @include font-style($type-16px, $type-22px, $color-tundora);
+    @include font-weight(bold);
+    display: block;
+    position: absolute;
+    top: rem(36);
+    width: rem(44);
+    height: rem(26);
+    margin: auto;
+    padding-top: 2px;
+    border-radius: 2px;
+    background-color: $color-supernova;
+    text-align: center;
+    appearance: none;
+  }
+
+  &__btn-td {
+    position: relative;
+    background-color: $color-white !important;
+  }
+
+  &__date,
+  &__property,
+  &__btn-content {
+    position: absolute;
+    top: rem(38);
+  }
+
+  &__rating--hover {
+    @include font-style($type-16px, $type-22px, $color-tundora);
+    @include font-weight(bold);
+    display: block;
+    position: absolute;
+    top: rem(36);
+    width: rem(44);
+    height: rem(26);
+    margin: auto;
+    padding-top: 2px;
+    border-radius: 2px;
+    background-color: $color-supernova;
+    text-align: center;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  &__text {
+    @include font-style($type-14px, $type-22px, $color-tundora);
+  }
+
+  &__btn {
+    @include font-style($type-14px, $type-22px, $color-keppel);
+    padding: rem(2) rem(8);
+    border: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  &__rating-type {
+    margin: 0;
+    text-align: right;
+
+    svg {
+      width: rem(16) !important;
+    }
+  }
+
+  &__rating-title {
+    @include font-style($type-14px, $type-22px, $color-tundora);
+    margin: 0 rem(8) 0 0;
+  }
+
+  &__content-text {
+    @include font-style($type-14px, $type-22px, $color-tundora);
+    margin: rem(4) 0 rem(16);
+  }
+
+  &__nickname {
+    @include font-weight(bold);
+    margin-bottom: rem(8);
+  }
+
+  &__filter {
+    @include font-style($type-14px, $type-22px, $color-tundora);
+    padding: rem(12);
+    border: solid 1px $color-mercury;
+    border-radius: 2px;
+    background-color: $color-white;
+
+  }
+
+  &__filter-title {
+    display: block;
+    margin-bottom: rem(6);
+  }
+
+  &__search-propery {
+    position: relative;
+  }
+
+  .ant-table-row {
+    height: rem(101) !important;
+  }
+
+  .ant-table-placeholder {
+    border-bottom: 0 !important;
+  }
+
+  .ant-table-body {
+    overflow-x: hidden !important;
+  }
+
+  .ant-input-number-input {
+    padding: rem(8) rem(11) !important;
+  }
+
+  &__filter-content {
+    .ant-input {
+      padding: rem(8) rem(11) !important;
+    }
+  }
+
+  .ant-table-column-has-actions {
+    position: relative;
+    background-color: $color-white !important;
+  }
+
+  &__more {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+  }
+
+  .ant-table-thead > tr > th:nth-child(5) {
+    text-align: center;
+  }
+
+  .ant-table-tbody > tr > td:nth-child(5) {
+    text-align: center;
+    white-space: nowrap;
+  }
+}

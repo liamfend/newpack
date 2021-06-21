@@ -1,0 +1,392 @@
+$color-hit-pink: #fdb48c;
+$color-chateau-green: #49b34f;
+$color-touch-red: #f5222d;
+$color-terracotta: #e16b5e;
+$type-22px: 22px;
+
+.contract-modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: rem(880);
+  min-width: rem(800);
+  height: 70%;
+  max-height: rem(762);
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  background: $color-white;
+
+  &__form {
+    display: none;
+    position: relative;
+    height: 100%;
+
+    &--show {
+      display: block;
+    }
+  }
+
+  &__header-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: rem(32);
+    padding: rem(20) rem(20) 0;
+    background: $color-white;
+    text-align: right;
+    z-index: $z-mid;
+  }
+
+  &__content-container {
+    height: 100%;
+    padding: rem(32) rem(32) 0;
+    overflow-y: scroll;
+  }
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    @include font-weight(normal);
+
+    margin: 0 0 rem(20);
+  }
+
+  &__footer-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: rem(72);
+    padding: rem(16);
+    background: $color-white;
+    text-align: right;
+    box-shadow: inset 0 1px 0 0 $color-mercury;
+    z-index: $z-mid;
+  }
+
+  &__btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: $color-white;
+    cursor: pointer;
+    appearance: none;
+
+    &--keppel {
+      @include font-style($type-14px, $type-24px, $color-white);
+      @include font-weight(bold);
+
+      padding: rem(8) rem(24);
+      border-radius: 2px;
+      background: $color-keppel;
+    }
+  }
+
+  &__checkbox {
+    margin-right: rem(14);
+  }
+
+  &__checkbox-container {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    vertical-align: baseline;
+  }
+
+  .table-list__columns-dropdown {
+    width: 100%;
+    height: rem(32);
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  &__label {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(4);
+  }
+
+  &__row {
+    margin: 0 0 rem(16);
+
+    &:last-child {
+      margin-bottom: rem(92);
+    }
+  }
+
+  .ant-form-item {
+    margin: 0;
+  }
+
+  &__confirm-modal {
+    display: none;
+    height: 100%;
+
+    &--show {
+      display: block;
+    }
+  }
+
+  &__status-tage {
+    &--active {
+      display: inline-block;
+      width: rem(6);
+      height: rem(6);
+      margin-right: rem(12);
+      border-radius: rem(6);
+      background: $color-chateau-green;
+    }
+
+    &--inactive {
+      display: inline-block;
+      width: rem(6);
+      height: rem(6);
+      margin-right: rem(12);
+      border-radius: rem(6);
+      background: $color-hit-pink;
+    }
+
+    &--expire {
+      display: inline-block;
+      width: rem(6);
+      height: rem(6);
+      margin-right: rem(12);
+      border-radius: rem(6);
+      background: $color-silver-sand;
+    }
+  }
+
+  &__upload-error {
+    @include font-style($type-14px, $type-22px, $color-touch-red);
+    margin: rem(-2) 0 0;
+  }
+
+  .ant-form-explain {
+    margin-top: 2px !important;
+  }
+
+  &__effiectived-date {
+    input::placeholder {
+      font-size: $type-14px;
+    }
+  }
+
+  &__open-end {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: rem(4);
+
+    .ant-form-item-control {
+      line-height: $type-16px;
+    }
+
+    .ant-checkbox + span {
+      padding-right: 0;
+    }
+  }
+
+  &__open-end-text {
+    @include font-style($type-12px, $type-24px, $color-silver-chalice);
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.contract-confirm-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__header-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: rem(32) rem(32) 0;
+    background: $color-white;
+    z-index: $z-mid;
+  }
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    display: inline-block;
+    width: calc(100% - 12px);
+    margin: 0;
+  }
+
+  &__btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: $color-white;
+    cursor: pointer;
+
+    &--close {
+      position: absolute;
+      top: rem(20);
+      right: rem(20);
+    }
+
+    &--back {
+      @include font-style($type-14px, $type-40px, $color-tundora);
+      float: left;
+    }
+
+    &--confirm {
+      @include font-style($type-14px, $type-24px, $color-white);
+      padding: rem(8) rem(24);
+      float: right;
+      border-radius: 2px;
+      background: $color-keppel;
+    }
+  }
+
+  &__content-container {
+    height: calc(100% - 73px);
+    padding: rem(76) rem(32) rem(16);
+    overflow-y: auto;
+  }
+
+  &__block {
+    margin-bottom: rem(20);
+  }
+
+  &__block-title {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0 0 rem(8);
+  }
+
+  &__container {
+    display: table;
+    width: 100%;
+    border: 1px solid $color-mercury;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 2px;
+  }
+
+  &__row {
+    display: table-row;
+  }
+
+  &__col {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    display: table-cell;
+  }
+
+  &__label {
+    width: 25%;
+    padding: rem(12);
+    background: $color-desert-storm;
+    box-shadow: inset -1px -1px 0 0 $color-mercury;
+  }
+
+  &__content {
+    width: 25%;
+    height: 100%;
+    padding: rem(12);
+    box-shadow: inset -1px -1px 0 0 $color-mercury;
+
+    &--img {
+      padding: rem(12) 0 0 rem(12);
+      box-shadow: inset -1px -1px 0 0 $color-mercury;
+    }
+  }
+
+  &__notice,
+  &__invalidate-notice {
+    @include font-style($type-14px, $type-20px, $color-supernova-dark);
+    position: relative;
+    padding: rem(8) rem(25) rem(8) rem(36);
+    border-radius: 2px;
+  }
+
+  &__invalidate-notice {
+    color: $color-terracotta;
+  }
+
+  &__properties-container,
+  &__invalidate-properties-container {
+    padding: rem(16);
+    border: 1px solid $color-mercury;
+    border-radius: 2px;
+    background: $color-desert-storm;
+  }
+
+  &__properties-container {
+    background: $color-white;
+  }
+
+  &__invalidate-properties-container {
+    .contract-confirm-container__property-name {
+      color: $color-silver-chalice;
+    }
+  }
+
+  &__property-count {
+    @include font-style($type-14px, $type-24px, $color-silver-sand);
+    @include font-weight(bold);
+    position: absolute;
+    top: rem(13);
+    left: 0;
+    margin-right: rem(12);
+  }
+
+  &__property-name {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    position: relative;
+    padding: rem(13) rem(13) rem(13) rem(31);
+  }
+
+  &__property-list-row {
+    border-bottom: 1px solid $color-mercury;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top:  50%;
+    left: rem(12);
+    transform: translateY(-50%);
+  }
+
+  &__footer-container {
+    @include clearfix();
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: rem(16) rem(20);
+    border-top: 1px solid $color-mercury;
+    background: $color-white;
+    z-index: $z-high;
+  }
+
+  &__img {
+    display: inline-block;
+    height: rem(60);
+    margin: 0 rem(12) rem(12) 0;
+  }
+
+  &__file {
+    display: inline-block;
+    width: rem(60);
+    height: rem(60);
+    margin: 0 rem(12) rem(12) 0;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  &__file-pdf {
+    height: rem(36);
+    margin-top: rem(8);
+    margin-left: rem(-120);
+  }
+}

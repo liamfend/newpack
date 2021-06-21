@@ -1,0 +1,136 @@
+@import '../variables';
+@import '../svgs';
+@import '../mixins/forms';
+@import '../mixins/fonts';
+
+%form-label {
+  @include font-weight('bold');
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  color: $color-tundora;
+  font-size: $type-14px;
+  line-height: $type-24px;
+}
+
+%form-input {
+  display: block;
+  width: 100%;
+  height: $input-height;
+  // no top/bottom padding to ensure text
+  // is not clipped in firefox with fixed height
+  padding: 0 16px;
+  border: 1px solid $color-silver-sand;
+  border-radius: 2px;
+  background-color: $color-white;
+  color: $color-tundora;
+  font-size: $type-16px;
+
+  &:focus {
+    border-color: $color-tundora;
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: $color-mercury;
+    background-color: $color-desert-storm;
+    color: $color-silver-chalice;
+  }
+
+  // fix Firefox showing a border automatically on some required fields
+  &:required {
+    box-shadow: none;
+  }
+
+  // remove default iOS styling
+  &[type=text],
+  &[type=email],
+  &[type=password],
+  &[type=tel] {
+    appearance: none;
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+%form-textarea {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid $color-silver-sand;
+  border-radius: 2px;
+  background-color: $color-white;
+  color: $color-tundora;
+  font-size: $type-16px;
+  line-height: $type-24px;
+  appearance: none; // remove default iOS styling
+
+  &:focus {
+    border-color: $color-tundora;
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: $color-mercury;
+    background-color: $color-desert-storm;
+    color: $color-silver-chalice;
+  }
+}
+
+%form-dropdown {
+  height: $input-height;
+  padding: 12px 40px 12px 16px; // allow space on right for arrow
+  border: 1px solid $color-silver-sand;
+  border-radius: 2px;
+  background: url($svg-select-arrow) no-repeat;
+  background-position: calc(100% - 16px) 50%;
+  background-size: 8px 6px;
+  appearance: none; // remove default iOS styling
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+%checkbox-style {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-silver-sand;
+  border-radius: 2px;
+  background-color: $color-white;
+  content: '';
+}
+
+%checkbox-checked-style {
+  width: 18px;
+  height: 18px;
+  border: 0;
+  background: url($svg-checkbox-ticked) no-repeat;
+}
+
+input {
+  &[type="number"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+// TODO figure out how to put this inside %form-input
+@include placeholder {
+  color: $color-silver-chalice;
+  font-size: $type-16px;
+}

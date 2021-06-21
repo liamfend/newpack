@@ -1,0 +1,90 @@
+$color-emerald: #60ca88;
+
+.property-header {
+  width: 100%;
+  padding: rem(16) rem(32);
+  border: 1px solid $color-mercury;
+  background-color: $color-white;
+
+  &__header-info {
+    display: inline-block;
+    // propertyEditWidth - allEditBtns
+    width: calc(100% - 460px);
+  }
+
+  &__underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border: 0;
+    background-color: $color-tundora;
+  }
+
+  &__property-name {
+    @include font-style($type-20px, $type-32px, $color-tundora);
+    @include font-weight(bold);
+    position: relative;
+    width: 100%;
+    margin: 0;
+    white-space: nowrap;
+
+    &:hover {
+      .property-header__underline {
+        height: 1px;
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    color: $color-tundora;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-tundora !important;
+    }
+  }
+
+  &__property-status {
+    @include font-style($type-12px, $type-16px, $color-white);
+    @include font-weight(bold);
+    display: inline-block;
+    position: absolute;
+    top: rem(4);
+    margin-left: rem(12);
+    padding: rem(2) rem(4);
+    border-radius: 2px;
+
+    &--gray {
+      background: $color-silver-chalice;
+    }
+
+    &--green {
+      top: rem(8);
+      background: $color-emerald;
+    }
+  }
+
+  &__btn {
+    width: rem(94);
+    min-width: rem(94) !important;
+    height: rem(32) !important;
+  }
+
+  &__property-id {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    display: inline-block;
+    margin-left: rem(6);
+  }
+
+  .property-edit__btns {
+    top: 0;
+    height: rem(32) !important;
+  }
+
+  .property-edit__btns__close {
+    padding: 0;
+  }
+}

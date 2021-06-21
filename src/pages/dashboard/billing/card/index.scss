@@ -1,0 +1,53 @@
+.billing {
+  &__card {
+    width: 100%;
+    padding: rem(16) rem(20);
+
+    &:hover {
+      .billing__card-icon--gray {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      .billing__card-icon {
+        display: block;
+        width: rem(40);
+        height: rem(40);
+      }
+    }
+  }
+
+  &__card-icon {
+    display: none;
+    width: 0;
+    height: 0;
+    margin-right: rem(20);
+    float: left;
+
+    &--gray {
+      display: block;
+      width: rem(40);
+      height: rem(40);
+      margin-right: rem(20);
+      float: left;
+    }
+  }
+
+  &__card-title {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    @include font-weight(bold);
+    display: inline-block;
+    margin: 0 rem(16) rem(4) 0;
+  }
+
+  &__card-description {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    display: block;
+    padding-left: rem(60);
+  }
+
+  &__clear-both {
+    clear: both;
+  }
+}

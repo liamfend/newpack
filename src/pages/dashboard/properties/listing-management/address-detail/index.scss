@@ -1,0 +1,129 @@
+.address-detail {
+  padding: rem(24);
+
+  &--hide {
+    display: none;
+  }
+
+  &__label {
+
+    &--hide {
+      display: none;
+    }
+
+    &--disable {
+      .address-detail__custom-label-text {
+        color: $color-silver-chalice;
+      }
+    }
+  }
+
+  &__recommended-universities {
+    position: relative;
+  }
+
+  &__universities-icon {
+    position: absolute;
+    top: rem(4);
+    left: rem(160);
+    color: $color-keppel;
+    z-index: $z-base;
+  }
+
+  &__universities-spin {
+    margin-left: 48%;
+  }
+
+  &__hide-fields {
+    display: none;
+  }
+
+  &__left-col {
+    width: 50%;
+  }
+
+  &__map {
+
+    &--hide {
+      display: none;
+    }
+
+    &--no-vpn {
+      padding-top: 0;
+    }
+  }
+
+  &__custom-label {
+    >a {
+      @include font-weight(normal);
+      float: right;
+    }
+
+    .display-permission__switch {
+      float: right;
+    }
+  }
+
+  &__link-delete {
+    @include font-weight(normal);
+    float: right;
+    color: $color-keppel;
+    cursor: pointer;
+  }
+
+  .address__map {
+    $color-torch-red: #f5222d;
+    position: relative;
+
+    &__coordinate {
+      @include font-style($type-12px, $type-16px, $color-silver-chalice);
+      margin-top: rem(24);
+
+      .ant-col {
+        width: auto;
+        margin-right: rem(20);
+      }
+    }
+
+    &__coordinate-error {
+      margin: rem(5) 0 0;
+      color: $color-torch-red;
+    }
+
+    .map-label {
+      @include font-style($type-12px, $type-24px, $color-tundora);
+      @include font-weight(bold);
+      top: 0;
+      width: 100%;
+      padding-bottom: rem(4);
+
+      .reset-pin-btn {
+        @include font-weight(normal);
+        display: inline-block;
+        margin-left: rem(12);
+        float: none;
+        outline: 0;
+        color: $color-keppel;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__university-icon {
+    position: absolute;
+    top: rem(4);
+    left: rem(12);
+    width: rem(15);
+    height: rem(11);
+    z-index: $z-base;
+    fill: $color-flame-pea;
+  }
+
+  .ant-select-selection {
+    padding-left: rem(26);
+  }
+
+  .ant-form-item {
+    padding-bottom: 0;
+  }
+}

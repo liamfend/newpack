@@ -1,0 +1,163 @@
+.record-form-modal {
+  height: 100%;
+  overflow: hidden;
+  z-index: $z-high;
+}
+
+.record-form {
+  $color-alizarin-crimson: #e3252a;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: rem(880);
+  height: rem(542);
+  padding: rem(32) rem(32) 0;
+  transform: translate(-50%, -50%);
+  background: $color-white;
+
+  &__header {
+    @include font-style($type-18px, $type-18px, $color-silver-chalice);
+    margin-bottom: rem(20);
+  }
+
+  &__tips {
+    margin-bottom: rem(20);
+    padding: rem(8) 0;
+    background-color: $color-supernova-bg;
+
+    .anticon-exclamation-circle {
+      position: relative;
+      top: 1px;
+      margin: 0 rem(10) 0 rem(12);
+      color: $color-supernova-dark;
+    }
+
+    span {
+      @include font-style($type-12px, normal, $color-supernova-dark);
+    }
+  }
+
+  &__content {
+    height: calc(100% - 108px);
+    overflow-y: scroll !important;
+  }
+
+  &__title {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin-bottom: rem(4);
+
+    &--required {
+
+      &::before {
+        @include font-style($type-14px, $type-14px, $color-thunderbird);
+        display: inline-block;
+        margin-right: rem(4);
+        content: '*';
+      }
+    }
+  }
+
+  .ant-calendar-picker {
+    width: rem(368);
+  }
+
+  &__stage {
+    padding-left: rem(40);
+  }
+
+  &__conform {
+    position: relative;
+    width: rem(880);
+    height: rem(70);
+    margin-left: rem(-32);
+    padding: rem(16) 0;
+    border-top: 1px solid $color-mercury;
+
+    &--btn {
+      @include font-style($type-14px, $type-24px, $color-white);
+      @include font-weight(bold);
+      position: absolute;
+      right: rem(20);
+      padding: rem(8) rem(16);
+      border: 0;
+      outline: none;
+      background-color: $color-keppel;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--disabled {
+      background-color: $color-silver-sand;
+      cursor: not-allowed;
+
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .quill {
+    height: rem(141);
+  }
+
+  .detail-tab__counter {
+    margin-top: rem(52);
+  }
+
+  .anticon-delete {
+    position: absolute;
+    top: 50%;
+    left: rem(2);
+    transform: translate(0, -50%);
+  }
+
+  &__delete-text {
+    @include font-style($type-14px, $type-20px, $color-keppel);
+    position: absolute;
+    top: 50%;
+    left: rem(26);
+    transform: translate(0, -44%);
+  }
+
+  &__delete-action {
+    display: inline-block;
+    position: relative;
+    left: rem(24);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__description-part {
+    .ant-form-explain {
+      margin-top: -24px;
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  &__row {
+    margin-bottom: rem(32);
+  }
+
+  &__contract-error {
+    position: absolute;
+    top: rem(56);
+  }
+
+  &__contract-error-content {
+    @include font-style($type-12px, $type-20px, $color-alizarin-crimson);
+    margin: rem(4) 0 0;
+  }
+
+  &__contract-error-link {
+    @include font-style($type-12px, $type-20px, $color-keppel);
+  }
+}

@@ -1,0 +1,16 @@
+@function rem($pixel-value, $base: 16) {
+  @return $pixel-value / $base * 1rem;
+}
+
+// Remove the unit of a length
+// @param {Number} $number - Number to remove unit from
+// @return {Number} - Unitless number
+//
+// Taken from https://css-tricks.com/snippets/sass/strip-unit-function/
+@function strip-units($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

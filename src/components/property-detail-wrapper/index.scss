@@ -1,0 +1,74 @@
+$color-buttercup: #f5a623;
+
+.property-detail-wrapper {
+  height: calc(100vh - 222px);
+  border: solid 1px $color-mercury;
+  border-radius: rem(2);
+  background-color: $color-white;
+
+  &--reminder {
+    height: calc(100vh - 224px);
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__content {
+    height: calc(100% - 4rem);
+    overflow-y: auto;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    height: rem(64);
+    padding: rem(12) rem(24);
+    border-top: solid 1px $color-mercury;
+  }
+
+  &__warning {
+    display: inline-block;
+    margin-top: rem(8);
+
+    &-icon {
+      color: $color-buttercup;
+    }
+
+    &-text {
+      @include font-style($type-12px, $type-16px, $color-buttercup);
+      margin-left: rem(8);
+    }
+  }
+
+  &__btn {
+    height: rem(40);
+    padding: 0 rem(24);
+  }
+
+  &__popconfirm {
+    .ant-popover-message {
+      @include font-style($type-12px, $type-18px, $color-tundora);
+
+      & > .anticon {
+        top: rem(6);
+      }
+    }
+
+    .ant-popover-buttons {
+      button:first-child {
+        @include font-style($type-12px, $type-12px, $color-shuttle-gray);
+        @include font-weight(bold);
+        height: rem(28);
+        padding: 0 rem(14);
+      }
+
+      button:last-child {
+        @include font-style($type-12px, $type-12px, $color-white);
+        @include font-weight(bold);
+        height: rem(28);
+        padding: 0 rem(14);
+      }
+    }
+  }
+}

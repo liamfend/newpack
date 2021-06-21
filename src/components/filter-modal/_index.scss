@@ -1,0 +1,136 @@
+.filter-modal {
+  $color-cursed-grey: #666666;
+  $color-dandelion-milk: #e8e8e8;
+  $color-froth: #fafafa;
+  $color-caravan: #d9d9d9;
+  position: relative;
+  height: 100%;
+
+  .filter-card {
+    width: 100%;
+    min-width: auto;
+    margin: 0 0 rem(16);
+  }
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-cursed-grey);
+    @include font-weight(normal);
+  }
+
+  &__filter-btn-container {
+    margin: rem(24) 0;
+  }
+
+  &__edit-filter-container {
+    position: relative;
+    margin-bottom: rem(20);
+    padding: rem(12) rem(12) rem(16);
+    border: solid 1px $color-dandelion-milk;
+    border-radius: 2px;
+    background-color: $color-froth;
+  }
+
+  &__edit-close-btn {
+    position: absolute;
+    top: rem(9);
+    right: rem(9);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: $z-high;
+    appearance: none;
+  }
+
+  &__filter-btn {
+    width: 100%;
+    border-color: $color-keppel;
+    color: $color-keppel;
+
+    span {
+      font-size: $type-14px;
+    }
+
+    &:disabled {
+      .filter-modal__filter-btn-icon {
+        color: $color-silver-chalice;
+      }
+    }
+  }
+
+  &_ {
+    margin-right: rem(2);
+    color: $color-keppel;
+    font-size: $type-12px;
+    vertical-align: middle;
+  }
+
+  &__field-label {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    margin-bottom: rem(4);
+  }
+
+  &__form-item {
+    margin-bottom: rem(12);
+  }
+
+  &__btn-container {
+    margin-top: rem(4);
+    text-align: right;
+  }
+
+  &__btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    appearance: none;
+
+    &--reset {
+      @include font-style($type-14px, $type-24px, $color-cursed-grey);
+      margin-right: rem(20);
+    }
+
+    &--confirm,
+    &--apply {
+      @include font-style($type-14px, $type-24px, $color-white);
+      @include font-weight(bold);
+      padding: rem(4) rem(20);
+      border-radius: 2px;
+      background-color: $color-keppel;
+    }
+
+    &--cancel {
+      @include font-style($type-14px, $type-24px, $color-tundora);
+      margin-right: rem(20);
+      padding: rem(4) rem(20);
+      border: solid 1px $color-caravan;
+      border-radius: 2px;
+      background-color: $color-white;
+    }
+  }
+
+  &__body {
+    height: 100%;
+    padding: rem(24) rem(24) rem(64);
+    overflow-y: scroll;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: rem(16) rem(24);
+    border-top: 1px solid $color-dandelion-milk;
+    background-color: $color-white;
+    text-align: right;
+  }
+
+  .ant-form-explain {
+    white-space: nowrap;
+  }
+}

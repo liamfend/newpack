@@ -1,0 +1,157 @@
+$color-froth: #fafafa;
+
+.transfer {
+  &__header {
+    width: 100%;
+    margin-bottom: rem(32);
+    padding: rem(24) rem(32);
+    border-top: 1px solid $color-mercury;
+    background-color: $color-white;
+    box-shadow: 0 4px 4px 0 rgba($color-black, 0.01);
+  }
+
+  &__bread-crumb {
+    margin-bottom: rem(20);
+  }
+
+  &__bread-crumb-text {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+  }
+
+  &__title {
+    @include font-style($type-16px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0;
+    padding: 0;
+  }
+
+  &__content {
+    margin: rem(36) rem(32);
+  }
+
+  &__table-field {
+    display: block;
+    max-width: rem(200);
+  }
+
+  &__table-content {
+    padding: rem(22) rem(24);
+    background-color: $color-white;
+  }
+
+  &__table-tltle {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    margin: 0 0 rem(22);
+    padding: 0;
+  }
+
+  &__table {
+    border: 1px solid $color-desert-storm;
+
+    .ant-table-body {
+      background-color: $color-froth;
+      overflow: scroll;
+    }
+  }
+
+  &__table-btn {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+    margin-right: rem(8);
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--transferred {
+      padding-left: rem(8);
+      border-left: 1px solid $color-mercury;
+    }
+  }
+
+  &__action {
+    background-color: $color-froth;
+  }
+
+  &__action-row {
+    min-width: rem(60);
+
+    &--transferred {
+      display: flex;
+      min-width: rem(130);
+    }
+  }
+
+  &__filter {
+    margin-bottom: rem(32);
+    padding: rem(24) rem(24) 0;
+    background-color: $color-white;
+
+    &__item {
+      display: flex;
+
+      .ant-form-item-label {
+        width: rem(150);
+        text-align: left;
+      }
+
+      .ant-form-item-control-wrapper {
+        width: calc(100% - 150px);
+      }
+
+      .ant-calendar-picker {
+        width: 100%;
+      }
+    }
+
+    &__btns {
+      position: absolute;
+      right: 0;
+      bottom: rem(24);
+      text-align: right;
+    }
+
+    &__btn-more {
+      margin-left: rem(14);
+      padding: 2px 0;
+      border: 0;
+      outline: none;
+      background-color: transparent;
+      color: $color-keppel;
+      cursor: pointer;
+      appearance: none;
+    }
+
+    &__btn-icon {
+      margin-left: rem(8);
+      color: $color-keppel;
+      vertical-align: bottom;
+    }
+
+    &__row {
+      &--hidden  {
+        display: none;
+      }
+    }
+
+    &__col {
+      &--hidden  {
+        display: none;
+      }
+    }
+
+    &__form {
+      position: relative;
+    }
+
+    .ant-row {
+      &:last-child {
+        margin-bottom: rem(16);
+      }
+    }
+
+    .ant-calendar-range-picker-input {
+      width: calc(50% - 12px);
+    }
+  }
+}

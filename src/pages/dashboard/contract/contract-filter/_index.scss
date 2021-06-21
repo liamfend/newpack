@@ -1,0 +1,147 @@
+$color-alabaster: #fafafa;
+
+.contract-filter {
+  @include clearfix;
+  min-width: rem(432);
+  margin-bottom: rem(16);
+  padding: rem(24) rem(50) rem(4);
+  border: 1px solid $color-mercury;
+  border-radius: 2px;
+  background-color: $color-white;
+
+  &__content-empty {
+    background-color: $color-alabaster;
+    cursor: not-allowed;
+  }
+
+  &__box {
+    width: 100%;
+    min-width: rem(357);
+  }
+
+  &__large {
+    width: 100%;
+  }
+
+  .ant-form-item {
+    display: inline-block;
+    width: 70%;
+    height: rem(32);
+  }
+
+  &__common-size {
+    width: 100%;
+
+    input::placeholder {
+      font-size: $type-14px;
+    }
+  }
+
+  &__title {
+    @include font-style($type-14px, $type-32px, $color-tundora);
+    @include font-weight(bold);
+    display: inline-block;
+    width: rem(102);
+    min-width: rem(102);
+    height: rem(32);
+    margin-right: rem(4);
+  }
+
+  &__title-empty {
+    color: $color-silver-sand;
+  }
+
+  &__circle {
+    display: inline-block;
+    width: rem(6);
+    height: rem(6);
+    margin-right: rem(12);
+    transform: translate(0, -20%);
+    border-radius: 50%;
+  }
+
+  &__inquire {
+    height: rem(32);
+  }
+
+  &__down {
+    display: inline-block;
+    height: rem(20);
+    outline: none;
+
+    .anticon-down {
+      margin-left: rem(14);
+      transform: translate(0, 10%);
+      color: $color-keppel;
+    }
+
+    .anticon-up {
+      margin-left: rem(14);
+      transform: translate(0, 10%);
+      color: $color-keppel;
+    }
+
+    &:hover .anticon-down,
+    .anticon-up {
+      cursor: pointer;
+    }
+  }
+
+  &__down-empty {
+    .anticon-down,
+    .anticon-up {
+      color: $color-silver-sand;
+    }
+
+    &:hover .anticon-down {
+      cursor: not-allowed;
+    }
+  }
+
+  &__act {
+    @include font-style($type-14px, $type-32px, $color-keppel);
+    display: inline-block;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__interval {
+    @include font-style($type-14px, $type-32px, $color-silver-sand);
+    margin: 0 rem(10);
+  }
+
+  &__btn-empty {
+    color: $color-silver-sand;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  .ant-calendar-picker-container {
+    top: 0 !important;
+  }
+
+  .search-component--active {
+    top: rem(30);
+    height: rem(280);
+  }
+
+  .indicator {
+    @include font-style($type-12px, rem(18), $color-white);
+    @include font-weight(bold);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(18);
+    height: rem(18);
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background-color: $color-coral-dark;
+    text-align: center;
+    cursor: pointer;
+  }
+}

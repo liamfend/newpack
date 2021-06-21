@@ -1,0 +1,23 @@
+.listing-management {
+  &__loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: rem(50);
+    background-color: $color-white;
+    text-align: center;
+    z-index: 100;
+  }
+
+  &__modal-container {
+    .ant-drawer-body {
+      height: 100%;
+      padding: 0;
+    }
+  }
+
+  &__filters-container {
+    margin: 0 rem(32);
+    padding-top: rem(16);
+  }
+}

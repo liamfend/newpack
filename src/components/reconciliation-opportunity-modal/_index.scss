@@ -1,0 +1,78 @@
+.reconciliation-opportunity-modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: rem(454);
+    transform: translate(-50%, -50%);
+    background: $color-white;
+  }
+
+  &__btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+
+  &__header {
+    margin: rem(20) rem(20) 0 rem(32);
+
+    &__title {
+      @include font-weight(normal);
+      @include font-style($type-18px, $type-24px, $color-silver-chalice);
+      flex: 1;
+      margin: rem(12) 0 0;
+    }
+  }
+
+  &__header-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    margin: rem(20) rem(32) rem(24);
+    padding: 0;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+    padding: rem(16) rem(32);
+    box-shadow: 0 -1px 0 0 $color-mercury;
+  }
+
+  &__bottom-default {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+    padding: 0 rem(24);
+    border-color: $color-keppel;
+  }
+
+  &__bottom-primary {
+    @include font-style($type-14px, $type-24px, $color-white);
+    margin-left: rem(24);
+    padding: 0 rem(24);
+  }
+
+  .ant-form-item {
+    margin-bottom: rem(8);
+  }
+
+  .ant-form-item-label {
+    label {
+      @include font-weight(bold);
+      @include font-style($type-12px, $type-14px, rgba($color-black, 0.65));
+      display: block;
+    }
+  }
+
+  .ant-input-number-input {
+    @include font-style($type-12px, $type-14px, $color-tundora);
+  }
+}

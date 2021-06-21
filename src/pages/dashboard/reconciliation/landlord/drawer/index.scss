@@ -1,0 +1,48 @@
+$color-light-border: #5abfb2;
+
+.drawfilter {
+
+  .ant-drawer-header {
+    border-bottom: 0;
+  }
+
+  .ant-drawer-content-wrapper {
+    width: rem(428);
+  }
+
+  .addfilter {
+    width: rem(380);
+    height: rem(40);
+    margin-bottom: rem(16);
+  }
+
+  .light {
+    border-color: $color-light-border;
+    color: $color-light-border;
+  }
+
+  .bottom-tools {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    height: rem(64);
+    padding: 0 24px ;
+    background-color: $color-white;
+
+    .clearall {
+      cursor: pointer;
+    }
+
+    .btns {
+      margin-left: auto;
+    }
+
+  }
+
+  .ant-drawer-body {
+    padding-bottom: rem(64);
+  }
+}

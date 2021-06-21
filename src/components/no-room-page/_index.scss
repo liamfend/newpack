@@ -1,0 +1,17 @@
+.no-room-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: rem(65);
+  padding-bottom: rem(78);
+
+  .no-room-hint {
+    @include font-style($type-14px, $type-20px, $color-silver-chalice);
+    margin: rem(16) 0;
+  }
+
+  .icon-plus {
+    width: rem(12);
+    height: rem(12);
+  }
+}

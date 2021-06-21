@@ -1,0 +1,79 @@
+
+@import '~@pages/dashboard/properties/listing-management/address-detail/index';
+@import '~@pages/dashboard/properties/listing-management/facility-detail/index';
+@import '~@pages/dashboard/properties/listing-management/room-detail/index';
+@import '~@pages/dashboard/properties/listing-management/listing-detail/index';
+@import '~@pages/dashboard/properties/listing-management/gallery-management/index';
+@import '~@pages/dashboard/properties/listing-management/upload-progress/index';
+@import '~@pages/dashboard/properties/listing-management/pending-approval/reminder/index';
+@import '~@pages/dashboard/properties/listing-management/header/index';
+
+.property-listing-management {
+  &__loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: rem(50);
+    background-color: $color-white;
+    text-align: center;
+    z-index: $z-big;
+  }
+
+  &__main-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: rem(24) rem(32) rem(32);
+  }
+
+  &__right {
+    position: relative;
+    width: calc(100% - 245px);
+    overflow: hidden;
+  }
+
+  &__part-reminder {
+    margin-bottom: rem(16);
+  }
+
+  .ant-form-item-label label {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    @include font-weight(bold);
+  }
+
+  input::placeholder,
+  .ant-input::placeholder,
+  .ant-calendar-input::placeholder,
+  .ant-select-selection__placeholder,
+  .ant-input-number-input::placeholder {
+    @include font-style($type-12px, rem(22), $color-silver-chalice);
+  }
+
+  .ant-input,
+  .ant-select,
+  .ant-form label,
+  .ant-select-dropdown,
+  .ant-calendar,
+  .ant-input-number-input {
+    @include font-style($type-12px, $type-18px, rgba($color-black, 0.65));
+  }
+
+  .ant-form-explain {
+    font-size: $type-12px;
+  }
+
+  &__landlord-tips-modal {
+    top: calc(50% - 130px) !important;
+
+    .ant-modal-content {
+      border-radius: 2px;
+    }
+
+    .ant-btn {
+      display: none;
+    }
+
+    .ant-btn-primary {
+      display: block;
+    }
+  }
+}

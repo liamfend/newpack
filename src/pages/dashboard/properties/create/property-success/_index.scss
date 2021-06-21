@@ -1,0 +1,17 @@
+.property-success {
+  padding-top: rem(170);
+  color: $color-tundora;
+  text-align: center;
+
+  &__icon {
+    width: rem(112);
+    height: rem(64);
+    margin-bottom: rem(14);
+  }
+
+  &__create-success {
+    @include font-weight(bold);
+    margin-bottom: rem(40);
+    font-size: $type-24px;
+  }
+}

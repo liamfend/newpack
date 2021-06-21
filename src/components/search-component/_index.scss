@@ -1,0 +1,130 @@
+.search-component {
+  $color-fountain-blue: #5abfb2;
+
+  $type-22px: 22px;
+  $color-black-squeeze: #ecf8f7;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: rem(4);
+  transition: opacity 0.5s, top 0.5s;
+  border-radius: 2px;
+  background: $color-white;
+  box-shadow: 0 0 4px 0 rgba($color-black, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  z-index: $z-dropdown;
+
+  &--active {
+    top: calc(100% + 8px);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__results-list {
+    width: rem(300);
+    height: rem(192);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-y: auto;
+  }
+
+  &__input-container {
+    position: relative;
+    width: 100%;
+    padding: rem(8) rem(8) rem(12);
+  }
+
+  &__search-icon {
+    position: absolute;
+    top: 50%;
+    right: rem(16);
+    transform: translateY(-50%);
+    color: rgba($color-black, 0.25);
+  }
+
+  &__input {
+    @include font-style($type-14px, $type-22px, $color-tundora);
+    width: 100%;
+    height: rem(32);
+    margin: 0;
+    padding: rem(5) rem(22) rem(5) rem(8);
+    border: solid 1px rgba($color-black, 0.15);
+    border-radius: 2px;
+    outline: none;
+    appearance: none;
+
+    &::placeholder {
+      color: rgba($color-black, 0.25);
+    }
+
+    &:hover {
+      border-right-width: 1px !important;
+      border-color: $color-fountain-blue;
+    }
+
+    &:focus {
+      border-right-width: 1px !important;
+      border-color: $color-fountain-blue;
+      outline: 0;
+      box-shadow: 0 0 0 2px rgba($color-fountain-blue, 0.2);
+    }
+  }
+
+  &__loading-wrap {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: rem(300);
+    height: rem(192);
+  }
+
+  &__loading-text {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    margin-top: rem(4);
+  }
+
+  &__results-item {
+    @include font-style($type-12px, $type-22px, $color-tundora);
+    @include font-weight(normal);
+    position: relative;
+    padding: rem(5) rem(28) rem(5) rem(8);
+    text-overflow: ellipsis;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+      background-color: $color-black-squeeze;
+    }
+  }
+
+  &__results-selected-icon {
+    position: absolute;
+    top: 50%;
+    right: rem(8);
+    transform: translateY(-50%);
+    color: $color-keppel;
+  }
+
+  &__operate-container {
+    padding: rem(7) rem(8) rem(12);
+  }
+
+  &__btn {
+    @include font-style($type-12px, $type-18px, $color-keppel);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+
+    &--select-all {
+      float: right;
+    }
+  }
+}

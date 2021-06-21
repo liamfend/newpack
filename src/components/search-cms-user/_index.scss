@@ -1,0 +1,50 @@
+.search-cms-user {
+  $color-black-squeeze: #ecf8f7;
+
+  &__search-result-input {
+    display: inline-block;
+    padding: rem(8);
+    border-radius: rem(2);
+    background-color: $color-white;
+  }
+
+  &__search-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(160);
+  }
+
+  &__options-wrap {
+    display: flex;
+    flex-direction: column;
+    height: rem(160);
+    overflow-y: auto;
+  }
+
+  &__name-option {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: rem(32);
+    min-height: rem(32);
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-black-squeeze;
+    }
+  }
+
+  &__selected-icon {
+    padding-right: rem(8);
+    color: $color-keppel;
+  }
+
+  &__empty-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(160);
+  }
+}

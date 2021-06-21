@@ -1,0 +1,122 @@
+[
+  {
+    "medium": "brandzone",
+    "file": "baidu_brandzone.png",
+    "link": "https://go.onelink.me/rg1U?pid=baidu-brandzone&af_channel=paid-search&c=paid-website&af_keyword=menu"
+  },
+  {
+    "source": "baidu",
+    "medium": "cpc",
+    "device": "Desktop",
+    "file": "baidu_cpc.png",
+    "link": "https://go.onelink.me/rg1U?pid=baidu-cpc&af_channel=paid-search&c=paid-desktop&af_keyword=menu"
+  },
+  {
+    "source": "baidu",
+    "medium": "cpc",
+    "device": "Mobile",
+    "file": "baidu_cpc.png",
+    "link": "https://go.onelink.me/rg1U?pid=baidu-cpc&af_channel=paid-search&c=paid-mobile&af_keyword=menu"
+  },
+  {
+    "source": "360",
+    "medium": "cpc",
+    "file": "360_cpc.png",
+    "link": "https://go.onelink.me/rg1U?pid=360-cpc&af_channel=paid-search&c=paid-website&af_keyword=menu"
+  },
+  {
+    "source": "sogou",
+    "medium": "cpc",
+    "file": "sogou_cpc.png",
+    "link": "https://go.onelink.me/rg1U?pid=sogou-cpc&af_channel=paid-search&c=paid-website&af_keyword=menu"
+  },
+  {
+    "source": "shenma",
+    "medium": "cpc",
+    "file": "shenma_cpc.png",
+    "link": "https://go.onelink.me/rg1U?pid=shenma-cpc&af_channel=paid-search&c=paid-website&af_keyword=menu"
+  },
+  {
+    "source": "google",
+    "medium": "cpc",
+    "file": "gclid.png",
+    "link": "https://go.onelink.me/rg1U?pid=google-cpc&af_channel=paid-search&c=paid-website&af_keyword=menu"
+  },
+  {
+    "medium": "display",
+    "file": "display.png",
+    "link": "https://go.onelink.me/rg1U?pid=google-display&af_channel=display-media&c=display-website&af_keyword=menu"
+  },
+  {
+    "medium": "remarketing",
+    "file": "display.png",
+    "link": "https://go.onelink.me/rg1U?pid=google-display&af_channel=display-media&c=display-website&af_keyword=menu"
+  },
+  {
+    "medium": "prospecting",
+    "file": "display.png",
+    "link": "https://go.onelink.me/rg1U?pid=google-display&af_channel=display-media&c=display-website&af_keyword=menu"
+  },
+  {
+    "source": "baidu",
+    "medium": "feed",
+    "file": "baidu_feed.png",
+    "link": "https://go.onelink.me/rg1U?pid=baidu-feed&af_channel=ugc-feed&c=ugc-website&af_keyword=menu"
+  },
+  {
+    "source": "zhihu",
+    "medium": "feed",
+    "file": "zhihu_feed.png",
+    "link": "https://go.onelink.me/rg1U?pid=zhihu-feed&af_channel=ugc-feed&c=ugc-website&af_keyword=menu"
+  },
+  {
+    "source": "baidu",
+    "medium": "ugc",
+    "file": "baidu_ugc.png",
+    "link": "https://go.onelink.me/rg1U?pid=baidu-ugc&af_channel=ugc-content&c=ugc-website&af_keyword=menu"
+  },
+  {
+    "source": "zhihu",
+    "medium": "ugc",
+    "file": "zhihu_ugc.png",
+    "link": "https://go.onelink.me/rg1U?pid=zhihu-ugc&af_channel=ugc-content&c=ugc-website&af_keyword=menu"
+  },
+  {
+    "source": "douban",
+    "medium": "ugc",
+    "file": "douban_ugc.png",
+    "link": "https://go.onelink.me/rg1U?pid=douban-ugc&af_channel=ugc-content&c=ugc-website&af_keyword=menu"
+  },
+  {
+    "source": "wechat",
+    "file": "wechat_socialmedia.png",
+    "link": "https://go.onelink.me/rg1U?pid=wechat-socialmedia&af_channel=socialmedia&c=wechat-website&af_keyword=menu"
+  },
+  {
+    "source": "weibo",
+    "file": "weibo_socialmedia.png",
+    "link": "https://go.onelink.me/rg1U?pid=weibo-socialmedia&af_channel=socialmedia&c=weibo-website&af_keyword=menu"
+  },
+  {
+    "source": "kol",
+    "file": "kol_branding.png",
+    "link": "https://go.onelink.me/rg1U?pid=kol-branding&af_channel=branding&c=kol-website&af_keyword=menu"
+  },
+  {
+    "source": "co-branding",
+    "file": "co-branding_branding.png",
+    "link": "https://go.onelink.me/rg1U?pid=co-branding&af_channel=branding&c=co-branding-website&af_keyword=menu"
+  },
+  {
+    "source": "others",
+    "medium": "others",
+    "file": "others.png",
+    "link": "https://go.onelink.me/rg1U?pid=other&af_channel=other&c=other-website&af_keyword=menu"
+  },
+  {
+    "source": "default",
+    "medium": "default",
+    "file": "default.png",
+    "link": "https://go.onelink.me/rg1U?pid=baidu-organic&af_channel=organic-search&c=organic-website&af_keyword=menu"
+  }
+]

@@ -1,0 +1,18 @@
+.account {
+  .ant-tabs-bar {
+    margin-bottom: 0;
+  }
+
+  &__spin-container {
+    text-align: center;
+  }
+
+  .ant-tabs-tab-active {
+    @include font-weight(bold);
+    color: $color-tundora !important;
+  }
+
+  .ant-tabs-tab:hover {
+    color: $color-tundora !important;
+  }
+}

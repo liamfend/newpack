@@ -1,0 +1,13 @@
+{
+  "medium-breakpoint": "768",
+  "large-breakpoint": "1025",
+  "extra-large-breakpoint": "1440",
+  "medium-max-width": "646px",
+  "large-max-width": "1008px",
+  "mobile-side-margin": "8%",
+  "grid-column-count-small" : "6",
+  "grid-column-count-medium": "12",
+  "grid-column-count-large": "12",
+  "input-height": "48px",
+  "label-height": "32px"
+}

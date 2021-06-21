@@ -1,0 +1,160 @@
+.bulk-update-modal {
+  $color-border: #d9d9d9;
+  $color-light-border: #5abfb2;
+
+  top: rem(200);
+
+  &__title {
+    @include font-style($type-18px, $type-24px, $color-silver-chalice);
+    margin-bottom: rem(20);
+  }
+
+  .ant-form-item-label {
+    @include font-style($type-12px, $type-24px, $color-tundora);
+    padding: 0 0 rem(4);
+  }
+
+  .upload-excel {
+    &__upload-icon {
+      svg {
+        width: rem(24);
+        height: rem(24);
+      }
+    }
+
+    &__text {
+      margin-left: rem(20);
+      text-align: left;
+    }
+
+    &__description {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+    }
+
+    &__tips {
+      @include font-style($type-12px, $type-20px, rgba($color-black, 0.43));
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: rem(16);
+    padding: 0;
+  }
+
+  .ant-upload.ant-upload-drag {
+    background-color: $color-desert-storm;
+
+    .ant-upload {
+      padding: rem(30);
+    }
+
+    .ant-upload-drag-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .file-wrap {
+    border: 1px dashed $color-border;
+    background-color: $color-desert-storm;
+
+    &:hover {
+      border-color: $color-light-border;
+    }
+
+    &__file {
+      display: flex;
+      align-items: center;
+      margin: rem(10);
+      padding: rem(8) rem(12) rem(8) rem(8);
+      border-radius: rem(2);
+      background-color: $color-white;
+    }
+
+    &__file-icon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(64);
+      height: rem(64);
+      border-radius: rem(2);
+      background-color: $color-keppel-bg;
+    }
+
+    &__file-icon {
+      svg {
+        width: rem(24);
+        height: rem(24);
+        fill: $color-keppel;
+      }
+    }
+
+    &__file-name {
+      @include font-style($type-12px, $type-16px, $color-keppel);
+    }
+
+    &__file-info {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      margin-left: rem(18);
+    }
+
+    &__delete-btn {
+      padding: 0;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+    }
+
+    &__delete-icon {
+      svg {
+        width: rem(16);
+        height: rem(16);
+        fill: $color-keppel;
+      }
+    }
+  }
+
+  .loading-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(20) rem(32) rem(32);
+    border-radius: rem(2);
+    background-color: $color-desert-storm;
+
+    &__loading-spin {
+      padding: rem(28);
+    }
+
+    &__loading-description {
+      @include font-style($type-12px, $type-20px, $color-tundora);
+      text-align: center;
+    }
+  }
+
+  .upload-success {
+    &__title {
+      @include font-style($type-18px, $type-24px, $color-silver-chalice);
+      margin-top: rem(32);
+      text-align: center;
+    }
+
+    &__description {
+      @include font-style($type-12px, $type-18px, rgba($color-black, 0.85));
+      margin: rem(20) rem(56) rem(36);
+      text-align: center;
+    }
+
+    &__tip-wrap {
+      display: flex;
+      justify-content: center;
+      background-color: $color-desert-storm;
+    }
+
+    &__tip-image {
+      height: rem(145);
+    }
+  }
+}

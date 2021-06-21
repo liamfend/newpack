@@ -1,0 +1,91 @@
+.comments  {
+  //sass-lint:disable property-units
+  min-height: 100vh;
+  background: $color-desert-storm;
+
+  &__loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: rem(50);
+    background-color: $color-white;
+    text-align: center;
+    z-index: 100;
+  }
+
+  &__container {
+    width: rem(600);
+    margin: 0 auto;
+    padding: rem(64) 0;
+    border-radius: rem(2);
+  }
+
+  &__header {
+    position: relative;
+    height: rem(80);
+    background: $color-tundora;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: rem(164);
+    height: rem(28);
+    transform: translate(-50%, -50%);
+  }
+
+  &__main {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    padding: rem(32) rem(40);
+    background: $color-white;
+  }
+
+  &__greeting {
+    padding-top: rem(32);
+  }
+
+  &__greeting-main {
+    padding-top: rem(32);
+    padding-bottom: rem(24);
+  }
+
+  &__wrap {
+    border-top: 1px solid $color-mercury;
+    border-bottom: 1px solid $color-mercury;
+  }
+
+  &__greeting-regards {
+    @include font-style($type-12px, $type-20px, $color-tundora);
+    padding-top: rem(24);
+  }
+
+  &__greeting-signature {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+  }
+
+  &__footer {
+    margin-top: rem(32);
+    text-align: center;
+  }
+
+  &__footer-logo {
+    width: rem(200);
+    height: rem(34);
+  }
+
+  &__footer-copyright {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+    padding: rem(20) 0 rem(16);
+    font-style: italic;
+  }
+
+  &__acceptance-message {
+    @include font-style($type-12px, $type-16px, $color-silver-chalice);
+
+    & a {
+      @include font-style($type-12px, $type-16px, $color-silver-chalice);
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import 'rule/index';
+@import 'check-in-tip/index';
+
+.longtail-cancellation-policy {
+  margin: 0  rem(12) rem(24);
+  padding: rem(8) rem(14) rem(16);
+  background: $color-desert-storm;
+
+  &__title {
+    @include font-style($type-14px, $type-24px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0 0 rem(12);
+    padding: 0;
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+  }
+
+  &__header {
+    position: relative;
+    height: rem(56);
+    border-bottom: 8px solid $color-keppel;
+  }
+
+  &__header-title {
+    @include font-style($type-14px, $type-16px, $color-shuttle-gray);
+    @include font-weight(normal);
+    min-height: rem(40);
+    margin: 0 0 rem(8);
+    padding: 0 rem(8);
+    border-left: 1px solid $color-silver-chalice;
+  }
+
+  &__content {
+    display: inline-block;
+    width: calc(50% - 2px);
+    margin-right: rem(4);
+
+    &--full {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &--without {
+      margin: 0;
+
+      .longtail-cancellation-policy__header {
+        border-bottom: 8px solid $color-terracotta;
+      }
+
+      .longtail-cancellation-policy__header-title {
+        padding-right: rem(82);
+      }
+    }
+  }
+
+  &__tips-svg {
+    margin-right: rem(8);
+  }
+
+  &__icon-tips {
+    @include font-style($type-12px, $type-20px, $color-silver-chalice);
+  }
+}

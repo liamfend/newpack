@@ -1,0 +1,14 @@
+{
+  "urls": {
+    "dev": "/resources/",
+    "prod": "//cdn.student.com/",
+    "stage": "//storm-frontend-cdn.dandythrust.com/",
+    "uat": "//storm-frontend-cdn.dandythrust.com/"
+  },
+  "imgCdnUrls": {
+    "dev": "//image.dandythrust.com",
+    "prod": "//image.student.com",
+    "stage": "//image.dandythrust.com",
+    "uat": "//image.dandythrust.com"
+  }
+}

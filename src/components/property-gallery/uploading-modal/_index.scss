@@ -1,0 +1,324 @@
+.gallery-uploading-modal {
+  padding: rem(48);
+  z-index: $z-high;
+
+  &--hidden {
+    animation-name: mini-modal-animation;
+    animation-duration: 0.5s;
+  }
+
+  &--show {
+    display: block !important;
+    animation-name: uploading-modal-animation;
+    animation-duration: 0.5s;
+  }
+}
+
+@keyframes mini-modal-animation {
+  from {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-black, 0.4);
+    opacity: 1;
+
+    .mini-uploading-modal {
+      display: none !important;
+    }
+  }
+
+  to {
+    top: 60px;
+    left: 90%;
+    width: rem(164);
+    height: rem(64);
+    background: rgba($color-black, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes uploading-modal-animation {
+  from {
+    top: 60px;
+    left: 90%;
+    width: rem(164);
+    height: rem(64);
+    background: rgba($color-black, 0);
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-black, 0.4);
+    opacity: 1;
+  }
+}
+
+.gallery-uploading {
+  position: relative;
+  top: 30%;
+  left: 50%;
+  width: rem(872);
+  height: 100%;
+  transform: translate(-50%, -30%);
+  border-radius: 2px;
+  outline: none;
+  background: $color-white;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: rem(64);
+    padding-left: rem(32);
+    background: $color-desert-storm;
+  }
+
+  &__header-upload {
+    @include font-style($type-14px);
+    @include font-weight(bold);
+    white-space: nowrap;
+  }
+
+  &__header-library {
+    width: rem(170);
+    height: rem(32);
+    margin-left: rem(12);
+  }
+
+  &__header-description {
+    @include font-style($type-11px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: rem(808);
+    margin: rem(12) 0 rem(16);
+    padding: rem(4) rem(6);
+    background-color: $color-supernova-bg;
+  }
+
+  &__annotation {
+
+    &:first-child {
+      margin-right: rem(8);
+    }
+  }
+
+  &__annotation-label {
+    @include font-weight(bold);
+    margin-right: rem(4);
+  }
+
+  &__footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-direction: row;
+    align-items: center;
+    width: rem(872);
+    height: rem(64);
+    padding: 0 rem(32);
+    background-color: $color-white;
+  }
+
+  &__footer-status {
+    @include font-style($type-14px);
+  }
+
+  &__footer-buttons {
+    position: relative;
+    margin-left: auto;
+
+    & > * {
+      margin-left: rem(24);
+    }
+  }
+
+  &__button {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+    height: rem(40);
+    padding: 0 rem(24);
+    border-color: $color-keppel;
+    background-color: $color-white;
+
+    &--disabled,
+    &--disabled:hover,
+    &--disabled:focus {
+      @include font-weight(bold);
+      border-color: $color-mercury;
+      background-color: $color-mercury;
+      color: $color-silver-chalice;
+      cursor: not-allowed;
+      opacity: 1;
+    }
+
+    &--primary {
+      @include font-weight(bold);
+      background-color: $color-keppel;
+      color: $color-white;
+    }
+  }
+
+  &__popover {
+    @include font-style($type-12px, $type-20px, $color-white);
+    @include font-weight(bold);
+    width: rem(203);
+  }
+
+  &__status-number {
+    @include font-weight(bold);
+  }
+
+  &__body {
+    margin: 0 0 0 rem(32);
+    padding-top: 0;
+    padding-bottom: rem(64);
+    padding-left: 0;
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__videos {
+    margin-top: rem(12);
+  }
+
+  &__item-image {
+    margin-top: rem(24);
+    margin-right: rem(26);
+  }
+
+  &__item-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: rem(184);
+    height: rem(181);
+    margin-top: rem(24);
+    margin-right: rem(26);
+    border: 1.5px dashed $color-silver-sand;
+    border-radius: 2px;
+    outline: none;
+    background: $color-desert-storm;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      border-color: $color-keppel;
+    }
+  }
+
+  &__item-upload-icon {
+    @include font-style($type-24px, $type-24px, $color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(32);
+    height: rem(32);
+    border-radius: 50%;
+    background: $color-keppel;
+  }
+
+  &__item-upload-text {
+    @include font-style($type-12px, $type-16px, $color-keppel);
+    @include font-weight(bold);
+    margin-top: rem(6);
+  }
+
+  &__tips {
+    .ant-popover-buttons .ant-btn:first-child {
+      display: none;
+    }
+  }
+
+  &__shrink {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+    position: absolute;
+    right: rem(32);
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__shrink-icon {
+    width: rem(16);
+    height: rem(16);
+    margin: rem(2) rem(8);
+    float: left;
+    vertical-align: middle;
+  }
+
+  &__animation {
+    overflow: hidden;
+    animation-name: gallery-confirm;
+    animation-duration: 1s;
+  }
+
+  @keyframes gallery-confirm {
+    from {
+      width: rem(184);
+      height: rem(206);
+      margin: rem(24) rem(26) 0 0;
+    }
+
+    to {
+      width: 0;
+      height: 0;
+      margin: 0;
+    }
+  }
+
+  &__video-animation {
+    animation-name: video-animation;
+    animation-duration: 1s;
+  }
+
+  @keyframes video-animation {
+    from {
+      height: rem(61);
+      margin-left: 0;
+      opacity: 1;
+    }
+
+    to {
+      height: 0;
+      margin-left: rem(820);
+      opacity: 0;
+    }
+  }
+
+  .ant-btn-sm {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+  }
+
+  &__time-out {
+    animation-name: time-out;
+    animation-duration: 6s;
+  }
+
+  @keyframes time-out {
+    0% {
+      display: none;
+    }
+
+    90% {
+      display: none;
+    }
+
+    100% {
+      opacity: block;
+    }
+  }
+}

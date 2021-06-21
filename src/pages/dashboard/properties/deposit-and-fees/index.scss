@@ -1,0 +1,340 @@
+$type-38px: 38px;
+$type-30px: 30px;
+$type-40px: 40px;
+$color-mine-shaft-04: rgba(0, 0, 0 , 0.04);
+$color-alto: #d9d9d9;
+
+.deposit-and-fees {
+  position: relative;
+  width: 100%;
+  min-width: rem(724);
+  height: 100%;
+
+  &__content {
+    height: calc(100% - 168px);
+    margin: rem(32);
+    border: solid 1px $color-mercury;
+    background: $color-white;
+    overflow: hidden;
+  }
+
+  &__content-line {
+    position: absolute;
+    bottom: rem(32);
+    left: rem(350);
+    width: 1px;
+    height: calc(100% - 344px);
+    border: 0;
+    background-color: $color-mercury;
+  }
+
+  &__header {
+    position: relative;
+    width: 100%;
+    height: rem(128);
+    padding: rem(32) rem(40) rem(32) rem(136);
+    border: 0;
+    border-bottom: 1px solid $color-mercury;
+  }
+
+  &__header-svg {
+    position: absolute;
+    left: rem(40);
+    width: rem(58);
+    height: rem(60);
+  }
+
+  &__header-title {
+    @include font-style($type-16px, $type-28px, $color-tundora);
+    @include font-weight(bold);
+  }
+
+  &__header-text {
+    @include font-style($type-14px, $type-24px, $color-silver-chalice);
+    display: block;
+  }
+
+  &__header-switch {
+    margin-left: rem(10);
+  }
+
+  &__list {
+    position: relative;
+    width: 100%;
+    padding: rem(48) rem(24) 0;
+  }
+
+  &__list-empaty {
+    padding: rem(32) rem(24) 0;
+  }
+
+  &__ttl {
+    position: relative;
+    width: rem(275);
+    height: rem(386);
+    margin: 0 rem(20) rem(32) 0;
+    border: 1px solid $color-mercury;
+    border-radius: 2px;
+    text-align: center;
+  }
+
+  &__ttl-title {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    @include font-weight(bold);
+    margin: 0 rem(46);
+    padding: rem(6) rem(28);
+    border-radius: 0 0 rem(32) rem(32);
+    background-color: $color-supernova;
+  }
+
+  &__ttl-formula {
+    @include font-style($type-14px, $type-28px, $color-tundora);
+    position: absolute;
+    bottom: rem(54);
+    left: rem(36);
+    width: rem(202);
+    padding: rem(8) rem(12);
+    background-color: $color-supernova-bg;
+    text-align: left;
+    z-index: $z-base;
+  }
+
+  &__ttl-formula-text {
+    display: block;
+  }
+
+  &__ttl-content {
+    position: absolute;
+    top: 0;
+    margin: rem(92) rem(20) 0;
+    z-index: $z-base;
+  }
+
+  &__warning-icon {
+    position: absolute;
+    top: rem(5);
+    left: rem(-12);
+  }
+
+  &__ttl-deposit-text {
+    @include font-style($type-16px, $type-28px, $color-tundora);
+    display: block;
+    width: rem(232);
+
+    &--amount {
+      @include font-style($type-24px, $type-40px, $color-tundora);
+      @include font-weight(bold);
+    }
+  }
+
+  &__ttl-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: rem(272);
+    height: rem(204);
+  }
+
+  &__list-add-new {
+    @include font-style($type-14px, $type-24px, $color-keppel);
+    position: absolute;
+    top: rem(12);
+    right: rem(24);
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__list-right {
+    width: calc(100% - 294px);
+    min-height: rem(400);
+    margin-bottom: rem(40);
+    margin-left: rem(294);
+    border: 0;
+  }
+
+  &__list-left {
+    position: absolute;
+    left: rem(24);
+  }
+
+  &__add-new {
+    width: rem(274);
+    height: rem(244);
+    margin-left: rem(20);
+    padding: 0;
+    border: 1.5px dashed $color-mercury;
+    border-radius: 2px;
+    outline: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      border: 1.5px dashed $color-keppel;
+    }
+  }
+
+  &__add-new-icon {
+    @include font-style($type-24px, $type-24px, $color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(32);
+    height: rem(32);
+    margin: 0 rem(120) rem(8);
+    border-radius: 50%;
+    background: $color-keppel;
+
+    .deposit-and-fees__card-list {
+      height: calc(100% - 326px);
+    }
+  }
+
+  &__add-new-fee-text {
+    @include font-style($type-12px, $type-16px, $color-keppel);
+    @include font-weight(bold);
+    padding-left: rem(4);
+  }
+
+  &__card {
+    display: inline-block;
+    position: relative;
+    width: rem(275);
+    height: rem(244);
+    margin: 0  0 rem(20) rem(20);
+    border: 1px solid $color-mercury;
+    text-align: center;
+  }
+
+  &__type {
+    @include font-style($type-38px, $type-40px, $color-keppel);
+    @include font-weight(bold);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(64);
+    height: rem(56);
+    border-radius: 0 0 0 rem(100);
+    background-color: $color-keppel-bg;
+  }
+
+  &__type-text {
+    display: block;
+    padding: rem(8) 0 0 rem(22);
+  }
+
+  &__card-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: rem(12) 0;
+    border-top: 1px solid $color-mercury;
+  }
+
+  &__edit-btn,
+  &__delete-btn {
+    height: rem(14);
+    padding: 0 rem(20);
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__delete-btn {
+    &--cannot-deleted {
+      cursor: not-allowed;
+    }
+  }
+
+  &__add-new-text {
+    padding-left: rem(4);
+  }
+
+  &__midline {
+    @include font-weight(bold);
+    height: rem(8);
+    color: $color-mercury;
+  }
+
+  &__card-name {
+    @include font-style($type-14px, $type-20px, $color-tundora);
+    margin: rem(50) 0 rem(12);
+    padding: 0 rem(16);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__card-value {
+    @include font-style($type-30px, $type-40px, $color-tundora);
+    display: block;
+    font-weight: 600;
+
+    &--month {
+      @include font-style($type-14px, $type-20px, $color-tundora);
+      @include font-weight(normal);
+    }
+  }
+
+  &__update-time {
+    @include font-style($type-14px, $type-20px, $color-silver-chalice);
+    display: block;
+    margin-top: rem(32);
+  }
+
+  &__type-abbreviation {
+    font-weight: 600;
+  }
+
+  &__book-now-tips {
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__deleted {
+    display: inline-block;
+  }
+
+  .ant-switch-inner {
+    margin-right: rem(8);
+    margin-left: rem(22);
+  }
+
+  .ant-switch-checked {
+    .ant-switch-inner {
+      margin-right: rem(24);
+      margin-left: rem(6);
+    }
+  }
+
+  .property-edit__loading {
+    margin-top: rem(200);
+    padding: 0;
+  }
+
+  &__switch-popup {
+    top: rem(30) !important;
+    left: rem(500) !important;
+    width: rem(322);
+    z-index: $z-low;
+
+    .ant-btn-sm {
+      display: none;
+    }
+
+    .ant-btn-primary {
+      @include font-style($type-14px, $type-24px, $color-keppel);
+      display: block;
+      margin-left: rem(210);
+      padding: 0 rem(16);
+      border: solid 1px $color-alto;
+      border-radius: rem(4);
+      background-color: $color-mine-shaft-04;
+      box-shadow: none !important;
+    }
+  }
+}

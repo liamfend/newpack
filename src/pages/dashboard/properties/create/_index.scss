@@ -1,0 +1,160 @@
+
+.property-create {
+  position: relative;
+  min-width: rem(660);
+  height: calc(100vh - 120px);
+  background: $color-white url('/create-bg.png') no-repeat;
+  background-size: 100%;
+  overflow-y: auto;
+  background-position-y: bottom;
+
+  &__headline {
+    position: relative;
+    padding: rem(40) 0 rem(33);
+  }
+
+
+  &__popconfirm--hidden {
+    display: block;
+  }
+
+  &__edit {
+    position: absolute;
+    top: 50%;
+    left: rem(58);
+    transform: translate(0, -50%);
+    color: $color-tundora;
+    font-size: $type-12px;
+
+    .anticon-left {
+      margin-right: rem(8);
+      color: $color-silver-chalice;
+    }
+
+    &:hover {
+      color: $color-keppel !important;
+    }
+
+    &:hover .anticon-left {
+      color: $color-keppel;
+    }
+  }
+
+  &__title {
+    @include font-style($type-24px, normal, $color-tundora);
+    @include font-weight(bold);
+    margin: 0;
+    text-align: center;
+  }
+
+  &__basic-bg {
+    position: absolute;
+    bottom: rem(24);
+    left: 0;
+    z-index: $z-base;
+  }
+
+  &__steps {
+    position: relative;
+  }
+
+  .ant-steps-horizontal {
+    width: rem(600);
+    margin: 0 auto;
+    margin-bottom: rem(40);
+  }
+
+  .ant-steps-item {
+
+    .ant-steps-item-icon {
+      width: rem(24);
+      height: rem(24);
+
+      .ant-steps-icon {
+        display: block;
+        font-size: $type-14px;
+        line-height: $type-24px;
+      }
+    }
+
+    .ant-steps-item-title {
+      @include font-style($type-14px, $type-24px, $color-tundora);
+      @include font-weight(bold);
+      padding-right: rem(8);
+
+      &::after {
+        top: rem(12);
+        left: 108%;
+        width: rem(64);
+      }
+    }
+  }
+
+  .ant-steps-item-wait {
+
+    .ant-steps-item-container {
+      cursor: auto !important;
+
+      &:hover .ant-steps-item-icon {
+        border-color: rgba($color-black, 0.25) !important;
+
+        .ant-steps-icon {
+          color: rgba($color-black, 0.25) !important;
+        }
+      }
+
+      &:hover .ant-steps-item-content {
+
+        .ant-steps-item-title {
+          color: rgba($color-black, 0.45) !important;
+        }
+      }
+    }
+
+    .ant-steps-item-title {
+      color: $color-silver-chalice;
+    }
+  }
+
+  .ant-steps-item-finish {
+    .ant-steps-item-title {
+      @include font-weight(normal);
+    }
+  }
+
+  .steps-action {
+    @include clearfix();
+    width: rem(568);
+    margin: rem(24) auto rem(79);
+
+    &__button {
+      @include font-weight(bold);
+      position: relative;
+      height: rem(40);
+      padding: 0 rem(16);
+      border-radius: 2px;
+      font-size: $type-16px;
+      z-index: $z-low;
+
+      &--right {
+        float: right;
+      }
+
+      &--back {
+        margin-left: rem(-15);
+        border: 0 none;
+        background: transparent;
+        color: $color-keppel;
+        box-shadow: none;
+
+        span {
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+
+  .ant-input {
+    padding-top: rem(6);
+  }
+}

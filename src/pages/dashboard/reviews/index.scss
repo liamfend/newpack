@@ -1,0 +1,8 @@
+$type-22px: 22px;
+
+.reviews {
+  &__pending-count {
+    @include font-style($type-14px, $type-22px, $color-keppel);
+    margin-left: rem(8);
+  }
+}

@@ -1,0 +1,16 @@
+export const errors = {
+  USER_NOT_ENABLED_ERROR: 'USER_NOT_ENABLED_ERROR',
+};
+
+export const bulkUpdateOppLandlordBookingsErrors = {
+  INVALID_EXCEL_HEADER: 'INVALID_EXCEL_HEADER',
+  BEYOND_QUANTITY_LIMIT: 'BEYOND_QUANTITY_LIMIT',
+  REPEAT_REFERENCE_ID: 'REPEAT_REFERENCE_ID',
+  BELOW_QUANTITY_LIMIT: 'BELOW_QUANTITY_LIMIT',
+};
+
+export const uploadTermsFileErrors = {
+  INVALID_PROPERTY_TERMS_FILE_TYPE: 'INVALID_PROPERTY_TERMS_FILE_TYPE',
+};
+
+export const others = {};
